@@ -59,8 +59,20 @@ def main() -> None:
     baseline = ROOT / manifest["official_baseline"]
     if not baseline.is_file():
         fail("missing published Astra baseline")
+    hashes = ROOT / "results" / "file_hashes.sha256"
+    checked = 0
+    with hashes.open(encoding="utf-8") as handle:
+        for line in handle:
+            expected, relative = line.rstrip("\n").split("  ", 1)
+            path = ROOT / relative
+            if not path.is_file():
+                fail(f"missing hashed file: {relative}")
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if digest != expected:
+                fail(f"file hash mismatch: {relative}")
+            checked += 1
     digest = hashlib.sha256(TABLE.read_bytes()).hexdigest()
-    print(f"OK: {len(tasks)} tasks, {len(models)} models, {len(rows)} records; comparison SHA-256 {digest}")
+    print(f"OK: {len(tasks)} tasks, {len(models)} models, {len(rows)} records, {checked} hashed files; comparison SHA-256 {digest}")
 
 
 if __name__ == "__main__":

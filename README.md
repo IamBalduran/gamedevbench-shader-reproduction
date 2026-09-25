@@ -29,7 +29,7 @@
 python tools\verify_package.py
 ```
 
-脚本检查 12 个题目 ZIP、48 行合并记录、每行的官方 JSON/模型结果/项目目录及 SHA-256 清单。各批次原始 `state.json` 中的绝对路径是历史记录，不会被重新定位；分析时以可移植合并表为准。
+脚本检查 12 个题目 ZIP、48 行合并记录、每行的官方 JSON/模型结果/项目目录及 `results/file_hashes.sha256` 中的文件哈希。各批次原始 `state.json` 中的绝对路径是历史记录，不会被重新定位；分析时以可移植合并表为准。
 
 ## 重新运行实验
 
@@ -40,7 +40,7 @@ cd /mnt/d/你的克隆路径/gamedevbench-shader-reproduction
 bash gamedevbench-environment/setup.sh
 ```
 
-`setup.sh` 从官方发布页下载固定版本的 uv、Godot 和 OpenCode，按 `uv.lock` 建立 Python 环境，并把 OpenCode 插件路径写成克隆位置。它不会运行实验。运行前请确认 Shubiaobiao API 对 `shader_comparison_models.json` 中四个模型仍开放，并自行承担模型调用费用。密钥只保存在本机，**不要提交或发送密钥**：
+`setup.sh` 从官方发布页下载 uv 及固定版本的 Godot、OpenCode，按 `uv.lock` 建立 Python 环境，并把 OpenCode 插件路径写成克隆位置。它不会运行实验。运行前请确认 Shubiaobiao API 对 `shader_comparison_models.json` 中四个模型仍开放，并自行承担模型调用费用。密钥只保存在本机，**不要提交或发送密钥**：
 
 ```powershell
 python .\gamedevbench-environment\secure_key.py save
