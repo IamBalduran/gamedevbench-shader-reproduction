@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0111",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "timestamp": "20260924_234010",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "ShaderMaterial not assigned to SphereMesh",
+    "timestamp": "2026-09-24T23:40:10.640605"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 600.0239684581757,
+    "is_rate_limited": false,
+    "model": "openai/deepseek-v4-pro",
+    "cost_usd": 0.129939,
+    "token_usage": {
+      "input_tokens": 23723,
+      "output_tokens": 3918,
+      "total_tokens": 27641,
+      "cache_read_tokens": 258048,
+      "cache_write_tokens": 0
+    }
+  }
+}

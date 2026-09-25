@@ -1,0 +1,56 @@
+Single task: task_0096 | OpenCode | gpt-5.6-sol | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_task_0096.json
+{
+  "task_name": "task_0096",
+  "success": false,
+  "message": "Shader must use render_mode unshaded",
+  "timestamp": "2026-09-24T22:07:12.930503",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Implemented and validated:\n\n- Added `assets/shaders/pixel_art.gdshader`\n- Added `ScreenQuad` with a 1280x720 `QuadMesh` at `(640, 360)`\n- Configured `ShaderMaterial` parameters:\n  - `target_resolution = Vector2(320, 180)`\n  - `colors_per_channel = 8.0`\n- Verified the scene loads and renders successfully in Godot 4.4.1.",
+  "solver_duration": 294.4423496723175,
+  "is_rate_limited": false,
+  "input_tokens": 17332,
+  "output_tokens": 1625,
+  "total_tokens": 18957,
+  "cache_read_tokens": 103011,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.018416500000000002,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_1b6349a3",
+  "result_dir": "tasks/test_result/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_0096_opencode_20260924_220712"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626
+Final status: FAILED/CANCELLED | exit code: 1

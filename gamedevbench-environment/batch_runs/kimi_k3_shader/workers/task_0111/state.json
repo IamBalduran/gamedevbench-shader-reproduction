@@ -1,0 +1,66 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0111"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0111": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "no_complete_result",
+          "solver_message": "No complete result JSON; process exit 1",
+          "run_name": null,
+          "started_at": "2026-09-25T06:35:08+00:00",
+          "finished_at": "2026-09-25T06:35:13+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T07:16:15+00:00",
+      "finished_at": "2026-09-25T07:22:01+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966",
+      "validator_sha256": "58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0111/console/task_0111_attempt_2.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_151616_task_0111_8965",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "90",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The task is complete. Everything was verified:\n\n**Deliverables:**\n\n1. **`scenes/main.tscn`** — Node3D root named `Main` with a `MeshInstance3D` child named `Sphere`. A `SphereMesh` is assigned to `Sphere.mesh`, and a `ShaderMaterial` (sub-resource, assigned onto the SphereMesh) references `res://scripts/triplanar_axis_blend.gdshader` with:\n   - `texture_x` = res://assets/sprites/Rock022_2K-PNG_Color.png\n   - `texture_y` = res://assets/sprites/Grass002_2K-PNG_Color.png\n   - `texture_z` = res://assets/sprites/Rock022_2K-PNG_Color.png\n\n2. **`scripts/triplanar_axis_blend.gdshader`** — Declares `uniform sampler2D texture_x / texture_y / texture_z` and implements normal-based triplanar blending with all the required exact lines:\n   - `vec3 adjusted_normal = pow(abs(normal), vec3(8.0))`\n   - `float use_y_up = float(normal.y > 0.0)`\n   - `vec3 color_y_up = texture(texture_y, uv_y).rgb * weights.y`\n   - `vec3 color_y_down = texture(texture_x, uv_y).rgb * weights.y`\n   - `mix(color_y_down, color_y_up, use_y_up)`\n   - `ALBEDO = (color_x + mix(color_y_down, color_y_up, use_y_up) + color_z) / 3.0`\n\n**Verification done:**\n- Ran the project headlessly in Godot 4.4.1 with a runtime inspection script: confirmed root is Node3D \"Main\", child is MeshInstance3D \"Sphere\", mesh is SphereMesh, material is ShaderMaterial with the correct shader path and all three texture paths.\n- Rendered a frame with a camera verification scene — the sphere rendered correctly with the rock/grass triplanar shader material, then all temporary verification files were removed.\n- Set `run/main_scene=\"res://scenes/main.tscn\"` in `project.godot` so the project runs directly.",
+      "solver_duration": 322.14703488349915,
+      "cost_usd": 0.966441,
+      "input_tokens": 303512,
+      "output_tokens": 3727,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_task_0111.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T07:22:01+00:00"
+}

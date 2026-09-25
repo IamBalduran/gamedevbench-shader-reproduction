@@ -1,0 +1,56 @@
+Single task: task_0128 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_task_0128.json
+{
+  "task_name": "task_0128",
+  "success": true,
+  "message": "Fractal panel configured",
+  "timestamp": "2026-09-24T21:47:29.996543",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Completed the changes:\n\n- Added `Main/Panel` as a `TextureRect` in [scenes/main.tscn](/workspace/scenes/main.tscn:8), using the `FULL_RECT` anchor preset to fill the viewport.\n- Assigned `materials/julia.material` as its material and `icon.png` as its texture.\n- Set the material\u2019s `seed` shader parameter to `Vector2(0.40, -0.20)`.\n- Left `julia.gdshader` unchanged.\n\nVerified the saved properties with Godot 4.4.1 and inspected a rendered frame showing the fractal filling the viewport. Godot exited successfully, and temporary verification files were removed.",
+  "solver_duration": 186.17729091644287,
+  "is_rate_limited": false,
+  "input_tokens": 16837,
+  "output_tokens": 1940,
+  "total_tokens": 18777,
+  "cache_read_tokens": 172321,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.079611,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_c6f91a57",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_0128_opencode_20260924_214730"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126
+Final status: PASS | exit code: 0

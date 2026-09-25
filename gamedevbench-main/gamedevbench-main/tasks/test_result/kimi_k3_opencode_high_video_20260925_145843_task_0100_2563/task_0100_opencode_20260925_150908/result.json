@@ -1,0 +1,59 @@
+{
+  "task_name": "task_0100",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260925_150908",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "www.google.com:443",
+      "html.duckduckgo.com:443",
+      "github.com:443",
+      "grep.app:443",
+      "www.bing.com:443",
+      "github.com:443",
+      "github.com:443",
+      "github.com:443",
+      "github.com:443",
+      "github.com:443"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "message": "Task completed successfully",
+    "timestamp": "2026-09-25T15:09:08.375919"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 600.057514667511,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.8149109999999999,
+    "token_usage": {
+      "input_tokens": 249337,
+      "output_tokens": 4460,
+      "total_tokens": 253797,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

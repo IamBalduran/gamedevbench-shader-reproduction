@@ -1,0 +1,12 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "model": "openai/kimi-k3",
+  "total": 1,
+  "counts": {
+    "completed": 1
+  },
+  "updated_at": "2026-09-25T07:04:22+00:00",
+  "results_csv": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0097/results.csv",
+  "results_csv_stale": false,
+  "latest_csv": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0097/results.csv"
+}

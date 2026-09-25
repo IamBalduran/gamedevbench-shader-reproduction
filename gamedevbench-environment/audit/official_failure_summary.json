@@ -1,0 +1,331 @@
+{
+  "source": "D:\\ShaderAgent\\re\\gamedevbench-main\\gamedevbench-main\\results\\gpt6_astra_codex_runtime_video_high_full_333\\final_results.json",
+  "total_tasks": 333,
+  "official_passed": 229,
+  "official_failed": 104,
+  "failed_with_solver_success": 104,
+  "failed_with_solver_failure": 0,
+  "failure_message_counts": [
+    [
+      "SpawnTop must line up with the bottom tip of the branch closest to the water",
+      12
+    ],
+    [
+      "Water requires a ShaderMaterial override (via material_override or surface_material_override)",
+      9
+    ],
+    [
+      "GemstoneHighlight should use a purple or pink-purple tint",
+      3
+    ],
+    [
+      "ContinueButton size_flags_horizontal must be Expand Fill",
+      2
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8539)",
+      2
+    ],
+    [
+      "GemstoneHighlight must cover the gemstone with overlap above 85% (IoU=0.8251)",
+      2
+    ],
+    [
+      "Projectile must react to enemies inside _on_area_entered",
+      1
+    ],
+    [
+      "'explode' animation should include later smoke frames (expect region 384,128,64,64)",
+      1
+    ],
+    [
+      "MuzzleFireLeft must use the muzzle flash shader material",
+      1
+    ],
+    [
+      "Export 'camera_shake_noise_panning_speed' missing on PlayerBody",
+      1
+    ],
+    [
+      "Impulse direction should push camera backwards along -Z",
+      1
+    ],
+    [
+      "PillarPoint node missing",
+      1
+    ],
+    [
+      "Main scene missing",
+      1
+    ],
+    [
+      "ArcingChunks must use a StandardMaterial3D override",
+      1
+    ],
+    [
+      "debug dictionary missing steer entry",
+      1
+    ],
+    [
+      "new_ball must trigger camera shake velocity change",
+      1
+    ],
+    [
+      "Draggable without overlaps must call self_destruct and queue_free",
+      1
+    ],
+    [
+      "Failed to load Player scene.",
+      1
+    ],
+    [
+      "player.gd must reference snappedf",
+      1
+    ],
+    [
+      "Main needs at least two Unit instances for testing",
+      1
+    ],
+    [
+      "Label2 text incorrect",
+      1
+    ],
+    [
+      "Minimap must define set_zoom",
+      1
+    ],
+    [
+      "Top margin left padding must be 20",
+      1
+    ],
+    [
+      "Crate must be destroyed after bullet hit",
+      1
+    ],
+    [
+      "Run animations must include the directional frames",
+      1
+    ],
+    [
+      "RectangleShape2D size must be 32x32 pixels",
+      1
+    ],
+    [
+      "Label text incorrect",
+      1
+    ],
+    [
+      "Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+      1
+    ],
+    [
+      "Surface material is not a ShaderMaterial",
+      1
+    ],
+    [
+      "Tank must enable and disable particles while moving",
+      1
+    ],
+    [
+      "Panel background color must be RPG blue (#1743 8C)",
+      1
+    ],
+    [
+      "grid_scale must be derived from grid size, viewport, and zoom",
+      1
+    ],
+    [
+      "ContinueButton size_flags_horizontal must be Expand",
+      1
+    ],
+    [
+      "Takeoff must transition into the jump animation",
+      1
+    ],
+    [
+      "kick animation must enable DamageEmitter monitoring during the kick and disable it when the kick ends",
+      1
+    ],
+    [
+      "Ground tile (0, 0) must use the expected rectangular navigation polygon",
+      1
+    ],
+    [
+      "BasicEnemy hurt animation must use the expected sprite frame sequence",
+      1
+    ],
+    [
+      "Path tile (3, 3) must use terrain 0",
+      1
+    ],
+    [
+      "Solid tile (17, 4) must use the standard full-tile collision polygon",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.7825)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.7527)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8191)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8079)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8692)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8124)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8319)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8642)",
+      1
+    ],
+    [
+      "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8166)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6275)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6519)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6729)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6622)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6305)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.5743)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6292)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.5984)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6640)",
+      1
+    ],
+    [
+      "StarHighlight must cover the star with overlap above 85% (IoU=0.6332)",
+      1
+    ],
+    [
+      "StarHighlight must stay inside the platformer image bounds",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 30.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 24.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 28.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 36.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 40.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 26.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 34.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 22.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 38.0",
+      1
+    ],
+    [
+      "DetectRange.base_range_size must be 27.0",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the overlay_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the drag_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the card_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the ui_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the float_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the front_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the ui_drag_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the hud_drag_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the screen_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the top_ui_layer group",
+      1
+    ],
+    [
+      "Dragging state must reparent the card into the drag_overlay group",
+      1
+    ]
+  ],
+  "note": "Failure messages are not root-cause labels. Official output artifacts are mostly not released; do not infer false-negative counts from this inventory."
+}

@@ -1,0 +1,65 @@
+{
+  "batch_id": "gpt6_astra_shader",
+  "tasks": [
+    "task_0111"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0111": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "runner_exception",
+          "solver_message": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0111/console'",
+          "run_name": null,
+          "started_at": "2026-09-24T13:06:52+00:00",
+          "finished_at": "2026-09-24T13:06:53+00:00"
+        }
+      ],
+      "started_at": "2026-09-24T13:41:00+00:00",
+      "finished_at": "2026-09-24T13:43:57+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966",
+      "validator_sha256": "58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0111/console/task_0111_attempt_2.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260924_214103_task_0111_5884",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "90",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Completed the Godot scene and shader.\n\n- `scenes/main.tscn`: `Main` Node3D with a `Sphere` MeshInstance3D, SphereMesh, and ShaderMaterial.\n- `scripts/triplanar_axis_blend.gdshader`: all requested uniforms and exact blending expressions.\n- Rock texture assigned to `texture_x` and `texture_z`; grass texture assigned to `texture_y`.\n- Configured the main scene with a camera and lighting.\n\nVerified in Godot 4.4.1: the shader compiled and rendered successfully, showing grass on top and rock on the sides. Preview saved as `output00000000.png`.",
+      "solver_duration": 153.14577889442444,
+      "cost_usd": 0.083712,
+      "input_tokens": 15134,
+      "output_tokens": 2554,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_214103_task_0111_5884/task_task_0111.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214103_task_0111_5884/task_0111_opencode_20260924_214354/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214103_task_0111_5884/task_0111_opencode_20260924_214354",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214103_task_0111_5884/task_0111_opencode_20260924_214354/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T13:43:57+00:00"
+}

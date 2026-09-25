@@ -1,0 +1,65 @@
+{
+  "batch_id": "gpt6_astra_shader",
+  "tasks": [
+    "task_0096"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0096": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "runner_exception",
+          "solver_message": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0096/console'",
+          "run_name": null,
+          "started_at": "2026-09-24T13:06:50+00:00",
+          "finished_at": "2026-09-24T13:06:51+00:00"
+        }
+      ],
+      "started_at": "2026-09-24T13:24:50+00:00",
+      "finished_at": "2026-09-24T13:31:42+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "8384e9f15461853b4d77891725db8069b9b91ac10bb5eec69d8f0682f36c84cf",
+      "validator_sha256": "04145e43fa90e547e55e275e6eb0e054b4630e51165a486cbc22a59b21537246",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0096/console/task_0096_attempt_2.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260924_212452_task_0096_483",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Screen quad shader setup is correct",
+      "official_details": "{}",
+      "validator_error_line": "79",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented:\n\n- Added `ScreenQuad` in `scenes/main.tscn` with a `1280×720` QuadMesh at `(640, 360)`.\n- Added `assets/shaders/pixel_art.gdshader` using nearest-filtered screen sampling, `320×180` downsampling, and 8 color levels per channel.\n- Set both requested ShaderMaterial parameters.\n\nValidated with Godot 4.4.1 and inspected a runtime capture. The supplied scene has no camera, so the capture is flat gray. Temporary verification files were removed.",
+      "solver_duration": 389.0029354095459,
+      "cost_usd": 0.12493500000000002,
+      "input_tokens": 28015,
+      "output_tokens": 2726,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_212452_task_0096_483/task_task_0096.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_212452_task_0096_483/task_0096_opencode_20260924_213140/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_212452_task_0096_483/task_0096_opencode_20260924_213140",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_212452_task_0096_483/task_0096_opencode_20260924_213140/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T13:31:42+00:00"
+}

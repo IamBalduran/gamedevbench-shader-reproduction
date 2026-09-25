@@ -1,0 +1,19 @@
+{
+  "task_id": 128,
+  "name": "Fractal Panel With Julia Shader Alt",
+  "instruction": "In `scenes/main.tscn`, add a TextureRect named `Panel` under `Main`. Set its anchors to fill the viewport (use the FULL_RECT preset for anchors preset), assign `materials/julia.material` to the `material` property, set `icon.png` as its texture, and edit julia.material to set the `seed` shader parameter in the material to (0.40, -0.20) without modifying julia.gdshader.",
+  "metadata": {
+    "tutorial_source": "YouTube: Tokisan Games - Procedural Art With Godot - Julia Set Fractal Animation",
+    "video_id": "zfA0jLDRCZ4",
+    "github_repo": "https://github.com/TokisanGames/godot-fractal-art",
+    "transcript_excerpt": "when we switch over to the Julia fractal set",
+    "expected_nodes": [
+      "TextureRect"
+    ],
+    "key_properties": {
+      "material": "res://materials/julia.material",
+      "texture": "res://icon.png",
+      "anchors": "full_rect"
+    }
+  }
+}

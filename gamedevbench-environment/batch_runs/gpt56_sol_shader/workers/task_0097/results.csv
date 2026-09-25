@@ -1,0 +1,10 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification
+task_0097,gpt56_sol,openai/gpt-5.6-sol,,,completed,1,False,VisualShader constants do not match DistortionUV example,{},49,True,"Configured [`scenes/main.tscn`](/workspace/scenes/main.tscn) with:
+
+- `DistortionPreview` `TextureRect` under `Main`
+- `shaderV_icon.png` texture
+- `ShaderMaterial` using a `VisualShader`
+- `DistortionUV` custom node
+- Constants: wave X `7`, wave Y `5`, distortion X/Y `0.1`
+
+Verified successfully in Godot 4.4.1 with a rendered screenshot showing the distorted icon.",503.25777673721313,0.0274475,52300,2091,False,gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_task_0097.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0097/console/task_0097_attempt_1.log,966415b14a9de5118004a30f4ffb9f746ec1fecd9aef7cc8ec9601da6bf7c009,404058068d43162847bfa5c7f391b0177753541a16fb756de7fb21988af615e3,2026-09-24T14:03:30+00:00,2026-09-24T14:12:19+00:00,1,official_fail_review_needed

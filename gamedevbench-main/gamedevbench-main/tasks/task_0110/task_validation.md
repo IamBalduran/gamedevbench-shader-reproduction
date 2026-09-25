@@ -1,0 +1,81 @@
+# Key Checklist
+- [x] The task starting point runs with `uv run gamedevbench  validate $TASK_NAME` and successfully outputs a test failure
+  - Evidence: `uv run gamedevbench validate task_0110` -> FAILED, "ShaderMaterial not assigned to SphereMesh".
+- [x] The task ground truth runs with `uv run gamedevbench --gt validate $TASK_NAME` and successfully outputs SUCCESS
+  - Evidence: `uv run gamedevbench --gt validate task_0110` -> PASSED, "Task completed successfully" (note: also prints missing task_config.json warning).
+- [x] In every task, there exists a valid `main.tscn` and `test.tscn` similar to tasks_gt/task_0110
+  - Evidence: `tasks/task_0110/scenes/main.tscn`, `tasks/task_0110/scenes/test.tscn`.
+- [x] The task instruction matches the tutorial transcript (See example for documentation). The task instructions must be a subset of the tutorial transcript.
+  - Instruction 1: "Create a Node3D scene with a MeshInstance3D sphere that uses a SphereMesh and a ShaderMaterial assigned to the SphereMesh material."
+    - Transcript: "I'm starting out with an empty spatial Shader material attached to a default sphere..."
+  - Instruction 2: "Write a spatial shader at res://scripts/triplanar_basic.gdshader that projects a single texture along the X, Y, and Z axes using world-space vertex coordinates and normal-weighted blending."
+    - Transcript: "get the vertex position... inverse view Matrix multiplied by the vertex... world coordinates... sample it three times... uvx = vertex.zy, uvy = vertex.xz, uvz = vertex.xy... use the mesh's normals... adjusted normal = abs(normal)... weights = adjusted normal / sum... multiply each of the color samples by the corresponding value in weights."
+  - Instruction 3: "Define `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` and `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`."
+    - Transcript: "inverse view Matrix multiplied by the vertex... cast to vec4... create a new vec3 variable called normal... replace vertex constant with normal... normalize the given values."
+  - Instruction 4: "Define `vec3 adjusted_normal = abs(normal)` and `vec3 weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`."
+    - Transcript: "adjusted normal... absolute value of normal... weights ... adjusted normal divided by the sum of all of its components."
+  - Instruction 5: "Define `vec2 uv_x = vertex.zy`, `vec2 uv_y = vertex.xz`, and `vec2 uv_z = vertex.xy`."
+    - Transcript: "uvx we'll use vertex.zy, uvy will use vertex xz, and uvz we'll use vertex.xy."
+  - Instruction 6: "Sample a single `uniform sampler2D texture_x` with `uv_x`, `uv_y`, and `uv_z`, multiply each sample by the corresponding weight, and set `ALBEDO = color_x + color_y + color_z`."
+    - Transcript: "we need to sample it three times... multiply each of the color samples by the corresponding value in weights."
+  - Instruction 7: "Assign any texture to the shader parameter `texture_x`."
+    - Transcript: "assign the uniform whatever texture you'd like."
+  - Instructions Missing from Transcript: None.
+- [x] The task code is directly derived from the repository code. Please document where the derived code is.
+  - Evidence: `tasks_gt/task_0110/scripts/triplanar_basic.gdshader` mirrors `tutorials/DevPoodle/Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine/repo/triplanar_mapping/triplanar.gdshader` (vertex in world space, normal-based weights, uv_x/uv_y/uv_z sampling), simplified to a single texture. The asset `tasks/task_0110/assets/sprites/Rock022_2K-PNG_Color.png` comes from `.../repo/triplanar_mapping/addons/Rock022_2K-PNG/Rock022_2K-PNG_Color.png`.
+- [x] The task instruction is clear, unambiguous, and self-contained. There are no references to the tutorial or other tasks
+  - Evidence: Instruction specifies required node types, shader file path, exact shader statements, and texture assignment requirement.
+- [x] The tests in `test.gd` match the instructions. All tests are contained in the instruction. Similarly, all instructions are in the tests. Explain how to adjust the tests themselves to match the instructions.
+  - Test 1, Instruction 1: Node3D scene root exists.
+  - Test 2, Instruction 1: MeshInstance3D sphere exists as a child.
+  - Test 3, Instruction 1: SphereMesh assigned to the MeshInstance3D.
+  - Test 4, Instruction 1: ShaderMaterial assigned to the SphereMesh material.
+  - Test 5, Instruction 2: Shader path is `res://scripts/triplanar_basic.gdshader`.
+  - Test 6, Instruction 7: `texture_x` parameter assigned (non-null).
+  - Test 7, Instruction 2: Shader file exists at `res://scripts/triplanar_basic.gdshader`.
+  - Test 8, Instructions 3-6: Shader contains required statements for vertex/normal/weights/uvs/ALBEDO.
+  - Missing Coverage: None.
+- [x] Each test in `test.gd` is unambiguously defined in the instructions. With just the instruction and the task code (without looking at the tests), it is unambiguously possible to satisfy each test condition.
+  - Test 1, Assertions: Node3D scene root exists. Instruction coverage: "Create a Node3D scene..."
+  - Test 2, Assertions: MeshInstance3D child exists. Instruction coverage: "MeshInstance3D sphere..."
+  - Test 3, Assertions: `sphere.mesh` exists and is `SphereMesh`. Instruction coverage: "uses a SphereMesh."
+  - Test 4, Assertions: `sphere.mesh.material` is `ShaderMaterial`. Instruction coverage: "ShaderMaterial assigned to the SphereMesh material."
+  - Test 5, Assertions: Shader assigned and resource path equals `res://scripts/triplanar_basic.gdshader`. Instruction coverage: explicit shader path is stated.
+  - Test 6, Assertions: `texture_x` parameter exists. Instruction coverage: "Assign any texture to the shader parameter `texture_x`."
+  - Test 7, Assertions: Shader file exists at `res://scripts/triplanar_basic.gdshader`. Instruction coverage: explicit shader path is stated.
+  - Test 8, Assertions: Shader contains exact snippets:
+    - `uniform sampler2D texture_x`
+    - `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)`
+    - `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`
+    - `vec3 adjusted_normal = abs(normal)`
+    - `vec3 weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`
+    - `vec2 uv_x = vertex.zy`
+    - `vec2 uv_y = vertex.xz`
+    - `vec2 uv_z = vertex.xy`
+    - `ALBEDO =`
+    Instruction coverage: exact statements are specified in the instruction.
+  - **CRITICAL AMBIGUITY CHECKS** - For each test, explicitly verify:
+    - [x] String formatting (padding, delimiters, exact format) is specified in instruction
+    - [x] Exact string values/names are in instruction
+    - [x] Number formats (zero-padding, decimal places) are specified
+    - [x] Any comparison operators (==, !=, >, <, contains, begins_with, ends_with) have clear criteria
+    - [x] Node names, paths, and types match instruction exactly
+    - [x] Property values (numbers, booleans, strings) have exact values in instruction
+  - Ambiguous Tests: None.
+- [x] If there are multiple solutions to the problem, the tests in `test.gd` are flexible to allow multiple solutions. Mark this as completed if there is only one solution to the problem and that solution is clearly decipherable from the instructions.
+  - Evidence: Tests focus on required shader statements and structure; multiple textures are allowed (any non-null `texture_x`).
+- [x] The folder and file names are consistent with other tasks (tasks_gt/task_0110)
+  - Evidence: Standard `assets/`, `scenes/`, `scripts/`, `project.godot` structure with `scenes/main.tscn` and `scenes/test.tscn`.
+- [x] PROCEED. Check this box is the task is validated and all key checks pass successfully.
+
+
+# Feature Checklist
+- [x] The task contains instructions or goals that are Node/inspector-focused.
+  - Evidence: Instruction requires creating a Node3D scene, MeshInstance3D sphere, ShaderMaterial, and shader parameter assignment.
+- [ ] The task contains or requires multimodal reasoning or understanding to complete.
+  - Evidence: No reasoning about visual content required beyond assigning a texture.
+- [ ] The task contains a multimodal input (such as a image) in the instruction.
+  - Evidence: Instruction references a texture parameter but does not include an image in the prompt.
+
+# Notes
+- Ground truth validation logs warn about missing `tasks_gt/task_0110/task_config.json`, but validation still reports PASSED.

@@ -1,0 +1,66 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0110"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0110": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "no_complete_result",
+          "solver_message": "No complete result JSON; process exit 1",
+          "run_name": null,
+          "started_at": "2026-09-25T06:35:02+00:00",
+          "finished_at": "2026-09-25T06:35:08+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T07:15:04+00:00",
+      "finished_at": "2026-09-25T07:17:31+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "0fad88610f20dd08dafb4cbaf1ac8255b24e1793355109899236dce9a6ba60f5",
+      "validator_sha256": "74269d13bcff6c18bae4a67a47a6b6c2b71acfeff676de9e9b00b02c47b2d20c",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0110/console/task_0110_attempt_2.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_151506_task_0110_8120",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "80",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Only benign ALSA audio errors (no sound card in the container) — no scene or shader errors. The task is complete:\n\n**Summary of changes:**\n\n1. **`scripts/triplanar_basic.gdshader`** — Full spatial triplanar shader exactly per spec:\n   - `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` (world-space position)\n   - `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`\n   - `adjusted_normal = abs(normal)` and `weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`\n   - `uv_x = vertex.zy`, `uv_y = vertex.xz`, `uv_z = vertex.xy`\n   - Single `uniform sampler2D texture_x` sampled with all three UVs, each multiplied by its weight, `ALBEDO = color_x + color_y + color_z`\n\n2. **`scenes/main.tscn`** — Node3D scene with:\n   - `MeshInstance3D` sphere using a `SphereMesh` with a `ShaderMaterial` assigned to the **mesh's material property**\n   - Material references the shader with `texture_x` set to `res://assets/sprites/Rock022_2K-PNG_Color.png`\n   - Added `Camera3D` and `DirectionalLight3D` for visibility\n\n3. **`project.godot`** — Set `run/main_scene=\"res://scenes/main.tscn\"`\n\nRendered frames were verified visually: the sphere displays the rock texture projected triplanarly across its surface.",
+      "solver_duration": 106.7153787612915,
+      "cost_usd": 0.5258309999999999,
+      "input_tokens": 162037,
+      "output_tokens": 2648,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_task_0110.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T07:17:31+00:00"
+}

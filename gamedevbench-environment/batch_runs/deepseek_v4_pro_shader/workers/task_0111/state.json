@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0111"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0111": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T15:29:46+00:00",
+      "finished_at": "2026-09-24T15:40:12+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966",
+      "validator_sha256": "58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0111/console/task_0111_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_232948_task_0111_28003",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "ShaderMaterial not assigned to SphereMesh",
+      "official_details": "{}",
+      "validator_error_line": "26",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0239684581757,
+      "cost_usd": 0.129939,
+      "input_tokens": 23723,
+      "output_tokens": 3918,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_232948_task_0111_28003/task_task_0111.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232948_task_0111_28003/task_0111_opencode_20260924_234010/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232948_task_0111_28003/task_0111_opencode_20260924_234010",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232948_task_0111_28003/task_0111_opencode_20260924_234010/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:40:12+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0019"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0019": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T16:16:59+00:00",
+      "finished_at": "2026-09-24T16:19:28+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "validator_sha256": "785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0019/console/task_0019_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_001702_task_0019_495",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "MuzzleFireLeft must use the muzzle flash shader material",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The task is complete. Summary of what was built:\n\n**`scenes/effects/muzzle_flash_effect.tscn`** — a full layered muzzle flash prefab:\n- **Root `MuzzleFlashEffect` (Node3D)**: attached `scripts/generic_effect_handler.gd`, `Optional Light` export → `NodePath(\"MuzzleFlash\")`, `light_duration = 0.2`.\n- **`MuzzleFlash` (OmniLight3D)**: warm orange light (energy 4, omni_range 3) that the handler tweens to 0 over 0.2s.\n- **`SmokeParticles` (GPUParticles3D)**: `ParticleProcessMaterial` with **zero gravity** and gentle upward drift; draw-pass QuadMesh with a **StandardMaterial3D** (`billboard_mode = PARTICLE_BILLBOARD` for volumetric puff look) using a radial **GradientTexture2D** (opaque center → transparent edge).\n- **`MuzzleFireLeft` / `MuzzleFireRight` (GPUParticles3D)**: opposing one-shot bursts (`direction = (-1,0,0)` / `(1,0,0)`, `one_shot = true`, full explosiveness), draw-pass **QuadMesh** with `ShaderMaterial` built from `assets/shaders/muzzle_flash.gdshader` (`cull_disabled` renders both sides), warm flash color + falloff 1.5.\n\n**`scenes/main.tscn`** — already instances the effect under `Main`, verified wired correctly.\n\n**Verification**: Godot 4.4.1 ran headless with no errors; captured frames via `--write-movie` show frame 0 with the bright flash burst firing and subsequent frames fading, matching the 0.2s light fade and one-shot particle behavior. Temporary capture frames were removed afterward.",
+      "solver_duration": 126.29948258399963,
+      "cost_usd": 0.375342,
+      "input_tokens": 111944,
+      "output_tokens": 2634,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_task_0019.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T16:19:28+00:00"
+}

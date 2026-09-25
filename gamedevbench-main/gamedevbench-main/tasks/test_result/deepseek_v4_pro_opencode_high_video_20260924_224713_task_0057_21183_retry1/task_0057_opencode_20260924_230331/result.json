@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0057",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "timestamp": "20260924_230331",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Main needs at least two Unit instances for testing",
+    "timestamp": "2026-09-24T23:03:31.053411"
+  },
+  "solver": {
+    "success": true,
+    "message": "All done. Here's what was built:\n\n**`player.tscn`** \u2014 Reusable Unit scene with:\n- `CharacterBody2D` root, `collision_layer=2`, `collision_mask=3`, group `\"units\"`\n- `Sprite2D` child with towerDefense spritesheet, `region_rect=Rect2(960,640,64,64)`, `ShaderMaterial` (aura.gdshader)\n- `CollisionShape2D` child with `CircleShape2D` radius 14\n- `Detect` Area2D child (`layer=2, mask=2`) with its own `CollisionShape2D`/`CircleShape2D` radius 35\n\n**`unit.gd`** \u2014 Script with:\n- `@export var speed`, `var target_radius`, `set_target()`\n- `set_selected()` toggles `aura_width` shader param (1.0 / 0.0)\n- `avoid()` via `$Detect.get_overlapping_bodies()`\n- `_ready()` duplicates the material so each instance is independent\n- `_physics_process()` uses `move_and_collide()` for movement",
+    "duration_seconds": 552.9140229225159,
+    "is_rate_limited": false,
+    "model": "openai/deepseek-v4-pro",
+    "cost_usd": 0.08373900000000001,
+    "token_usage": {
+      "input_tokens": 16213,
+      "output_tokens": 2340,
+      "total_tokens": 18553,
+      "cache_read_tokens": 149504,
+      "cache_write_tokens": 0
+    }
+  }
+}

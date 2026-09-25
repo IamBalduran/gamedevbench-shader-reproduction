@@ -1,0 +1,33 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification
+task_0106,,openai/gpt-6-astra,,,completed,2,True,Task completed successfully,{},60,True,"The maximum steps for this agent have been reached, so tool access is unavailable for this turn.
+
+Implemented:
+
+- `res://scripts/outline_effect.gd`
+  - Added `@tool`, `extends CompositorEffect`, and `class_name OutlineEffect`
+  - Uses `RenderingServer.get_rendering_device()`
+  - Creates the shader, compute pipeline, storage buffer, and depth sampler
+  - Retrieves render scene buffers, internal size, color layer, and depth layer
+  - Updates parameters with `buffer_update`
+  - Creates a uniform set with `uniform_set_create`
+  - Dispatches the compute shader with `compute_list_dispatch`
+  - Supports configurable radius, depth threshold, and outline color
+  - Handles reverse-Z depth reconstruction and resource cleanup
+
+- `res://outline.glsl`
+  - Added compute shader layout with 8×8 workgroups
+  - Added `readonly buffer Params` with `mat4 inv_proj_mat`
+  - Added color image and depth sampler bindings
+  - Added `get_linear_depth`
+  - Compares neighboring depths across configurable radii and directions
+  - Writes outlined pixels using `imageStore`
+
+- The shader successfully imported in Godot 4.4.1.
+- A 60-frame Vulkan run completed successfully without script, shader, or rendering errors.
+- Added a temporary `verify_outline.gd` script intended to validate perspective, orthographic, resized viewport, MSAA, zero-radius bypass, and changed output pixels.
+
+Remaining work:
+
+- The final verification script was added but could not be executed before the step limit was reached.
+- Temporary verification artifacts and `verify_outline.gd` should be removed after running or reviewing the verification.
+- The captured default scene appeared as a flat gray frame because the provided camera starts inside the box; the temporary verification script positions the camera to make the outline visible.",527.7272906303406,0.19068600000000002,27967,7119,False,gpt6_astra_opencode_high_video_20260924_213143_task_0106_2842,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_213143_task_0106_2842/task_task_0106.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_213143_task_0106_2842/task_0106_opencode_20260924_214052/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_213143_task_0106_2842/task_0106_opencode_20260924_214052,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_213143_task_0106_2842/task_0106_opencode_20260924_214052/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0106/console/task_0106_attempt_2.log,a4390ae1451f5523b81467062aec912499b4bc05cdb6882e57a0054e1f103e60,2feeaf0b3f6265799986b52eb0466867fb7b3bb606562f7f184679553e3dd5f0,2026-09-24T13:31:42+00:00,2026-09-24T13:41:00+00:00,0,official_pass

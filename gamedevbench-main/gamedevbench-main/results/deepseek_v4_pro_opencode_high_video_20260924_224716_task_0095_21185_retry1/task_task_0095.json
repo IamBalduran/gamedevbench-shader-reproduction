@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Shader code missing required parts: const float curvature = 7.0, const float vignette_multiplier = 2.0, uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, SCREEN_UV * 2.0 - 1.0, centered_uv.yx / curvature, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+  "details": {},
+  "timestamp": "2026-09-24T23:00:52.456719"
+}

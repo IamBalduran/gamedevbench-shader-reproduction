@@ -1,0 +1,56 @@
+Single task: task_0106 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260924_231359_task_0106_25182
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_231359_task_0106_25182/task_task_0106.json
+{
+  "task_name": "task_0106",
+  "success": true,
+  "message": "Task completed successfully",
+  "timestamp": "2026-09-24T23:24:22.031652",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.0574386119843,
+  "is_rate_limited": false,
+  "input_tokens": 17224,
+  "output_tokens": 3248,
+  "total_tokens": 20472,
+  "cache_read_tokens": 102400,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.100392,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_97c98582",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_231359_task_0106_25182/task_0106_opencode_20260924_232422"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_231359_task_0106_25182
+Final status: PASS | exit code: 0

@@ -1,0 +1,51 @@
+{
+  "task_name": "task_0033",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260925_141853",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "ArcingChunks lifetime must be 3 seconds",
+    "timestamp": "2026-09-25T14:18:53.300211"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 50489.08088970184,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.23761200000000002,
+    "token_usage": {
+      "input_tokens": 75269,
+      "output_tokens": 787,
+      "total_tokens": 76056,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

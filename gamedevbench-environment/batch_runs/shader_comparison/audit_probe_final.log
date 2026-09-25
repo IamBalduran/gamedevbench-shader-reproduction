@@ -1,0 +1,44 @@
+
+=== Astra_0107 ===
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+AUDIT: active=ShaderMaterial
+AUDIT: mesh_surface=StandardMaterial3D
+AUDIT: surface_override=ShaderMaterial
+AUDIT: shader_path=res://shaders/weapon_clip_and_fov_shader.gdshader
+AUDIT: fov=54.0
+AUDIT: albedo_copied=true
+AUDIT: metallic_copied=true
+AUDIT: roughness_copied=true
+probe_exit=0
+
+=== Kimi_0107 ===
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+AUDIT: active=ShaderMaterial
+AUDIT: mesh_surface=StandardMaterial3D
+AUDIT: surface_override=ShaderMaterial
+AUDIT: shader_path=res://shaders/weapon_clip_and_fov_shader.gdshader
+AUDIT: fov=54.0
+AUDIT: albedo_copied=true
+AUDIT: metallic_copied=true
+AUDIT: roughness_copied=true
+probe_exit=0
+
+=== Sol_0097 ===
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+AUDIT: visual_shader=true
+AUDIT: includes_distortion=true
+AUDIT: constants_five_decimals=false
+AUDIT: constants_six_decimals=false
+AUDIT: generated_line=float n_in2p1 = 0.00000;
+AUDIT: generated_line=float n_in2p2 = 0.00000;
+AUDIT: generated_line=float n_in2p3 = 0.00000;
+AUDIT: generated_line=float n_in2p4 = 0.00000;
+AUDIT: generated_line=n_out2p0.xy = _distortionUV(UV.xy, vec2(n_in2p3, n_in2p4), vec2(n_in2p1, n_in2p2));
+AUDIT: port_1=0.0
+AUDIT: port_2=0.0
+AUDIT: port_3=0.0
+AUDIT: port_4=0.0
+probe_exit=0

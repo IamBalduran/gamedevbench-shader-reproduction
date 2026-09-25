@@ -1,0 +1,50 @@
+{
+  "task_name": "task_0097",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "timestamp": "20260924_212955",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "docs.godotengine.org:443"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "message": "Distortion UV preview configured",
+    "timestamp": "2026-09-24T21:29:55.025663"
+  },
+  "solver": {
+    "success": true,
+    "message": "Completed.\n\n- `Main/DistortionPreview` uses `shaderV_icon.png`.\n- Assigned a ShaderMaterial with an editable VisualShader using `addons/shaderV/uv/distortionUV.gd`.\n- Set wave X **7**, wave Y **5**, and distortion X/Y **0.1**.\n- Centered the preview at 384 \u00d7 384 pixels.\n\nValidated in Godot 4.4.1 and visually confirmed the distortion. Verification image: `distortion_preview00000000.png`.",
+    "duration_seconds": 283.33812713623047,
+    "is_rate_limited": false,
+    "model": "openai/gpt-6-astra",
+    "cost_usd": 0.125061,
+    "token_usage": {
+      "input_tokens": 22377,
+      "output_tokens": 3862,
+      "total_tokens": 26239,
+      "cache_read_tokens": 282075,
+      "cache_write_tokens": 0
+    }
+  }
+}

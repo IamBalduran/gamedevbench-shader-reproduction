@@ -1,0 +1,21 @@
+{
+  "task_id": 110,
+  "name": "Basic Triplanar Shader on a Sphere",
+  "instruction": "Create a Node3D scene with a MeshInstance3D sphere that uses a SphereMesh and a ShaderMaterial assigned to the SphereMesh material. Write a spatial shader at res://scripts/triplanar_basic.gdshader that projects a single texture along the X, Y, and Z axes using world-space vertex coordinates and normal-weighted blending. In fragment(), define `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` and `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`. Define `vec3 adjusted_normal = abs(normal)` and `vec3 weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`. Define `vec2 uv_x = vertex.zy`, `vec2 uv_y = vertex.xz`, and `vec2 uv_z = vertex.xy`. Sample a single `uniform sampler2D texture_x` with `uv_x`, `uv_y`, and `uv_z`, multiply each sample by the corresponding weight, and set `ALBEDO = color_x + color_y + color_z`. Assign any texture to the shader parameter `texture_x`.",
+  "metadata": {
+    "tutorial_source": "YouTube: DevPoodle - Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine",
+    "video_id": "e3Luf7dXSEY",
+    "github_repo": "https://github.com/DevPoodle/yt-example-projects",
+    "transcript_excerpt": "I'm starting out with an empty spatial Shader material attached to a default sphere... we need to sample it three times... create a new vec3 called weights... multiply each of the color samples by the corresponding value in weights",
+    "expected_nodes": [
+      "Node3D",
+      "MeshInstance3D",
+      "SphereMesh",
+      "ShaderMaterial"
+    ],
+    "key_properties": {
+      "shader_path": "res://scripts/triplanar_basic.gdshader",
+      "texture_x": "res://assets/sprites/Rock022_2K-PNG_Color.png"
+    }
+  }
+}

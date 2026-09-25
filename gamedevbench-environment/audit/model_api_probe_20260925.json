@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-25",
+  "provider": "https://api.shubiaobiao.cn/v1",
+  "method": "Minimal direct API requests using the locally saved key; no benchmark tasks run",
+  "results": [
+    {"model": "gemini-3.1-pro-preview", "endpoint": "/responses", "http_status": 400, "error": "contents is required"},
+    {"model": "gemini-3.1-pro-preview", "endpoint": "/chat/completions", "http_status": 200, "tool_call_low_effort": true, "tool_call_high_effort_with_small_output_budget": false},
+    {"model": "gemini-3.8-flash", "endpoint": "/responses", "http_status": 400, "error": "contents is required"},
+    {"model": "kimi-k3", "endpoint": "/responses", "http_status": 200, "output_types": ["reasoning", "message"]},
+    {"model": "kimi-k3", "endpoint": "/responses", "http_status": 200, "reasoning_effort": "high", "tool_call": "echo"}
+  ],
+  "batch_evidence": {
+    "model": "gemini-3.1-pro-preview",
+    "batch_id": "gemini_31_pro_shader",
+    "status": "blocked_api",
+    "error": "HTTP 401 on /responses in OpenCode; no completed model task",
+    "preserved_results": "batch_runs/gemini_31_pro_shader"
+  },
+  "conclusion": "Kimi K3 is the fourth comparison model; full OpenCode benchmark compatibility remains untested until a task runs."
+}

@@ -1,0 +1,129 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0019,kimi_k3,openai/kimi-k3,,,completed,1,False,MuzzleFireLeft must use the muzzle flash shader material,{},,True,"The task is complete. Summary of what was built:
+
+**`scenes/effects/muzzle_flash_effect.tscn`** — a full layered muzzle flash prefab:
+- **Root `MuzzleFlashEffect` (Node3D)**: attached `scripts/generic_effect_handler.gd`, `Optional Light` export → `NodePath(""MuzzleFlash"")`, `light_duration = 0.2`.
+- **`MuzzleFlash` (OmniLight3D)**: warm orange light (energy 4, omni_range 3) that the handler tweens to 0 over 0.2s.
+- **`SmokeParticles` (GPUParticles3D)**: `ParticleProcessMaterial` with **zero gravity** and gentle upward drift; draw-pass QuadMesh with a **StandardMaterial3D** (`billboard_mode = PARTICLE_BILLBOARD` for volumetric puff look) using a radial **GradientTexture2D** (opaque center → transparent edge).
+- **`MuzzleFireLeft` / `MuzzleFireRight` (GPUParticles3D)**: opposing one-shot bursts (`direction = (-1,0,0)` / `(1,0,0)`, `one_shot = true`, full explosiveness), draw-pass **QuadMesh** with `ShaderMaterial` built from `assets/shaders/muzzle_flash.gdshader` (`cull_disabled` renders both sides), warm flash color + falloff 1.5.
+
+**`scenes/main.tscn`** — already instances the effect under `Main`, verified wired correctly.
+
+**Verification**: Godot 4.4.1 ran headless with no errors; captured frames via `--write-movie` show frame 0 with the bright flash burst firing and subsequent frames fading, matching the 0.2s light fade and one-shot particle behavior. Temporary capture frames were removed afterward.",126.29948258399963,0.375342,111944,2634,False,kimi_k3_opencode_high_video_20260925_001702_task_0019_495,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_task_0019.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001702_task_0019_495/task_0019_opencode_20260925_001926/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0019/console/task_0019_attempt_1.log,3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2,785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d,2026-09-24T16:16:59+00:00,2026-09-24T16:19:28+00:00,1,official_fail_review_needed,,
+task_0033,kimi_k3,openai/kimi-k3,,,completed,1,False,ArcingChunks lifetime must be 3 seconds,{},26,False,OpenCode execution timed out after 600s,50489.08088970184,0.23761200000000002,75269,787,False,kimi_k3_opencode_high_video_20260925_001701_task_0033_497,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_001701_task_0033_497/task_task_0033.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001701_task_0033_497/task_0033_opencode_20260925_141853/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001701_task_0033_497/task_0033_opencode_20260925_141853,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001701_task_0033_497/task_0033_opencode_20260925_141853/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0033/console/task_0033_attempt_1.log,c9a46c8cae7e601e910cd8f1e1024bf79871597370c4a431abe697e755010554,250f93dcd8b2900a3929449fb254b5143f9d82d5b3f34f3efc918b369f9fe637,2026-09-24T16:16:59+00:00,2026-09-25T06:18:54+00:00,1,solver_incomplete,,
+task_0057,kimi_k3,openai/kimi-k3,,,completed,1,False,Main needs at least two Unit instances for testing,{},20,True,"Both units render correctly — the green tile from spritesheet region (960, 640, 64, 64) is visible at the expected positions. The task is complete and fully verified.
+
+## Summary
+
+**`scenes/player.tscn`** — reusable Unit scene:
+- **Root `Unit`**: `CharacterBody2D`, `collision_layer=2`, `collision_mask=3`, in group `""units""`
+- **`Sprite2D`**: towerDefense tilesheet texture, `region_enabled=true`, `region_rect=Rect2(960, 640, 64, 64)`, with a `ShaderMaterial` using `aura.gdshader` (`aura_width=0.0` default)
+- **`CollisionShape2D`**: `CircleShape2D` radius 14
+- **`Detect`** (`Area2D`, layer 2 / mask 2) with child `CollisionShape2D`: `CircleShape2D` radius 35
+
+**`scripts/unit.gd`** — unit logic:
+- `@export var speed` and `@export var target_radius`
+- `_ready()` **duplicates the Sprite2D material** so each instance has its own
+- `set_selected()` toggles the `aura_width` shader parameter (**1.0** selected / **0.0** deselected)
+- `set_target()` sets the movement target
+- `avoid()` computes a repulsion vector from `$Detect.get_overlapping_bodies()`
+- `_physics_process()` moves toward the target (stopping within `target_radius`) using **`move_and_collide()`**
+
+**Verification:**
+1. ✅ Script check pass via `--check-only`
+2. ✅ 27/27 functional checks PASS (scene structure, layers/masks, groups, sprite region/shader, shape radii, exported vars, setters, aura_width toggling, per-instance material independence, and real physics-frame movement toward a target)
+3. ✅ Visual run of `main.tscn` confirms both unit instances render at their positions
+
+One fix was needed along the way: GDScript couldn't infer types when iterating the typed array from `get_overlapping_bodies()` with `:=`, so `away`/`distance` in `avoid()` use explicit type annotations.",229.6350221633911,0.778611,236092,4689,False,kimi_k3_opencode_high_video_20260925_001929_task_0057_1615,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_task_0057.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0057/console/task_0057_attempt_1.log,20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981,de834174bfe83a75853636430152234181fbe00d034e1b0989fbd895a177cc7d,2026-09-24T16:19:28+00:00,2026-09-24T16:23:42+00:00,1,official_fail_review_needed,,
+task_0095,kimi_k3,openai/kimi-k3,,,completed,3,False,"Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",{},,True,"The CRT screen shader is implemented and verified. Done.
+
+## Summary
+
+Implemented the full CRT post-processing shader in `screen_effect/screen_effect.gdshader` following Godot 4's canonical advanced-postprocessing pattern:
+
+- **Shader setup**: `canvas_item` shader with `render_mode unshaded, skip_vertex_transform`
+- **Constants**: `curvature = 7.0`, `vignette_multiplier = 2.0`
+- **Uniform**: `sampler2D screen_texture` with `hint_screen_texture` + `filter_linear_mipmap`
+- **fragment()**:
+  1. Centered UVs: `SCREEN_UV * 2.0 - 1.0`
+  2. Curvature warp: `centered_uv + centered_uv * uv_offset * uv_offset` (with `uv_offset = centered_uv.yx / curvature`) — barrel distortion
+  3. Cutoff mask via `step(abs(warped_uv.x), 1.0) * step(...y...)` — blacks out pixels warped off-screen
+  4. Scanlines: `sin(warped_uv.y * 720.0) * 0.25 + 0.75`
+  5. Vignette based on squared distance of centered UVs divided by `vignette_multiplier`
+  6. Screen sampling with `textureLod(..., 0.2)` for a slight blur
+  7. Outputs `vec4(color, 1.0)`
+
+**Verification**: Ran the project with Godot 4.4.1 and captured frames. Using a temporary test scene (since `main.tscn` has no visible content), I confirmed via both pixel analysis and zoomed image crops: clear scanlines, barrel curvature (rect edge bends horizontally), black cutoff borders, vignette darkening toward corners, slight blur, and undistorted colors at screen center. The temporary scene was removed afterward; `scenes/main.tscn` is untouched and runs correctly with the shader.",478.76428151130676,0.733764,228208,3276,False,kimi_k3_opencode_high_video_20260925_145020_task_0095_495,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_task_0095.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0095/console/task_0095_attempt_3.log,53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb,0c711ba6185e9f65d2bf221d513ea51f21b3c3718ca71ebc6ce7c4589b00c373,2026-09-25T06:50:19+00:00,2026-09-25T06:58:42+00:00,1,official_fail_review_needed,,
+task_0096,kimi_k3,openai/kimi-k3,,,completed,3,False,Shader must use render_mode unshaded,{},50,True,"All tasks completed successfully. Here's a summary of the changes:
+
+**1. Created `assets/shaders/pixel_art.gdshader`**
+- A `canvas_item` shader that samples the screen texture with `filter_nearest`
+- Uses `target_resolution = vec2(320.0, 180.0)` to downsample `SCREEN_UV`
+- Quantizes colors with `colors_per_channel = 8.0`
+- Outputs the final quantized color
+
+**2. Updated `scenes/main.tscn`**
+- Added a `MeshInstance2D` node named **`ScreenQuad`**
+- Assigned a `QuadMesh` with size `1280x720`
+- Positioned it at `(640, 360)`
+- Applied a `ShaderMaterial` using the new shader
+- Set shader parameters: `target_resolution = Vector2(320, 180)` and `colors_per_channel = 8.0`
+
+**Verification:** Ran Godot 4.4.1 and rendered a frame. The output image clearly shows the expected pixel-art effect: the 3D cube and sky are downsampled into large 32px blocks (matching 1280/320 and 720/180), with heavy color quantization. The scene loads without errors.",194.54665732383728,0.321861,99197,1618,False,kimi_k3_opencode_high_video_20260925_145020_task_0096_497,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_task_0096.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0096/console/task_0096_attempt_3.log,8384e9f15461853b4d77891725db8069b9b91ac10bb5eec69d8f0682f36c84cf,04145e43fa90e547e55e275e6eb0e054b4630e51165a486cbc22a59b21537246,2026-09-25T06:50:19+00:00,2026-09-25T06:53:57+00:00,1,official_fail_review_needed,,
+task_0097,kimi_k3,openai/kimi-k3,,,completed,2,False,DistortionPreview must use a ShaderMaterial,{},32,False,OpenCode execution timed out after 600s,600.0344884395599,0.572499,173083,3550,False,kimi_k3_opencode_high_video_20260925_145358_task_0097_1389,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145358_task_0097_1389/task_task_0097.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145358_task_0097_1389/task_0097_opencode_20260925_150419/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145358_task_0097_1389/task_0097_opencode_20260925_150419,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145358_task_0097_1389/task_0097_opencode_20260925_150419/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0097/console/task_0097_attempt_2.log,966415b14a9de5118004a30f4ffb9f746ec1fecd9aef7cc8ec9601da6bf7c009,404058068d43162847bfa5c7f391b0177753541a16fb756de7fb21988af615e3,2026-09-25T06:53:57+00:00,2026-09-25T07:04:21+00:00,1,solver_incomplete,,
+task_0100,kimi_k3,openai/kimi-k3,,,completed,2,True,Task completed successfully,{},67,False,OpenCode execution timed out after 600s,600.057514667511,0.8149109999999999,249337,4460,False,kimi_k3_opencode_high_video_20260925_145843_task_0100_2563,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145843_task_0100_2563/task_task_0100.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145843_task_0100_2563/task_0100_opencode_20260925_150908/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145843_task_0100_2563/task_0100_opencode_20260925_150908,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145843_task_0100_2563/task_0100_opencode_20260925_150908/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0100/console/task_0100_attempt_2.log,96b2f9d690794dce257e333c1ce6f03937c75a7a017b96b1dac49954d79ba034,a4466d63b6d86b267a5d1949b4c4e7eca09d29e4db5bc1886a8b60a657e9f99a,2026-09-25T06:58:42+00:00,2026-09-25T07:09:12+00:00,0,official_pass,,
+task_0106,kimi_k3,openai/kimi-k3,,,completed,2,False,outline_effect.gd missing 'get_color_layer(0)',{},,False,OpenCode execution timed out after 600s,600.0516653060913,0.957111,293162,5175,False,kimi_k3_opencode_high_video_20260925_150423_task_0106_4234,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_150423_task_0106_4234/task_task_0106.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150423_task_0106_4234/task_0106_opencode_20260925_151444/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150423_task_0106_4234/task_0106_opencode_20260925_151444,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150423_task_0106_4234/task_0106_opencode_20260925_151444/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0106/console/task_0106_attempt_2.log,a4390ae1451f5523b81467062aec912499b4bc05cdb6882e57a0054e1f103e60,2feeaf0b3f6265799986b52eb0466867fb7b3bb606562f7f184679553e3dd5f0,2026-09-25T07:04:22+00:00,2026-09-25T07:15:04+00:00,1,solver_incomplete,,
+task_0107,kimi_k3,openai/kimi-k3,,,completed,2,False,Surface material is not a ShaderMaterial,{},55,True,"The task is complete. The view model clip shader swap has been implemented in `scripts/weapon_manager.gd`:
+
+**Implementation:**
+- `apply_clip_and_fov_shader_to_view_model(node3d, fov_or_negative_for_unchanged)` recursively walks the node tree under the given view model node and finds every `MeshInstance3D`.
+- For each mesh surface, it creates a new `ShaderMaterial` using `res://shaders/weapon_clip_and_fov_shader.gdshader` and applies it via `set_surface_override_material()`.
+- It copies the base material's parameters into the shader: `albedo` color, `metallic`, `roughness`, plus their associated textures (`texture_albedo`, `texture_metallic`, `texture_roughness`, `texture_normal`, `specular`, normal scale, UV transforms, metallic channel).
+- When `fov_or_negative_for_unchanged >= 0`, it sets the `viewmodel_fov` shader parameter (a negative value leaves the shader default untouched).
+- `_ready()` applies the swap on `$ViewModel` with `viewmodel_fov = 54.0`.
+
+**Verification performed:**
+1. **Runtime assertion script** — loaded the main scene, confirmed the Knife's surface 0 override is a `ShaderMaterial` with the correct shader path, `viewmodel_fov = 54.0`, albedo `(0.2, 0.7, 0.9, 1)`, metallic `0.2`, roughness `0.8` — all checks passed.
+2. **Visual render** — rendered the scene with a camera/lights to a screenshot; the cyan view model box renders correctly with the shader (including the custom FOV projection) active.
+3. **Clean run** — the main scene runs without any GDScript or shader compilation errors.",389.44385290145874,0.691986,211777,3777,False,kimi_k3_opencode_high_video_20260925_150915_task_0107_5577,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_150915_task_0107_5577/task_task_0107.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150915_task_0107_5577/task_0107_opencode_20260925_151614/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150915_task_0107_5577/task_0107_opencode_20260925_151614,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_150915_task_0107_5577/task_0107_opencode_20260925_151614/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0107/console/task_0107_attempt_2.log,ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6,3f855be8dec6b0c3d412979d43c9c320f2fdd3979c79847fadcf611ebf44cf30,2026-09-25T07:09:13+00:00,2026-09-25T07:16:15+00:00,1,official_fail_review_needed,,
+task_0110,kimi_k3,openai/kimi-k3,,,completed,2,True,Task completed successfully,{},80,True,"Only benign ALSA audio errors (no sound card in the container) — no scene or shader errors. The task is complete:
+
+**Summary of changes:**
+
+1. **`scripts/triplanar_basic.gdshader`** — Full spatial triplanar shader exactly per spec:
+   - `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` (world-space position)
+   - `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`
+   - `adjusted_normal = abs(normal)` and `weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`
+   - `uv_x = vertex.zy`, `uv_y = vertex.xz`, `uv_z = vertex.xy`
+   - Single `uniform sampler2D texture_x` sampled with all three UVs, each multiplied by its weight, `ALBEDO = color_x + color_y + color_z`
+
+2. **`scenes/main.tscn`** — Node3D scene with:
+   - `MeshInstance3D` sphere using a `SphereMesh` with a `ShaderMaterial` assigned to the **mesh's material property**
+   - Material references the shader with `texture_x` set to `res://assets/sprites/Rock022_2K-PNG_Color.png`
+   - Added `Camera3D` and `DirectionalLight3D` for visibility
+
+3. **`project.godot`** — Set `run/main_scene=""res://scenes/main.tscn""`
+
+Rendered frames were verified visually: the sphere displays the rock texture projected triplanarly across its surface.",106.7153787612915,0.5258309999999999,162037,2648,False,kimi_k3_opencode_high_video_20260925_151506_task_0110_8120,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_task_0110.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0110/console/task_0110_attempt_2.log,0fad88610f20dd08dafb4cbaf1ac8255b24e1793355109899236dce9a6ba60f5,74269d13bcff6c18bae4a67a47a6b6c2b71acfeff676de9e9b00b02c47b2d20c,2026-09-25T07:15:04+00:00,2026-09-25T07:17:31+00:00,0,official_pass,,
+task_0111,kimi_k3,openai/kimi-k3,,,completed,2,True,Task completed successfully,{},90,True,"The task is complete. Everything was verified:
+
+**Deliverables:**
+
+1. **`scenes/main.tscn`** — Node3D root named `Main` with a `MeshInstance3D` child named `Sphere`. A `SphereMesh` is assigned to `Sphere.mesh`, and a `ShaderMaterial` (sub-resource, assigned onto the SphereMesh) references `res://scripts/triplanar_axis_blend.gdshader` with:
+   - `texture_x` = res://assets/sprites/Rock022_2K-PNG_Color.png
+   - `texture_y` = res://assets/sprites/Grass002_2K-PNG_Color.png
+   - `texture_z` = res://assets/sprites/Rock022_2K-PNG_Color.png
+
+2. **`scripts/triplanar_axis_blend.gdshader`** — Declares `uniform sampler2D texture_x / texture_y / texture_z` and implements normal-based triplanar blending with all the required exact lines:
+   - `vec3 adjusted_normal = pow(abs(normal), vec3(8.0))`
+   - `float use_y_up = float(normal.y > 0.0)`
+   - `vec3 color_y_up = texture(texture_y, uv_y).rgb * weights.y`
+   - `vec3 color_y_down = texture(texture_x, uv_y).rgb * weights.y`
+   - `mix(color_y_down, color_y_up, use_y_up)`
+   - `ALBEDO = (color_x + mix(color_y_down, color_y_up, use_y_up) + color_z) / 3.0`
+
+**Verification done:**
+- Ran the project headlessly in Godot 4.4.1 with a runtime inspection script: confirmed root is Node3D ""Main"", child is MeshInstance3D ""Sphere"", mesh is SphereMesh, material is ShaderMaterial with the correct shader path and all three texture paths.
+- Rendered a frame with a camera verification scene — the sphere rendered correctly with the rock/grass triplanar shader material, then all temporary verification files were removed.
+- Set `run/main_scene=""res://scenes/main.tscn""` in `project.godot` so the project runs directly.",322.14703488349915,0.966441,303512,3727,False,kimi_k3_opencode_high_video_20260925_151616_task_0111_8965,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_task_0111.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0111/console/task_0111_attempt_2.log,65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966,58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772,2026-09-25T07:16:15+00:00,2026-09-25T07:22:01+00:00,0,official_pass,,
+task_0128,kimi_k3,openai/kimi-k3,,,completed,2,False,Panel node not found,{},15,True,Probe READ behavior — craft a scene with a text sub-resource ShaderMaterial and see what loads work from a `.tscn` — this decides my strategy:,217.21754145622253,0.939591,298882,2863,False,kimi_k3_opencode_high_video_20260925_151733_task_0128_9791,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_task_0128.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0128/console/task_0128_attempt_2.log,2812ef7aca377c60ebdcac51ec943c239c2c9df9af9354ee300f13b852a34cb5,947bccdaf5005b307854e791009028f4b7dcbf1b76bd10aac614b6cd1c018380,2026-09-25T07:17:31+00:00,2026-09-25T07:21:34+00:00,1,official_fail_review_needed,,

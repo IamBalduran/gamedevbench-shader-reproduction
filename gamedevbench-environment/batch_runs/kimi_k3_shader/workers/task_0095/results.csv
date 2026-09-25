@@ -1,0 +1,20 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0095,kimi_k3,openai/kimi-k3,,,completed,3,False,"Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",{},,True,"The CRT screen shader is implemented and verified. Done.
+
+## Summary
+
+Implemented the full CRT post-processing shader in `screen_effect/screen_effect.gdshader` following Godot 4's canonical advanced-postprocessing pattern:
+
+- **Shader setup**: `canvas_item` shader with `render_mode unshaded, skip_vertex_transform`
+- **Constants**: `curvature = 7.0`, `vignette_multiplier = 2.0`
+- **Uniform**: `sampler2D screen_texture` with `hint_screen_texture` + `filter_linear_mipmap`
+- **fragment()**:
+  1. Centered UVs: `SCREEN_UV * 2.0 - 1.0`
+  2. Curvature warp: `centered_uv + centered_uv * uv_offset * uv_offset` (with `uv_offset = centered_uv.yx / curvature`) — barrel distortion
+  3. Cutoff mask via `step(abs(warped_uv.x), 1.0) * step(...y...)` — blacks out pixels warped off-screen
+  4. Scanlines: `sin(warped_uv.y * 720.0) * 0.25 + 0.75`
+  5. Vignette based on squared distance of centered UVs divided by `vignette_multiplier`
+  6. Screen sampling with `textureLod(..., 0.2)` for a slight blur
+  7. Outputs `vec4(color, 1.0)`
+
+**Verification**: Ran the project with Godot 4.4.1 and captured frames. Using a temporary test scene (since `main.tscn` has no visible content), I confirmed via both pixel analysis and zoomed image crops: clear scanlines, barrel curvature (rect edge bends horizontally), black cutoff borders, vignette darkening toward corners, slight blur, and undistorted colors at screen center. The temporary scene was removed afterward; `scenes/main.tscn` is untouched and runs correctly with the shader.",478.76428151130676,0.733764,228208,3276,False,kimi_k3_opencode_high_video_20260925_145020_task_0095_495,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_task_0095.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0095_495/task_0095_opencode_20260925_145840/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0095/console/task_0095_attempt_3.log,53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb,0c711ba6185e9f65d2bf221d513ea51f21b3c3718ca71ebc6ce7c4589b00c373,2026-09-25T06:50:19+00:00,2026-09-25T06:58:42+00:00,1,official_fail_review_needed,,

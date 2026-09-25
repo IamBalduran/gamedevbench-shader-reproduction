@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0128"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0128": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:30:38+00:00",
+      "finished_at": "2026-09-24T14:34:22+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "2812ef7aca377c60ebdcac51ec943c239c2c9df9af9354ee300f13b852a34cb5",
+      "validator_sha256": "947bccdaf5005b307854e791009028f4b7dcbf1b76bd10aac614b6cd1c018380",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0128/console/task_0128_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_223039_task_0128_18511",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Fractal panel configured",
+      "official_details": "{}",
+      "validator_error_line": "55",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented:\n\n- Added `Panel` TextureRect under `Main` with `FULL_RECT` anchors.\n- Assigned `materials/julia.material`.\n- Assigned `icon.png`.\n- Set material `seed` to `(0.40, -0.20)`.\n- Left `julia.gdshader` unchanged.\n- Verified via Godot 4.4.1 scene loading and rendered output.",
+      "solver_duration": 197.92310190200806,
+      "cost_usd": 0.0285385,
+      "input_tokens": 26948,
+      "output_tokens": 2517,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_223039_task_0128_18511/task_task_0128.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_223039_task_0128_18511/task_0128_opencode_20260924_223420/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_223039_task_0128_18511/task_0128_opencode_20260924_223420",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_223039_task_0128_18511/task_0128_opencode_20260924_223420/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:34:22+00:00"
+}

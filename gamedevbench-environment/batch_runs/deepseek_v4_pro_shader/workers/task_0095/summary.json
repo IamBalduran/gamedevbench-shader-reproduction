@@ -1,0 +1,12 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "model": "openai/deepseek-v4-pro",
+  "total": 1,
+  "counts": {
+    "completed": 1
+  },
+  "updated_at": "2026-09-24T15:00:54+00:00",
+  "results_csv": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0095/results.csv",
+  "results_csv_stale": false,
+  "latest_csv": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0095/results.csv"
+}

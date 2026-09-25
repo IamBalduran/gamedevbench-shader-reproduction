@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0110"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0110": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T15:24:23+00:00",
+      "finished_at": "2026-09-24T15:29:46+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "0fad88610f20dd08dafb4cbaf1ac8255b24e1793355109899236dce9a6ba60f5",
+      "validator_sha256": "74269d13bcff6c18bae4a67a47a6b6c2b71acfeff676de9e9b00b02c47b2d20c",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0110/console/task_0110_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_232425_task_0110_26561",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "80",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "All files are in place and verified via render. Here's what was done:\n\n- **`scripts/triplanar_basic.gdshader`**: Spatial shader with triplanar mapping using `INV_VIEW_MATRIX`, normal-weighted blending, and a single `uniform sampler2D texture_x` sampled along three axes.\n- **`scenes/main.tscn`**: Node3D scene with a MeshInstance3D sphere using a SphereMesh, assigned a ShaderMaterial that references the shader and sets `texture_x` to the Rock022 texture.\n- **`project.godot`**: Added `run/main_scene` pointing to the main scene.",
+      "solver_duration": 297.45308113098145,
+      "cost_usd": 0.08111700000000001,
+      "input_tokens": 17034,
+      "output_tokens": 2001,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_232425_task_0110_26561/task_task_0110.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232425_task_0110_26561/task_0110_opencode_20260924_232944/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232425_task_0110_26561/task_0110_opencode_20260924_232944",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232425_task_0110_26561/task_0110_opencode_20260924_232944/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:29:46+00:00"
+}

@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "DistortionPreview must use a ShaderMaterial",
+  "details": {},
+  "timestamp": "2026-09-25T15:04:19.679241"
+}

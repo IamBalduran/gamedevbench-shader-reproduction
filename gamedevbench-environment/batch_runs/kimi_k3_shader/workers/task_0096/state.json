@@ -1,0 +1,75 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0096"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0096": {
+      "state": "completed",
+      "attempts": 3,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "",
+          "solver_message": null,
+          "run_name": "kimi_k3_opencode_high_video_20260925_141855_task_0096_2890",
+          "started_at": "2026-09-25T06:18:54+00:00",
+          "finished_at": ""
+        },
+        {
+          "attempt": 2,
+          "state": "running",
+          "classification": "api_transport_failure",
+          "solver_message": "OpenCode command failed (exit code 1)",
+          "run_name": "kimi_k3_opencode_high_video_20260925_142630_task_0096_503",
+          "started_at": "2026-09-25T06:26:26+00:00",
+          "finished_at": "2026-09-25T06:34:32+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T06:50:19+00:00",
+      "finished_at": "2026-09-25T06:53:57+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "8384e9f15461853b4d77891725db8069b9b91ac10bb5eec69d8f0682f36c84cf",
+      "validator_sha256": "04145e43fa90e547e55e275e6eb0e054b4630e51165a486cbc22a59b21537246",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0096/console/task_0096_attempt_3.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_145020_task_0096_497",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader must use render_mode unshaded",
+      "official_details": "{}",
+      "validator_error_line": "50",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "All tasks completed successfully. Here's a summary of the changes:\n\n**1. Created `assets/shaders/pixel_art.gdshader`**\n- A `canvas_item` shader that samples the screen texture with `filter_nearest`\n- Uses `target_resolution = vec2(320.0, 180.0)` to downsample `SCREEN_UV`\n- Quantizes colors with `colors_per_channel = 8.0`\n- Outputs the final quantized color\n\n**2. Updated `scenes/main.tscn`**\n- Added a `MeshInstance2D` node named **`ScreenQuad`**\n- Assigned a `QuadMesh` with size `1280x720`\n- Positioned it at `(640, 360)`\n- Applied a `ShaderMaterial` using the new shader\n- Set shader parameters: `target_resolution = Vector2(320, 180)` and `colors_per_channel = 8.0`\n\n**Verification:** Ran Godot 4.4.1 and rendered a frame. The output image clearly shows the expected pixel-art effect: the 3D cube and sky are downsampled into large 32px blocks (matching 1280/320 and 720/180), with heavy color quantization. The scene loads without errors.",
+      "solver_duration": 194.54665732383728,
+      "cost_usd": 0.321861,
+      "input_tokens": 99197,
+      "output_tokens": 1618,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_task_0096.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_145020_task_0096_497/task_0096_opencode_20260925_145356/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T06:53:57+00:00"
+}

@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-09-25T08:22:58+00:00",
+  "task_count_per_model": 12,
+  "models": [
+    {
+      "order": 1,
+      "model": "openai/gpt-6-astra",
+      "batch_id": "gpt6_astra_shader",
+      "counts": {
+        "completed": 12
+      }
+    },
+    {
+      "order": 2,
+      "model": "openai/gpt-5.6-sol",
+      "batch_id": "gpt56_sol_shader",
+      "counts": {
+        "completed": 12
+      }
+    },
+    {
+      "order": 3,
+      "model": "openai/deepseek-v4-pro",
+      "batch_id": "deepseek_v4_pro_shader",
+      "counts": {
+        "completed": 12
+      }
+    },
+    {
+      "order": 4,
+      "model": "openai/kimi-k3",
+      "batch_id": "kimi_k3_shader",
+      "counts": {
+        "completed": 12
+      }
+    }
+  ],
+  "comparison_csv": "D:\\ShaderAgent\\re\\gamedevbench-shader-reproduction\\gamedevbench-environment\\batch_runs\\shader_comparison\\comparison.csv",
+  "comparison_csv_stale": false,
+  "latest_csv": "D:\\ShaderAgent\\re\\gamedevbench-shader-reproduction\\gamedevbench-environment\\batch_runs\\shader_comparison\\comparison.csv"
+}

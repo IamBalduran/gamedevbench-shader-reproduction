@@ -1,0 +1,105 @@
+﻿task_name,failure_message,validator_found,validator_path,method_name_guard,direct_handler_call,exact_text_comparison,exact_resource_path,explicit_node_path,screening_priority
+task_0002,Projectile must react to enemies inside _on_area_entered,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0002\scripts\test.gd,1,1,0,3,3,high
+task_0003,"'explode' animation should include later smoke frames (expect region 384,128,64,64)",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0003\scripts\test.gd,0,0,0,1,2,normal
+task_0019,MuzzleFireLeft must use the muzzle flash shader material,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0019\scripts\test.gd,0,0,0,1,4,normal
+task_0026,Export 'camera_shake_noise_panning_speed' missing on PlayerBody,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0026\scripts\test.gd,0,0,0,1,3,normal
+task_0027,Impulse direction should push camera backwards along -Z,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0027\scripts\test.gd,2,0,0,1,3,high
+task_0028,PillarPoint node missing,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0028\scripts\test.gd,1,0,0,1,2,high
+task_0030,Main scene missing,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0030\scripts\test.gd,0,0,0,0,5,normal
+task_0033,ArcingChunks must use a StandardMaterial3D override,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0033\scripts\test.gd,0,0,0,0,4,normal
+task_0034,debug dictionary missing steer entry,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0034\scripts\test.gd,1,0,0,0,3,high
+task_0042,new_ball must trigger camera shake velocity change,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0042\scripts\test.gd,1,1,0,0,2,high
+task_0048,Draggable without overlaps must call self_destruct and queue_free,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0048\scripts\test.gd,2,2,0,1,5,high
+task_0052,Failed to load Player scene.,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0052\scripts\test.gd,1,0,0,0,0,high
+task_0055,player.gd must reference snappedf,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0055\scripts\test.gd,0,0,0,0,3,normal
+task_0057,Main needs at least two Unit instances for testing,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0057\scripts\test.gd,0,0,0,1,8,normal
+task_0058,Label2 text incorrect,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0058\scripts\test.gd,0,0,0,0,11,normal
+task_0060,Minimap must define set_zoom,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0060\scripts\test.gd,2,3,0,0,7,high
+task_0063,Top margin left padding must be 20,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0063\scripts\test.gd,0,0,3,0,15,normal
+task_0068,Crate must be destroyed after bullet hit,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0068\scripts\test.gd,3,2,0,2,1,high
+task_0069,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0069\scripts\test.gd,0,0,0,0,6,normal
+task_0070,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0070\scripts\test.gd,0,0,0,0,6,normal
+task_0071,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0071\scripts\test.gd,0,0,0,0,6,normal
+task_0072,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0072\scripts\test.gd,0,0,0,0,6,normal
+task_0073,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0073\scripts\test.gd,0,0,0,0,6,normal
+task_0075,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0075\scripts\test.gd,0,0,0,0,6,normal
+task_0076,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0076\scripts\test.gd,0,0,0,0,6,normal
+task_0077,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0077\scripts\test.gd,0,0,0,0,6,normal
+task_0078,Water requires a ShaderMaterial override (via material_override or surface_material_override),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0078\scripts\test.gd,0,0,0,0,6,normal
+task_0082,Run animations must include the directional frames,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0082\scripts\test.gd,0,0,0,0,4,normal
+task_0087,RectangleShape2D size must be 32x32 pixels,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0087\scripts\test.gd,0,0,0,0,6,normal
+task_0089,Label text incorrect,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0089\scripts\test.gd,0,0,0,0,11,normal
+task_0093,ContinueButton size_flags_horizontal must be Expand Fill,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0093\scripts\test.gd,1,0,5,0,4,high
+task_0095,"Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0095\scripts\test.gd,0,0,0,0,3,normal
+task_0107,Surface material is not a ShaderMaterial,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0107\scripts\test.gd,1,0,0,0,0,high
+task_0108,Tank must enable and disable particles while moving,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0108\scripts\test.gd,0,0,0,2,3,normal
+task_0121,Panel background color must be RPG blue (#1743 8C),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0121\scripts\test.gd,0,0,0,0,9,normal
+task_0132,"grid_scale must be derived from grid size, viewport, and zoom",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0132\scripts\test.gd,2,3,0,0,7,high
+task_0150,ContinueButton size_flags_horizontal must be Expand Fill,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0150\scripts\test.gd,1,0,5,0,4,high
+task_0159,ContinueButton size_flags_horizontal must be Expand,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0159\scripts\test.gd,1,0,5,0,4,high
+task_0164,Takeoff must transition into the jump animation,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0164\scripts\test.gd,0,0,0,1,3,normal
+task_0166,kick animation must enable DamageEmitter monitoring during the kick and disable it when the kick ends,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0166\scripts\test.gd,0,0,0,1,6,normal
+task_0183,"Ground tile (0, 0) must use the expected rectangular navigation polygon",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0183\scripts\test.gd,0,0,0,0,2,normal
+task_0184,BasicEnemy hurt animation must use the expected sprite frame sequence,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0184\scripts\test.gd,0,0,0,5,12,normal
+task_0185,"Path tile (3, 3) must use terrain 0",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0185\scripts\test.gd,0,0,0,0,2,normal
+task_0190,"Solid tile (17, 4) must use the standard full-tile collision polygon",True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0190\scripts\test.gd,0,0,0,0,2,normal
+task_0204,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0204\scripts\test.gd,0,0,0,0,6,normal
+task_0205,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0205\scripts\test.gd,0,0,0,0,6,normal
+task_0206,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0206\scripts\test.gd,0,0,0,0,6,normal
+task_0207,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0207\scripts\test.gd,0,0,0,0,6,normal
+task_0208,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0208\scripts\test.gd,0,0,0,0,6,normal
+task_0209,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0209\scripts\test.gd,0,0,0,0,6,normal
+task_0210,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0210\scripts\test.gd,0,0,0,0,6,normal
+task_0211,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0211\scripts\test.gd,0,0,0,0,6,normal
+task_0212,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0212\scripts\test.gd,0,0,0,0,6,normal
+task_0213,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0213\scripts\test.gd,0,0,0,0,6,normal
+task_0214,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0214\scripts\test.gd,0,0,0,0,6,normal
+task_0215,SpawnTop must line up with the bottom tip of the branch closest to the water,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0215\scripts\test.gd,0,0,0,0,6,normal
+task_0216,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8539),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0216\scripts\test.gd,0,0,0,0,4,normal
+task_0217,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.7825),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0217\scripts\test.gd,0,0,0,0,4,normal
+task_0218,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.7527),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0218\scripts\test.gd,0,0,0,0,4,normal
+task_0219,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8191),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0219\scripts\test.gd,0,0,0,0,4,normal
+task_0220,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8079),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0220\scripts\test.gd,0,0,0,0,4,normal
+task_0221,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8539),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0221\scripts\test.gd,0,0,0,0,4,normal
+task_0222,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8692),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0222\scripts\test.gd,0,0,0,0,4,normal
+task_0223,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8124),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0223\scripts\test.gd,0,0,0,0,4,normal
+task_0224,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8319),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0224\scripts\test.gd,0,0,0,0,4,normal
+task_0225,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8642),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0225\scripts\test.gd,0,0,0,0,4,normal
+task_0226,CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8166),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0226\scripts\test.gd,0,0,0,0,4,normal
+task_0227,StarHighlight must cover the star with overlap above 85% (IoU=0.6275),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0227\scripts\test.gd,0,0,0,0,5,normal
+task_0228,StarHighlight must cover the star with overlap above 85% (IoU=0.6519),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0228\scripts\test.gd,0,0,0,0,5,normal
+task_0229,StarHighlight must cover the star with overlap above 85% (IoU=0.6729),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0229\scripts\test.gd,0,0,0,0,5,normal
+task_0230,StarHighlight must cover the star with overlap above 85% (IoU=0.6622),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0230\scripts\test.gd,0,0,0,0,5,normal
+task_0231,StarHighlight must cover the star with overlap above 85% (IoU=0.6305),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0231\scripts\test.gd,0,0,0,0,5,normal
+task_0232,StarHighlight must cover the star with overlap above 85% (IoU=0.5743),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0232\scripts\test.gd,0,0,0,0,5,normal
+task_0233,StarHighlight must cover the star with overlap above 85% (IoU=0.6292),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0233\scripts\test.gd,0,0,0,0,5,normal
+task_0234,StarHighlight must cover the star with overlap above 85% (IoU=0.5984),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0234\scripts\test.gd,0,0,0,0,5,normal
+task_0235,StarHighlight must cover the star with overlap above 85% (IoU=0.6640),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0235\scripts\test.gd,0,0,0,0,5,normal
+task_0236,StarHighlight must cover the star with overlap above 85% (IoU=0.6332),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0236\scripts\test.gd,0,0,0,0,5,normal
+task_0237,StarHighlight must stay inside the platformer image bounds,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0237\scripts\test.gd,0,0,0,0,5,normal
+task_0238,GemstoneHighlight should use a purple or pink-purple tint,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0238\scripts\test.gd,0,0,0,0,5,normal
+task_0240,GemstoneHighlight must cover the gemstone with overlap above 85% (IoU=0.8251),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0240\scripts\test.gd,0,0,0,0,5,normal
+task_0244,GemstoneHighlight should use a purple or pink-purple tint,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0244\scripts\test.gd,0,0,0,0,5,normal
+task_0245,GemstoneHighlight should use a purple or pink-purple tint,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0245\scripts\test.gd,0,0,0,0,5,normal
+task_0248,GemstoneHighlight must cover the gemstone with overlap above 85% (IoU=0.8251),True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0248\scripts\test.gd,0,0,0,0,5,normal
+task_0263,DetectRange.base_range_size must be 30.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0263\scripts\test.gd,2,0,0,1,7,high
+task_0264,DetectRange.base_range_size must be 24.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0264\scripts\test.gd,2,0,0,1,7,high
+task_0265,DetectRange.base_range_size must be 28.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0265\scripts\test.gd,2,0,0,1,7,high
+task_0267,DetectRange.base_range_size must be 36.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0267\scripts\test.gd,2,0,0,1,7,high
+task_0268,DetectRange.base_range_size must be 40.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0268\scripts\test.gd,2,0,0,1,7,high
+task_0269,DetectRange.base_range_size must be 26.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0269\scripts\test.gd,2,0,0,1,7,high
+task_0270,DetectRange.base_range_size must be 34.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0270\scripts\test.gd,2,0,0,1,7,high
+task_0271,DetectRange.base_range_size must be 22.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0271\scripts\test.gd,2,0,0,1,7,high
+task_0272,DetectRange.base_range_size must be 38.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0272\scripts\test.gd,2,0,0,1,7,high
+task_0273,DetectRange.base_range_size must be 27.0,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0273\scripts\test.gd,2,0,0,1,7,high
+task_0281,Dragging state must reparent the card into the overlay_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0281\scripts\test.gd,0,6,0,1,7,high
+task_0282,Dragging state must reparent the card into the drag_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0282\scripts\test.gd,0,6,0,1,7,high
+task_0283,Dragging state must reparent the card into the card_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0283\scripts\test.gd,0,6,0,1,7,high
+task_0284,Dragging state must reparent the card into the ui_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0284\scripts\test.gd,0,6,0,1,7,high
+task_0285,Dragging state must reparent the card into the float_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0285\scripts\test.gd,0,6,0,1,7,high
+task_0286,Dragging state must reparent the card into the front_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0286\scripts\test.gd,0,6,0,1,7,high
+task_0287,Dragging state must reparent the card into the ui_drag_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0287\scripts\test.gd,0,6,0,1,7,high
+task_0288,Dragging state must reparent the card into the hud_drag_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0288\scripts\test.gd,0,6,0,1,7,high
+task_0289,Dragging state must reparent the card into the screen_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0289\scripts\test.gd,0,6,0,1,7,high
+task_0290,Dragging state must reparent the card into the top_ui_layer group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0290\scripts\test.gd,0,6,0,1,7,high
+task_0291,Dragging state must reparent the card into the drag_overlay group,True,D:\ShaderAgent\re\gamedevbench-main\gamedevbench-main\tasks\task_0291\scripts\test.gd,0,6,0,1,7,high

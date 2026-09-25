@@ -1,0 +1,25 @@
+{
+  "task_ids": [
+    "task_0019",
+    "task_0033",
+    "task_0057",
+    "task_0095",
+    "task_0096",
+    "task_0097",
+    "task_0100",
+    "task_0106",
+    "task_0107",
+    "task_0110",
+    "task_0111",
+    "task_0128"
+  ],
+  "model_batch_ids": [
+    "gpt6_astra_shader",
+    "gpt56_sol_shader",
+    "deepseek_v4_pro_shader",
+    "kimi_k3_shader"
+  ],
+  "records": 48,
+  "source": "waynchi/gamedevbench, 12-task shader subset",
+  "official_baseline": "gamedevbench-main/gamedevbench-main/results/gpt6_astra_codex_runtime_video_high_full_333/final_results.json"
+}

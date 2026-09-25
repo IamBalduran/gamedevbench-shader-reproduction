@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0033"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0033": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T13:47:37+00:00",
+      "finished_at": "2026-09-24T13:58:02+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "c9a46c8cae7e601e910cd8f1e1024bf79871597370c4a431abe697e755010554",
+      "validator_sha256": "250f93dcd8b2900a3929449fb254b5143f9d82d5b3f34f3efc918b369f9fe637",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0033/console/task_0033_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_214738_task_0033_7945",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "ArcingChunks must use a StandardMaterial3D override",
+      "official_details": "{}",
+      "validator_error_line": "35",
+      "solver_success": false,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0585408210754,
+      "cost_usd": 0.040944375000000005,
+      "input_tokens": 61555,
+      "output_tokens": 3325,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_214738_task_0033_7945/task_task_0033.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_214738_task_0033_7945/task_0033_opencode_20260924_215801/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_214738_task_0033_7945/task_0033_opencode_20260924_215801",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_214738_task_0033_7945/task_0033_opencode_20260924_215801/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T13:58:02+00:00"
+}

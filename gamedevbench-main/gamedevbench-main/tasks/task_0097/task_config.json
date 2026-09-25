@@ -1,0 +1,21 @@
+{
+  "task_id": 97,
+  "name": "Distortion UV Preview Shader",
+  "instruction": "Create a TextureRect named DistortionPreview under Main and assign the shaderV_icon.png texture. Add a ShaderMaterial that uses a VisualShader with the DistortionUV custom node from addons/shaderV/uv/distortionUV.gd, matching the DistortionUV example constants (wave X 7, wave Y 5, distortion 0.1 on both axes).",
+  "metadata": {
+    "tutorial_source": "YouTube: Kextex - Rain Puddle Shader - Godot 4.0 - Visual Shader",
+    "video_id": "bJxh23oAMLU",
+    "github_repo": "https://github.com/arkology/ShaderV",
+    "transcript_excerpt": "[Music]",
+    "expected_nodes": [
+      "Control",
+      "TextureRect",
+      "ShaderMaterial",
+      "VisualShader"
+    ],
+    "key_properties": {
+      "texture": "res://addons/shaderV/shaderV_icon.png",
+      "visual_shader_include": "res://addons/shaderV/uv/distortionUV.gdshaderinc"
+    }
+  }
+}

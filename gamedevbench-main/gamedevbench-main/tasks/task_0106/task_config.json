@@ -1,0 +1,18 @@
+{
+  "task_id": 106,
+  "name": "Depth Outline Compositor Shader",
+  "instruction": "Implement `res://scripts/outline_effect.gd` and `res://outline.glsl` for a depth-based outline compositor effect. The script must include `@tool`, `extends CompositorEffect`, and `class_name OutlineEffect`. It must use `RenderingServer.get_rendering_device()` and create the compute pipeline with `rd.compute_pipeline_create`, a parameter storage buffer with `storage_buffer_create`, and a depth sampler with `sampler_create`. In the render callback, it must call `get_render_scene_buffers`, `get_internal_size`, `get_color_layer(0)`, and `get_depth_layer(0)`, update the buffer with `buffer_update`, create the uniform set with `uniform_set_create`, and dispatch with `compute_list_dispatch`. The shader must be a compute shader (`#[compute]`) with `layout(local_size_x = 8` and declare the params buffer as `readonly buffer Params` that includes `mat4 inv_proj_mat`. It must bind the color image as `uniform image2D color_image` and the depth texture as `sampler2D depth_texture` (with `binding = 0` on the params buffer). The shader must use `gl_GlobalInvocationID`, call a `get_linear_depth` function, use a `sample_size` radius to compare neighboring depths, and write the outlined color back with `imageStore`.",
+  "metadata": {
+    "tutorial_source": "YouTube: DevPoodle - Making a 3D Outline Effect - Using Godot Engine",
+    "video_id": "PQHExF-sbB4",
+    "github_repo": "https://github.com/DevPoodle/yt-example-projects",
+    "transcript_excerpt": "create a script for our compositor effect... extends compositor effect... create the Shader... outline.glsl... add a sampler for a depth texture... inverse projection Matrix... compare the depth of nearby pixels",
+    "expected_nodes": [
+      "CompositorEffect"
+    ],
+    "key_properties": {
+      "outline_effect.gd": "compute pipeline setup with color + depth uniforms",
+      "outline.glsl": "compute shader with linear depth outline"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0057"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0057": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:47:12+00:00",
+      "finished_at": "2026-09-24T15:03:32+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+      "validator_sha256": "de834174bfe83a75853636430152234181fbe00d034e1b0989fbd895a177cc7d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0057/console/task_0057_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_224713_task_0057_21183_retry1",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Main needs at least two Unit instances for testing",
+      "official_details": "{}",
+      "validator_error_line": "20",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "All done. Here's what was built:\n\n**`player.tscn`** — Reusable Unit scene with:\n- `CharacterBody2D` root, `collision_layer=2`, `collision_mask=3`, group `\"units\"`\n- `Sprite2D` child with towerDefense spritesheet, `region_rect=Rect2(960,640,64,64)`, `ShaderMaterial` (aura.gdshader)\n- `CollisionShape2D` child with `CircleShape2D` radius 14\n- `Detect` Area2D child (`layer=2, mask=2`) with its own `CollisionShape2D`/`CircleShape2D` radius 35\n\n**`unit.gd`** — Script with:\n- `@export var speed`, `var target_radius`, `set_target()`\n- `set_selected()` toggles `aura_width` shader param (1.0 / 0.0)\n- `avoid()` via `$Detect.get_overlapping_bodies()`\n- `_ready()` duplicates the material so each instance is independent\n- `_physics_process()` uses `move_and_collide()` for movement",
+      "solver_duration": 552.9140229225159,
+      "cost_usd": 0.08373900000000001,
+      "input_tokens": 16213,
+      "output_tokens": 2340,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_224713_task_0057_21183_retry1/task_task_0057.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224713_task_0057_21183_retry1/task_0057_opencode_20260924_230331/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224713_task_0057_21183_retry1/task_0057_opencode_20260924_230331",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224713_task_0057_21183_retry1/task_0057_opencode_20260924_230331/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:03:32+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "batch_id": "gpt6_astra_shader",
+  "tasks": [
+    "task_0128"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0128": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "runner_exception",
+          "solver_message": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0128/console'",
+          "run_name": null,
+          "started_at": "2026-09-24T13:06:52+00:00",
+          "finished_at": "2026-09-24T13:06:53+00:00"
+        }
+      ],
+      "started_at": "2026-09-24T13:43:57+00:00",
+      "finished_at": "2026-09-24T13:47:32+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "2812ef7aca377c60ebdcac51ec943c239c2c9df9af9354ee300f13b852a34cb5",
+      "validator_sha256": "947bccdaf5005b307854e791009028f4b7dcbf1b76bd10aac614b6cd1c018380",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0128/console/task_0128_attempt_2.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Fractal panel configured",
+      "official_details": "{}",
+      "validator_error_line": "55",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Completed the changes:\n\n- Added `Main/Panel` as a `TextureRect` in [scenes/main.tscn](/workspace/scenes/main.tscn:8), using the `FULL_RECT` anchor preset to fill the viewport.\n- Assigned `materials/julia.material` as its material and `icon.png` as its texture.\n- Set the material’s `seed` shader parameter to `Vector2(0.40, -0.20)`.\n- Left `julia.gdshader` unchanged.\n\nVerified the saved properties with Godot 4.4.1 and inspected a rendered frame showing the fractal filling the viewport. Godot exited successfully, and temporary verification files were removed.",
+      "solver_duration": 186.17729091644287,
+      "cost_usd": 0.079611,
+      "input_tokens": 16837,
+      "output_tokens": 1940,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_task_0128.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_0128_opencode_20260924_214730/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_0128_opencode_20260924_214730",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260924_214358_task_0128_7126/task_0128_opencode_20260924_214730/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T13:47:32+00:00"
+}

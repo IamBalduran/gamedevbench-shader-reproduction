@@ -1,0 +1,22 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0111,kimi_k3,openai/kimi-k3,,,completed,2,True,Task completed successfully,{},90,True,"The task is complete. Everything was verified:
+
+**Deliverables:**
+
+1. **`scenes/main.tscn`** — Node3D root named `Main` with a `MeshInstance3D` child named `Sphere`. A `SphereMesh` is assigned to `Sphere.mesh`, and a `ShaderMaterial` (sub-resource, assigned onto the SphereMesh) references `res://scripts/triplanar_axis_blend.gdshader` with:
+   - `texture_x` = res://assets/sprites/Rock022_2K-PNG_Color.png
+   - `texture_y` = res://assets/sprites/Grass002_2K-PNG_Color.png
+   - `texture_z` = res://assets/sprites/Rock022_2K-PNG_Color.png
+
+2. **`scripts/triplanar_axis_blend.gdshader`** — Declares `uniform sampler2D texture_x / texture_y / texture_z` and implements normal-based triplanar blending with all the required exact lines:
+   - `vec3 adjusted_normal = pow(abs(normal), vec3(8.0))`
+   - `float use_y_up = float(normal.y > 0.0)`
+   - `vec3 color_y_up = texture(texture_y, uv_y).rgb * weights.y`
+   - `vec3 color_y_down = texture(texture_x, uv_y).rgb * weights.y`
+   - `mix(color_y_down, color_y_up, use_y_up)`
+   - `ALBEDO = (color_x + mix(color_y_down, color_y_up, use_y_up) + color_z) / 3.0`
+
+**Verification done:**
+- Ran the project headlessly in Godot 4.4.1 with a runtime inspection script: confirmed root is Node3D ""Main"", child is MeshInstance3D ""Sphere"", mesh is SphereMesh, material is ShaderMaterial with the correct shader path and all three texture paths.
+- Rendered a frame with a camera verification scene — the sphere rendered correctly with the rock/grass triplanar shader material, then all temporary verification files were removed.
+- Set `run/main_scene=""res://scenes/main.tscn""` in `project.godot` so the project runs directly.",322.14703488349915,0.966441,303512,3727,False,kimi_k3_opencode_high_video_20260925_151616_task_0111_8965,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_task_0111.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/result.json,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200,/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151616_task_0111_8965/task_0111_opencode_20260925_152200/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0111/console/task_0111_attempt_2.log,65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966,58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772,2026-09-25T07:16:15+00:00,2026-09-25T07:22:01+00:00,0,official_pass,,

@@ -1,0 +1,22 @@
+{
+  "task_id": 100,
+  "name": "Codex HQX Smooth Borders Shader",
+  "instruction": "Update res://assets/shaders/map3d.gdshader to apply HQX-style border smoothing for the map texture. Add uniforms threshold (0.1), aa_scale (17.6), and base_line_thickness (0.38197), include the diagonal line blending function, and in fragment sample subview_image with texelFetch to compute the smoothed color before assigning ALBEDO. In res://scenes/main.tscn, set those three shader parameters on the MeshInstance3D ShaderMaterial while keeping subview_image assigned to res://assets/textures/ProvinceMap.bmp.",
+  "metadata": {
+    "tutorial_source": "YouTube: Good Solution Interactive - Smooth Borders! Godot 4 Ultimate Grand Strategy Tutorial Series",
+    "video_id": "Gj2WpkAw6sw",
+    "github_repo": "https://github.com/Thomas-Holtvedt/grand-strategy-godot",
+    "transcript_excerpt": "start to call our HQX upscaling shader ... need some parameters ... function for the line blending logic",
+    "expected_nodes": [
+      "Node3D:Main",
+      "MeshInstance3D:Main/MeshInstance3D"
+    ],
+    "key_properties": {
+      "map3d.gdshader.uniforms": "threshold, aa_scale, base_line_thickness",
+      "ShaderMaterial.threshold": "0.1",
+      "ShaderMaterial.aa_scale": "17.6",
+      "ShaderMaterial.base_line_thickness": "0.38197",
+      "ShaderMaterial.subview_image": "res://assets/textures/ProvinceMap.bmp"
+    }
+  }
+}

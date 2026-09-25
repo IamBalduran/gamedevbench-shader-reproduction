@@ -1,0 +1,18 @@
+{
+  "task_id": 96,
+  "name": "Pixel Art Screen Quad Shader",
+  "instruction": "In scenes/main.tscn, add a MeshInstance2D named ScreenQuad that uses a QuadMesh sized 1280x720 and is positioned at (640, 360). Create a ShaderMaterial for it that uses a new shader at assets/shaders/pixel_art.gdshader. The shader must sample the screen texture with filter_nearest, downsample SCREEN_UV to a target_resolution of 320x180, quantize colors using a colors_per_channel value of 8, and output the quantized color. Set the material shader parameters to target_resolution = Vector2(320, 180) and colors_per_channel = 8.0.",
+  "metadata": {
+    "tutorial_source": "YouTube: DevPoodle - Making a 3D Pixel Art Shader Effect - Using Godot Engine",
+    "video_id": "dHbqsr-KjOg",
+    "github_repo": "https://github.com/DevPoodle/yt-example-projects",
+    "transcript_excerpt": "add a mesh instance... add in a basic quad mesh... the same resolution 1280 by 720... offset the x value by half... create a new Shader material... Shader... add a new uniform for the screen texture... hint screen texture... downscale... target resolution 320x180... add colors per channel... replace with quantized color... add filter nearest",
+    "expected_nodes": [
+      "MeshInstance2D"
+    ],
+    "key_properties": {
+      "target_resolution": "Vector2(320, 180)",
+      "colors_per_channel": 8.0
+    }
+  }
+}

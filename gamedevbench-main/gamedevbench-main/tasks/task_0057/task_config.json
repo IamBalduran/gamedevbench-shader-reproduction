@@ -1,0 +1,25 @@
+{
+  "task_id": 57,
+  "name": "Configure RTS Unit Scene with Aura Highlight",
+  "instruction": "Build the reusable Unit scene: root it in a CharacterBody2D on collision layer 2/mask 3, keep it in the 'units' group. Add a Sprite2D child that uses the towerDefense spritesheet texture with region_enabled=true and region_rect=Rect2(960, 640, 64, 64), and apply a ShaderMaterial using the aura.gdshader. Add a CollisionShape2D child with a CircleShape2D of radius 14. Add an Area2D child named 'Detect' (collision layer 2, collision mask 2) with its own CollisionShape2D child using a CircleShape2D of radius 35. Implement unit.gd to export a speed variable, define a target_radius variable, include set_selected() and set_target() setters, an avoid() function that uses $Detect.get_overlapping_bodies(), and use move_and_collide() for movement. The set_selected() function must toggle the aura_width shader parameter (1.0 when selected=true, 0.0 when selected=false). Duplicate the Sprite2D material in _ready() to ensure each instance has its own material.",
+  "metadata": {
+    "tutorial_source": "https://kidscancode.org/godot_recipes/4.x/input/multi_unit_select/index.html",
+    "github_repo": "https://github.com/godotrecipes/multi_unit_select",
+    "transcript_excerpt": "To test this out, we\u2019ll need some basic RTS-style units... Each of those collider items is a reference to a unit, so we can use this to notify them that they\u2019ve been selected, activating the outline shader.",
+    "expected_nodes": [
+      "Main",
+      "Main/UnitA",
+      "Main/UnitB",
+      "res://scenes/unit.tscn:Sprite2D",
+      "res://scenes/unit.tscn:Detect"
+    ],
+    "key_properties": {
+      "Unit.collision_layer": 2,
+      "Unit.collision_mask": 3,
+      "Sprite2D.texture": "res://assets/sprites/towerDefense_tilesheet.png",
+      "Sprite2D.material.shader": "res://assets/shaders/aura.gdshader",
+      "Detect.collision_layer": 2,
+      "Detect.collision_mask": 2
+    }
+  }
+}

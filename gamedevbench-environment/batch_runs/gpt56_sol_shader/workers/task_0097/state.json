@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0097"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0097": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:03:30+00:00",
+      "finished_at": "2026-09-24T14:12:19+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "966415b14a9de5118004a30f4ffb9f746ec1fecd9aef7cc8ec9601da6bf7c009",
+      "validator_sha256": "404058068d43162847bfa5c7f391b0177753541a16fb756de7fb21988af615e3",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0097/console/task_0097_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "VisualShader constants do not match DistortionUV example",
+      "official_details": "{}",
+      "validator_error_line": "49",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Configured [`scenes/main.tscn`](/workspace/scenes/main.tscn) with:\n\n- `DistortionPreview` `TextureRect` under `Main`\n- `shaderV_icon.png` texture\n- `ShaderMaterial` using a `VisualShader`\n- `DistortionUV` custom node\n- Constants: wave X `7`, wave Y `5`, distortion X/Y `0.1`\n\nVerified successfully in Godot 4.4.1 with a rendered screenshot showing the distorted icon.",
+      "solver_duration": 503.25777673721313,
+      "cost_usd": 0.0274475,
+      "input_tokens": 52300,
+      "output_tokens": 2091,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_task_0097.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220331_task_0097_11939/task_0097_opencode_20260924_221217/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:12:19+00:00"
+}

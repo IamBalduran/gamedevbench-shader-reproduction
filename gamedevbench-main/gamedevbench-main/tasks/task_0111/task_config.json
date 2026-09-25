@@ -1,0 +1,23 @@
+{
+  "task_id": 111,
+  "name": "Axis Textures and Top-Only Grass Triplanar Shader",
+  "instruction": "Create a Node3D root named Main with a MeshInstance3D child named Sphere. Assign a SphereMesh to Sphere.mesh and assign a ShaderMaterial to that SphereMesh. The ShaderMaterial must use a shader at res://scripts/triplanar_axis_blend.gdshader. In that shader, declare uniforms `uniform sampler2D texture_x`, `uniform sampler2D texture_y`, and `uniform sampler2D texture_z`. Implement triplanar blending with normal-based weights and exact lines: `vec3 adjusted_normal = pow(abs(normal), vec3(8.0))`, `float use_y_up = float(normal.y > 0.0)`, `vec3 color_y_up = texture(texture_y, uv_y).rgb * weights.y`, `vec3 color_y_down = texture(texture_x, uv_y).rgb * weights.y`, `mix(color_y_down, color_y_up, use_y_up)`, and `ALBEDO = (color_x + mix(color_y_down, color_y_up, use_y_up) + color_z) / 3.0`. Assign res://assets/sprites/Rock022_2K-PNG_Color.png to shader parameter texture_x and texture_z, and res://assets/sprites/Grass002_2K-PNG_Color.png to shader parameter texture_y.",
+  "metadata": {
+    "tutorial_source": "YouTube: DevPoodle - Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine",
+    "video_id": "e3Luf7dXSEY",
+    "github_repo": "https://github.com/DevPoodle/yt-example-projects",
+    "transcript_excerpt": "add two new texture uniforms... control how sharp the blending between different textures is... wrap this in a power function... create a new variable called use_y_up... use mix to interpolate between two different colors",
+    "expected_nodes": [
+      "Node3D",
+      "MeshInstance3D",
+      "SphereMesh",
+      "ShaderMaterial"
+    ],
+    "key_properties": {
+      "shader_path": "res://scripts/triplanar_axis_blend.gdshader",
+      "texture_x": "res://assets/sprites/Rock022_2K-PNG_Color.png",
+      "texture_y": "res://assets/sprites/Grass002_2K-PNG_Color.png",
+      "texture_z": "res://assets/sprites/Rock022_2K-PNG_Color.png"
+    }
+  }
+}

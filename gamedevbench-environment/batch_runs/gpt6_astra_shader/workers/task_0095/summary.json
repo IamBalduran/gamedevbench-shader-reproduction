@@ -1,0 +1,10 @@
+{
+  "batch_id": "gpt6_astra_shader",
+  "model": "openai/gpt-6-astra",
+  "total": 1,
+  "counts": {
+    "completed": 1
+  },
+  "updated_at": "2026-09-24T13:20:47+00:00",
+  "results_csv": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt6_astra_shader/workers/task_0095/results.csv"
+}

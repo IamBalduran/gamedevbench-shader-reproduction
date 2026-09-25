@@ -1,0 +1,50 @@
+Single task: task_0057 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260924_211625_task_0057_2876
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_211625_task_0057_2876/task_task_0057.json
+{
+  "task_name": "task_0057",
+  "success": false,
+  "message": "Main needs at least two Unit instances for testing",
+  "timestamp": "2026-09-24T21:17:03.672469",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode command failed (exit code -5)",
+  "solver_duration": 0.15326333045959473,
+  "is_rate_limited": false,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.0,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [],
+    "denied_connects": []
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_5303badf",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260924_211625_task_0057_2876/task_0057_opencode_20260924_211703"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_211625_task_0057_2876
+Final status: FAILED/CANCELLED | exit code: 1

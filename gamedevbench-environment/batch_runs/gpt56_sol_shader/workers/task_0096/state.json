@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0096"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0096": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:01:55+00:00",
+      "finished_at": "2026-09-24T14:07:14+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "8384e9f15461853b4d77891725db8069b9b91ac10bb5eec69d8f0682f36c84cf",
+      "validator_sha256": "04145e43fa90e547e55e275e6eb0e054b4630e51165a486cbc22a59b21537246",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0096/console/task_0096_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader must use render_mode unshaded",
+      "official_details": "{}",
+      "validator_error_line": "50",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented and validated:\n\n- Added `assets/shaders/pixel_art.gdshader`\n- Added `ScreenQuad` with a 1280x720 `QuadMesh` at `(640, 360)`\n- Configured `ShaderMaterial` parameters:\n  - `target_resolution = Vector2(320, 180)`\n  - `colors_per_channel = 8.0`\n- Verified the scene loads and renders successfully in Godot 4.4.1.",
+      "solver_duration": 294.4423496723175,
+      "cost_usd": 0.018416500000000002,
+      "input_tokens": 17332,
+      "output_tokens": 1625,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_task_0096.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_0096_opencode_20260924_220712/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_0096_opencode_20260924_220712",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_220156_task_0096_11626/task_0096_opencode_20260924_220712/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:07:14+00:00"
+}

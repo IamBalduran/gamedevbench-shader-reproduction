@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0019"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0019": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:36:45+00:00",
+      "finished_at": "2026-09-24T14:47:12+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "validator_sha256": "785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0019/console/task_0019_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_223649_task_0019_20346",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "MuzzleFireLeft must use the muzzle flash shader material",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0479221343994,
+      "cost_usd": 0.061611,
+      "input_tokens": 13002,
+      "output_tokens": 1507,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_223649_task_0019_20346/task_task_0019.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_223649_task_0019_20346/task_0019_opencode_20260924_224710/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_223649_task_0019_20346/task_0019_opencode_20260924_224710",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_223649_task_0019_20346/task_0019_opencode_20260924_224710/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:47:12+00:00"
+}

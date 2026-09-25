@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0x4fw2btt1kp"]
+
+[ext_resource type="Texture2D" uid="uid://c3cqh4a2vmb4j" path="res://addons/shaderV/shaderV_icon.png" id="1"]
+
+[node name="Main" type="Control"]
+
+[node name="DistortionPreview" type="TextureRect" parent="."]
+texture = ExtResource("1")
+expand_mode = 1
+stretch_mode = 6

@@ -1,0 +1,19 @@
+Task: task_0057
+Agent: opencode
+Model: openai/gpt-6-astra
+Sandbox: /tmp/gamedevbench_sandbox_5303badf
+Confinement: strict-v1
+Network policy: isolated-provider-proxy
+Provider hosts: api.openai.com, api.shubiaobiao.cn, docs.godotengine.org, openrouter.ai
+Timestamp: 2026-09-24T21:16:56.880363
+================================================================================
+
+Success: False
+Message: OpenCode command failed (exit code -5)
+Duration: 0.15s
+
+STDOUT:
+[18] pas panic: deallocation did fail at 0x7ffffb41f350: Large heap did not find object
+
+
+STDERR:

@@ -1,0 +1,140 @@
+{
+  "selection_rule": "Explicit task instruction requires shader authoring, VisualShader/GLSL work, or ShaderMaterial setup/parameter behavior; scene-only use of an unchanged provided shader is excluded.",
+  "selected_count": 12,
+  "selected": [
+    {
+      "task_name": "task_0019",
+      "category": "shader_integration",
+      "name": "Build the muzzle flash effect prefab",
+      "instruction": "Create a layered muzzle flash prefab: edit scenes/effects/muzzle_flash_effect.tscn so the root Node3D uses scripts/generic_effect_handler.gd, targets its Optional Light export at an OmniLight child named MuzzleFlash, and keeps a 0.2 second fade. Add SmokeParticles configured with zero gravity and a StandardMaterial3D mesh using a radial GradientTexture2D. Simulate a volumetric smoke puff via using particle billboard mode for billboarding, plus a pair of opposing GPUParticles3D named MuzzleFireLeft and MuzzleFireRight that emit one-shot bursts. Each muzzle fire particle system must rely on the provided assets/shaders/muzzle_flash.gdshader ShaderMaterial and include a draw-pass QuadMesh so the burst renders from both sides. Wire the scene into scenes/main.tscn so Main instantiates the finished effect."
+    },
+    {
+      "task_name": "task_0033",
+      "category": "shader_integration",
+      "name": "Bonkahe Arcing Chunk Sub-Emitter",
+      "instruction": "Finish the Explosion hierarchy so the ArcingChunks emitter works as wanted: set ArcingChunks to one_shot, lifetime 3s, randomness about 0.7, give it a QuadMesh draw pass and a StandardMaterial3D billboard with bright emission, and drive it with a ParticleProcessMaterial that fires from the default spread at 8–12 m/s, enables rigid collision with bounce 1.0, uses collision_use_scale, and sets a constant sub emitter frequency of 100 Hz with the sub_emitter path pointing to ../ArcingChunkSmoke. Add the GPUParticlesCollisionBox3D named ArcingChunkCollision, positioned just below the emitter and scaled to 40×1×40 so debris collides as shown in the collision segment of the video. Configure ArcingChunkSmoke to emit ~1000 particles with a ShaderMaterial referencing res://assets/shaders/SmokeShader.gdshader (NoiseTexture = res://assets/shaders/NoiseResource.tres) and a ParticleProcessMaterial that rotates sprites, uses the warm gradient/curve combo from the repo, lifetime 3 s, gravity (0,1,0), linear accel ~2, scale curve peaks between 8 and 15, and turbulence influence about 0.005–0.01 so the smoke puffs appear along the chunk trails."
+    },
+    {
+      "task_name": "task_0057",
+      "category": "shader_integration",
+      "name": "Configure RTS Unit Scene with Aura Highlight",
+      "instruction": "Build the reusable Unit scene: root it in a CharacterBody2D on collision layer 2/mask 3, keep it in the 'units' group. Add a Sprite2D child that uses the towerDefense spritesheet texture with region_enabled=true and region_rect=Rect2(960, 640, 64, 64), and apply a ShaderMaterial using the aura.gdshader. Add a CollisionShape2D child with a CircleShape2D of radius 14. Add an Area2D child named 'Detect' (collision layer 2, collision mask 2) with its own CollisionShape2D child using a CircleShape2D of radius 35. Implement unit.gd to export a speed variable, define a target_radius variable, include set_selected() and set_target() setters, an avoid() function that uses $Detect.get_overlapping_bodies(), and use move_and_collide() for movement. The set_selected() function must toggle the aura_width shader parameter (1.0 when selected=true, 0.0 when selected=false). Duplicate the Sprite2D material in _ready() to ensure each instance has its own material."
+    },
+    {
+      "task_name": "task_0095",
+      "category": "shader_authoring",
+      "name": "CRT Shader Effect Implementation",
+      "instruction": "Implement the CRT screen shader in screen_effect/screen_effect.gdshader. Use a canvas_item shader with render_mode unshaded and skip_vertex_transform. Add constants for curvature (7.0) and vignette_multiplier (2.0), and declare a sampler2D uniform named screen_texture with the screen texture hint and linear mipmap filtering. In fragment(), compute centered UVs from SCREEN_UV, warp the UVs for curvature, apply a cutoff mask outside the screen, add scanlines, add a vignette, and sample the screen texture with a small LOD bias to blur. Output the final color with alpha 1.0."
+    },
+    {
+      "task_name": "task_0096",
+      "category": "shader_authoring",
+      "name": "Pixel Art Screen Quad Shader",
+      "instruction": "In scenes/main.tscn, add a MeshInstance2D named ScreenQuad that uses a QuadMesh sized 1280x720 and is positioned at (640, 360). Create a ShaderMaterial for it that uses a new shader at assets/shaders/pixel_art.gdshader. The shader must sample the screen texture with filter_nearest, downsample SCREEN_UV to a target_resolution of 320x180, quantize colors using a colors_per_channel value of 8, and output the quantized color. Set the material shader parameters to target_resolution = Vector2(320, 180) and colors_per_channel = 8.0."
+    },
+    {
+      "task_name": "task_0097",
+      "category": "shader_authoring",
+      "name": "Distortion UV Preview Shader",
+      "instruction": "Create a TextureRect named DistortionPreview under Main and assign the shaderV_icon.png texture. Add a ShaderMaterial that uses a VisualShader with the DistortionUV custom node from addons/shaderV/uv/distortionUV.gd, matching the DistortionUV example constants (wave X 7, wave Y 5, distortion 0.1 on both axes)."
+    },
+    {
+      "task_name": "task_0100",
+      "category": "shader_authoring",
+      "name": "Codex HQX Smooth Borders Shader",
+      "instruction": "Update res://assets/shaders/map3d.gdshader to apply HQX-style border smoothing for the map texture. Add uniforms threshold (0.1), aa_scale (17.6), and base_line_thickness (0.38197), include the diagonal line blending function, and in fragment sample subview_image with texelFetch to compute the smoothed color before assigning ALBEDO. In res://scenes/main.tscn, set those three shader parameters on the MeshInstance3D ShaderMaterial while keeping subview_image assigned to res://assets/textures/ProvinceMap.bmp."
+    },
+    {
+      "task_name": "task_0106",
+      "category": "shader_authoring",
+      "name": "Depth Outline Compositor Shader",
+      "instruction": "Implement `res://scripts/outline_effect.gd` and `res://outline.glsl` for a depth-based outline compositor effect. The script must include `@tool`, `extends CompositorEffect`, and `class_name OutlineEffect`. It must use `RenderingServer.get_rendering_device()` and create the compute pipeline with `rd.compute_pipeline_create`, a parameter storage buffer with `storage_buffer_create`, and a depth sampler with `sampler_create`. In the render callback, it must call `get_render_scene_buffers`, `get_internal_size`, `get_color_layer(0)`, and `get_depth_layer(0)`, update the buffer with `buffer_update`, create the uniform set with `uniform_set_create`, and dispatch with `compute_list_dispatch`. The shader must be a compute shader (`#[compute]`) with `layout(local_size_x = 8` and declare the params buffer as `readonly buffer Params` that includes `mat4 inv_proj_mat`. It must bind the color image as `uniform image2D color_image` and the depth texture as `sampler2D depth_texture` (with `binding = 0` on the params buffer). The shader must use `gl_GlobalInvocationID`, call a `get_linear_depth` function, use a `sample_size` radius to compare neighboring depths, and write the outlined color back with `imageStore`."
+    },
+    {
+      "task_name": "task_0107",
+      "category": "shader_integration",
+      "name": "Apply View Model Clip Shader",
+      "instruction": "Implement the view model clip shader swap on the weapon view model node. Add logic that finds MeshInstance3D nodes under the view model, replaces each surface material with a ShaderMaterial that uses res://shaders/weapon_clip_and_fov_shader.gdshader, copies the base material albedo/metallic/roughness parameters into the shader, and sets the viewmodel_fov shader parameter to 54.0 when applying the shader."
+    },
+    {
+      "task_name": "task_0110",
+      "category": "shader_authoring",
+      "name": "Basic Triplanar Shader on a Sphere",
+      "instruction": "Create a Node3D scene with a MeshInstance3D sphere that uses a SphereMesh and a ShaderMaterial assigned to the SphereMesh material. Write a spatial shader at res://scripts/triplanar_basic.gdshader that projects a single texture along the X, Y, and Z axes using world-space vertex coordinates and normal-weighted blending. In fragment(), define `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` and `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`. Define `vec3 adjusted_normal = abs(normal)` and `vec3 weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`. Define `vec2 uv_x = vertex.zy`, `vec2 uv_y = vertex.xz`, and `vec2 uv_z = vertex.xy`. Sample a single `uniform sampler2D texture_x` with `uv_x`, `uv_y`, and `uv_z`, multiply each sample by the corresponding weight, and set `ALBEDO = color_x + color_y + color_z`. Assign any texture to the shader parameter `texture_x`."
+    },
+    {
+      "task_name": "task_0111",
+      "category": "shader_authoring",
+      "name": "Axis Textures and Top-Only Grass Triplanar Shader",
+      "instruction": "Create a Node3D root named Main with a MeshInstance3D child named Sphere. Assign a SphereMesh to Sphere.mesh and assign a ShaderMaterial to that SphereMesh. The ShaderMaterial must use a shader at res://scripts/triplanar_axis_blend.gdshader. In that shader, declare uniforms `uniform sampler2D texture_x`, `uniform sampler2D texture_y`, and `uniform sampler2D texture_z`. Implement triplanar blending with normal-based weights and exact lines: `vec3 adjusted_normal = pow(abs(normal), vec3(8.0))`, `float use_y_up = float(normal.y > 0.0)`, `vec3 color_y_up = texture(texture_y, uv_y).rgb * weights.y`, `vec3 color_y_down = texture(texture_x, uv_y).rgb * weights.y`, `mix(color_y_down, color_y_up, use_y_up)`, and `ALBEDO = (color_x + mix(color_y_down, color_y_up, use_y_up) + color_z) / 3.0`. Assign res://assets/sprites/Rock022_2K-PNG_Color.png to shader parameter texture_x and texture_z, and res://assets/sprites/Grass002_2K-PNG_Color.png to shader parameter texture_y."
+    },
+    {
+      "task_name": "task_0128",
+      "category": "shader_integration",
+      "name": "Fractal Panel With Julia Shader Alt",
+      "instruction": "In `scenes/main.tscn`, add a TextureRect named `Panel` under `Main`. Set its anchors to fill the viewport (use the FULL_RECT preset for anchors preset), assign `materials/julia.material` to the `material` property, set `icon.png` as its texture, and edit julia.material to set the `seed` shader parameter in the material to (0.40, -0.20) without modifying julia.gdshader."
+    }
+  ],
+  "excluded_explicit_shader_mentions": [
+    {
+      "task_name": "task_0021",
+      "name": "Level Camera Menu Hookup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0062",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0069",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0070",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0071",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0072",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0073",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0074",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0075",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0076",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0077",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    },
+    {
+      "task_name": "task_0078",
+      "name": "Depth Ripple Geometry Setup",
+      "reason": "Scene composition uses a provided shader without shader behavior work"
+    }
+  ]
+}

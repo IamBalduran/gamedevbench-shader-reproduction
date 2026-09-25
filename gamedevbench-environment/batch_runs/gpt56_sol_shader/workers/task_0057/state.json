@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0057"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0057": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T13:51:05+00:00",
+      "finished_at": "2026-09-24T14:01:54+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+      "validator_sha256": "de834174bfe83a75853636430152234181fbe00d034e1b0989fbd895a177cc7d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0057/console/task_0057_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_215107_task_0057_9095_retry1",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Main needs at least two Unit instances for testing",
+      "official_details": "{}",
+      "validator_error_line": "20",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented and verified the reusable Unit scene and `unit.gd`. Godot 4.4.1 loaded and rendered the project successfully with no script or parse errors.",
+      "solver_duration": 231.06710982322693,
+      "cost_usd": 0.035671125,
+      "input_tokens": 63689,
+      "output_tokens": 2771,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_215107_task_0057_9095_retry1/task_task_0057.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_215107_task_0057_9095_retry1/task_0057_opencode_20260924_220151/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_215107_task_0057_9095_retry1/task_0057_opencode_20260924_220151",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_215107_task_0057_9095_retry1/task_0057_opencode_20260924_220151/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:01:54+00:00"
+}

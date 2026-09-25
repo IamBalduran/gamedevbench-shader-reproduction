@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0100"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0100": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T15:11:19+00:00",
+      "finished_at": "2026-09-24T15:20:06+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "96b2f9d690794dce257e333c1ce6f03937c75a7a017b96b1dac49954d79ba034",
+      "validator_sha256": "a4466d63b6d86b267a5d1949b4c4e7eca09d29e4db5bc1886a8b60a657e9f99a",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0100/console/task_0100_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_231121_task_0100_24924",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader missing HQX marker: diag(",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "Both changes are complete. The shader compiled and ran without errors in Godot 4.4.1:\n\n- **`map3d.gdshader`**: Added `threshold`, `aa_scale`, `base_line_thickness` uniforms, the `diagonal_line_blend()` function, and rewrote `fragment()` to sample a 3x3 neighborhood via `texelFetch` and blend diagonal line patterns before assigning `ALBEDO`.\n- **`main.tscn`**: Added the three shader parameter values on the `ShaderMaterial` while preserving the `subview_image` texture assignment.",
+      "solver_duration": 501.0806288719177,
+      "cost_usd": 0.079485,
+      "input_tokens": 14530,
+      "output_tokens": 2393,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_231121_task_0100_24924/task_task_0100.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_231121_task_0100_24924/task_0100_opencode_20260924_232004/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_231121_task_0100_24924/task_0100_opencode_20260924_232004",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_231121_task_0100_24924/task_0100_opencode_20260924_232004/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:20:06+00:00"
+}

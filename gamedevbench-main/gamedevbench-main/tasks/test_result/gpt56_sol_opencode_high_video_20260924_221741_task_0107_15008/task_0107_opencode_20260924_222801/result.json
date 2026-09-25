@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0107",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "timestamp": "20260924_222801",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Surface material is not a ShaderMaterial",
+    "timestamp": "2026-09-24T22:28:00.997344"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 600.0947089195251,
+    "is_rate_limited": false,
+    "model": "openai/gpt-5.6-sol",
+    "cost_usd": 0.047208875000000004,
+    "token_usage": {
+      "input_tokens": 42871,
+      "output_tokens": 4185,
+      "total_tokens": 47056,
+      "cache_read_tokens": 53599,
+      "cache_write_tokens": 0
+    }
+  }
+}

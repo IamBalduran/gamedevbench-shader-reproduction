@@ -1,0 +1,55 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0057"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0057": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T16:19:28+00:00",
+      "finished_at": "2026-09-24T16:23:42+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+      "validator_sha256": "de834174bfe83a75853636430152234181fbe00d034e1b0989fbd895a177cc7d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0057/console/task_0057_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_001929_task_0057_1615",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Main needs at least two Unit instances for testing",
+      "official_details": "{}",
+      "validator_error_line": "20",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Both units render correctly — the green tile from spritesheet region (960, 640, 64, 64) is visible at the expected positions. The task is complete and fully verified.\n\n## Summary\n\n**`scenes/player.tscn`** — reusable Unit scene:\n- **Root `Unit`**: `CharacterBody2D`, `collision_layer=2`, `collision_mask=3`, in group `\"units\"`\n- **`Sprite2D`**: towerDefense tilesheet texture, `region_enabled=true`, `region_rect=Rect2(960, 640, 64, 64)`, with a `ShaderMaterial` using `aura.gdshader` (`aura_width=0.0` default)\n- **`CollisionShape2D`**: `CircleShape2D` radius 14\n- **`Detect`** (`Area2D`, layer 2 / mask 2) with child `CollisionShape2D`: `CircleShape2D` radius 35\n\n**`scripts/unit.gd`** — unit logic:\n- `@export var speed` and `@export var target_radius`\n- `_ready()` **duplicates the Sprite2D material** so each instance has its own\n- `set_selected()` toggles the `aura_width` shader parameter (**1.0** selected / **0.0** deselected)\n- `set_target()` sets the movement target\n- `avoid()` computes a repulsion vector from `$Detect.get_overlapping_bodies()`\n- `_physics_process()` moves toward the target (stopping within `target_radius`) using **`move_and_collide()`**\n\n**Verification:**\n1. ✅ Script check pass via `--check-only`\n2. ✅ 27/27 functional checks PASS (scene structure, layers/masks, groups, sprite region/shader, shape radii, exported vars, setters, aura_width toggling, per-instance material independence, and real physics-frame movement toward a target)\n3. ✅ Visual run of `main.tscn` confirms both unit instances render at their positions\n\nOne fix was needed along the way: GDScript couldn't infer types when iterating the typed array from `get_overlapping_bodies()` with `:=`, so `away`/`distance` in `avoid()` use explicit type annotations.",
+      "solver_duration": 229.6350221633911,
+      "cost_usd": 0.778611,
+      "input_tokens": 236092,
+      "output_tokens": 4689,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_task_0057.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_001929_task_0057_1615/task_0057_opencode_20260925_002341/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T16:23:42+00:00"
+}

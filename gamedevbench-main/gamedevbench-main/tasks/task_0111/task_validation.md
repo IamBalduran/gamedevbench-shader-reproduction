@@ -1,0 +1,64 @@
+# Key Checklist
+- [x] The task starting point runs with `uv run gamedevbench  validate $TASK_NAME` and successfully outputs a test failure 
+  - Evidence: `uv run gamedevbench validate task_0111` -> FAILED, "ShaderMaterial not assigned to SphereMesh".
+- [x] The task ground truth runs with `uv run gamedevbench --gt validate $TASK_NAME` and successfully outputs SUCCESS
+  - Evidence: `uv run gamedevbench --gt validate task_0111` -> PASSED, "Task completed successfully" (note: logged missing task_config.json but validation still passed).
+- [x] In every task, there exists a valid `main.tscn` and `test.tscn` similar to tasks_gt/task_0111
+  - Evidence: `tasks/task_0111/scenes/main.tscn`, `tasks/task_0111/scenes/test.tscn`, `tasks_gt/task_0111/scenes/main.tscn`, `tasks_gt/task_0111/scenes/test.tscn`.
+- [x] The task instruction matches the tutorial transcript (See example for documentation). The task instructions must be a subset of the tutorial transcript.
+  - Instruction: "Create a Node3D scene with a MeshInstance3D sphere that uses a ShaderMaterial." / Transcript: "I'm starting out with an empty spatial Shader material attached to a default sphere"
+  - Instruction: "Write a spatial shader ... that blends three axis textures with normal-based weights" / Transcript: "we actually need to sample it three times... create a new variable called adjusted normal... create a new VC 3 called weights... multiply each of the color samples by the corresponding value"
+  - Instruction: "... sharpens the blend" / Transcript: "wrap this in a power function... I personally like it at eight"
+  - Instruction: "... uses grass only on upward-facing surfaces" / Transcript: "we want the grass texture to only appear on the top... use y up... mix function"
+  - Instruction: "Assign ... Rock... to texture_x and texture_z, and ... Grass... to texture_y." / Transcript: "replace the x and z textures with a rock image and the y texture with the grass image"
+  - Instructions Missing from Transcript: None found.
+- [x] The task code is directly derived from the repository code. Please document where the derived code is.
+  - Evidence: `tasks_gt/task_0111/scripts/triplanar_axis_blend.gdshader` matches `tutorials/DevPoodle/Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine/repo/triplanar_mapping/triplanar.gdshader` (same shader logic, file renamed).
+- [x] The task instruction is clear, unambiguous, and self-contained. There are no references to the tutorial or other tasks
+  - Evidence: Instruction now specifies node names (`Main`, `Sphere`), SphereMesh requirement, shader path, exact shader snippet lines, and texture assignments in `tasks/task_0111/task_config.json`.
+- [x] The tests in `test.gd` match the instructions. All tests are contained in the instruction. Similarly, all instructions are in the tests. Explain how to adjust the tests themselves to match the instructions.
+  - Test 1, Instruction 1: Requires root node `Main`; instruction explicitly names `Main`.
+  - Test 2, Instruction 2: Requires `Main/Sphere` MeshInstance3D; instruction explicitly names `Sphere` and type.
+  - Test 3, Instruction 3: Requires `Sphere.mesh` is `SphereMesh`; instruction explicitly requires SphereMesh assignment.
+  - Test 4, Instruction 4: Requires ShaderMaterial assigned to SphereMesh; instruction explicitly requires ShaderMaterial.
+  - Test 5, Instruction 5: Requires shader path `res://scripts/triplanar_axis_blend.gdshader`; instruction explicitly requires this path.
+  - Test 6, Instruction 6: Requires texture_x/y/z shader parameters assigned to exact textures; instruction explicitly requires these assignments.
+  - Test 7, Instruction 7: Requires shader file exists at `res://scripts/triplanar_axis_blend.gdshader`; instruction explicitly requires writing shader at that path.
+  - Test 8, Instruction 8: Requires exact shader snippets/lines; instruction explicitly lists the exact required lines.
+  - Missing Coverage: None.
+- [x] Each test in `test.gd` is unambiguously defined in the instructions. With just the instruction and the task code (without looking at the tests), it is unambiguously possible to satisfy each test condition.
+  - Test 1, Assertions: `Main` node exists at root. Instruction coverage: \"Create a Node3D root named Main\".
+  - Test 2, Assertions: `Main/Sphere` exists and is MeshInstance3D. Instruction coverage: \"MeshInstance3D child named Sphere\".
+  - Test 3, Assertions: `Sphere.mesh` is `SphereMesh`. Instruction coverage: \"Assign a SphereMesh to Sphere.mesh\".
+  - Test 4, Assertions: `Sphere.mesh.material` is ShaderMaterial. Instruction coverage: \"Assign a ShaderMaterial to that SphereMesh\".
+  - Test 5, Assertions: Shader exists on material; shader path equals `res://scripts/triplanar_axis_blend.gdshader`. Instruction coverage: \"ShaderMaterial must use a shader at res://scripts/triplanar_axis_blend.gdshader\".
+  - Test 6, Assertions: `texture_x`, `texture_y`, `texture_z` shader parameters assigned with exact paths. Instruction coverage: explicit texture assignments.
+  - Test 7, Assertions: Shader file exists at `res://scripts/triplanar_axis_blend.gdshader`. Instruction coverage: \"Write a shader at res://scripts/triplanar_axis_blend.gdshader\".
+  - Test 8, Assertions: Shader file contains exact snippets listed. Instruction coverage: explicit requirement for each exact line.
+  - **CRITICAL AMBIGUITY CHECKS** - For each test, explicitly verify:
+    - [x] String formatting (padding, delimiters, exact format) is specified in instruction
+    - [x] Exact string values/names are in instruction (node names `Main`/`Sphere`, shader snippet text)
+    - [x] Number formats (zero-padding, decimal places) are specified (`vec3(8.0)` required)
+    - [x] Any comparison operators (==, !=, >, <, contains, begins_with, ends_with) have clear criteria (shader path and texture paths are explicit)
+    - [x] Node names, paths, and types match instruction exactly
+    - [x] Property values (numbers, booleans, strings) have exact values in instruction
+  - Ambiguous Tests: None.
+- [x] If there are multiple solutions to the problem, the tests in `test.gd` are flexible to allow multiple solutions. Mark this as completed if there is only one solution to the problem and that solution is clearly decipherable from the instructions.
+  - Evidence: Instruction specifies exact node names, shader path, and exact shader lines, yielding a single clearly decipherable solution that matches the tests.
+- [x] The folder and file names are consistent with other tasks (tasks_gt/task_0111)
+  - Evidence: Standard `assets/`, `scenes/`, `scripts/`, `project.godot`, and `task_config.json` structure present in both task and ground truth.
+- [x] PROCEED. Check this box is the task is validated and all key checks pass successfully.
+
+
+# Feature Checklist
+- [x] The task contains instructions or goals that are Node/inspector-focused. 
+  - Evidence: Instruction requires Node3D scene with MeshInstance3D sphere and ShaderMaterial assignment.
+- [ ] The task contains or requires multimodal reasoning or understanding to complete.
+  - Evidence: No multimodal reasoning required beyond text instructions.
+- [ ] The task contains a multimodal input (such as a image) in the instruction.
+  - Evidence: No image or other multimodal input referenced in instruction.
+
+# Notes
+- Transcript coverage sourced from `tutorials/DevPoodle/Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine/transcript.txt`.
+- Repository shader source at `tutorials/DevPoodle/Texturing Without UV's (An Intro to Triplanar Mapping) - Using Godot Engine/repo/triplanar_mapping/triplanar.gdshader`.
+- Ground truth shader at `tasks_gt/task_0111/scripts/triplanar_axis_blend.gdshader`.

@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0107"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0107": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T15:20:07+00:00",
+      "finished_at": "2026-09-24T15:30:29+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+      "validator_sha256": "3f855be8dec6b0c3d412979d43c9c320f2fdd3979c79847fadcf611ebf44cf30",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0107/console/task_0107_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_232008_task_0107_25909",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Base material is missing or not a BaseMaterial3D",
+      "official_details": "{}",
+      "validator_error_line": "43",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0625977516174,
+      "cost_usd": 0.115152,
+      "input_tokens": 23309,
+      "output_tokens": 3015,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_232008_task_0107_25909/task_task_0107.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232008_task_0107_25909/task_0107_opencode_20260924_233028/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232008_task_0107_25909/task_0107_opencode_20260924_233028",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_232008_task_0107_25909/task_0107_opencode_20260924_233028/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:30:29+00:00"
+}

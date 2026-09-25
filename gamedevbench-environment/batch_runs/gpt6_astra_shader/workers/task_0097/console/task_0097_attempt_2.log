@@ -1,0 +1,57 @@
+Single task: task_0097 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260924_212452_task_0097_485
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_212452_task_0097_485/task_task_0097.json
+{
+  "task_name": "task_0097",
+  "success": true,
+  "message": "Distortion UV preview configured",
+  "timestamp": "2026-09-24T21:29:55.025663",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Completed.\n\n- `Main/DistortionPreview` uses `shaderV_icon.png`.\n- Assigned a ShaderMaterial with an editable VisualShader using `addons/shaderV/uv/distortionUV.gd`.\n- Set wave X **7**, wave Y **5**, and distortion X/Y **0.1**.\n- Centered the preview at 384 \u00d7 384 pixels.\n\nValidated in Godot 4.4.1 and visually confirmed the distortion. Verification image: `distortion_preview00000000.png`.",
+  "solver_duration": 283.33812713623047,
+  "is_rate_limited": false,
+  "input_tokens": 22377,
+  "output_tokens": 3862,
+  "total_tokens": 26239,
+  "cache_read_tokens": 282075,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.125061,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "docs.godotengine.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_e072fae0",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260924_212452_task_0097_485/task_0097_opencode_20260924_212955"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260924_212452_task_0097_485
+Final status: PASS | exit code: 0

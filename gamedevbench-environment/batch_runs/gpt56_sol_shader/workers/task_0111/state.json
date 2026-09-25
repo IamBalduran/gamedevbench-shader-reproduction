@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0111"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0111": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:28:02+00:00",
+      "finished_at": "2026-09-24T14:36:38+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "65a36868e078ad36a4fa6257e24073f7a92b7bc6ce7475fda03e2a39fd06b966",
+      "validator_sha256": "58b5d43bbab6a96f55c6170ea98b9a227dd49a452000af1525c1a4104601a772",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0111/console/task_0111_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_222803_task_0111_17911",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "90",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented and verified:\n\n- `Main` Node3D with `Sphere` MeshInstance3D child.\n- SphereMesh assigned with ShaderMaterial.\n- Triplanar shader implemented at [triplanar_axis_blend.gdshader](/workspace/scripts/triplanar_axis_blend.gdshader).\n- Rock texture assigned to `texture_x` and `texture_z`.\n- Grass texture assigned to `texture_y`.\n- Godot 4.4.1 scene/editor validation passed.\n- Rendered frame confirmed the textured sphere displays correctly.",
+      "solver_duration": 492.23635745048523,
+      "cost_usd": 0.035639124999999994,
+      "input_tokens": 31033,
+      "output_tokens": 3176,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_222803_task_0111_17911/task_task_0111.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_222803_task_0111_17911/task_0111_opencode_20260924_223636/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_222803_task_0111_17911/task_0111_opencode_20260924_223636",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_222803_task_0111_17911/task_0111_opencode_20260924_223636/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:36:38+00:00"
+}

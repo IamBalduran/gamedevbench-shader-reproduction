@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_shader",
+  "tasks": [
+    "task_0095"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0095": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:47:12+00:00",
+      "finished_at": "2026-09-24T15:00:54+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb",
+      "validator_sha256": "0c711ba6185e9f65d2bf221d513ea51f21b3c3718ca71ebc6ce7c4589b00c373",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/deepseek_v4_pro_shader/workers/task_0095/console/task_0095_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260924_224716_task_0095_21185_retry1",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader code missing required parts: const float curvature = 7.0, const float vignette_multiplier = 2.0, uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, SCREEN_UV * 2.0 - 1.0, centered_uv.yx / curvature, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The CRT shader compiles and renders without errors. All requirements are implemented:\n\n- **Shader type**: `canvas_item` with `render_mode unshaded, skip_vertex_transform`\n- **Constants**: `CURVATURE = 7.0`, `VIGNETTE_MULTIPLIER = 2.0`\n- **Uniform**: `sampler2D screen_texture : hint_screen_texture, filter_linear_mipmap`\n- **Fragment logic**: centered UVs, curvature warp, cutoff mask, scanlines, vignette, LOD-biased sampling (`textureLod` at 0.5), output with `alpha = 1.0`\n\nThe output is dark because the scene has no visible content, so the screen texture behind the shader is empty — this is expected behavior.",
+      "solver_duration": 197.38378858566284,
+      "cost_usd": 0.045324,
+      "input_tokens": 8533,
+      "output_tokens": 1315,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260924_224716_task_0095_21185_retry1/task_task_0095.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224716_task_0095_21185_retry1/task_0095_opencode_20260924_230052/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224716_task_0095_21185_retry1/task_0095_opencode_20260924_230052",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260924_224716_task_0095_21185_retry1/task_0095_opencode_20260924_230052/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T15:00:54+00:00"
+}

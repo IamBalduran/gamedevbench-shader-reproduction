@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://task0620_start_main"]
+
+[ext_resource type="PackedScene" path="res://scenes/effects/muzzle_flash_effect.tscn" id="1_e4p0h"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="MuzzleFlashEffect" parent="." instance=ExtResource("1_e4p0h")]

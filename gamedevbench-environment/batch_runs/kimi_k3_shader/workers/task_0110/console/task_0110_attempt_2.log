@@ -1,0 +1,56 @@
+Single task: task_0110 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260925_151506_task_0110_8120
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_task_0110.json
+{
+  "task_name": "task_0110",
+  "success": true,
+  "message": "Task completed successfully",
+  "timestamp": "2026-09-25T15:17:30.373862",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Only benign ALSA audio errors (no sound card in the container) \u2014 no scene or shader errors. The task is complete:\n\n**Summary of changes:**\n\n1. **`scripts/triplanar_basic.gdshader`** \u2014 Full spatial triplanar shader exactly per spec:\n   - `vec4 vertex = INV_VIEW_MATRIX * vec4(VERTEX, 1.0)` (world-space position)\n   - `vec3 normal = normalize((INV_VIEW_MATRIX * vec4(NORMAL, 0.0)).xyz)`\n   - `adjusted_normal = abs(normal)` and `weights = adjusted_normal / (adjusted_normal.x + adjusted_normal.y + adjusted_normal.z)`\n   - `uv_x = vertex.zy`, `uv_y = vertex.xz`, `uv_z = vertex.xy`\n   - Single `uniform sampler2D texture_x` sampled with all three UVs, each multiplied by its weight, `ALBEDO = color_x + color_y + color_z`\n\n2. **`scenes/main.tscn`** \u2014 Node3D scene with:\n   - `MeshInstance3D` sphere using a `SphereMesh` with a `ShaderMaterial` assigned to the **mesh's material property**\n   - Material references the shader with `texture_x` set to `res://assets/sprites/Rock022_2K-PNG_Color.png`\n   - Added `Camera3D` and `DirectionalLight3D` for visibility\n\n3. **`project.godot`** \u2014 Set `run/main_scene=\"res://scenes/main.tscn\"`\n\nRendered frames were verified visually: the sphere displays the rock texture projected triplanarly across its surface.",
+  "solver_duration": 106.7153787612915,
+  "is_rate_limited": false,
+  "input_tokens": 162037,
+  "output_tokens": 2648,
+  "total_tokens": 164685,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.5258309999999999,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_79108636",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120/task_0110_opencode_20260925_151730"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151506_task_0110_8120
+Final status: PASS | exit code: 0

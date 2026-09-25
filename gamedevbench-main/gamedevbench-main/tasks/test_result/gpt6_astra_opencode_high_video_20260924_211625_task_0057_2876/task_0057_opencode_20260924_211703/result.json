@@ -1,0 +1,36 @@
+{
+  "task_name": "task_0057",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "timestamp": "20260924_211703",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [],
+    "denied_connects": []
+  },
+  "validation": {
+    "success": false,
+    "message": "Main needs at least two Unit instances for testing",
+    "timestamp": "2026-09-24T21:17:03.672469"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code -5)",
+    "duration_seconds": 0.15326333045959473,
+    "is_rate_limited": false,
+    "model": "openai/gpt-6-astra",
+    "cost_usd": 0.0
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0097",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "timestamp": "20260924_221217",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "VisualShader constants do not match DistortionUV example",
+    "timestamp": "2026-09-24T22:12:17.605739"
+  },
+  "solver": {
+    "success": true,
+    "message": "Configured [`scenes/main.tscn`](/workspace/scenes/main.tscn) with:\n\n- `DistortionPreview` `TextureRect` under `Main`\n- `shaderV_icon.png` texture\n- `ShaderMaterial` using a `VisualShader`\n- `DistortionUV` custom node\n- Constants: wave X `7`, wave Y `5`, distortion X/Y `0.1`\n\nVerified successfully in Godot 4.4.1 with a rendered screenshot showing the distorted icon.",
+    "duration_seconds": 503.25777673721313,
+    "is_rate_limited": false,
+    "model": "openai/gpt-5.6-sol",
+    "cost_usd": 0.0274475,
+    "token_usage": {
+      "input_tokens": 52300,
+      "output_tokens": 2091,
+      "total_tokens": 54391,
+      "cache_read_tokens": 143463,
+      "cache_write_tokens": 0
+    }
+  }
+}

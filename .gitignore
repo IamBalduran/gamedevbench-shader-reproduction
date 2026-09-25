@@ -1,0 +1,10 @@
+**/.venv/
+**/.godot/
+**/__pycache__/
+**/.pytest_cache/
+**/.DS_Store
+gamedevbench-environment/tools/
+gamedevbench-environment/logs/
+gamedevbench-environment/shubiaobiao-key.dpapi
+**/.env
+*.tmp

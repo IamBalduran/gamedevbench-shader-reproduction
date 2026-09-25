@@ -1,0 +1,119 @@
+﻿task_name,constraint_kind,method_name,instruction_explicitly_names_method,validator_line,validator_excerpt,official_failure_message,review_status
+task_0002,has_method,_on_area_entered,False,26,"if projectile.has_method(""_on_area_entered""):",Projectile must react to enemies inside _on_area_entered,candidate_only
+task_0002,direct_handler_call,_on_area_entered,False,27,projectile._on_area_entered(enemy),Projectile must react to enemies inside _on_area_entered,candidate_only
+task_0027,has_method,fire_weapon,True,31,"if not weapon.has_method(""fire_weapon""):",Impulse direction should push camera backwards along -Z,candidate_only
+task_0027,has_method,apply_weapon_impulse,True,35,"if not player.has_method(""apply_weapon_impulse""):",Impulse direction should push camera backwards along -Z,candidate_only
+task_0028,has_method,reset_target_state,True,52,"if not node.has_method(""reset_target_state""):",PillarPoint node missing,candidate_only
+task_0034,has_method,steer,True,19,"if not steer_component.has_method(""steer""):",debug dictionary missing steer entry,candidate_only
+task_0042,has_method,shake,True,22,"if not camera.has_method(""shake""):",new_ball must trigger camera shake velocity change,candidate_only
+task_0042,direct_handler_call,_on_left_wall_right_point_up,False,36,main_node._on_left_wall_right_point_up(),new_ball must trigger camera shake velocity change,candidate_only
+task_0048,has_method,self_destruct,True,39,"if not dragger.has_method(""self_destruct"") or not dragger.has_method(""play_spawn_animation""):",Draggable without overlaps must call self_destruct and queue_free,candidate_only
+task_0048,has_method,play_spawn_animation,True,39,"if not dragger.has_method(""self_destruct"") or not dragger.has_method(""play_spawn_animation""):",Draggable without overlaps must call self_destruct and queue_free,candidate_only
+task_0048,direct_handler_call,_on_input_event,True,59,"dragger._on_input_event(null, press, 0)",Draggable without overlaps must call self_destruct and queue_free,candidate_only
+task_0048,direct_handler_call,_on_input_event,True,80,"stray._on_input_event(null, press, 0)",Draggable without overlaps must call self_destruct and queue_free,candidate_only
+task_0052,has_method,_physics_process,False,38,"if not player.has_method(""_physics_process""):",Failed to load Player scene.,candidate_only
+task_0060,has_method,_process,False,27,"assert_condition(minimap.has_method(""_process""), ""Minimap must be a script instance"")",Minimap must define set_zoom,candidate_only
+task_0060,has_method,set_zoom,False,40,"assert_condition(minimap.has_method(""set_zoom""), ""Minimap must define set_zoom"")",Minimap must define set_zoom,candidate_only
+task_0060,direct_handler_call,_on_gui_input,True,82,minimap._on_gui_input(event_up),Minimap must define set_zoom,candidate_only
+task_0060,direct_handler_call,_on_gui_input,True,89,minimap._on_gui_input(event_down),Minimap must define set_zoom,candidate_only
+task_0060,direct_handler_call,_on_object_removed,True,93,minimap._on_object_removed(crate),Minimap must define set_zoom,candidate_only
+task_0068,has_method,_physics_process,False,49,"if ensure(bullet.has_method(""_physics_process""), ""Implement _physics_process for bullet movement""):",Crate must be destroyed after bullet hit,candidate_only
+task_0068,has_method,_on_area_entered,False,51,"if ensure(bullet.has_method(""_on_area_entered""), ""Implement _on_area_entered handler""):",Crate must be destroyed after bullet hit,candidate_only
+task_0068,has_method,_on_body_entered,False,53,"if ensure(bullet.has_method(""_on_body_entered""), ""Implement _on_body_entered handler""):",Crate must be destroyed after bullet hit,candidate_only
+task_0068,direct_handler_call,_on_area_entered,False,90,temp._on_area_entered(null),Crate must be destroyed after bullet hit,candidate_only
+task_0068,direct_handler_call,_on_body_entered,False,105,temp._on_body_entered(crate),Crate must be destroyed after bullet hit,candidate_only
+task_0093,has_method,show_screen,True,158,"if not panel.has_method(""show_screen""):",ContinueButton size_flags_horizontal must be Expand Fill,candidate_only
+task_0107,has_method,apply_clip_and_fov_shader_to_view_model,False,99,"if node.has_method(""apply_clip_and_fov_shader_to_view_model""):",Surface material is not a ShaderMaterial,candidate_only
+task_0132,has_method,_process,False,27,"assert_condition(minimap.has_method(""_process""), ""Minimap must be a script instance"")","grid_scale must be derived from grid size, viewport, and zoom",candidate_only
+task_0132,has_method,set_zoom,False,40,"assert_condition(minimap.has_method(""set_zoom""), ""Minimap must define set_zoom"")","grid_scale must be derived from grid size, viewport, and zoom",candidate_only
+task_0132,direct_handler_call,_on_gui_input,True,82,minimap._on_gui_input(event_up),"grid_scale must be derived from grid size, viewport, and zoom",candidate_only
+task_0132,direct_handler_call,_on_gui_input,True,89,minimap._on_gui_input(event_down),"grid_scale must be derived from grid size, viewport, and zoom",candidate_only
+task_0132,direct_handler_call,_on_object_removed,True,93,minimap._on_object_removed(crate),"grid_scale must be derived from grid size, viewport, and zoom",candidate_only
+task_0150,has_method,show_screen,True,158,"if not panel.has_method(""show_screen""):",ContinueButton size_flags_horizontal must be Expand Fill,candidate_only
+task_0159,has_method,show_screen,True,155,"if not panel.has_method(""show_screen""):",ContinueButton size_flags_horizontal must be Expand,candidate_only
+task_0263,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 30.0,candidate_only
+task_0263,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 30.0,candidate_only
+task_0264,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 24.0,candidate_only
+task_0264,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 24.0,candidate_only
+task_0265,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 28.0,candidate_only
+task_0265,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 28.0,candidate_only
+task_0267,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 36.0,candidate_only
+task_0267,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 36.0,candidate_only
+task_0268,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 40.0,candidate_only
+task_0268,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 40.0,candidate_only
+task_0269,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 26.0,candidate_only
+task_0269,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 26.0,candidate_only
+task_0270,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 34.0,candidate_only
+task_0270,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 34.0,candidate_only
+task_0271,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 22.0,candidate_only
+task_0271,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 22.0,candidate_only
+task_0272,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 38.0,candidate_only
+task_0272,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 38.0,candidate_only
+task_0273,has_method,find_target,True,71,"if not assert_or_fail(target_finder.has_method(""find_target""), ""TargetFinder must implement find_target()""):",DetectRange.base_range_size must be 27.0,candidate_only
+task_0273,has_method,has_target_in_range,True,73,"if not assert_or_fail(target_finder.has_method(""has_target_in_range""), ""TargetFinder must implement has_target_in_range()""):",DetectRange.base_range_size must be 27.0,candidate_only
+task_0281,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0281,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0281,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0281,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0281,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0281,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the overlay_layer group,candidate_only
+task_0282,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0282,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0282,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0282,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0282,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0282,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_layer group,candidate_only
+task_0283,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the card_layer group,candidate_only
+task_0283,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the card_layer group,candidate_only
+task_0283,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the card_layer group,candidate_only
+task_0283,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the card_layer group,candidate_only
+task_0283,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the card_layer group,candidate_only
+task_0283,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the card_layer group,candidate_only
+task_0284,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0284,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0284,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0284,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0284,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0284,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_layer group,candidate_only
+task_0285,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the float_layer group,candidate_only
+task_0285,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the float_layer group,candidate_only
+task_0285,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the float_layer group,candidate_only
+task_0285,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the float_layer group,candidate_only
+task_0285,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the float_layer group,candidate_only
+task_0285,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the float_layer group,candidate_only
+task_0286,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the front_layer group,candidate_only
+task_0286,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the front_layer group,candidate_only
+task_0286,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the front_layer group,candidate_only
+task_0286,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the front_layer group,candidate_only
+task_0286,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the front_layer group,candidate_only
+task_0286,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the front_layer group,candidate_only
+task_0287,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0287,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0287,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0287,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0287,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0287,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the ui_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0288,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the hud_drag_layer group,candidate_only
+task_0289,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0289,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0289,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0289,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0289,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0289,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the screen_layer group,candidate_only
+task_0290,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0290,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0290,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0290,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0290,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0290,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the top_ui_layer group,candidate_only
+task_0291,direct_handler_call,_on_gui_input,False,62,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the drag_overlay group,candidate_only
+task_0291,direct_handler_call,_on_drop_point_detector_area_entered,False,99,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_overlay group,candidate_only
+task_0291,direct_handler_call,_on_drop_point_detector_area_entered,False,100,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_overlay group,candidate_only
+task_0291,direct_handler_call,_on_drop_point_detector_area_exited,False,103,card._on_drop_point_detector_area_exited(drop_area),Dragging state must reparent the card into the drag_overlay group,candidate_only
+task_0291,direct_handler_call,_on_gui_input,False,107,"card._on_gui_input(make_mouse_button_event(MOUSE_BUTTON_LEFT, true))",Dragging state must reparent the card into the drag_overlay group,candidate_only
+task_0291,direct_handler_call,_on_drop_point_detector_area_entered,False,111,card._on_drop_point_detector_area_entered(drop_area),Dragging state must reparent the card into the drag_overlay group,candidate_only

@@ -1,0 +1,35 @@
+
+=== Sol after only correcting Unit scene path in a copy ===
+VALIDATION_FAILED: set_selected() must toggle the aura_width shader parameter
+VALIDATION_FAILED: selected setter must widen the aura when true
+VALIDATION_PASSED: Unit scene configured with aura highlight and detection area
+ERROR: 2 RID allocations of type 'P11GodotBody2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P11GodotArea2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P12GodotShape2D' were leaked at exit.
+ERROR: 1 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 2 RID allocations of type 'N13RendererDummy15MaterialStorage13DummyMaterialE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.
+ERROR: 5 resources still in use at exit (run with --verbose for details).
+
+=== DeepSeek after only correcting Unit scene path in a copy ===
+VALIDATION_FAILED: set_selected() must toggle the aura_width shader parameter
+SCRIPT ERROR: Invalid assignment of property or key 'selected' with value of type 'bool' on a base object of type 'CharacterBody2D (unit.gd)'.
+VALIDATION_PASSED: Unit scene configured with aura highlight and detection area
+ERROR: 2 RID allocations of type 'P11GodotBody2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P11GodotArea2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P12GodotShape2D' were leaked at exit.
+ERROR: 1 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 2 RID allocations of type 'N13RendererDummy15MaterialStorage13DummyMaterialE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.
+ERROR: 5 resources still in use at exit (run with --verbose for details).
+
+=== Kimi after only correcting Unit scene path in a copy ===
+VALIDATION_FAILED: set_selected() must toggle the aura_width shader parameter
+VALIDATION_PASSED: Unit scene configured with aura highlight and detection area
+ERROR: 2 RID allocations of type 'P11GodotBody2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P11GodotArea2D' were leaked at exit.
+ERROR: 2 RID allocations of type 'P12GodotShape2D' were leaked at exit.
+ERROR: 1 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 2 RID allocations of type 'N13RendererDummy15MaterialStorage13DummyMaterialE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.
+ERROR: 5 resources still in use at exit (run with --verbose for details).

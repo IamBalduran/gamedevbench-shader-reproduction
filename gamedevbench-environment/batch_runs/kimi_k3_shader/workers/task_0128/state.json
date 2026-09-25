@@ -1,0 +1,66 @@
+{
+  "batch_id": "kimi_k3_shader",
+  "tasks": [
+    "task_0128"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0128": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "no_complete_result",
+          "solver_message": "No complete result JSON; process exit 1",
+          "run_name": null,
+          "started_at": "2026-09-25T06:35:13+00:00",
+          "finished_at": "2026-09-25T06:35:19+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T07:17:31+00:00",
+      "finished_at": "2026-09-25T07:21:34+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "2812ef7aca377c60ebdcac51ec943c239c2c9df9af9354ee300f13b852a34cb5",
+      "validator_sha256": "947bccdaf5005b307854e791009028f4b7dcbf1b76bd10aac614b6cd1c018380",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/kimi_k3_shader/workers/task_0128/console/task_0128_attempt_2.log",
+      "run_name": "kimi_k3_opencode_high_video_20260925_151733_task_0128_9791",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Panel node not found",
+      "official_details": "{}",
+      "validator_error_line": "15",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Probe READ behavior — craft a scene with a text sub-resource ShaderMaterial and see what loads work from a `.tscn` — this decides my strategy:",
+      "solver_duration": 217.21754145622253,
+      "cost_usd": 0.939591,
+      "input_tokens": 298882,
+      "output_tokens": 2863,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_task_0128.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260925_151733_task_0128_9791/task_0128_opencode_20260925_152131/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T07:21:34+00:00"
+}

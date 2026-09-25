@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+  "details": {},
+  "timestamp": "2026-09-25T14:58:40.683292"
+}

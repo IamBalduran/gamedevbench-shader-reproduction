@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_shader",
+  "tasks": [
+    "task_0106"
+  ],
+  "display_total": 12,
+  "items": {
+    "task_0106": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-24T14:12:19+00:00",
+      "finished_at": "2026-09-24T14:22:49+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "a4390ae1451f5523b81467062aec912499b4bc05cdb6882e57a0054e1f103e60",
+      "validator_sha256": "2feeaf0b3f6265799986b52eb0466867fb7b3bb606562f7f184679553e3dd5f0",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-environment/batch_runs/gpt56_sol_shader/workers/task_0106/console/task_0106_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260924_221220_task_0106_13541",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Task completed successfully",
+      "official_details": "{}",
+      "validator_error_line": "60",
+      "solver_success": false,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0787134170532,
+      "cost_usd": 0.08098050000000001,
+      "input_tokens": 134244,
+      "output_tokens": 6420,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260924_221220_task_0106_13541/task_task_0106.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_221220_task_0106_13541/task_0106_opencode_20260924_222240/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_221220_task_0106_13541/task_0106_opencode_20260924_222240",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260924_221220_task_0106_13541/task_0106_opencode_20260924_222240/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-24T14:22:49+00:00"
+}
