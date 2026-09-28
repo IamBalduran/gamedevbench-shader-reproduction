@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://crate0734"]
+
+[ext_resource type="Script" path="res://scripts/crate.gd" id="1_crate"]
+[ext_resource type="Texture2D" path="res://assets/minimapIcon_exclamationYellow.res" id="2_icon"]
+
+[node name="Crate" type="Area2D" groups=["minimap_objects"]]
+script = ExtResource("1_crate")
+minimap_icon = ExtResource("2_icon")

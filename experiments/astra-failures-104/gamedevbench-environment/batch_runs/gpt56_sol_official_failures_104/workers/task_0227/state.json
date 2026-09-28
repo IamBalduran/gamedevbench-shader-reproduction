@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0227"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0227": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T04:14:55+00:00",
+      "finished_at": "2026-09-26T04:25:24+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "b8f0f89c064807fc99c339aa51e1314be5164151cdcc8299d2456a23e3089a5d",
+      "validator_sha256": "b7c6da9b98c1de9d1e9bdb802da3a649a6af00c33e83302313a5692e3b21fe44",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0227/console/task_0227_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "StarHighlights needs a Polygon2D child named StarHighlight",
+      "official_details": "{}",
+      "validator_error_line": "136",
+      "solver_success": false,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0454435348511,
+      "cost_usd": 0.005624875,
+      "input_tokens": 6279,
+      "output_tokens": 484,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_task_0227.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_0227_opencode_20260926_122522/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_0227_opencode_20260926_122522",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_0227_opencode_20260926_122522/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T04:25:24+00:00"
+}

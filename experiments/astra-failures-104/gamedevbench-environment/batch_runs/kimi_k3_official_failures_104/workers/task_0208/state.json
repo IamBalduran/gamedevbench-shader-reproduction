@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0208"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0208": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T20:32:05+00:00",
+      "finished_at": "2026-09-26T20:37:39+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "b34fc7dce70ccd451f0e8b8518a8eb3b362e64f4add586859082be4b0b268ffc",
+      "validator_sha256": "3da4aa862fa5e3be812f60b772bf657ceb9feda728bfa906be1d1e1023b3aed4",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0208/console/task_0208_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_043206_task_0208_305256",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Add a Node2D named SpawningPoints under Trap",
+      "official_details": "{}",
+      "validator_error_line": "44",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The scene is fully rendered. Now let me analyze the texture programmatically to find the precise tip locations.",
+      "solver_duration": 304.60422468185425,
+      "cost_usd": 0.580896,
+      "input_tokens": 181957,
+      "output_tokens": 2335,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_043206_task_0208_305256/task_task_0208.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_043206_task_0208_305256/task_0208_opencode_20260927_043736/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_043206_task_0208_305256/task_0208_opencode_20260927_043736",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_043206_task_0208_305256/task_0208_opencode_20260927_043736/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T20:37:39+00:00"
+}

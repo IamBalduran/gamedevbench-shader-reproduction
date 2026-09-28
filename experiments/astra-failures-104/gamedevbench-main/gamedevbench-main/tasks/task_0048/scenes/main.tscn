@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/draggable.tscn" id="1_bux0u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drop"]
+extents = Vector2(60, 24)
+
+[node name="Main" type="Node2D"]
+
+[node name="SampleDraggable" parent="." instance=ExtResource("1_bux0u")]
+position = Vector2(512, 360)
+
+[node name="DropTarget" type="Area2D" parent="."]
+position = Vector2(512, 180)
+collision_layer = 2
+monitoring = true
+monitorable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropTarget"]
+shape = SubResource("RectangleShape2D_drop")

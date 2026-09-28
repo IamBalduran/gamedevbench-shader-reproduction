@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqv3q6bmn4hoc"]
+
+[ext_resource type="Script" path="res://scripts/flashlight_point.gd" id="1_mi0h6"]
+
+[node name="FlashlightPoint" type="Node3D"]
+script = ExtResource("1_mi0h6")

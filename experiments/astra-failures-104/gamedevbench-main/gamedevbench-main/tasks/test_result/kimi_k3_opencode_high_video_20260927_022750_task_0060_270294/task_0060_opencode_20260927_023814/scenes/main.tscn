@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://main0734"]
+
+[ext_resource type="PackedScene" path="res://scenes/minimap.tscn" id="1_minimap"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scenes/mob.tscn" id="3_mob"]
+[ext_resource type="PackedScene" path="res://scenes/crate.tscn" id="4_crate"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="5_world"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("5_world")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Minimap" parent="CanvasLayer" instance=ExtResource("1_minimap")]
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(0, 0)
+
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="Mob" parent="Mobs" instance=ExtResource("3_mob")]
+position = Vector2(120, 0)
+
+[node name="Crates" type="Node2D" parent="."]
+
+[node name="Crate" parent="Crates" instance=ExtResource("4_crate")]
+position = Vector2(-160, 0)

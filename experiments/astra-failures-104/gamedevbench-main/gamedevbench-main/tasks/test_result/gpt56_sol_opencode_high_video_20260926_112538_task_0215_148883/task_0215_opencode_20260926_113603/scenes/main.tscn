@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl4gtvqpbx2pb"]
+
+[ext_resource type="Texture2D" uid="uid://ogksparxf2cn" path="res://assets/sprites/tree_image.jpg" id="2_igidl"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Trap" type="Node2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2.2, 2.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Trap"]
+position = Vector2(64.5, 34.5)
+scale = Vector2(0.07473366, 0.08652595)
+texture = ExtResource("2_igidl")
+
+[node name="SpawningPoints" type="Node2D" parent="Trap"]
+
+[node name="SpawnTop" type="Marker2D" parent="Trap/SpawningPoints"]
+position = Vector2(80, 61)
+
+[node name="SpawnBot" type="Marker2D" parent="Trap/SpawningPoints"]
+z_index = 1
+position = Vector2(34.1, 69.3)

@@ -1,0 +1,19 @@
+{
+  "task_id": 68,
+  "name": "Implement Bullet Collision Cleanup",
+  "instruction": "Update res://scripts/entities/tank/weapon/bullet.gd so the Bullet has const SPEED = 500, stores its travel direction and firing tank, moves every physics frame by direction.normalized() * SPEED * delta, queues itself when area_entered fires, and on body_entered destroys Crate bodies before calling queue_free().",
+  "metadata": {
+    "tutorial_source": "YouTube: Game Dev Artisan - Adding Collisions: Layers, Detections, and Interactions - Godot Fundamentals",
+    "video_id": "z9d8BU1o3Zw",
+    "github_repo": "https://github.com/Game-Dev-Artisan/godot-fundamentals",
+    "expected_nodes": [
+      "Area2D:Bullet"
+    ],
+    "key_properties": {
+      "Bullet.SPEED": "500",
+      "Bullet._physics_process": "direction.normalized() * SPEED * delta",
+      "Bullet._on_area_entered": "queue_free()",
+      "Bullet._on_body_entered": "Crate.destroy() + queue_free()"
+    }
+  }
+}

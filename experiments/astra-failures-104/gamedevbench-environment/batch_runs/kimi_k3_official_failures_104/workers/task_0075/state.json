@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0075"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0075": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:56:29+00:00",
+      "finished_at": "2026-09-26T19:05:22+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "f84d39606b48e17a7143ead0fb15a6ac0237d1961bc347f175a7d2a6c76e8735",
+      "validator_sha256": "da42e9741e0ab543e0f198c062d0b39c09563f37445e885a67a3e8b45a936e32",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0075/console/task_0075_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_025629_task_0075_279498",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Some spheres still out of frustum at z=12. Let me compute required camera distance for fov=30 to cover the horizontal extent (-5.1 to 5.1, half-width 5.1) plus margin.\n\nHalf-width 5.5 with margin → dist = 5.5 / tan(15°) ≈ 20.5. But h-fov also depends on aspect ratio (typically 16:9 in editor default 1152x648 project → narrower). Let me just test z=22 and also slightly reduce margins. Also vertical extent: y -1.1 to 1, camera at y=1 → vertical range [-2.1, 0], half ~1.05 — well within v-fov (30° vertical? In Godot, fov is vertical FOV... actually Godot's Camera3D fov is vertical). Wait — if fov is vertical = 30°, then tan(15°) covers vertical half. Vertical needed: from y=1 down to -1.1 = 2.1 → dist = 2.1/tan(15°) ≈ 7.8. Horizontal: with aspect 16:9, h_half_angle = atan(tan(15°)*16/9) = atan(0.476) ≈ 25.4°, tan ≈ 0.476. dist = 5.5/0.476 ≈ 11.5. Hmm, then z=12 should nearly work. The in_frustum=false for sphere at x=3.8: dist 12, h offset 3.8/12 = 0.3167 < 0.476 → should be in frustum... Wait, camera is at z=12, sphere at z=3.2 → effective distance 12-3.2 = 8.8. x=3.8 → 3.8/8.8=0.432 < 0.476 OK barely. Sphere3 x=4.6, z=-0.6 → dist 12.6, 4.6/12.6=0.365 OK. Hmm but it says false. Maybe the frustum check ran before viewport update? Or the default viewport aspect in headless is 1:1 — then h half-width at dist 12.6 = tan(15°)*12.6 = 3.38 < 4.6. Yes, that's it.\n\nHeadless default window is small. Rather than relying on rendering viewport, push camera back to z=18 and also shift camera look slightly. Let's compute worst: sphere4 x=-4.2, radius 0.5 → need h offset 4.7 visible. If aspect 1:1: dist needed = 4.7/tan(15°) ≈ 17.5. Sphere4 z=1.7 → camera z = 1.7+17.5 = 19.2. Use z=20 for margin. Vertical: sphere below: y -1.1, from cam y=1 → 2.1 below; at dist 20 works.\n\nLet's try z=20.",
+      "solver_duration": 499.6244831085205,
+      "cost_usd": 0.7824,
+      "input_tokens": 239640,
+      "output_tokens": 4232,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_025629_task_0075_279498/task_task_0075.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025629_task_0075_279498/task_0075_opencode_20260927_030518/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025629_task_0075_279498/task_0075_opencode_20260927_030518",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025629_task_0075_279498/task_0075_opencode_20260927_030518/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:05:22+00:00"
+}

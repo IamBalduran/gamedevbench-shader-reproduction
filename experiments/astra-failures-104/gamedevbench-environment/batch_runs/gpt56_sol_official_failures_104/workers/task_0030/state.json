@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0030"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0030": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T00:14:49+00:00",
+      "finished_at": "2026-09-26T00:22:19+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "d317b25b106231b8783c8fce4d88808ea35af4870a5835a65267d7b15bff7902",
+      "validator_sha256": "faf45e4ee9d4fbe41b9deb58cee7ce00061775de7b3616ec1cd1c8e593829053",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0030/console/task_0030_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_081450_task_0030_106672",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Sunshine Clouds driver and lighting configured",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Added the `SunshineCloudsDriver` under `Main`, wired the cloud resource into both the driver and `WorldEnvironment` compositor, registered the existing lights with a 32-step directional shadow entry, and set the camera far plane to 400000. Updated the requested cloud settings; the mask width was already 512 km.\n\nGodot 4.4.1 rendered a frame successfully, and the image shows the clouds. Headless import could not process the addon shaders, but the graphical editor import resolved that; runtime shutdown reports addon GPU-resource cleanup warnings.",
+      "solver_duration": 399.10604071617126,
+      "cost_usd": 0.03790225,
+      "input_tokens": 70418,
+      "output_tokens": 2910,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_081450_task_0030_106672/task_task_0030.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_081450_task_0030_106672/task_0030_opencode_20260926_082205/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_081450_task_0030_106672/task_0030_opencode_20260926_082205",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_081450_task_0030_106672/task_0030_opencode_20260926_082205/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T00:22:19+00:00"
+}

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crate0734"]
+
+[ext_resource type="Script" path="res://scripts/crate.gd" id="1_crate"]
+
+[node name="Crate" type="Area2D"]
+script = ExtResource("1_crate")

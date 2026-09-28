@@ -1,0 +1,3 @@
+{
+  "instruction": "Populate the HUD CanvasLayer so it shows a top MarginContainer named MarginContainer, with a HBoxContainer child node named HBoxContainer, which then contains two Label named Health and Score, writing \"Health: 100\" and \"Score: 0\" repsectively. Then, add a hidden MarginContainer, named GameOver, stretched to the viewport with process mode set to Always. The margin of GameOver should be 70 on left and right, 60 on top, and 100 on bottom. Inside GameOver, include a gradient TextureRect background, a Labels VBox containing three labels (Label writing \"Game Over!!!\", Label2 writing \"your score is 0\", and Label3 writing \"your high score is 100\"), and an HBoxContainer named HBoxContainer with buttons named \"menu\" and \"restart\"."
+}

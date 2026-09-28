@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://c0so0h638fwfp" path="res://assets/sprites/platformer.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(155.049, 8.622)
+rotation = 0.22
+scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+texture = ExtResource("1_platformer")
+centered = false
+
+[node name="CoinHighlights" type="Node2D" parent="Level"]
+
+[node name="CoinHighlight1" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(298.35, 298.34, 296.88, 303.84, 292.85, 307.87, 287.35, 309.34, 281.85, 307.87, 277.82, 303.84, 276.35, 298.34, 277.82, 292.84, 281.85, 288.81, 287.35, 287.34, 292.85, 288.81, 296.88, 292.84)
+
+[node name="CoinHighlight2" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(265.58, 312.37, 264.11, 317.87, 260.08, 321.9, 254.58, 323.37, 249.08, 321.9, 245.05, 317.87, 243.58, 312.37, 245.05, 306.87, 249.08, 302.84, 254.58, 301.37, 260.08, 302.84, 264.11, 306.87)
+
+[node name="CoinHighlight3" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(295.03, 111.98, 293.56, 117.48, 289.53, 121.51, 284.03, 122.98, 278.53, 121.51, 274.5, 117.48, 273.03, 111.98, 274.5, 106.48, 278.53, 102.45, 284.03, 100.98, 289.53, 102.45, 293.56, 106.48)
+
+[node name="CoinHighlight4" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(437.05, 72.92, 435.58, 78.42, 431.55, 82.45, 426.05, 83.92, 420.55, 82.45, 416.52, 78.42, 415.05, 72.92, 416.52, 67.42, 420.55, 63.39, 426.05, 61.92, 431.55, 63.39, 435.58, 67.42)
+
+[node name="CoinHighlight5" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(330.42, 83.88, 328.95, 89.38, 324.92, 93.41, 319.42, 94.88, 313.92, 93.41, 309.89, 89.38, 308.42, 83.88, 309.89, 78.38, 313.92, 74.35, 319.42, 72.88, 324.92, 74.35, 328.95, 78.38)
+
+[node name="CoinHighlight6" type="Polygon2D" parent="Level/CoinHighlights"]
+color = Color(1, 1, 0, 0.35)
+polygon = PackedVector2Array(299.32, 187.55, 297.85, 193.05, 293.82, 197.08, 288.32, 198.55, 282.82, 197.08, 278.79, 193.05, 277.32, 187.55, 278.79, 182.05, 282.82, 178.02, 288.32, 176.55, 293.82, 178.02, 297.85, 182.05)

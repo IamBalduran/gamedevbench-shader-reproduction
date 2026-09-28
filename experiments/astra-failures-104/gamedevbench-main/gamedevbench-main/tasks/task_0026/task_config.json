@@ -1,0 +1,37 @@
+{
+  "task_id": 26,
+  "name": "Codex Camera Shake Rig",
+  "instruction": "In scenes/player_body.tscn, restructure PlayerBody so CameraNode contains a CameraActual Node3D with a Camera3D child, assign those nodes to the player_body.gd exports, and implement a noise-based camera shake: expose a FastNoiseLite plus numeric exports for noise_panning_speed (30), max_power (0.15), blend_speed (7), return_strength (5), noise_strength (0.2), falling_bias (1.0), falling_strength_falloff (2.0), falling_max_strength (1.0), and jumping_strength (0.2). Track camera_shake_position/time_since_started, lerp CameraActual toward camera_shake_position plus sampled noise every physics frame, decay back to origin, clamp impulses to the max power, add an upward kick inside impulse_camera_with_recoil, and implement apply_landing_impulse() so downward velocities below the bias trigger a proportional drop impulse. In the PlayerBody scene, create a FastNoiseLite resource with default values and wire it to the camera shake export.",
+  "metadata": {
+    "tutorial_source": "YouTube: Bonkahe - Godot 3D - Adding a bit of JUICE (Camera Shake & Head Bob) - FPS Horror Project (C#) | 13",
+    "video_id": "JnubpEa-Inw",
+    "github_repo": "https://github.com/Bonkahe/FPSHorrorMono (Episode13/FpsGodotProjectMono)",
+    "transcript_excerpt": "\"we went ahead and added a camera actual node ... add in our camera Shake variables ... noise texture ... panning speed ... max power ... blend speed ... return strength\"",
+    "repo_evidence": "ScenePrefabs/PlayerBody.tscn, Code/PlayerBodyController.cs",
+    "expected_nodes": [
+      "Main/PlayerBody",
+      "PlayerBody/CameraNode",
+      "PlayerBody/CameraNode/CameraActual",
+      "PlayerBody/CameraNode/CameraActual/Camera3D"
+    ],
+    "key_properties": {
+      "camera_shake_exports": [
+        "camera_shake_noise",
+        "camera_shake_noise_panning_speed",
+        "camera_shake_max_power",
+        "camera_shake_blend_speed",
+        "camera_shake_return_strength",
+        "camera_shake_noise_strength",
+        "camera_shake_falling_bias",
+        "camera_shake_falling_strength_falloff",
+        "camera_shake_falling_max_strength",
+        "camera_shake_jumping_strength"
+      ],
+      "impulse_methods": [
+        "impulse_camera",
+        "impulse_camera_with_recoil",
+        "apply_landing_impulse"
+      ]
+    }
+  }
+}

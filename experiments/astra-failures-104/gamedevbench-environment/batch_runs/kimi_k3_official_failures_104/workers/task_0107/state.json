@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0107"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0107": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:31:31+00:00",
+      "finished_at": "2026-09-26T19:37:12+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+      "validator_sha256": "3f855be8dec6b0c3d412979d43c9c320f2fdd3979c79847fadcf611ebf44cf30",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0107/console/task_0107_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_033132_task_0107_291248",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Surface material is not a ShaderMaterial",
+      "official_details": "{}",
+      "validator_error_line": "55",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The task is complete. Here's a summary of what was implemented:\n\n## Implementation: View Model Clip Shader Swap\n\n**File modified:** `scripts/weapon_manager.gd`\n\n### What the implementation does\n\n1. **`_ready()`** — Calls `apply_clip_and_fov_shader_to_view_model(view_model_container, 54.0)`, applying the shader swap to the view model subtree with the required 54.0 FOV.\n\n2. **`apply_clip_and_fov_shader_to_view_model(node3d, fov_or_negative_for_unchanged)`** —\n   - Loads the shader `res://shaders/weapon_clip_and_fov_shader.gdshader`\n   - Recursively collects all `MeshInstance3D` nodes under the given node\n   - For each mesh surface, resolves the base material (preferring surface override materials, falling back to mesh surface materials)\n   - Creates a new `ShaderMaterial` using the clip/FOV shader\n   - Copies the base material parameters into the shader (see below)\n   - Sets `viewmodel_fov` to the provided FOV (54.0 when applied from `_ready`)\n   - Assigns it via `set_surface_override_material`\n\n3. **Parameter copying** (`_copy_material_parameters`) — From `StandardMaterial3D` it copies `albedo` (albedo color), `metallic`, `roughness`, `specular`, plus optional albedo/metallic/roughness/normal textures and UV transforms. From an existing `ShaderMaterial` it copies the same parameter names (and preserves `viewmodel_fov` when shaders match).\n\n### Verification\n\nA runtime verification script instantiated the scene in headless Godot 4.4.1 and confirmed:\n\n- Knife's surface override material is a `ShaderMaterial` with `res://shaders/weapon_clip_and_fov_shader.gdshader`\n- `albedo = (0.2, 0.7, 0.9, 1.0)`, `metallic = 0.2`, `roughness = 0.8` — all copied from the base material\n- `viewmodel_fov = 54.0`\n- Full project runs cleanly with no script errors (exit code 0)",
+      "solver_duration": 317.4130415916443,
+      "cost_usd": 0.8530589999999999,
+      "input_tokens": 264688,
+      "output_tokens": 3933,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_033132_task_0107_291248/task_task_0107.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033132_task_0107_291248/task_0107_opencode_20260927_033710/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033132_task_0107_291248/task_0107_opencode_20260927_033710",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033132_task_0107_291248/task_0107_opencode_20260927_033710/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:37:12+00:00"
+}

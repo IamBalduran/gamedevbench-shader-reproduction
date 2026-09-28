@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "StarHighlight must cover the star with overlap above 85% (IoU=0.4672)",
+  "details": {},
+  "timestamp": "2026-09-26T12:36:02.731461"
+}

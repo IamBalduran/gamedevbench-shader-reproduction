@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0073"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0073": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:53:45+00:00",
+      "finished_at": "2026-09-26T19:03:42+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "a31302afd477e8ac9b73095284f9b1a4bad211dfce671707d14486d1e2a2e4c1",
+      "validator_sha256": "50ce2e1e14f52007d57363c39a35c4958f57a4d7ed99429dd05791968a38a222",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0073/console/task_0073_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_025346_task_0073_278304",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Camera should be angled such that all spheres are visible",
+      "official_details": "{}",
+      "validator_error_line": "184",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Done. `res://scenes/main.tscn` is now populated and verified by rendering it in Godot 4.4.1.\n\n**What was built:**\n- **WorldEnvironment** — `Environment` with `background_mode = 2` (Sky) using a `ProceduralSkyMaterial`, and `glow_enabled = true`\n- **DirectionalLight3D** — tilted sun light with `shadow_enabled = true`\n- **Water** (`MeshInstance3D`) — `PlaneMesh` size `(10, 10)` subdivided 20×20, with a `ShaderMaterial` referencing `res://scenes/WaterShader.tres`\n- **Background** (`Node3D`) with exactly 5 sphere meshes at the specified coordinates (all within the water plane), each with a green `StandardMaterial3D` override:\n  - Sphere (3.2, 0.3, 3.0), Sphere2 (4.0, -0.5, 2.2), Sphere3 (2.5, 0.1, 4.2), Sphere4 (3.8, -0.7, 4.5), Sphere5 (4.4, 0.4, 3.8)\n- **Camera3D** at `(0.142, 0.6, 0.141)` with FOV 50, aimed at the sphere cluster so all 5 are in frame\n\n**Verification:** headless run exits clean with no errors, and the rendered frame shows the blue rippling water plane with all five green spheres visible.",
+      "solver_duration": 564.2143857479095,
+      "cost_usd": 0.7684050000000001,
+      "input_tokens": 240265,
+      "output_tokens": 3174,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_025346_task_0073_278304/task_task_0073.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025346_task_0073_278304/task_0073_opencode_20260927_030339/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025346_task_0073_278304/task_0073_opencode_20260927_030339",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_025346_task_0073_278304/task_0073_opencode_20260927_030339/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:03:42+00:00"
+}

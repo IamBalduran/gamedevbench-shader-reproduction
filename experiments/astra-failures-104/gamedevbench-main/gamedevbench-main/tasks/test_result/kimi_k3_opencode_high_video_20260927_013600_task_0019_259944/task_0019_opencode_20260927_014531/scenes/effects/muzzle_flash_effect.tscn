@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://task0620_start_effect"]
+
+[ext_resource type="Script" uid="uid://1fwasvyf0jja" path="res://scripts/generic_effect_handler.gd" id="1_script"]
+[ext_resource type="Shader" uid="uid://b8mloxgyn13ly" path="res://assets/shaders/muzzle_flash.gdshader" id="2_shader"]
+
+[sub_resource type="Gradient" id="Gradient_smoke"]
+colors = PackedColorArray(0.6, 0.6, 0.6, 0.85, 0.4, 0.4, 0.4, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_smoke"]
+gradient = SubResource("Gradient_smoke")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smoke"]
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("GradientTexture2D_smoke")
+billboard_mode = 3
+
+[sub_resource type="SphereMesh" id="SphereMesh_smoke"]
+material = SubResource("StandardMaterial3D_smoke")
+radius = 0.5
+height = 1.0
+radial_segments = 16
+rings = 8
+
+[sub_resource type="Curve" id="Curve_smoke_scale"]
+_data = [Vector2(0, 0.3), 0.0, 1.2, 0, 0, Vector2(1, 1), 1.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_smoke_scale"]
+curve = SubResource("Curve_smoke_scale")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_smoke"]
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 0.4
+initial_velocity_max = 1.2
+angular_velocity_min = -60.0
+angular_velocity_max = 60.0
+damping_min = 1.0
+damping_max = 2.0
+scale_min = 0.5
+scale_max = 1.2
+scale_curve = SubResource("CurveTexture_smoke_scale")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fire"]
+direction = Vector3(1, 0, 0)
+spread = 30.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 5.0
+damping_min = 4.0
+damping_max = 8.0
+scale_min = 0.6
+scale_max = 1.4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fire"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/flash_color = Color(1, 0.75, 0.3, 1)
+shader_parameter/falloff_power = 1.6
+
+[sub_resource type="QuadMesh" id="QuadMesh_fire"]
+material = SubResource("ShaderMaterial_fire")
+
+[node name="MuzzleFlashEffect" type="Node3D"]
+script = ExtResource("1_script")
+optional_light_path = NodePath("MuzzleFlash")
+light_duration = 0.2
+
+[node name="MuzzleFlash" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.7, 0.35, 1)
+light_energy = 4.0
+omni_range = 5.0
+
+[node name="SmokeParticles" type="GPUParticles3D" parent="."]
+amount = 24
+lifetime = 1.2
+one_shot = true
+explosiveness = 0.85
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_smoke")
+draw_pass_1 = SubResource("SphereMesh_smoke")
+
+[node name="MuzzleFireLeft" type="GPUParticles3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+amount = 8
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_fire")
+draw_pass_1 = SubResource("QuadMesh_fire")
+
+[node name="MuzzleFireRight" type="GPUParticles3D" parent="."]
+amount = 8
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB(-4, -4, -4, 8, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_fire")
+draw_pass_1 = SubResource("QuadMesh_fire")

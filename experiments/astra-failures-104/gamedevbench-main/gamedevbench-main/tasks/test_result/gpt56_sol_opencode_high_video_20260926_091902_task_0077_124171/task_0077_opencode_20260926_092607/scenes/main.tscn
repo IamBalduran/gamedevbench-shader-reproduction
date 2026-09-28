@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://codex0619task"]
+
+[ext_resource type="Shader" path="res://scenes/WaterShader.tres" id="1_water_shader"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_main"]
+sky_top_color = Color(0.08, 0.18, 0.34, 1)
+sky_horizon_color = Color(0.55, 0.76, 0.88, 1)
+ground_bottom_color = Color(0.025, 0.045, 0.065, 1)
+ground_horizon_color = Color(0.42, 0.58, 0.66, 1)
+
+[sub_resource type="Sky" id="Sky_main"]
+sky_material = SubResource("ProceduralSkyMaterial_main")
+
+[sub_resource type="Environment" id="Environment_main"]
+background_mode = 2
+sky = SubResource("Sky_main")
+ambient_light_source = 3
+reflected_light_source = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_water"]
+shader = ExtResource("1_water_shader")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_water"]
+material = SubResource("ShaderMaterial_water")
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="SphereMesh" id="SphereMesh_background"]
+radius = 0.5
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_green"]
+albedo_color = Color(0.08, 0.72, 0.18, 1)
+roughness = 0.68
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_main")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-58, -32, 0)
+light_color = Color(0.92, 0.97, 1, 1)
+light_energy = 1.25
+shadow_enabled = true
+
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_water")
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Sphere" type="MeshInstance3D" parent="Background"]
+position = Vector3(-3.9, 0.3, -3.6)
+mesh = SubResource("SphereMesh_background")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere2" type="MeshInstance3D" parent="Background"]
+position = Vector3(3.2, -0.2, 4.1)
+mesh = SubResource("SphereMesh_background")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere3" type="MeshInstance3D" parent="Background"]
+position = Vector3(-0.8, 0.5, -4.4)
+mesh = SubResource("SphereMesh_background")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere4" type="MeshInstance3D" parent="Background"]
+position = Vector3(4.7, -0.4, -1.2)
+mesh = SubResource("SphereMesh_background")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere5" type="MeshInstance3D" parent="Background"]
+position = Vector3(-4.6, 0, 2)
+mesh = SubResource("SphereMesh_background")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 1, 22)
+rotation_degrees = Vector3(-2.6, 0, 0)
+current = true
+fov = 30.0

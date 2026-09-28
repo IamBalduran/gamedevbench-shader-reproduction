@@ -1,0 +1,3 @@
+{
+  "instruction": "Update `res://assets/tile_set.tres` to add a navigation layer to the tileset and assign navigation polygons to all ground tiles in the atlas, except the slippery ice tile. Do not add navigation polygons to decor tiles. Each walkable ground tile should use the same rectangular navigation polygon with corners at `(-14, -9)`, `(-14, 9)`, `(14, 9)`, and `(14, -9)`. Do not change the existing tile shape, tile size, probabilities, or tile map structure."
+}

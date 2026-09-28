@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0095"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0095": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:24:08+00:00",
+      "finished_at": "2026-09-25T18:31:59+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb",
+      "validator_sha256": "0c711ba6185e9f65d2bf221d513ea51f21b3c3718ca71ebc6ce7c4589b00c373",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0095/console/task_0095_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_022410_task_0095_36135",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, SCREEN_UV * 2.0 - 1.0, centered_uv.yx / curvature, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2)",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the CRT screen shader in [screen_effect.gdshader](/workspace/screen_effect/screen_effect.gdshader:1).\n\nIt includes:\n\n- `canvas_item` shader with `unshaded` and `skip_vertex_transform`\n- Curvature constant set to `7.0`\n- Vignette multiplier set to `2.0`\n- `screen_texture` using the screen texture hint and linear mipmap filtering\n- Centered and warped `SCREEN_UV` coordinates\n- Curved screen cutoff mask\n- Scanline effect\n- Vignette darkening\n- `textureLod` sampling with a small blur bias\n- Final output with alpha `1.0`\n\nValidation completed successfully with Godot 4.4.1. The rendered frame visibly shows the curved display edges, scanlines, vignette, and cutoff mask.",
+      "solver_duration": 446.03199648857117,
+      "cost_usd": 0.07839,
+      "input_tokens": 13530,
+      "output_tokens": 2520,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_022410_task_0095_36135/task_task_0095.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022410_task_0095_36135/task_0095_opencode_20260926_023158/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022410_task_0095_36135/task_0095_opencode_20260926_023158",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022410_task_0095_36135/task_0095_opencode_20260926_023158/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:31:59+00:00"
+}

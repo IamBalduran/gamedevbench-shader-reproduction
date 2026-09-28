@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0030"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0030": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T17:50:28+00:00",
+      "finished_at": "2026-09-26T17:59:15+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "d317b25b106231b8783c8fce4d88808ea35af4870a5835a65267d7b15bff7902",
+      "validator_sha256": "faf45e4ee9d4fbe41b9deb58cee7ce00061775de7b3616ec1cd1c8e593829053",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0030/console/task_0030_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_015029_task_0030_262895",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Sunshine Clouds driver and lighting configured",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Maximum steps for this agent turn have been reached — no further tool calls are possible right now.\n\n**Summary of what has been accomplished:**\n\n1. **`/workspace/scenes/main.tscn` — fully edited and verified:**\n   - Added `ext_resource` for `addons/SunshineClouds2/SunshineCloudsDriver.gd` and bumped `load_steps` to 8.\n   - Added a `SunshineCloudsDriver` node under Main with `update_continuously = true`, `clouds_resource = ExtResource(\"1_clouds\")` (pointing at `res://assets/clouds/tutorial_clouds_settings.tres`), `ambience_sample_environment = SubResource(\"3_env\")` (reusing the WorldEnvironment's Environment), `tracked_directional_lights = [NodePath(\"../DirectionalLight3D\")]`, `tracked_directional_light_shadow_steps = Array[int]([32])`, `tracked_point_lights = [NodePath(\"../OmniLight3D\")]`, and the matching `node_paths` serialization (mirroring the addon's ExampleScene).\n   - OmniLight3D `omni_range` kept at `20000.0`.\n   - Camera3D `far` extended to `400000.0`.\n   - WorldEnvironment's compositor now lists the clouds effect: `compositor_effects = Array[CompositorEffect]([ExtResource(\"1_clouds\")])`.\n\n2. **`/workspace/assets/clouds/tutorial_clouds_settings.tres` — updated to reference values:** `clouds_coverage = 0.874`, `atmospheric_density = 0.617977`, `cloud_ambient_color = Color(1,1,1,1)`, `cloud_ambient_tint = Color(0.131626, 0.201524, 0.241773, 1)`, `atmosphere_color = Color(0.696127, 0.832325, 0.989334, 1)`, and verified `mask_width_km = 512.0`.\n\n3. **Fixed a blocking environment issue:** the addon's GLSL shaders had stale `valid=false` imports, so the compositor effect couldn't load. Wiped `.godot` and all stale `.import` files and re-ran `xvfb-run godot --import` — all six SunshineClouds shaders now import successfully.\n\n**Remaining tasks:**\n- Visual verification: render a frame (`xvfb-run godot --path . --quit-after N --write-movie output.png`) and inspect the image to confirm clouds render.\n- Address one import-side script error seen during the last import: `SunshineClouds.gd:299 — assigning CompressedTexture2D to Texture3D`. After the fresh re-import, `bluenoise_Dither.png` (and possibly `curl_noise_varied.tga`) were imported as 2D textures instead of `CompressedTexture3D`. Their `.import` files need `importer=\"texture_3d\"` / `type=\"CompressedTexture3D\"` (matching the original metadata) and a re-import.\n\n**Recommended next steps:** restore/write the noise-texture `.import` files with the 3D texture importer, re-run `xvfb-run godot --import`, confirm the scene loads error-free, then capture and view a screenshot to verify the clouds render with the new settings.",
+      "solver_duration": 472.2473864555359,
+      "cost_usd": 2.326182,
+      "input_tokens": 750424,
+      "output_tokens": 4994,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_015029_task_0030_262895/task_task_0030.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015029_task_0030_262895/task_0030_opencode_20260927_015857/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015029_task_0030_262895/task_0030_opencode_20260927_015857",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015029_task_0030_262895/task_0030_opencode_20260927_015857/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T17:59:15+00:00"
+}

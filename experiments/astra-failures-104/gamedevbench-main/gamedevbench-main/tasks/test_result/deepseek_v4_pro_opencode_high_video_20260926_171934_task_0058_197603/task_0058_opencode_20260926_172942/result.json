@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0058",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "timestamp": "20260926_172942",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "message": "Audio demo UI lists sounds, wires buttons, and reflects AudioManager stats",
+    "timestamp": "2026-09-26T17:29:42.477297"
+  },
+  "solver": {
+    "success": true,
+    "message": "Done. Here's what was created:\n\n**`res://scenes/audio_demo.tscn`** \u2014 MarginContainer root named \"AudioDemo\" with full-screen anchors, 20px margins on all sides, CenterContainer > GridContainer (2 columns, 10px h/v separation), and a CanvasLayer with an HBoxContainer top bar containing Labels in order: \"Available Streams:\", Label2 (count), VSeparator, \"Queue:\", Label3 (count). All labels use Poppins-Medium at size 24.\n\n**`res://scripts/audio_demo.gd`** \u2014 On `_ready()` scans `sound_dir` (defaulting to `res://assets`) for `.wav`/`.ogg` files, creates a Button per file with Poppins font override and `pressed` connected to `on_audio_button_pressed` which calls `AudioManager.play(sound_dir + \"/\" + filename)`. `_process()` updates the count labels from `AudioManager.available.size()` and `AudioManager.queue.size()`.\n\nProject runs cleanly with no errors.",
+    "duration_seconds": 577.5224697589874,
+    "is_rate_limited": false,
+    "model": "openai/deepseek-v4-pro",
+    "cost_usd": 0.109929,
+    "token_usage": {
+      "input_tokens": 22148,
+      "output_tokens": 2899,
+      "total_tokens": 25047,
+      "cache_read_tokens": 176128,
+      "cache_write_tokens": 0
+    }
+  }
+}

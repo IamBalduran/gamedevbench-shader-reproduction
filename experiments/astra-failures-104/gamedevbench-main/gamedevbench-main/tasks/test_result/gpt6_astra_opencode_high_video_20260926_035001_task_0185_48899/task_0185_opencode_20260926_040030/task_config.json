@@ -1,0 +1,3 @@
+{
+  "instruction": "Update `res://assets/tile_set.tres` to add a terrain set for the half-offset square tileset. Create a terrain set in Match Corners mode with a single terrain named `Path`; the terrain set uses the dirt path tiles against grass default. Configure all terrain peer bits correctly so all the 15 path tiles autotile properly (include grass as default and ignore the bordered path tile in the tileset, which should be unused in this autotile). Do not change the existing tile shape or other metadata."
+}

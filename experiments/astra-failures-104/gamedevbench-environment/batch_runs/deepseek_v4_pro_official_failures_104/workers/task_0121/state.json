@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0121"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0121": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T10:59:14+00:00",
+      "finished_at": "2026-09-26T11:06:30+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff",
+      "validator_sha256": "7e45f6875d75c8c139e4642c54f8addb34f8763a856785db40c336e19f841dd4",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0121/console/task_0121_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_185915_task_0121_216710",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Panel background color must be RPG blue (#1743 8C)",
+      "official_details": "{}",
+      "validator_error_line": "105",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "All changes are complete. Here's a summary of what was done to `scenes/portrait_balloon.tscn`:\n\n**Scene tree restructuring:**\n- Added `HBoxContainer` between inner `MarginContainer` and the text content, with `theme_override_constants/separation = 30`\n- `VBoxContainer` (text column) is the first child of HBoxContainer\n- `PortraitTexture` (TextureRect) is the second child, so it appears to the right of the text, with `custom_minimum_size = Vector2(150, 150)` and `unique_name_in_owner = true`\n\n**Theme updates:**\n- All four `MarginContainer/constants/margin_*` = 30 px\n- `default_font_size` = 26\n- Panel `StyleBoxFlat` bg_color = `#17438C` (Color(0.0902, 0.2627, 0.549, 1))\n- Button normal: darker blue `Color(0.059, 0.171, 0.357, 1)` (≈#0F2B5B)\n- Button focus/hover: lighter blue `Color(0.117, 0.342, 0.714, 1)` (≈#1E57B6)\n\n**Verified:** Scene loads cleanly via `--check-only` (the `--write-movie` crash is a known Godot headless/gl_compatibility limitation unrelated to the scene content).",
+      "solver_duration": 411.2038896083832,
+      "cost_usd": 0.098412,
+      "input_tokens": 17514,
+      "output_tokens": 3058,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_185915_task_0121_216710/task_task_0121.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_185915_task_0121_216710/task_0121_opencode_20260926_190628/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_185915_task_0121_216710/task_0121_opencode_20260926_190628",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_185915_task_0121_216710/task_0121_opencode_20260926_190628/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T11:06:30+00:00"
+}

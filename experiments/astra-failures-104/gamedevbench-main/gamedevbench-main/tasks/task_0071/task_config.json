@@ -1,0 +1,33 @@
+{
+  "task_id": 71,
+  "name": "Depth Ripple Geometry Setup",
+  "instruction": "Populate res://scenes/main.tscn so Main contains a water depth visualization scene: add a WorldEnvironment with a procedural sky and glow enabled, a DirectionalLight3D with shadows enabled, a MeshInstance3D named Water that uses a 10x10 PlaneMesh subdivided 20x20 with a ShaderMaterial pointing at res://scenes/WaterShader.tres, a Background Node3D holding exactly 5 sphere MeshInstance3Ds at these positions (all within the 10x10 water plane): Sphere at (1.200, 0.200, 3.800); Sphere2 at (-1.400, -0.400, 4.300); Sphere3 at (2.600, 0.100, 4.500); Sphere4 at (-2.800, 0.000, 3.200); Sphere5 at (0.400, 0.500, 4.000), all with green StandardMaterial3D overrides, and a Camera3D positioned at (0.000, 0.600, 0.200) with a FOV of 110 and all spheres are visible.",
+  "requires_display": true,
+  "metadata": {
+    "tutorial_source": "YouTube: Bramwell - Tutorial: Improving 3D Water in Godot 4",
+    "video_id": "zvoQqhLeans",
+    "github_repo": "https://github.com/bramreth/Godot4WaterShader",
+    "transcript_excerpt": "add a mesh instance 3D set the mesh to whatever shape you want to see how it intersects let's try a sphere and then you can fiddle with its scale and position",
+    "expected_nodes": [
+      "Node3D:Main",
+      "WorldEnvironment:Main/WorldEnvironment",
+      "DirectionalLight3D:Main/DirectionalLight3D",
+      "MeshInstance3D:Main/Water",
+      "Node3D:Main/Background",
+      "MeshInstance3D:Main/Background/Sphere",
+      "MeshInstance3D:Main/Background/Sphere2",
+      "MeshInstance3D:Main/Background/Sphere3",
+      "MeshInstance3D:Main/Background/Sphere4",
+      "MeshInstance3D:Main/Background/Sphere5",
+      "Camera3D:Main/Camera3D"
+    ],
+    "key_properties": {
+      "WorldEnvironment.environment": "Procedural sky with glow enabled",
+      "DirectionalLight3D.shadow_enabled": true,
+      "Water.mesh": "PlaneMesh size 10x10, subdivisions 20x20",
+      "Water.material_override": "ShaderMaterial using res://scenes/WaterShader.tres",
+      "Background spheres": "Green StandardMaterial3D overrides at the instructed positions (5 spheres)",
+      "Camera3D.fov": 110.0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "task_id": 121,
+  "name": "Portrait Balloon Layout Alt",
+  "instruction": "Build the portrait-ready dialogue balloon in `scenes/portrait_balloon.tscn`. Wrap the dialogue content in an `HBoxContainer` with a named TextureRect portrait slot (150\u00d7150 min size) alongside the VBox text column, set the separation to 30 px, and flag the portrait node as unique for scripts. Name the HBox node as `HBoxContainer`, and the portrait node `PortraitTexture`. Update the node order to ensure that the portrait appears to the right of the dialog text. Update the balloon theme so every MarginContainer side uses 30 px padding, the default font size is 26, the panel background switches to the \"RPG blue\" (#17438C) color, and the response buttons use matching blue normal/focus StyleBoxFlat resources (slightly darker blue for normal, and lighter blue for focus).",
+  "metadata": {
+    "tutorial_source": "YouTube: Nathan Hoad - Dialogue balloons with portraits in Godot 4",
+    "video_id": "X0e-n7dbff8",
+    "github_repo": "https://github.com/nathanhoad/godot_dialogue_manager",
+    "transcript_excerpt": "\"If we want to add portraits to our balloon, we can start by adding an HBoxContainer in here ... my pictures ... are 150x150 ... go to constants and bring [the margins] up to be the same ... default font size of 20. Let's make that 26 ... Make the panel... blue.\"",
+    "expected_nodes": [
+      "PortraitBalloon",
+      "Balloon",
+      "Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer",
+      "Balloon/.../HBoxContainer/PortraitTexture",
+      "Balloon/.../HBoxContainer/VBoxContainer"
+    ],
+    "key_properties": {
+      "PortraitTexture.custom_minimum_size": "Vector2(150, 150)",
+      "PortraitTexture.unique_name_in_owner": "true",
+      "HBoxContainer.theme_override_constants/separation": "30",
+      "Theme.default_font_size": "26",
+      "MarginContainer.constants": "all 30",
+      "PanelContainer.panel.bg_color": "Color(0.09, 0.2627, 0.549)"
+    }
+  }
+}

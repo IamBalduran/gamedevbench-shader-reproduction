@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0121"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0121": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:37:12+00:00",
+      "finished_at": "2026-09-26T19:41:39+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff",
+      "validator_sha256": "7e45f6875d75c8c139e4642c54f8addb34f8763a856785db40c336e19f841dd4",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0121/console/task_0121_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_033713_task_0121_293658",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Panel background color must be RPG blue (#1743 8C)",
+      "official_details": "{}",
+      "validator_error_line": "105",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Everything is verified. The task is complete.\n\n## Summary\n\n**`scenes/portrait_balloon.tscn`** — rebuilt the dialogue layout:\n\n1. **HBoxContainer layout**: The inner `MarginContainer` now wraps an `HBoxContainer` (30 px separation) containing:\n   - the `VBoxContainer` text column (CharacterLabel + DialogueLabel, `size_flags_horizontal = 3` so it expands), then\n   - the `PortraitTexture` (`TextureRect`, 150×150 min size, `unique_name_in_owner = true`) — ordered **after** the VBox so it renders to the **right** of the dialogue text.\n2. **Theme updates**:\n   - All four MarginContainer margins set to **30 px**\n   - Default font size set to **26**\n   - Panel background switched to **RPG blue #17438C**\n   - Response button StyleBoxFlats: **#0F2E66** (darker blue, normal) and **#285FA8** (lighter blue, focus; hover also uses focus style)\n\n**`scenes/main.tscn` / `scenes/main.gd`** — small demo script that loads the hero portrait into the `%PortraitTexture` slot at runtime for visual confirmation.\n\n**Verification** (Godot 4.4.1):\n- Scene instantiates cleanly; node tree, separation, min size, unique-name flag (`%PortraitTexture` lookup works), all margins, font size 26, panel `#17438C`, and button colors all confirmed via script inspection.\n- Rendered frames show the RPG-blue balloon with the text column on the left, the hero portrait on the right, and a matching blue \"Continue\" response button below.",
+      "solver_duration": 239.72476816177368,
+      "cost_usd": 0.560754,
+      "input_tokens": 169803,
+      "output_tokens": 3423,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_task_0121.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:41:39+00:00"
+}

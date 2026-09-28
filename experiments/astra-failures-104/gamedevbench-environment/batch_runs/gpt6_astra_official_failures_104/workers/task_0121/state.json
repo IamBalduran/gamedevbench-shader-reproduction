@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0121"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0121": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:31:59+00:00",
+      "finished_at": "2026-09-25T18:35:20+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff",
+      "validator_sha256": "7e45f6875d75c8c139e4642c54f8addb34f8763a856785db40c336e19f841dd4",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0121/console/task_0121_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_023201_task_0121_38937",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Panel background color must be RPG blue (#1743 8C)",
+      "official_details": "{}",
+      "validator_error_line": "105",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated [portrait_balloon.tscn](/workspace/scenes/portrait_balloon.tscn) with:\n\n- `HBoxContainer` wrapping the dialogue content.\n- `VBoxContainer` text column placed before the portrait.\n- `PortraitTexture` `TextureRect` placed to the right.\n- Portrait minimum size set to `150×150`.\n- Portrait flagged with `unique_name_in_owner = true`.\n- HBox separation set to `30 px`.\n- All `MarginContainer` sides set to `30 px`.\n- Default theme font size set to `26`.\n- Panel background set to RPG blue `#17438C`.\n- Response normal and focus styles updated to darker and lighter matching blue tones.\n\nValidation completed successfully with Godot 4.4.1. A rendered preview confirmed the portrait appears to the right of the dialogue, and the focused response button uses the lighter blue style.",
+      "solver_duration": 174.5801022052765,
+      "cost_usd": 0.16946099999999997,
+      "input_tokens": 44492,
+      "output_tokens": 2399,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_023201_task_0121_38937/task_task_0121.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_023201_task_0121_38937/task_0121_opencode_20260926_023518/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_023201_task_0121_38937/task_0121_opencode_20260926_023518",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_023201_task_0121_38937/task_0121_opencode_20260926_023518/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:35:20+00:00"
+}

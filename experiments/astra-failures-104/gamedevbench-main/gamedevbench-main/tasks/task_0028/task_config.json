@@ -1,0 +1,22 @@
+{
+  "task_id": 28,
+  "name": "Bonkahe Flashlight Priority Points",
+  "instruction": "Create a reusable FlashlightPoint marker scene that uses scripts/flashlight_point.gd to expose a Priority enum (low, medium, high), a has_been_targeted flag, and a reset_target_state() helper, then instance three FlashlightPoint nodes directly under Main in scenes/main.tscn. Place the nodes at (8.36166, 1.81915, -12.0301), (-16.6577, 2.41884, -39.9426), and (23.0185, 2.63927, -86.6948), keep them in the FlashlightPoints group, and set their priorities to medium, low, and high respectively.",
+  "metadata": {
+    "tutorial_source": "YouTube: Bonkahe - Godot 3D - Flashlight Collision Plus Dynamic Targeting - Making a FPS Horror Game (C#) | 12",
+    "video_id": "qW3B7-kBbno",
+    "github_repo": "https://github.com/Bonkahe/FPSHorrorMono",
+    "transcript_excerpt": "we're going to put a whole bunch of objects into a group and the objects within this group will be node that has a priority enum on it ... it will also have a Boolean on those objects saying if they've been looked at before",
+    "expected_nodes": [
+      "PillarPoint",
+      "GatePoint",
+      "EnemyPoint"
+    ],
+    "key_properties": {
+      "PillarPoint.priority": "medium",
+      "GatePoint.priority": "low",
+      "EnemyPoint.priority": "high",
+      "FlashlightPoint.group": "FlashlightPoints"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "instruction": "Create a Player scene with a CharacterBody2D root named Player, add an AnimatedSprite2D that autoplay the default animation and includes looping default/left/right jet frames from assets/sprites/sprites-Sheet.png and a non-looping explode sequence from the smoke sprites at assets/sprites/Free Smoke Fx  Pixel 04.png, and attach a 16\u00d716 rectangular CollisionShape2D that fits the jet."
+}

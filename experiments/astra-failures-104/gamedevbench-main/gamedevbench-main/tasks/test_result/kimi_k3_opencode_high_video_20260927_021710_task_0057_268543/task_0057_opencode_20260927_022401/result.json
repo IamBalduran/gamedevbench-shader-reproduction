@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0057",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_022401",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Main needs at least two Unit instances for testing",
+    "timestamp": "2026-09-27T02:24:01.866060"
+  },
+  "solver": {
+    "success": true,
+    "message": "`add_child` under a SceneTree `_init` doesn't fully enter the tree \u2014 nothing about my scene materials is broken; the probe environment is. Let me use the canonical runtime: autoload `MainLoop` in the project settings.",
+    "duration_seconds": 382.63059997558594,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.62907,
+    "token_usage": {
+      "input_tokens": 189500,
+      "output_tokens": 4038,
+      "total_tokens": 193538,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

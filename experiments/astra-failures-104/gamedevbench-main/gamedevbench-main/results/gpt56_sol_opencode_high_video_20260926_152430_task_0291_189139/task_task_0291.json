@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Dragging state must reparent the card into the drag_overlay group",
+  "details": {},
+  "timestamp": "2026-09-26T15:34:59.009528"
+}

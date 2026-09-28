@@ -1,0 +1,26 @@
+{
+  "task_id": 19,
+  "name": "Build the muzzle flash effect prefab",
+  "instruction": "Create a layered muzzle flash prefab: edit scenes/effects/muzzle_flash_effect.tscn so the root Node3D uses scripts/generic_effect_handler.gd, targets its Optional Light export at an OmniLight child named MuzzleFlash, and keeps a 0.2 second fade. Add SmokeParticles configured with zero gravity and a StandardMaterial3D mesh using a radial GradientTexture2D. Simulate a volumetric smoke puff via using particle billboard mode for billboarding, plus a pair of opposing GPUParticles3D named MuzzleFireLeft and MuzzleFireRight that emit one-shot bursts. Each muzzle fire particle system must rely on the provided assets/shaders/muzzle_flash.gdshader ShaderMaterial and include a draw-pass QuadMesh so the burst renders from both sides. Wire the scene into scenes/main.tscn so Main instantiates the finished effect.",
+  "metadata": {
+    "tutorial_source": "YouTube: Bonkahe - Godot 3D - Making a FPS Horror Game (C#) | 03 | Gun Mechanics",
+    "video_id": "obEgPSnPqUs",
+    "github_repo": "https://github.com/Bonkahe/FPSHorrorMono",
+    "transcript_excerpt": "the muzzle flash has a light but if we go ahead and turn that off it also has several particle effects that are all children of it \u2026 we also have a custom Shader \u2026 we're going to go ahead and create a kind of generic effect Handler \u2026 if the optional light is not null we tween the light energy back down to zero",
+    "expected_nodes": [
+      "Main/MuzzleFlashEffect",
+      "Main/MuzzleFlashEffect/MuzzleFlash",
+      "Main/MuzzleFlashEffect/SmokeParticles",
+      "Main/MuzzleFlashEffect/MuzzleFireLeft",
+      "Main/MuzzleFlashEffect/MuzzleFireRight"
+    ],
+    "key_properties": {
+      "MuzzleFlashEffect.script": "res://scripts/generic_effect_handler.gd",
+      "MuzzleFlashEffect.optional_light_path": "MuzzleFlash",
+      "MuzzleFlash.light_energy": "> 0",
+      "MuzzleFireLeft.material_override": "res://assets/shaders/muzzle_flash.gdshader",
+      "MuzzleFireRight.material_override": "res://assets/shaders/muzzle_flash.gdshader",
+      "SmokeParticles.draw_pass_1": "mesh present"
+    }
+  }
+}

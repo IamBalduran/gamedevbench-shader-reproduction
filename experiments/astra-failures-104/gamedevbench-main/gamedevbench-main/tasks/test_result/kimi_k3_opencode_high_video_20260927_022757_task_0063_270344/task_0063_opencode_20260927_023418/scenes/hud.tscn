@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://hud605start"]
+
+[sub_resource type="Gradient" id="Gradient_gameover"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0, 0, 0, 0.85, 0.18, 0.18, 0.18, 0.85)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gameover"]
+gradient = SubResource("Gradient_gameover")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Health: 100"
+
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="GameOver" type="MarginContainer" parent="."]
+process_mode = 2
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 100
+
+[node name="TextureRect" type="TextureRect" parent="GameOver"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_gameover")
+
+[node name="Labels" type="VBoxContainer" parent="GameOver"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+text = "Game Over!!!"
+
+[node name="Label2" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+text = "your score is 0"
+
+[node name="Label3" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+text = "your high score is 100"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOver"]
+layout_mode = 2
+
+[node name="menu" type="Button" parent="GameOver/HBoxContainer"]
+layout_mode = 2
+text = "menu"
+
+[node name="restart" type="Button" parent="GameOver/HBoxContainer"]
+layout_mode = 2
+text = "restart"

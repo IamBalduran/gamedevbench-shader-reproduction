@@ -8,3 +8,9 @@ gamedevbench-environment/logs/
 gamedevbench-environment/shubiaobiao-key.dpapi
 **/.env
 *.tmp
+
+# All experiment credentials and local runtimes
+**/*.dpapi
+**/gamedevbench-environment/tools/
+**/gamedevbench-environment/logs/
+**/*.egg-info/

@@ -1,0 +1,20 @@
+{
+  "task_id": 95,
+  "name": "CRT Shader Effect Implementation",
+  "instruction": "Implement the CRT screen shader in screen_effect/screen_effect.gdshader. Use a canvas_item shader with render_mode unshaded and skip_vertex_transform. Add constants for curvature (7.0) and vignette_multiplier (2.0), and declare a sampler2D uniform named screen_texture with the screen texture hint and linear mipmap filtering. In fragment(), compute centered UVs from SCREEN_UV, warp the UVs for curvature, apply a cutoff mask outside the screen, add scanlines, add a vignette, and sample the screen texture with a small LOD bias to blur. Output the final color with alpha 1.0.",
+  "metadata": {
+    "tutorial_source": "YouTube: DevPoodle - Making a CRT Shader Effect - Using Godot Engine",
+    "video_id": "E401x98N6iA",
+    "github_repo": "https://github.com/DevPoodle/yt-example-projects",
+    "transcript_excerpt": "create a uniform sampler2D ... hint screen texture ... set the color of each pixel ... warp the UVs ... add scan lines ... add vignette ... add a little bit of blur",
+    "expected_nodes": [
+      "CanvasLayer",
+      "MeshInstance2D"
+    ],
+    "key_properties": {
+      "curvature": 7.0,
+      "vignette_multiplier": 2.0,
+      "screen_texture_hint": "hint_screen_texture"
+    }
+  }
+}

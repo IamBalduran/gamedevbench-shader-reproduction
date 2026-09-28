@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://d2kc2xj6c0m8d" path="res://assets/sprites/platformer_coins.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(118.631, 56.766)
+scale = Vector2(0.64, 0.64)
+rotation = -0.02
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+position = Vector2(1.5384617, 11.538463)
+texture = ExtResource("1_platformer")
+centered = false
+
+[node name="GemstoneHighlights" type="Node2D" parent="Level"]
+
+[node name="GemstoneHighlight" type="Polygon2D" parent="Level/GemstoneHighlights"]
+position = Vector2(1.5384617, 11.538463)
+color = Color(1, 0.35, 0.85, 0.4)
+polygon = PackedVector2Array(1471, 634, 1488, 634, 1496, 642, 1479, 663, 1463, 642)

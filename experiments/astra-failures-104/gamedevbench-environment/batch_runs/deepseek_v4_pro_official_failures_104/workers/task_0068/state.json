@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0068"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0068": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T09:55:42+00:00",
+      "finished_at": "2026-09-26T09:57:55+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "13cb795558216b854973920e9323c7b6fe5fbe465b4ecc4c3e22be12a08a881d",
+      "validator_sha256": "9e6c3826a2df22683f141ccd492671d194ca9cf0ef668483aba293f4b8712c17",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0068/console/task_0068_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_175543_task_0068_200840",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Crate must be destroyed after bullet hit",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The `bullet.gd` file already contains all the requested code:\n\n- `const SPEED := 500` (line 4)\n- `var direction: Vector2` storing travel direction (line 6)\n- `var tank: Tank` storing the firing tank (line 7)\n- `_physics_process` moves by `direction.normalized() * SPEED * delta` (line 12)\n- `_on_area_entered` calls `queue_free()` (line 15)\n- `_on_body_entered` checks for `Crate`, calls `body.destroy()`, then `queue_free()` (lines 17-20)\n\nScene connections for both `area_entered` and `body_entered` signals are also wired in `bullet.tscn` (lines 23-24). The project runs without errors. No changes needed.",
+      "solver_duration": 107.67929577827454,
+      "cost_usd": 0.031824,
+      "input_tokens": 6703,
+      "output_tokens": 781,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_175543_task_0068_200840/task_task_0068.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_175543_task_0068_200840/task_0068_opencode_20260926_175753/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_175543_task_0068_200840/task_0068_opencode_20260926_175753",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_175543_task_0068_200840/task_0068_opencode_20260926_175753/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T09:57:55+00:00"
+}

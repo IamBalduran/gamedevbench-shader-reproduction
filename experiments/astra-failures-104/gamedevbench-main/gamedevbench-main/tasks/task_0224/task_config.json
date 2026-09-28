@@ -1,0 +1,33 @@
+{
+  "task_id": 224,
+  "name": "Platformer Coin Highlights Rotated Variant Y",
+  "instruction": "Rotate the Level node to 0.22 radians. Add a Node2D named CoinHighlights under the Level node. Inside CoinHighlights, create six semi-transparent circular Polygon2D nodes named CoinHighlight1 through CoinHighlight6. Place one very tight circle over each yellow star coin in the rotated platformer image so each highlight closely covers its coin with minimal spill outside the coin.",
+  "metadata": {
+    "tutorial_source": "Synthetic platformer image task",
+    "variant_of": "task_0219",
+    "video_id": "unknown",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "rotate the platformer image to 0.22 radians and place very tight circular highlight overlays over the yellow star coins",
+    "expected_nodes": [
+      "Node2D:Level/CoinHighlights",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight1",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight2",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight3",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight4",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight5",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight6"
+    ],
+    "key_properties": {
+      "Level.position": "Vector2(155.049, 8.622)",
+      "Level.scale": "Vector2(0.75, 0.75)",
+      "Level.rotation": "0.22",
+      "Sprite2D.centered": "false",
+      "CoinHighlight1.color.a": "0.35",
+      "CoinHighlight2.color.a": "0.35",
+      "CoinHighlight3.color.a": "0.35",
+      "CoinHighlight4.color.a": "0.35",
+      "CoinHighlight5.color.a": "0.35",
+      "CoinHighlight6.color.a": "0.35"
+    }
+  }
+}

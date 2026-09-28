@@ -1,0 +1,66 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0184"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0184": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "api_transport_failure",
+          "solver_message": "OpenCode command failed (exit code 1)\nFinal response: The encounter is implemented, and Godot 4.4.1 imports it without errors. I’m now checking actual hitbox collisions, attacks in both directions, hurt recovery, and character removal. I’ll also capture the encounter to inspect the sprites and placement.",
+          "run_name": "gpt6_astra_opencode_high_video_20260926_025614_task_0184_47143",
+          "started_at": "2026-09-25T18:56:11+00:00",
+          "finished_at": "2026-09-25T19:04:47+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T19:50:00+00:00",
+      "finished_at": "2026-09-25T20:00:38+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "a8700919750798386a96e0cfb22baa58e4f66be2bed82873575cec7fdb75a06b",
+      "validator_sha256": "5fe54d72431c26e7c36d8411c6e0efbc8cac927603d85cd302051b5c303f033b",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0184/console/task_0184_attempt_2.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_035001_task_0184_48901",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "basic_enemy.tscn must exist",
+      "official_details": "{}",
+      "validator_error_line": "127",
+      "solver_success": false,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.1287536621094,
+      "cost_usd": 0.140412,
+      "input_tokens": 33279,
+      "output_tokens": 2705,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_035001_task_0184_48901/task_task_0184.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_035001_task_0184_48901/task_0184_opencode_20260926_040030/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_035001_task_0184_48901/task_0184_opencode_20260926_040030",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_035001_task_0184_48901/task_0184_opencode_20260926_040030/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T20:00:38+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0055"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0055": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:15:16+00:00",
+      "finished_at": "2026-09-26T18:27:48+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3b226d0cc57bc2b6eb93c43e061671ca011ca5d9ef6e6e478caa0dd5e0a28ced",
+      "validator_sha256": "7ac786c04c0ff80f74367dddc3fbcaa962163b9545a46d912ef26fbc53644070",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0055/console/task_0055_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_021518_task_0055_267991",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "player.gd must reference snappedf",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Done. I implemented the 8-direction mouse controller in `/workspace/scripts/player.gd`:\n\n```gdscript\nfunc _physics_process(delta: float) -> void:\n\tvar mouse := get_local_mouse_position()\n\tvar snapped_angle: float = snapped(mouse.angle(), PI / 4) / (PI / 4)\n\tangle = wrapi(int(snapped_angle), 0, 8)\n\n\tif Input.is_action_pressed(\"left_mouse\") and mouse.length() > 10:\n\t\tcurrent_animation = \"run\"\n\t\tvelocity = mouse.normalized() * speed\n\telse:\n\t\tcurrent_animation = \"idle\"\n\t\tvelocity = Vector2.ZERO\n\n\t$AnimatedSprite2D.play(current_animation + str(angle))\n\tmove_and_slide()\n```\n\nHow it works:\n- **Local mouse vector** — `get_local_mouse_position()` each physics frame.\n- **Snap to 45°** — `snapped(angle, PI/4)`, then divide by `PI/4` to get a sector index.\n- **Wrap to 0–7** — `wrapi(..., 0, 8)` handles negative angles (e.g. `-1` → `7`).\n- **Animation** — plays `idle<angle>` or `run<angle>` (both sets exist in the scene).\n- **Movement** — on `left_mouse` held and distance > 10px, sets velocity toward the mouse and calls `move_and_slide()`; otherwise zero velocity, idle animation.\n\nVerification:\n- `--check-only` parse check passes with no errors.\n- Ran headless for 120 physics frames with no runtime errors.\n- Rendered the game visually — the crusader sprite displays correctly.\n- A temporary functional test (since removed) confirmed: no-click → `idle`, zero velocity; click + near (<10px) → run animation; click + far → `run` animation with velocity toward mouse and actual displacement; release → back to idle with zero velocity.",
+      "solver_duration": 236.3547887802124,
+      "cost_usd": 1.788411,
+      "input_tokens": 582252,
+      "output_tokens": 2777,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_021518_task_0055_267991/task_task_0055.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021518_task_0055_267991/task_0055_opencode_20260927_022218/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021518_task_0055_267991/task_0055_opencode_20260927_022218",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021518_task_0055_267991/task_0055_opencode_20260927_022218/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:27:48+00:00"
+}

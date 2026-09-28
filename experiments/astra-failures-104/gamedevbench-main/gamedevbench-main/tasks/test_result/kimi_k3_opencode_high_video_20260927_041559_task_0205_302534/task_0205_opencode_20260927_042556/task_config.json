@@ -1,0 +1,3 @@
+{
+  "instruction": "Add a Node2D named SpawningPoints under the Trap node. Inside SpawningPoints, create two Marker2D children named SpawnTop and SpawnBot. Place one marker on the bottom tip of the branch closest to the water surface, and place the other marker at the rightmost bottom tip of the trunk of the tree; ensure each Marker2D's position is visually aligned with the sprite texture. Set SpawnBot's z_index to 1."
+}

@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://c0so0h638fwfp" path="res://assets/sprites/platformer.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(116.307, 148.276)
+rotation = -0.43
+scale = Vector2(0.65, 0.65)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+texture = ExtResource("1_platformer")
+centered = false
+
+[node name="CoinHighlights" type="Node2D" parent="Level"]
+
+[node name="CoinHighlight1" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(283.692, 112.231)
+color = Color(1, 0.9, 0.1, 0.42)
+
+[node name="CoinHighlight2" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(319.5, 84.167)
+color = Color(1, 0.9, 0.1, 0.42)
+
+[node name="CoinHighlight3" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(425.639, 73.038)
+color = Color(1, 0.9, 0.1, 0.42)
+
+[node name="CoinHighlight4" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(288.5, 186.731)
+color = Color(1, 0.9, 0.1, 0.42)
+
+[node name="CoinHighlight5" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(287.42, 298.12)
+color = Color(1, 0.9, 0.1, 0.42)
+
+[node name="CoinHighlight6" type="Polygon2D" parent="Level/CoinHighlights"]
+polygon = PackedVector2Array(12, 0, 11.086, 4.592, 8.485, 8.485, 4.592, 11.086, 0, 12, -4.592, 11.086, -8.485, 8.485, -11.086, 4.592, -12, 0, -11.086, -4.592, -8.485, -8.485, -4.592, -11.086, 0, -12, 4.592, -11.086, 8.485, -8.485, 11.086, -4.592)
+position = Vector2(255, 312.286)
+color = Color(1, 0.9, 0.1, 0.42)

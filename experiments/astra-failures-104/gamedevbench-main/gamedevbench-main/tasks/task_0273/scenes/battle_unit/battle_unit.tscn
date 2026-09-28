@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/battle_unit/battle_unit.gd" id="1_battle_unit"]
+[ext_resource type="Resource" path="res://data/units/bjorn.tres" id="2_stats"]
+
+[sub_resource type="RectangleShape2D" id="1_body_shape"]
+size = Vector2(24, 24)
+
+[node name="BattleUnit" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_battle_unit")
+stats = ExtResource("2_stats")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1_body_shape")

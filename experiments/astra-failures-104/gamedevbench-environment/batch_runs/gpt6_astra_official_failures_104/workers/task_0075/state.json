@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0075"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0075": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:52:35+00:00",
+      "finished_at": "2026-09-25T18:01:19+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "f84d39606b48e17a7143ead0fb15a6ac0237d1961bc347f175a7d2a6c76e8735",
+      "validator_sha256": "da42e9741e0ab543e0f198c062d0b39c09563f37445e885a67a3e8b45a936e32",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0075/console/task_0075_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the water depth visualization scene in [main.tscn](/workspace/scenes/main.tscn).\n\nIt now includes:\n\n- `WorldEnvironment` with a procedural sky and glow enabled\n- `DirectionalLight3D` with shadows enabled\n- `Water` MeshInstance3D using:\n  - 10×10 `PlaneMesh`\n  - 20×20 subdivisions\n  - ShaderMaterial referencing `res://scenes/WaterShader.tres`\n- `Background` Node3D containing exactly five green sphere MeshInstance3D nodes at the requested positions\n- `Camera3D` with FOV `30` and Y position `1.0`, framed to show all spheres\n- Forward+ rendering enabled in [project.godot](/workspace/project.godot) to support glow and successful rendering\n\nValidation completed successfully with Godot 4.4.1. A Forward+ render capture showed the water plane and all five green spheres in view.",
+      "solver_duration": 475.71835947036743,
+      "cost_usd": 0.18562800000000002,
+      "input_tokens": 44241,
+      "output_tokens": 3527,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_task_0075.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_0075_opencode_20260926_020112/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_0075_opencode_20260926_020112",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_0075_opencode_20260926_020112/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:01:19+00:00"
+}

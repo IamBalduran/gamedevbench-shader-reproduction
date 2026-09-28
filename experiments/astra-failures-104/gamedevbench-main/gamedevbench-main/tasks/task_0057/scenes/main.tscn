@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_lv2sa"]
+
+[node name="Main" type="Node2D"]
+
+[node name="UnitA" parent="." instance=ExtResource("1_lv2sa")]
+position = Vector2(180, 160)
+
+[node name="UnitB" parent="." instance=ExtResource("1_lv2sa")]
+position = Vector2(360, 200)

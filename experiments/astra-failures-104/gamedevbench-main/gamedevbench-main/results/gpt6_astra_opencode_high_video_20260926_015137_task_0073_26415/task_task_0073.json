@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Water requires a ShaderMaterial override (via material_override or surface_material_override)",
+  "details": {},
+  "timestamp": "2026-09-26T01:59:41.433191"
+}

@@ -1,0 +1,3 @@
+{
+  "instruction": "Add a Camera2D node centered on the playfield, attach a Camera2D.gd script that stores displacement, velocity, and the SPRING=900, DAMP=18, MULTIPLIER=20 constants, and implement a shake(right_pointed) method that reverses direction based on who scored. Update pong.gd so new_ball() keeps respawning the Ball and also calls Camera2D.shake() after every score. In _physics_process(), apply spring-damper physics to update velocity and displacement, then set position.x = displacement to drive the horizontal spring motion."
+}

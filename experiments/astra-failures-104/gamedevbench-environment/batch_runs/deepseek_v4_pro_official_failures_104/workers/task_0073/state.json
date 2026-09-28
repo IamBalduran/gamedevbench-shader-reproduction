@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0073"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0073": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T10:12:29+00:00",
+      "finished_at": "2026-09-26T10:19:42+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "a31302afd477e8ac9b73095284f9b1a4bad211dfce671707d14486d1e2a2e4c1",
+      "validator_sha256": "50ce2e1e14f52007d57363c39a35c4958f57a4d7ed99429dd05791968a38a222",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0073/console/task_0073_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_181231_task_0073_206974",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Camera should be angled such that all spheres are visible",
+      "official_details": "{}",
+      "validator_error_line": "184",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The scene renders correctly with all required elements visible: the procedural sky background, the blue water plane with the shader applied, five green spheres at their specified positions, directional light with shadows, and camera at the correct position. The task is complete.",
+      "solver_duration": 399.2605221271515,
+      "cost_usd": 0.106413,
+      "input_tokens": 25566,
+      "output_tokens": 1981,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_181231_task_0073_206974/task_task_0073.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181231_task_0073_206974/task_0073_opencode_20260926_181938/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181231_task_0073_206974/task_0073_opencode_20260926_181938",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181231_task_0073_206974/task_0073_opencode_20260926_181938/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T10:19:42+00:00"
+}

@@ -1,0 +1,3 @@
+{
+  "instruction": "Implement the view model clip shader swap on the weapon view model node. Add logic that finds MeshInstance3D nodes under the view model, replaces each surface material with a ShaderMaterial that uses res://shaders/weapon_clip_and_fov_shader.gdshader, copies the base material albedo/metallic/roughness parameters into the shader, and sets the viewmodel_fov shader parameter to 54.0 when applying the shader."
+}

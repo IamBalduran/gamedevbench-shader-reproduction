@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0287",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "timestamp": "20260926_145307",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "CardStateMachine must enter CardBaseState on ready",
+    "timestamp": "2026-09-26T14:53:07.446911"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code 1)\nFinal response: The input map provides `left_mouse` and `right_mouse`, and there are no competing implementations in the project. I\u2019m using the existing state API and Godot 4 event semantics, including a timestamp for the drag release threshold and group-based reparenting.",
+    "duration_seconds": 387.25521898269653,
+    "is_rate_limited": false,
+    "model": "openai/gpt-5.6-sol",
+    "cost_usd": 0.013587125,
+    "token_usage": {
+      "input_tokens": 14617,
+      "output_tokens": 1176,
+      "total_tokens": 15793,
+      "cache_read_tokens": 53805,
+      "cache_write_tokens": 0
+    }
+  }
+}

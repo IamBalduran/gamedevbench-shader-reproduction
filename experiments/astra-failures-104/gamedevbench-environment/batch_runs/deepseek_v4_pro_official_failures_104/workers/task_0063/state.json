@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0063"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0063": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T09:48:38+00:00",
+      "finished_at": "2026-09-26T09:59:04+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "e3e19b22e5fbd28459110d0852a9330cfd02231e81a30dcba1dfd2e627202eeb",
+      "validator_sha256": "47a4b54cfac9575747f4ecd3ca76c8aa8fbc2f42108605b6cb34154b7b7795eb",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0063/console/task_0063_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_174840_task_0063_199933",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "HUD CanvasLayer not found",
+      "official_details": "{}",
+      "validator_error_line": "17",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.049646615982,
+      "cost_usd": 0.085335,
+      "input_tokens": 11235,
+      "output_tokens": 3442,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_174840_task_0063_199933/task_task_0063.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_174840_task_0063_199933/task_0063_opencode_20260926_175903/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_174840_task_0063_199933/task_0063_opencode_20260926_175903",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_174840_task_0063_199933/task_0063_opencode_20260926_175903/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T09:59:04+00:00"
+}

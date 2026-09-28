@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0076"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0076": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T10:19:42+00:00",
+      "finished_at": "2026-09-26T10:30:13+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "eb9128857d27c22e37a845e769f5e98a6569f1e304c2da703e5631aa0ebd25be",
+      "validator_sha256": "37d193da97115e7c11742a882bca50307deca05b6c8b1174b1519a3aa0175d32",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0076/console/task_0076_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_181944_task_0076_209275",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "WorldEnvironment with procedural sky missing",
+      "official_details": "{}",
+      "validator_error_line": "58",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0549619197845,
+      "cost_usd": 0.014022,
+      "input_tokens": 2594,
+      "output_tokens": 416,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_181944_task_0076_209275/task_task_0076.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181944_task_0076_209275/task_0076_opencode_20260926_183010/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181944_task_0076_209275/task_0076_opencode_20260926_183010",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181944_task_0076_209275/task_0076_opencode_20260926_183010/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T10:30:13+00:00"
+}

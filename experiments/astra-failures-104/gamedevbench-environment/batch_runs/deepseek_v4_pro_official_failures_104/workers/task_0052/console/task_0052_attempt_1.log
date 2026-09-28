@@ -1,0 +1,56 @@
+Single task: task_0052 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_task_0052.json
+{
+  "task_name": "task_0052",
+  "success": false,
+  "message": "Failed to load Player scene.",
+  "timestamp": "2026-09-26T16:20:19.935619",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The script compiles and runs without errors. Changes made to `scripts/player.gd`:\n\n- Added `@export_range(0.0, 1.0) var friction = 0.1` and `@export_range(0.0, 1.0) var acceleration = 0.25`\n- Cached input as `dir` variable via `Input.get_axis(\"move_left\", \"move_right\")`\n- When `dir != 0`, velocity.x lerps toward `dir * speed` using `acceleration`\n- When idle (`dir == 0`), velocity.x lerps toward `0.0` using `friction`\n- Gravity, `move_and_slide()`, and jump gated on `is_on_floor()` all preserved",
+  "solver_duration": 81.75727868080139,
+  "is_rate_limited": false,
+  "input_tokens": 6054,
+  "output_tokens": 820,
+  "total_tokens": 6874,
+  "cache_read_tokens": 36864,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.030462000000000003,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_494646bd",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_0052_opencode_20260926_162019"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075
+Final status: FAILED/CANCELLED | exit code: 1

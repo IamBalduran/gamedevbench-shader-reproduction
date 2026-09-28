@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "LeftTrackParticles.process_material must use box emission",
+  "details": {},
+  "timestamp": "2026-09-27T03:37:14.499970"
+}

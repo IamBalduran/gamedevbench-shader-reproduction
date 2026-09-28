@@ -1,0 +1,168 @@
+Single task: task_0229 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_054738_task_0229_322023
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023/task_task_0229.json
+{
+  "task_name": "task_0229",
+  "success": false,
+  "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+  "timestamp": "2026-09-27T05:51:14.353181",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode command failed (exit code 1)\nFinal response: The scene structure partially exists. Now I need to look at the sprite image to find the yellow star collectible near the top.",
+  "solver_duration": 190.89624428749084,
+  "is_rate_limited": false,
+  "input_tokens": 127132,
+  "output_tokens": 2738,
+  "total_tokens": 129870,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.42246599999999995,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_63a179d8",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023/task_0229_opencode_20260927_055114"
+}
+API HTTP 401. Retrying task in 300 seconds (1/3). Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry1
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry1/task_task_0229.json
+{
+  "task_name": "task_0229",
+  "success": false,
+  "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+  "timestamp": "2026-09-27T05:56:47.523772",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode command failed (exit code 1)",
+  "solver_duration": 3.320409059524536,
+  "is_rate_limited": false,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.0,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_1304d21a",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry1/task_0229_opencode_20260927_055647"
+}
+API HTTP 401. Retrying task in 300 seconds (2/3). Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry2
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry2/task_task_0229.json
+{
+  "task_name": "task_0229",
+  "success": false,
+  "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+  "timestamp": "2026-09-27T06:02:17.880790",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode command failed (exit code 1)",
+  "solver_duration": 3.0886409282684326,
+  "is_rate_limited": false,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.0,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_452bd9a4",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_054738_task_0229_322023_retry2/task_0229_opencode_20260927_060217"
+}
+API HTTP 401. Retrying task in 300 seconds (3/3). Ctrl+C cancels.

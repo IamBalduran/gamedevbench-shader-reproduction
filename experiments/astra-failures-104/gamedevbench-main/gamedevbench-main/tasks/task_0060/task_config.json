@@ -1,0 +1,23 @@
+{
+  "task_id": 60,
+  "name": "Minimap marker logic and zoom control",
+  "instruction": "Implement the minimap logic: export a Player reference and a zoom property with a clamped setter, cache the grid and marker prototypes, center the player marker after the first frame, compute grid_scale from the grid size and viewport, duplicate and show markers for every node in the minimap_objects group using their minimap_icon keys, store them in a 'markers' dictionary, rotate (player rotation + PI/2) and position markers each frame relative to the player (scaling to 0.75 and clamping when off the grid), implement _on_object_removed which removes and erases markers when called, and implement _on_gui_input which handles mouse wheel gui_input to adjust zoom. Ensure the world scene connects minimap_objects \"removed\" signals to the minimap while mobs/crates have the \"removed\" signals, expose each one's \"minimap_icon\", and ensure mobs/crates belong to the minimap_objects group.",
+  "metadata": {
+    "tutorial_source": "https://kidscancode.org/godot_recipes/4.x/ui/minimap/index.html",
+    "github_repo": "https://github.com/godotrecipes/minimap",
+    "transcript_excerpt": "\u201c@export var player: Player @export var zoom = 1.5\u2026 icons = { \"mob\": mob_marker, \"alert\": alert_marker }\u2026 _ready(): await get_tree().process_frame\u2026 player_marker.position = grid.size / 2\u2026 grid_scale = grid.size / (get_viewport_rect().size * zoom)\u2026 duplicate markers for map_objects\u2026 _process: player_marker.rotation = player.rotation + PI/2\u2026 obj_pos = (item.position - player.position) * grid_scale + grid.size / 2\u2026 clamp\u2026 scale 1 vs 0.75\u2026 _on_object_removed\u2026 connect signals\u2026 gui_input scroll adjusts zoom.\u201d",
+    "expected_nodes": [
+      "Main/CanvasLayer/Minimap",
+      "Main/Player",
+      "Main/Mobs/Mob",
+      "Main/Crates/Crate"
+    ],
+    "key_properties": {
+      "minimap_export_player": "Player type",
+      "zoom_clamp": "0.5-5.0",
+      "markers_dictionary": "tracks minimap_objects -> duplicated markers",
+      "minimap_icon_mapping": "mob->MobMarker, alert->AlertMarker",
+      "removed_signal": "connected from minimap_objects to Minimap"
+    }
+  }
+}

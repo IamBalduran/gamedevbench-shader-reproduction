@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://main_flashlight_points_start"]
+
+[ext_resource type="PackedScene" path="res://scenes/flashlight_point.tscn" id="1_flashlight_point"]
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 4)
+fov = 70.0
+
+[node name="FlashlightPoint" parent="." instance=ExtResource("1_flashlight_point")]
+position = Vector3(8.36166, 1.81915, -12.0301)
+priority = 1
+
+[node name="FlashlightPoint2" parent="." instance=ExtResource("1_flashlight_point")]
+position = Vector3(-16.6577, 2.41884, -39.9426)
+priority = 0
+
+[node name="FlashlightPoint3" parent="." instance=ExtResource("1_flashlight_point")]
+position = Vector3(23.0185, 2.63927, -86.6948)
+priority = 2

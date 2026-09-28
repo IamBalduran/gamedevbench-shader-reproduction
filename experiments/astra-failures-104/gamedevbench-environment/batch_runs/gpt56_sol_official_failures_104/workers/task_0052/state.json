@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0052"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0052": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T00:33:25+00:00",
+      "finished_at": "2026-09-26T00:34:35+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "242421c4b38c9be6b95465e25dda1e968a496dd8508e73af565d09ed5037bf4a",
+      "validator_sha256": "890afb72c124ce6cab16633156ef276be3ddaf6434911542f482c461e670ec86",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0052/console/task_0052_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_083326_task_0052_111023",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Failed to load Player scene.",
+      "official_details": "{}",
+      "validator_error_line": "10",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Updated `scripts/player.gd` with:\n\n- Exported `friction = 0.1` and `acceleration = 0.25`, both constrained to `0.0–1.0`.\n- Cached horizontal input in `dir`.\n- Accelerated toward `dir * speed` while moving.\n- Applied friction toward zero while idle.\n- Preserved gravity, `move_and_slide()`, and floor-gated jump logic.\n\nVerified with Godot 4.4.1 using a timeout and one-frame render. The project launched without script or runtime errors.",
+      "solver_duration": 44.87132382392883,
+      "cost_usd": 0.009079625,
+      "input_tokens": 5517,
+      "output_tokens": 839,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_083326_task_0052_111023/task_task_0052.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_083326_task_0052_111023/task_0052_opencode_20260926_083433/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_083326_task_0052_111023/task_0052_opencode_20260926_083433",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_083326_task_0052_111023/task_0052_opencode_20260926_083433/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T00:34:35+00:00"
+}

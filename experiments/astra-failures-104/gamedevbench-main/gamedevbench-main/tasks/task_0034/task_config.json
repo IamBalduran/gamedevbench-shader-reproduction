@@ -1,0 +1,19 @@
+{
+  "task_id": 34,
+  "name": "Buffer Steering Debug Vectors",
+  "instruction": "Inside the SteerComponent script, capture the current velocity, scaled desired velocity, and steering force in a debug dictionary whenever debugging is enabled, and queue a redraw every frame so the overlay can update.",
+  "metadata": {
+    "tutorial_source": "YouTube: Cashew OldDew - Debug Visually in Godot 4.2",
+    "video_id": "0MfTANzADHw",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "add the forces the points and whatever else you want to visualize in a dictionary... make sure you redraw at every frame in your process function with Q redraw",
+    "expected_nodes": [
+      "Main",
+      "Fish",
+      "SteerComponent"
+    ],
+    "key_properties": {
+      "SteerComponent.debug_keys": "velocity, scaled_desired_velocity, steer"
+    }
+  }
+}

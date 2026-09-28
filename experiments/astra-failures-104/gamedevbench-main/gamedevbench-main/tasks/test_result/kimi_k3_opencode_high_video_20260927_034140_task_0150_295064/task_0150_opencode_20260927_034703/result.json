@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0150",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_034703",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "timestamp": "2026-09-27T03:47:03.802653"
+  },
+  "solver": {
+    "success": true,
+    "message": "The panel renders correctly: a full-screen semi-transparent dark overlay with a centered \"Victorious!\" label and the \"Awesome!\" continue button visible (restart button hidden for WIN type). \n\nLet me clean up the test files and confirm the final state of the workspace:",
+    "duration_seconds": 301.6858386993408,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.8962680000000001,
+    "token_usage": {
+      "input_tokens": 277581,
+      "output_tokens": 4235,
+      "total_tokens": 281816,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

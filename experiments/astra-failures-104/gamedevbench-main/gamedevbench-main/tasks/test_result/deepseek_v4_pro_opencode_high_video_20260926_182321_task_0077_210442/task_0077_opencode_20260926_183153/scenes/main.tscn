@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://codex0619task"]
+
+[ext_resource type="Shader" path="res://scenes/WaterShader.tres" id="1_water_shader"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sky"]
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("ProceduralSkyMaterial_sky")
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 2
+sky = SubResource("Sky")
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_water"]
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_water"]
+shader = ExtResource("1_water_shader")
+transparency = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_green"]
+albedo_color = Color(0, 1, 0, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 8, 2)
+shadow_enabled = true
+
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_water")
+material_override = SubResource("ShaderMaterial_water")
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Sphere" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0.3, -3.6)
+mesh = SubResource("SphereMesh")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere2" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, -0.2, 4.1)
+mesh = SubResource("SphereMesh")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere3" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0.5, -4.4)
+mesh = SubResource("SphereMesh")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere4" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.7, -0.4, -1.2)
+mesh = SubResource("SphereMesh")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere5" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0.0, 2.0)
+mesh = SubResource("SphereMesh")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 20)
+fov = 30.0

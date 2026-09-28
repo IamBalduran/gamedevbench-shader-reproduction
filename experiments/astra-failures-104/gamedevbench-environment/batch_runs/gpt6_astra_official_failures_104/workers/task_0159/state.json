@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0159"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0159": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:44:24+00:00",
+      "finished_at": "2026-09-25T18:50:32+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "68c85543266663b50b7fd12723c010dafb41a1d423407133e0c4c5d8d49c2d64",
+      "validator_sha256": "7253e4bf774561bfb125dd41ba212e3e8587e5a6ff211c623a74414ad021a4b7",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0159/console/task_0159_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_024426_task_0159_42636",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "ContinueButton size_flags_horizontal must be Expand",
+      "official_details": "{}",
+      "validator_error_line": "114",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Completed:\n- `res://scenes/ui/battle_over_panel.tscn` matches the requested layout, styling, and controls.\n- `res://scenes/ui/battle_over_panel.gd` handles event-driven WIN/LOSE display, button connections, and scene-tree pausing.\n\nVerified in Godot 4.4.1 with runtime assertions for both states and a rendered preview. Temporary validation files were removed.",
+      "solver_duration": 339.6492609977722,
+      "cost_usd": 0.179859,
+      "input_tokens": 40018,
+      "output_tokens": 3987,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_024426_task_0159_42636/task_task_0159.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_024426_task_0159_42636/task_0159_opencode_20260926_025030/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_024426_task_0159_42636/task_0159_opencode_20260926_025030",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_024426_task_0159_42636/task_0159_opencode_20260926_025030/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:50:32+00:00"
+}

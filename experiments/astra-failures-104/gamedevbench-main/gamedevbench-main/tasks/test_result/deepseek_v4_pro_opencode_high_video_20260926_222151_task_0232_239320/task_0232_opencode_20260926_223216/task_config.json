@@ -1,0 +1,3 @@
+{
+  "instruction": "Keep the Level node aligned to the viewport with position (165.228, 108.717), scale (0.57, 0.57), and rotation -0.06 radians. Keep Sprite2D using assets/sprites/platformer_coins.jpg with centered set to false. Add a Node2D named StarHighlights under the Level node. Inside StarHighlights, create a semi-transparent Polygon2D named StarHighlight. Shape and place the polygon so it matches the single yellow star collectible near the top of the platformer image as closely as possible, with minimal spill outside the star."
+}

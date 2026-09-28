@@ -1,0 +1,23 @@
+{
+  "task_id": 33,
+  "name": "Bonkahe Arcing Chunk Sub-Emitter",
+  "instruction": "Finish the Explosion hierarchy so the ArcingChunks emitter works as wanted: set ArcingChunks to one_shot, lifetime 3s, randomness about 0.7, give it a QuadMesh draw pass and a StandardMaterial3D billboard with bright emission, and drive it with a ParticleProcessMaterial that fires from the default spread at 8\u201312 m/s, enables rigid collision with bounce 1.0, uses collision_use_scale, and sets a constant sub emitter frequency of 100 Hz with the sub_emitter path pointing to ../ArcingChunkSmoke. Add the GPUParticlesCollisionBox3D named ArcingChunkCollision, positioned just below the emitter and scaled to 40\u00d71\u00d740 so debris collides as shown in the collision segment of the video. Configure ArcingChunkSmoke to emit ~1000 particles with a ShaderMaterial referencing res://assets/shaders/SmokeShader.gdshader (NoiseTexture = res://assets/shaders/NoiseResource.tres) and a ParticleProcessMaterial that rotates sprites, uses the warm gradient/curve combo from the repo, lifetime 3 s, gravity (0,1,0), linear accel ~2, scale curve peaks between 8 and 15, and turbulence influence about 0.005\u20130.01 so the smoke puffs appear along the chunk trails.",
+  "metadata": {
+    "tutorial_source": "YouTube: Bonkahe - Pretty Much Everything About GPUParticles in Godot 4",
+    "video_id": "BUa-mKHEPUM",
+    "github_repo": "https://github.com/Bonkahe/BasicParticleEffects",
+    "transcript_excerpt": "if we go ahead and go down to the process material and we set Collision mode to rigid set the bounce to one and we add a new node for a collision box 3D ... you can see the particles are stopping right where that Collision box is ... these spawn out the little white particles at the tips of these trails and then those particles are also accessing the arcing chunk smoke particle ... by using the sub emitter set to constant with a frequency of 100 Hertz",
+    "expected_nodes": [
+      "Main/Explosion/ArcingChunks",
+      "Main/Explosion/ArcingChunkSmoke",
+      "Main/Explosion/ArcingChunkCollision"
+    ],
+    "key_properties": {
+      "ArcingChunks.sub_emitter": "../ArcingChunkSmoke",
+      "ArcingChunks.process_material.sub_emitter_frequency": "100",
+      "ArcingChunks.process_material.collision_mode": "rigid",
+      "ArcingChunkSmoke.material_override.shader": "res://assets/shaders/SmokeShader.gdshader",
+      "ArcingChunkCollision.size": "Vector3(40, 1, 40)"
+    }
+  }
+}

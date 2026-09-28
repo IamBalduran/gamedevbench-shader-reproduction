@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0027"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0027": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T00:04:58+00:00",
+      "finished_at": "2026-09-26T00:12:17+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "5c0dbb6bcfa651f37fd97532768cbccc5c9d0b2caf8aa0317e64af65dee244f5",
+      "validator_sha256": "4f6b8582db0800ed86186e45004ac677b8f92296385e436923bee9c75e59514f",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0027/console/task_0027_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Weapon recoil signal wired into PlayerBody",
+      "official_details": "{}",
+      "validator_error_line": "72",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented the complete weapon recoil signal flow:\n\n- `scripts/weapon_effects.gd`\n  - Added typed `on_shot_camera_impulse(Vector3, float)` signal.\n  - Added exported `camera_shake_power` defaulting to `0.3`.\n  - `fire_weapon()` now emits the normalized global forward direction from `BarrelRayCast` with the exported power.\n\n- `scenes/weapon_rig.tscn`\n  - Exposes `BarrelEnd`, `BarrelRayCast`, and `camera_shake_power = 0.3`.\n\n- `scripts/player_body.gd`\n  - Added `apply_weapon_impulse()`, forwarding to `impulse_camera_with_recoil()`.\n\n- `scenes/main.tscn`\n  - Connected the weapon signal to `PlayerBody.apply_weapon_impulse`.\n\nValidated with Godot 4.4.1:\n\n- Project and scenes load without script or scene errors.\n- Visual smoke-test frames rendered successfully.\n- Runtime assertion confirmed direction `(0, 0, -1)`, power `0.3`, and immediate camera offset `(0, 0.12, -0.09)`.",
+      "solver_duration": 412.00710678100586,
+      "cost_usd": 0.04569625,
+      "input_tokens": 46850,
+      "output_tokens": 3984,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_task_0027.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T00:12:17+00:00"
+}

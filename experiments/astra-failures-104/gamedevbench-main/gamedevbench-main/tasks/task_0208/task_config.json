@@ -1,0 +1,26 @@
+{
+  "task_id": 208,
+  "name": "Tree Spawning Points Scale Variant H",
+  "instruction": "Add a Node2D named SpawningPoints under the Trap node. Inside SpawningPoints, create two Marker2D children named SpawnTop and SpawnBot. Place one marker on the bottom tip of the branch closest to the water surface, and place the other marker at the rightmost bottom tip of the trunk of the tree; ensure each Marker2D's position is visually aligned with the sprite texture. Set SpawnBot's z_index to 1.",
+  "metadata": {
+    "tutorial_source": "Synthetic variant of task_0200",
+    "variant_of": "task_0204",
+    "video_id": "unknown",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "scale variant h of the tree tip placement task",
+    "expected_nodes": [
+      "Node2D:Trap/SpawningPoints",
+      "Marker2D:Trap/SpawningPoints/SpawnTop",
+      "Marker2D:Trap/SpawningPoints/SpawnBot"
+    ],
+    "key_properties": {
+      "Trap.position": "Vector2(320, 180)",
+      "Trap.scale": "Vector2(2.0, 2.0)",
+      "Sprite2D.position": "Vector2(64.5, 34.5)",
+      "Sprite2D.scale": "Vector2(0.07473366, 0.08652595)",
+      "SpawnTop.position": "Vector2(36.5, 65.5)",
+      "SpawnBot.position": "Vector2(76.49999, 65.5)",
+      "SpawnBot.z_index": "1"
+    }
+  }
+}

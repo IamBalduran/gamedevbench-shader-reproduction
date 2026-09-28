@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.6508)",
+  "details": {},
+  "timestamp": "2026-09-26T05:24:15.435426"
+}

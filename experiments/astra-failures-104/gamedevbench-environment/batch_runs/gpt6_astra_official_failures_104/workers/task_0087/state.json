@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0087"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0087": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:11:49+00:00",
+      "finished_at": "2026-09-25T18:21:09+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "669046cbd9b437fb416e006819178bcb387078fdc2bfdab96fe507a8a467a709",
+      "validator_sha256": "4f4275d0369975b275fbfe89f9b4e01d457f03008e84c3692f8acd86cb7ab996",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0087/console/task_0087_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_021150_task_0087_32532",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "RectangleShape2D size must be 32x32 pixels",
+      "official_details": "{}",
+      "validator_error_line": "37",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Completed [Player.tscn](/workspace/scenes/Player.tscn).\n\n- Added `Sprite2d` using `res://assets/sokoban_character.png`, sliced into 6×4 frames.\n- Added `CollisionShape2d` with a 64×64 `RectangleShape2D`.\n- Added `RayCast2d` with `collide_with_areas = true`.\n- Added `AnimationPlayer` with `up`, `down`, `left`, and `right` clips.\n- Each clip has exactly six `Sprite2d.frame` keys and one animation track.\n- Preserved the requested lowercase `d` node names.\n\nValidation passed in Godot 4.4.1, including a rendered visual check of all animation frames.",
+      "solver_duration": 532.3415198326111,
+      "cost_usd": 0.179985,
+      "input_tokens": 33875,
+      "output_tokens": 5224,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_021150_task_0087_32532/task_task_0087.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_021150_task_0087_32532/task_0087_opencode_20260926_022106/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_021150_task_0087_32532/task_0087_opencode_20260926_022106",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_021150_task_0087_32532/task_0087_opencode_20260926_022106/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:21:09+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0190"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0190": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T20:00:32+00:00",
+      "finished_at": "2026-09-25T20:05:09+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3c5c7cdcfde4c9696ea6d3879c325b9d8412576087772de8194cfb9bce71f8b9",
+      "validator_sha256": "1512896c9f4ce7a0a8e26d1c9f90308ed47dc5646f10ebfc70556c8327ddeb89",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0190/console/task_0190_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_040033_task_0190_50180",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Tile (14, 1) must remain without collision",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated [assets/tile_set.tres](/workspace/assets/tile_set.tres) with collision boxes for **16 water pipe tiles and 16 solid leaf tiles**.\n\nEach uses the same single full-tile rectangle as the existing solid tiles: `(-9, -9), (9, -9), (9, 9), (-9, 9)`. All other tiles retain their previous collision settings.\n\nVerified in Godot 4.4.1 using physics queries across all 180 tiles and a [rendered collision preview](/workspace/.godot/collision_preview.png): 86 solid tiles and 94 tiles without collision.",
+      "solver_duration": 252.1784918308258,
+      "cost_usd": 0.18089100000000002,
+      "input_tokens": 36157,
+      "output_tokens": 4828,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_040033_task_0190_50180/task_task_0190.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_040033_task_0190_50180/task_0190_opencode_20260926_040507/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_040033_task_0190_50180/task_0190_opencode_20260926_040507",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_040033_task_0190_50180/task_0190_opencode_20260926_040507/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T20:05:09+00:00"
+}

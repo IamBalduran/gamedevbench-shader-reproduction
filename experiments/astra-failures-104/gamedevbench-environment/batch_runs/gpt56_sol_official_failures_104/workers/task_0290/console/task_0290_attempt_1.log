@@ -1,0 +1,57 @@
+Single task: task_0290 | OpenCode | gpt-5.6-sol | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt56_sol_opencode_high_video_20260926_151346_task_0290_188303
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_151346_task_0290_188303/task_task_0290.json
+{
+  "task_name": "task_0290",
+  "success": false,
+  "message": "CardStateMachine must enter CardBaseState on ready",
+  "timestamp": "2026-09-26T15:24:15.284993",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.1506986618042,
+  "is_rate_limited": false,
+  "input_tokens": 4337,
+  "output_tokens": 981,
+  "total_tokens": 5318,
+  "cache_read_tokens": 48949,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.010352125,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_0b04004a",
+  "result_dir": "tasks/test_result/gpt56_sol_opencode_high_video_20260926_151346_task_0290_188303/task_0290_opencode_20260926_152415"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_151346_task_0290_188303
+Final status: FAILED/CANCELLED | exit code: 1

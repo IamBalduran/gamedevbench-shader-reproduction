@@ -1,0 +1,43 @@
+{
+  "task_name": "task_0281",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "timestamp": "20260927_002745",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "CardStateMachine must enter CardBaseState on ready",
+    "timestamp": "2026-09-27T00:27:45.902982"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 600.1274900436401,
+    "is_rate_limited": false,
+    "model": "openai/deepseek-v4-pro",
+    "cost_usd": 0.0
+  }
+}

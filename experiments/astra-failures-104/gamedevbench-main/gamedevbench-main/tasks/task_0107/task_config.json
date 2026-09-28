@@ -1,0 +1,21 @@
+{
+  "task_id": 107,
+  "name": "Apply View Model Clip Shader",
+  "instruction": "Implement the view model clip shader swap on the weapon view model node. Add logic that finds MeshInstance3D nodes under the view model, replaces each surface material with a ShaderMaterial that uses res://shaders/weapon_clip_and_fov_shader.gdshader, copies the base material albedo/metallic/roughness parameters into the shader, and sets the viewmodel_fov shader parameter to 54.0 when applying the shader.",
+  "metadata": {
+    "tutorial_source": "YouTube: Majikayo Games - Godot 4.3 Weapon View Model Clip Shader Tutorial + Shader Transform Pipeline Overview",
+    "video_id": "v6lKjUHjH4c",
+    "github_repo": "https://github.com/majikayogames/SimpleFPSController",
+    "transcript_excerpt": "replaces all of the materials in your view model with this Shader material",
+    "expected_nodes": [
+      "Main",
+      "WeaponManager",
+      "ViewModel",
+      "Knife"
+    ],
+    "key_properties": {
+      "shader_path": "res://shaders/weapon_clip_and_fov_shader.gdshader",
+      "viewmodel_fov": 54.0
+    }
+  }
+}

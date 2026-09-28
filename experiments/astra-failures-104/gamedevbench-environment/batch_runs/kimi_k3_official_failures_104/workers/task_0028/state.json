@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0028"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0028": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T17:47:35+00:00",
+      "finished_at": "2026-09-26T17:54:24+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "5606d0021844fcf14cc0d01fb2d0b259d819eb7b5c3780f0974267a8cd7344a6",
+      "validator_sha256": "72e8064c2a35a62628b0a633a9efceb022e8c94ba71a5d4a0fc2c0b160217e1b",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0028/console/task_0028_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_014736_task_0028_262453",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "PillarPoint node missing",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Done. Here's what I created and verified:\n\n**`scripts/flashlight_point.gd`** — `FlashlightPoint` class extending `Marker3D`:\n- `enum Priority { low, medium, high }` (exported as `@export var priority`)\n- `var has_been_targeted: bool = false`\n- `func reset_target_state()` sets it back to `false`\n\n**`scenes/flashlight_point.tscn`** — reusable marker scene (root `Marker3D` named `FlashlightPoint`) with the script attached and declared in the `FlashlightPoints` group.\n\n**`scenes/main.tscn`** — three instances parented directly under `Main`:\n| Node | Position | Priority |\n|------|----------|----------|\n| FlashlightPoint | (8.36166, 1.81915, -12.0301) | medium (1) |\n| FlashlightPoint2 | (-16.6577, 2.41884, -39.9426) | low (0) |\n| FlashlightPoint3 | (23.0185, 2.63927, -86.6948) | high (2) |\n\nVerification (run headless in an isolated harness, since removed):\n- `group_size=3`, all three members of `FlashlightPoints` ✓\n- Positions match exactly, priorities resolve to medium/low/high ✓\n- `has_been_targeted` toggles true then resets to false via `reset_target_state()` ✓\n- All nodes are `FlashlightPoint` instances, parented directly under `Main`, and the project/scene load cleanly (`--check-only` exit 0) ✓",
+      "solver_duration": 381.84416604042053,
+      "cost_usd": 0.8694870000000001,
+      "input_tokens": 270759,
+      "output_tokens": 3814,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_task_0028.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T17:54:24+00:00"
+}

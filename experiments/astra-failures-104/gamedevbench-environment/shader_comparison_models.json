@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "provider_base_url": "https://api.shubiaobiao.cn/v1",
+  "models": [
+    {"key": "gpt6_astra", "api_id": "gpt-6-astra", "opencode_id": "openai/gpt-6-astra", "batch_id": "gpt6_astra_shader", "effort": "high"},
+    {"key": "gpt56_sol", "api_id": "gpt-5.6-sol", "opencode_id": "openai/gpt-5.6-sol", "batch_id": "gpt56_sol_shader", "effort": "high"},
+    {"key": "deepseek_v4_pro", "api_id": "deepseek-v4-pro", "opencode_id": "openai/deepseek-v4-pro", "batch_id": "deepseek_v4_pro_shader", "effort": "high"},
+    {"key": "kimi_k3", "api_id": "kimi-k3", "opencode_id": "openai/kimi-k3", "batch_id": "kimi_k3_shader", "effort": "high"}
+  ]
+}

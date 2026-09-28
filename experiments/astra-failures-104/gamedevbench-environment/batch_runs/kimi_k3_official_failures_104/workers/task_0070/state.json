@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0070"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0070": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:39:23+00:00",
+      "finished_at": "2026-09-26T18:49:57+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "e428abe8a03f23f51f63a64b5af233cbb90c5661a725e42460a5c6d01cf3966e",
+      "validator_sha256": "60ed5401e7e668cd90ce70958786d909d9250ca904da7266642706faccc287c9",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0070/console/task_0070_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_023924_task_0070_274243",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": false,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0394196510315,
+      "cost_usd": 0.403206,
+      "input_tokens": 121282,
+      "output_tokens": 2624,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_023924_task_0070_274243/task_task_0070.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023924_task_0070_274243/task_0070_opencode_20260927_024954/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023924_task_0070_274243/task_0070_opencode_20260927_024954",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023924_task_0070_274243/task_0070_opencode_20260927_024954/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:49:57+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0218"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0218": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T13:05:41+00:00",
+      "finished_at": "2026-09-26T13:16:06+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "a6b4ec2ca25ee8c872a6c1ab8970957898ff8d6c454f38ca1d4e35abcaf4790f",
+      "validator_sha256": "1dd31713f43a67857935b7773afcc6e12d5d73ba5d0d43a215329945989ad65e",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0218/console/task_0218_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_210543_task_0218_230629",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Add a Node2D named CoinHighlights under Level",
+      "official_details": "{}",
+      "validator_error_line": "176",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0597929954529,
+      "cost_usd": 0.09734099999999998,
+      "input_tokens": 14712,
+      "output_tokens": 3547,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_210543_task_0218_230629/task_task_0218.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_210543_task_0218_230629/task_0218_opencode_20260926_211605/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_210543_task_0218_230629/task_0218_opencode_20260926_211605",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_210543_task_0218_230629/task_0218_opencode_20260926_211605/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T13:16:07+00:00"
+}

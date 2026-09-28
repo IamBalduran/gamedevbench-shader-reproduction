@@ -1,0 +1,21 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0264,gpt6_astra,openai/gpt-6-astra,,,completed,1,False,DetectRange.base_range_size must be 24.0,{},53,True,"Implemented the guard patrol intruder tracking setup.
+
+Changes include:
+
+- Added `UnitStats.TARGET` team-to-group mapping in [unit_stats.gd](/workspace/data/units/unit_stats.gd:4).
+- Added [detect_range.gd](/workspace/custom_nodes/detect_range.gd:1):
+  - Configures collision layer and mask from team.
+  - Creates a circular detection shape based on `base_range_size * attack_range`.
+- Added [target_finder.gd](/workspace/custom_nodes/target_finder.gd:1):
+  - Tracks `BattleUnit` instances entering and leaving range.
+  - Emits `targets_in_range_changed`.
+  - Finds the closest opposing unit by group and distance.
+- Updated [battle_unit.gd](/workspace/scenes/battle_unit/battle_unit.gd:4) with `detect_range` and `target_finder` references and stat propagation.
+- Updated [battle_unit.tscn](/workspace/scenes/battle_unit/battle_unit.tscn:1) with the `DetectRange`, collision shape, and `TargetFinder` nodes.
+
+Validation completed successfully with Godot 4.4.1:
+
+- Project parsed and loaded in headless editor mode.
+- Runtime checks passed for collision setup, target detection, closest-target selection, entry/exit signals, filtering, and stat-driven range updates.
+- The project launched and exited cleanly with `--quit-after`.",361.0708248615265,0.115896,16222,4482,False,gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_task_0264.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0264/console/task_0264_attempt_1.log,08fb738cd53ee0157513fcfd6ffa07df00bdff10aeb27e709270b9978ceaccd6,0ffac9f03e9601ddfdb5353efa2a126f96eb6d78ceb2c5b567a6a9573ff503dc,2026-09-25T22:18:21+00:00,2026-09-25T22:24:47+00:00,1,official_fail_review_needed,,

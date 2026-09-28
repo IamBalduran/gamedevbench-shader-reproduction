@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0287"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0287": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T06:46:08+00:00",
+      "finished_at": "2026-09-26T07:30:14+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "df87e73682153963d4b4e9dfe5524da6fd1e03afa70f07200e12c5cada6b5668",
+      "validator_sha256": "b7a8016f91f429e2d7ff469a7c7d7d67cb671c3d95b67ce8c2defb27459d01ea",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0287/console/task_0287_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_144611_task_0287_185783_retry3",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Dragging state must reparent the card into the ui_drag_layer group",
+      "official_details": "{}",
+      "validator_error_line": "77",
+      "solver_success": false,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0787823200226,
+      "cost_usd": 0.035834124999999994,
+      "input_tokens": 25313,
+      "output_tokens": 3267,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_144611_task_0287_185783_retry3/task_task_0287.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_144611_task_0287_185783_retry3/task_0287_opencode_20260926_153001/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_144611_task_0287_185783_retry3/task_0287_opencode_20260926_153001",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_144611_task_0287_185783_retry3/task_0287_opencode_20260926_153001/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T07:30:14+00:00"
+}

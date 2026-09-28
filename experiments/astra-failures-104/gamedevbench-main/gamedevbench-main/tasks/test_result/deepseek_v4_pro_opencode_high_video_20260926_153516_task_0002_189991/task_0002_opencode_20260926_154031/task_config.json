@@ -1,0 +1,3 @@
+{
+  "instruction": "Make the projectile advance the Shoot Em Up quest by calling QuestManager.progress_quest with the kill step each time it overlaps an enemy, queue_free itself after the hit, and ensure it also removes itself when it travels far off screen (50 pixels)."
+}

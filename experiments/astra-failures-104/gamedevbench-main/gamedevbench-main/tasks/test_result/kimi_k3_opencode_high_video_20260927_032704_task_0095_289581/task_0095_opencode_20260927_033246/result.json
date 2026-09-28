@@ -1,0 +1,54 @@
+{
+  "task_name": "task_0095",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_033246",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "www.google.com:443",
+      "godotshaders.com:443",
+      "duckduckgo.com:443",
+      "www.bing.com:443",
+      "html.duckduckgo.com:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Shader code missing required parts: step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+    "timestamp": "2026-09-27T03:32:46.850872"
+  },
+  "solver": {
+    "success": true,
+    "message": "Task complete. The CRT screen shader was implemented in `screen_effect/screen_effect.gdshader` and verified by rendering actual frames with Godot 4.4.1.\n\n**Implementation summary:**\n- `shader_type canvas_item` with `render_mode unshaded, skip_vertex_transform`\n- Constants: `curvature = 7.0` and `vignette_multiplier = 2.0`\n- `uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap`\n- `fragment()` pipeline:\n  1. Centered UVs: `centered_uv = SCREEN_UV * 2.0 - 1.0` (range [-1,1])\n  2. Curvature warp: `warped_uv = centered_uv + centered_uv * (centered_uv.yx / curvature)\u00b2`\n  3. Cutoff mask via `step()` on |warped_uv| \u2264 0.5 \u2192 black at corners/barrel edges\n  4. Scanlines: `sin(2.0 * warped_uv.y * 100.0) * 0.1 + 0.9`\n  5. Vignette: `length(pow(abs(warped_uv), vec2(4.0)) / 0.5)` scaled by `vignette_multiplier`\n  6. Samples `screen_texture` at the warped UV with a small LOD bias (`textureLod(..., 0.25)`) for blur\n  7. Outputs `COLOR = vec4(color, 1.0)`\n\n**Verification:** Rendered with `godot --path . --quit-after N --write-movie` using a temporary colorful background behind the quad. The captures confirmed all effect components: barrel-curved content with black cutoff in the corners, darkened curved edges (vignette), subtle softening from the LOD blur, and visible horizontal scanlines (clearly seen in a 6\u00d7 vertically-stretched crop). The scene file was then restored to its original state and the project still renders without errors.",
+    "duration_seconds": 318.3699297904968,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 1.0315020000000001,
+    "token_usage": {
+      "input_tokens": 318454,
+      "output_tokens": 5076,
+      "total_tokens": 323530,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "model": "openai/deepseek-v4-pro",
+  "total": 1,
+  "counts": {
+    "completed": 1
+  },
+  "updated_at": "2026-09-26T13:16:07+00:00",
+  "results_csv": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0218/results.csv",
+  "results_csv_stale": false,
+  "latest_csv": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0218/results.csv"
+}

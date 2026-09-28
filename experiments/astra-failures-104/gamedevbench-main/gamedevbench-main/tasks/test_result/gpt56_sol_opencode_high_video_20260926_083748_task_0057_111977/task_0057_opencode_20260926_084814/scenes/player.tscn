@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/unit.gd" id="1_vv7m8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/towerDefense_tilesheet.png" id="2_texture"]
+[ext_resource type="Shader" path="res://assets/shaders/aura.gdshader" id="3_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aura"]
+shader = ExtResource("3_shader")
+shader_parameter/aura_width = 0.0
+shader_parameter/aura_color = Color(0.2, 0.85, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_detect"]
+radius = 35.0
+
+[node name="Unit" type="CharacterBody2D" groups=["units"]]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_vv7m8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_texture")
+material = SubResource("ShaderMaterial_aura")
+region_enabled = true
+region_rect = Rect2(960, 640, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_body")
+
+[node name="Detect" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detect"]
+shape = SubResource("CircleShape2D_detect")

@@ -1,0 +1,57 @@
+Single task: task_0075 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_181315_task_0075_207719
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_181315_task_0075_207719/task_task_0075.json
+{
+  "task_name": "task_0075",
+  "success": true,
+  "message": "Depth scene geometry matches tutorial setup",
+  "timestamp": "2026-09-26T18:23:17.531515",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The scene file has been written and verified. Godot loaded and rendered it without errors. Here's what was set up:\n\n- **WorldEnvironment** with procedural sky material (`background_mode=2`, `glow_enabled=true`)\n- **DirectionalLight3D** angled from above with `shadow_enabled=true`\n- **Water** MeshInstance3D with a `10x10` PlaneMesh subdivided `20x20`, using `ShaderMaterial` pointing to `res://scenes/WaterShader.tres`\n- **Background** Node3D containing 5 sphere MeshInstance3Ds (`Sphere` through `Sphere5`) at the specified positions, all with green `StandardMaterial3D` overrides\n- **Camera3D** at `(0, 1, 25)` with `FOV=30`, positioned to see all spheres spanning the full water plane",
+  "solver_duration": 572.2691860198975,
+  "is_rate_limited": false,
+  "input_tokens": 8373,
+  "output_tokens": 1851,
+  "total_tokens": 10224,
+  "cache_read_tokens": 112640,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.052884,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_0ae31a27",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_181315_task_0075_207719/task_0075_opencode_20260926_182317"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_181315_task_0075_207719
+Final status: PASS | exit code: 0

@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://d2kc2xj6c0m8d" path="res://assets/sprites/platformer_coins.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(211.163, 22.665)
+scale = Vector2(0.55, 0.55)
+rotation = 0.16
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+position = Vector2(0, -0.76923084)
+texture = ExtResource("1_platformer")
+centered = false
+
+[node name="StarHighlights" type="Node2D" parent="Level"]
+
+[node name="StarHighlight" type="Polygon2D" parent="Level/StarHighlights"]
+position = Vector2(0, -0.76923084)
+color = Color(1, 1, 0.35, 0.42)
+polygon = PackedVector2Array(1002.5, 60.5, 1004, 61.5, 1005, 63.5, 1005.5, 66, 1007, 68, 1009.5, 69, 1015, 69.5, 1017, 70.5, 1018, 72, 1017, 74.5, 1015, 76.5, 1012, 79.5, 1011.7, 81, 1012.5, 85.5, 1012.5, 88, 1011, 89.5, 1009, 89.5, 1005.5, 87.5, 1002.5, 86.5, 1000.5, 87, 996.5, 89, 994, 90, 992.5, 89, 992, 87, 992.5, 84, 993.5, 80.5, 992.5, 78.5, 990, 76, 988.5, 74, 988.5, 71.5, 990, 70, 993.5, 69.5, 996, 69, 997.5, 68, 999, 64, 1000.5, 61.5)
+antialiased = true

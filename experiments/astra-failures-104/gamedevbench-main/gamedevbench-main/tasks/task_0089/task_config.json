@@ -1,0 +1,23 @@
+{
+  "task_id": 89,
+  "name": "Audio Demo Grid UI Formatting",
+  "instruction": "Create res://scenes/audio_demo.tscn with a MarginContainer root named \"AudioDemo\" that fills the screen, uses 20px margins on all sides, and attaches res://scripts/audio_demo.gd exporting sound_dir defaulting to res://assets. Add a CenterContainer with a GridContainer child set to two columns with 10px horizontal and vertical separation for dynamically added Buttons. Add a CanvasLayer with an HBoxContainer top bar containing a Label node named Label using the Poppins-Medium font at size 24. The Label text should be constantly updated to display \"Available Streams: {num_available_streams} | Queue: {num_queud_streams}\", using this string template. Implement audio_demo.gd so _ready() scans sound_dir for .wav/.ogg files, adds a Button for each with its text set to the filename, Poppins font override, and pressed connected to on_audio_button_pressed, which calls AudioManager.play() on the file path. Ensure _process() updates the count labels to reflect AudioManager.available.size() and AudioManager.queue.size().",
+  "metadata": {
+    "tutorial_source": "https://kidscancode.org/godot_recipes/4.x/audio/audio_manager/index.html",
+    "github_repo": "https://github.com/godotrecipes/audio_manager",
+    "transcript_excerpt": "The example project \"reads a folder full of audio files and generates a grid of buttons. Click the button to play the sound. At the top, you can see the audio manager\u2019s live statistics.\"",
+    "expected_nodes": [
+      "AudioDemo",
+      "AudioDemo/CenterContainer/GridContainer",
+      "AudioDemo/CanvasLayer/HBoxContainer/Label"
+    ],
+    "key_properties": {
+      "Margins": "20px on all sides",
+      "GridContainer.columns": 2,
+      "GridContainer.spacing": 10,
+      "TopBar.font": "Poppins-Medium, size 24",
+      "sound_dir": "res://assets",
+      "Buttons.source": "all .wav/.ogg files in sound_dir"
+    }
+  }
+}

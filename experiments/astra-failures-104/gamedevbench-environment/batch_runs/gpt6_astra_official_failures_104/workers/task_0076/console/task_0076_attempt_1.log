@@ -1,0 +1,56 @@
+Single task: task_0076 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260926_015953_task_0076_28898
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_015953_task_0076_28898/task_task_0076.json
+{
+  "task_name": "task_0076",
+  "success": false,
+  "message": "Water requires a ShaderMaterial override (via material_override or surface_material_override)",
+  "timestamp": "2026-09-26T02:03:04.639661",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Implemented `res://scenes/main.tscn` with:\n- Procedural sky, glow, and shadow-enabled directional light.\n- A 10\u00d710 water plane subdivided 20\u00d720 using `WaterShader.tres`.\n- Exactly five green spheres at the requested positions.\n- A current camera at Y = 1.0 with FOV = 30\u00b0, framing all five spheres.\n\nEnabled Forward+ in `project.godot` for glow support.\n\nVerified by rendering in Godot 4.4.1 with no errors. Preview: `preview00000001.png`.",
+  "solver_duration": 154.6045835018158,
+  "is_rate_limited": false,
+  "input_tokens": 19844,
+  "output_tokens": 2262,
+  "total_tokens": 22106,
+  "cache_read_tokens": 151077,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.093462,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_48108e3c",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260926_015953_task_0076_28898/task_0076_opencode_20260926_020304"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_015953_task_0076_28898
+Final status: FAILED/CANCELLED | exit code: 1

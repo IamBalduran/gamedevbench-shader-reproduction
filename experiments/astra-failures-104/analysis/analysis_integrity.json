@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-27",
+  "planned": 416,
+  "completed": 380,
+  "official_pass": 35,
+  "solver_normal": 193,
+  "solver_timeout": 185,
+  "other_solver_failure": 2,
+  "local_probe_runs": 16,
+  "rule_corrected_pass": 12,
+  "normal_solver_among_rule_corrected": 11,
+  "artifact_dirs_present": 380,
+  "trajectory_files_present": 380
+}

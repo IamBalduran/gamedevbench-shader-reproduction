@@ -1,0 +1,19 @@
+{
+  "snapshot": "2026-09-28",
+  "planned": 416,
+  "completed": 380,
+  "unfinished": 36,
+  "redactions": [
+    {
+      "path": "gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_023117_task_0108_38691/task_0108_opencode_20260926_024139/agent_trajectory.log",
+      "count": 2,
+      "reason": "credential-shaped value removed from publication copy; original local evidence unchanged"
+    }
+  ],
+  "excluded": [
+    "credentials",
+    "runtime binaries",
+    "caches",
+    "redundant probe project copies"
+  ]
+}

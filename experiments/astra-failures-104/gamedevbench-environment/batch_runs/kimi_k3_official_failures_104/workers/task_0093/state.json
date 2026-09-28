@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0093"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0093": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:22:09+00:00",
+      "finished_at": "2026-09-26T19:31:31+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "eafab9545af9f382923970647181ac41b961b611d8600b645ae632c237b63cb0",
+      "validator_sha256": "26a7e6cac945fb3d36925eaf838d42a63be7e292f1bb7d4cb5f8f89682c43c76",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0093/console/task_0093_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_032211_task_0093_288113",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+      "official_details": "{}",
+      "validator_error_line": "114",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The task is complete. Summary of what was done:\n\n## Created Files\n\n**`res://scenes/ui/battle_over_panel.tscn`** — Panel UI scene with:\n- Root `Panel` named `BattleOverPanel` with `process_mode = 3` (Always) and full-rect anchors (`anchors_preset = 15`, stretching to entire window)\n- `theme_override_styles/panel` set to a `StyleBoxFlat` with `bg_color = Color(0, 0, 0, 0.34902)`\n- A centered `VBoxContainer` (center anchor preset, offsets −20/−20/20/20, `alignment = 1`)\n- Inside it:\n  - `Label` (unique name) — text `\"Victorious!\"`, centered horizontal (`1`) and vertical (`1`) alignment, `LabelSettings` with `font_size = 24`\n  - `ContinueButton` (unique name) — `custom_minimum_size (50, 16)`, `size_flags_horizontal = 3` (expand fill), text `\"Awesome!\"`\n  - `RestartButton` (unique name) — same size/flags, text `\"Restart\"`\n\n**`res://scenes/ui/battle_over_panel.gd`** — Script with:\n- `class_name BattleOverPanel`, `extends Panel`\n- `enum Type {WIN, LOSE}`\n- `%Label`, `%ContinueButton`, `%RestartButton` bindings via `@onready`\n- `_ready()` connects `ContinueButton` → `get_tree().quit`, `RestartButton` → `get_tree().reload_current_scene`, and `Events.battle_over_screen_requested` → `show_screen`\n- `show_screen(text, type)` updates label text, shows `ContinueButton` only for `WIN`, `RestartButton` only for `LOSE`, calls `show()`, and pauses the tree\n\n## Verification\n- ✅ Headless project import — no errors\n- ✅ Rendered frame via `--write-movie` — panel displays fullscreen with centered dark box and visible label/buttons\n- ✅ Functional test: enum values, node bindings, both button connections, and `show_screen` behavior verified for both WIN and LOSE (label updates, correct button visibility, `paused = true`)\n- ✅ End-to-end test with the real `Events` autoload: emitting `battle_over_screen_requested` correctly drives the panel in game mode\n- ✅ All temporary test artifacts removed; `main.tscn` restored to its original state",
+      "solver_duration": 535.1694362163544,
+      "cost_usd": 1.168308,
+      "input_tokens": 359671,
+      "output_tokens": 5953,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_032211_task_0093_288113/task_task_0093.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032211_task_0093_288113/task_0093_opencode_20260927_033129/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032211_task_0093_288113/task_0093_opencode_20260927_033129",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032211_task_0093_288113/task_0093_opencode_20260927_033129/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:31:31+00:00"
+}

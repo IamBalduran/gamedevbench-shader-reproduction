@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0078"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0078": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:03:12+00:00",
+      "finished_at": "2026-09-25T18:11:48+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "8971e9f0398c2fe0664d7a892bc32b440529fff585682d5e0ec1638cd65b43c9",
+      "validator_sha256": "99079d1f65867b61879db2edbdbc482ad364d42fcd9d863a8426618757af57fc",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0078/console/task_0078_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_020313_task_0078_30253",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the water depth visualization scene.\n\nUpdated:\n\n- [scenes/main.tscn](/workspace/scenes/main.tscn)\n  - Added `WorldEnvironment` with procedural sky and glow enabled.\n  - Added shadow-enabled `DirectionalLight3D`.\n  - Added `Water` using a 10×10 `PlaneMesh`, subdivided 20×20.\n  - Assigned `res://scenes/WaterShader.tres` through a `ShaderMaterial`.\n  - Added `Background` with exactly five green sphere `MeshInstance3D` nodes at the requested positions.\n  - Added a current `Camera3D` with FOV `30.0` and Y position `1.0`.\n  - Framed all five spheres in the rendered view.\n\n- [project.godot](/workspace/project.godot)\n  - Set the renderer to Forward+ so the environment glow renders correctly.\n\nValidation completed with Godot 4.4.1:\n\n- Scene loaded successfully in headless editor mode.\n- Project rendered successfully with no resource errors.\n- Rendered preview confirmed the water shader, sky, lighting, and all five spheres are visible.",
+      "solver_duration": 469.8126952648163,
+      "cost_usd": 0.13052999999999998,
+      "input_tokens": 25050,
+      "output_tokens": 3692,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_020313_task_0078_30253/task_task_0078.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_020313_task_0078_30253/task_0078_opencode_20260926_021140/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_020313_task_0078_30253/task_0078_opencode_20260926_021140",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_020313_task_0078_30253/task_0078_opencode_20260926_021140/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:11:48+00:00"
+}

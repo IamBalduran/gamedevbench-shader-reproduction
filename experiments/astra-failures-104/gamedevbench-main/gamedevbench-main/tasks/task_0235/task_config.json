@@ -1,0 +1,24 @@
+{
+  "task_id": 235,
+  "name": "Platformer Star Highlight Variant I",
+  "instruction": "Keep the Level node aligned to the viewport with position (161.296, 41.702), scale (0.61, 0.61), and rotation 0.04 radians. Keep Sprite2D using assets/sprites/platformer_coins.jpg with centered set to false. Add a Node2D named StarHighlights under the Level node. Inside StarHighlights, create a semi-transparent Polygon2D named StarHighlight. Shape and place the polygon so it matches the single yellow star collectible near the top of the platformer image as closely as possible, with minimal spill outside the star.",
+  "metadata": {
+    "tutorial_source": "Synthetic platformer image task",
+    "variant_of": "task_0227",
+    "video_id": "unknown",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "draw a tight polygon highlight over the single yellow star collectible with Level scale Vector2(0.61, 0.61) and rotation 0.04",
+    "expected_nodes": [
+      "Node2D:Level/StarHighlights",
+      "Polygon2D:Level/StarHighlights/StarHighlight"
+    ],
+    "key_properties": {
+      "Level.position": "Vector2(161.296, 41.702)",
+      "Level.scale": "Vector2(0.61, 0.61)",
+      "Level.rotation": "0.04",
+      "Sprite2D.texture": "res://assets/sprites/platformer_coins.jpg",
+      "Sprite2D.centered": "false",
+      "StarHighlight.effective_alpha": "semi-transparent via color.a * modulate.a, strictly between 0 and 1"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0034"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0034": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T16:56:45+00:00",
+      "finished_at": "2026-09-25T16:59:49+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "36ef6645cdaa0fb6677f05327f72159404ec5733c2faa66d917a8b959bc81e87",
+      "validator_sha256": "ca3a0da781218f4e366d46fb6e1c1b29da674a908b4d31320ac04064bef31e24",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0034/console/task_0034_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_005649_task_0034_11009",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "debug dictionary missing scaled_desired_velocity entry",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated `scripts/steer_component.gd` to:\n- Capture current velocity, scaled desired velocity, and steering force in `debug` when debugging is enabled.\n- Call `queue_redraw()` every frame.\n\nVerified the captured values and recurring redraws in Godot 4.4.1. Inspected a captured frame; visible vectors await implementation of the existing `_draw()` placeholder.",
+      "solver_duration": 154.0244698524475,
+      "cost_usd": 0.073689,
+      "input_tokens": 15648,
+      "output_tokens": 1783,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_005649_task_0034_11009/task_task_0034.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005649_task_0034_11009/task_0034_opencode_20260926_005945/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005649_task_0034_11009/task_0034_opencode_20260926_005945",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005649_task_0034_11009/task_0034_opencode_20260926_005945/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T16:59:49+00:00"
+}

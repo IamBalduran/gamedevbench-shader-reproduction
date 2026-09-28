@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0290"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0290": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T23:35:51+00:00",
+      "finished_at": "2026-09-25T23:44:46+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "a01e70b1a4676e66608625ee79edb4ed96fbb731ea164c8dd3e3a37ddd0ccc67",
+      "validator_sha256": "8c9f0e8495ae1a4d161fca7cb323b16c30144f993ae083c8a7c129b869289015",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0290/console/task_0290_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_073556_task_0290_97548",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Dragging state must reparent the card into the top_ui_layer group",
+      "official_details": "{}",
+      "validator_error_line": "77",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the full card-dragging mechanic using the existing state nodes.\n\n- Initialized states, connected transitions, and forwarded input.\n- Added mouse-follow dragging, right-click cancellation, and the 65 ms release threshold.\n- Added duplicate-free drop tracking and card removal on valid drops.\n- Restored cancelled cards to their recorded `GripRow` positions.\n\nVerified in Godot 4.4.1: **62 checks passed** in both headless and rendered runs. Screenshots confirmed dragging and successful card removal.\n\nRegression test: `tests/card_dragging_test.gd`.",
+      "solver_duration": 488.72074699401855,
+      "cost_usd": 0.106944,
+      "input_tokens": 323,
+      "output_tokens": 7065,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_073556_task_0290_97548/task_task_0290.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_073556_task_0290_97548/task_0290_opencode_20260926_074434/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_073556_task_0290_97548/task_0290_opencode_20260926_074434",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_073556_task_0290_97548/task_0290_opencode_20260926_074434/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T23:44:46+00:00"
+}

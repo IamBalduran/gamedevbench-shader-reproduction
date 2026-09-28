@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0150"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0150": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:41:39+00:00",
+      "finished_at": "2026-09-26T19:47:05+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "92e2fb70f347c1bff046d60380c41905c130648f0f9e0865e85836794918b2d5",
+      "validator_sha256": "26a7e6cac945fb3d36925eaf838d42a63be7e292f1bb7d4cb5f8f89682c43c76",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0150/console/task_0150_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_034140_task_0150_295064",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+      "official_details": "{}",
+      "validator_error_line": "114",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The panel renders correctly: a full-screen semi-transparent dark overlay with a centered \"Victorious!\" label and the \"Awesome!\" continue button visible (restart button hidden for WIN type). \n\nLet me clean up the test files and confirm the final state of the workspace:",
+      "solver_duration": 301.6858386993408,
+      "cost_usd": 0.8962680000000001,
+      "input_tokens": 277581,
+      "output_tokens": 4235,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_034140_task_0150_295064/task_task_0150.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_034140_task_0150_295064/task_0150_opencode_20260927_034703/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_034140_task_0150_295064/task_0150_opencode_20260927_034703",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_034140_task_0150_295064/task_0150_opencode_20260927_034703/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:47:05+00:00"
+}

@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3]
+
+[ext_resource type="Shader" path="res://scenes/WaterShader.tres" id="1_o5qli"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+ambient_light_source = 3
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbgi4"]
+render_priority = 0
+shader = ExtResource("1_o5qli")
+shader_parameter/ColorParameter = null
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tefeu"]
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6xl0"]
+albedo_color = Color(0, 0.8, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_tipki"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_85g3d"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_choun"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ya4ey"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_eb6dy"]
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jyhfs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0.321394, -0.383022, 0, 0.766044, 0.642788, 0.5, -0.55667, 0.663414, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Water" type="MeshInstance3D" parent="."]
+material_override = SubResource("ShaderMaterial_tbgi4")
+mesh = SubResource("PlaneMesh_tefeu")
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Sphere" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8, 0.3, 1.2)
+material_override = SubResource("StandardMaterial3D_o6xl0")
+mesh = SubResource("SphereMesh_tipki")
+
+[node name="Sphere2" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, -0.5, -0.6)
+material_override = SubResource("StandardMaterial3D_o6xl0")
+mesh = SubResource("SphereMesh_85g3d")
+
+[node name="Sphere3" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0.1, -2.4)
+material_override = SubResource("StandardMaterial3D_o6xl0")
+mesh = SubResource("SphereMesh_choun")
+
+[node name="Sphere4" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, -0.7, 2.8)
+material_override = SubResource("StandardMaterial3D_o6xl0")
+mesh = SubResource("SphereMesh_ya4ey")
+
+[node name="Sphere5" type="MeshInstance3D" parent="Background"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 0.4, 3.5)
+material_override = SubResource("StandardMaterial3D_o6xl0")
+mesh = SubResource("SphereMesh_eb6dy")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.241336, -0.227161, 0.94348, 0, 0.972217, 0.23408, -0.970442, 0.0564919, -0.234631, -0.194, 0.6, 0.048)
+current = true
+fov = 110.0

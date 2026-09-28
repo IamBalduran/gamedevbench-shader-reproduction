@@ -1,0 +1,22 @@
+{
+  "task_id": 108,
+  "name": "Track Particles Driven by Tile Type Gradient",
+  "instruction": "In `scenes/world.tscn`, add a TileSet custom data layer named `tile_type` with type int, and assign GradientTexture1D exports named `water_color`, `dirt_color`, and `grass_color` on the World node. In `scripts/world.gd`, add `enum TILE_TYPES { NONE, WATER, DIRT, GRASS }`, export the three GradientTexture1D variables (`water_color`, `dirt_color`, `grass_color`), create a dictionary mapping TILE_TYPES to those gradients, and add a static `get_gradient_at(position)` that reads `get_custom_data_at(position, \"tile_type\")` and returns the matching gradient. In `scenes/tank.tscn`, add `LeftTrackParticles` and `RightTrackParticles` GPUParticles2D nodes with a ParticleProcessMaterial using box emission (emission_shape box) and `emission_box_extents.x = -16`, direction.y = -16 for left and +16 for right, spread 25, gravity = Vector3.ZERO, initial_velocity_max 4, damping_max 3, scale_min 0.25, amount 128, z_index -1, and `emitting = false`. In `scripts/tank.gd`, track the current particle gradient using `World.get_gradient_at(position)`, assign it to each emitter\u2019s `process_material.color_ramp`, set both emitters to `emitting = true` while moving, and `emitting = false` when not moving.",
+  "metadata": {
+    "tutorial_source": "YouTube: Game Dev Artisan - Using Godot 4's TileMaps and Custom Data Layers - Godot Fundamentals",
+    "video_id": "M1ri3Zli2g0",
+    "github_repo": "https://github.com/Game-Dev-Artisan/godot-fundamentals",
+    "transcript_excerpt": "let's add a speed modifier ... add a new custom data layer let's call this tile type ... create a new enumerator we'll call this tile types ... add a new type of GPU particles 2D ... set the direction ... set the spread ... disable gravity ... and set the color ramp based off what our world states",
+    "expected_nodes": [
+      "World",
+      "TileMap",
+      "LeftTrackParticles",
+      "RightTrackParticles"
+    ],
+    "key_properties": {
+      "TileSet.custom_data_layer_0.name": "tile_type",
+      "LeftTrackParticles.amount": 128,
+      "RightTrackParticles.amount": 128
+    }
+  }
+}

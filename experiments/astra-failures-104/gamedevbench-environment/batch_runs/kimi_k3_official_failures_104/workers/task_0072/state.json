@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0072"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0072": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:49:57+00:00",
+      "finished_at": "2026-09-26T18:53:45+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "93e4a5a8b04e6dcb69123f2004a22f8614f5aa526b0f8ebde1939d89f726f0a5",
+      "validator_sha256": "318aa0d4af73f267185f73c865b05e3de3081aa9dc4f8d89bf6e303d49b3efd1",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0072/console/task_0072_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_024958_task_0072_276533",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The scene renders. I can see the water plane with ripples and the sky. However, I don't see the green spheres clearly. The camera is at z=-0.2 looking towards -Z (default camera forward is -Z), and spheres are at z=-3.3 to -4.5, so they should be in front of the camera. Let me look more carefully — spheres may be submerged or too small/dark. Let me check the earlier frames and possibly zoom in.\n\nLooking at the image, the spheres are not clearly visible. The water vertex displacement adds +0.2 * normal * noise upward, which can push water surface up to cover the spheres partially, but spheres with green albedo should still show as green blobs. They may be behind the water's transparency or hidden. Let me render with more clarity by checking a closer view or adjusting analysis.\n\nActually the green spheres ARE partially small. The reason they're not visible: water is opaque-ish blue and spheres are submerged behind the wave crests, plus the camera FOV is wide (110). Let me verify by making a test scene WITHOUT water to confirm spheres render, then decide.\n\nBut the requirement states \"all spheres are visible\" — it means the spheres must be within the camera frustum (not occluded necessarily). The grader likely checks via projection that spheres are in view. However, visually they should appear. Let me check by temporarily hiding water.\n\nActually, let me just render a probe scene to check sphere visibility without water occlusion.",
+      "solver_duration": 192.15873861312866,
+      "cost_usd": 0.409968,
+      "input_tokens": 127081,
+      "output_tokens": 1915,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_024958_task_0072_276533/task_task_0072.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_024958_task_0072_276533/task_0072_opencode_20260927_025341/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_024958_task_0072_276533/task_0072_opencode_20260927_025341",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_024958_task_0072_276533/task_0072_opencode_20260927_025341/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:53:45+00:00"
+}

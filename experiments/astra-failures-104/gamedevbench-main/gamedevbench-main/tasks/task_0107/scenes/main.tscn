@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh3d3dmh1x0x0"]
+
+[ext_resource type="Script" path="res://scripts/weapon_manager.gd" id="1_i2my2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1"]
+albedo_color = Color(0.2, 0.7, 0.9, 1)
+metallic = 0.2
+roughness = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+size = Vector3(0.2, 0.1, 0.5)
+material = SubResource("StandardMaterial3D_1")
+
+[node name="Main" type="Node3D"]
+
+[node name="WeaponManager" type="Node3D" parent="."]
+script = ExtResource("1_i2my2")
+
+[node name="ViewModel" type="Node3D" parent="WeaponManager"]
+
+[node name="Knife" type="MeshInstance3D" parent="WeaponManager/ViewModel"]
+mesh = SubResource("BoxMesh_1")

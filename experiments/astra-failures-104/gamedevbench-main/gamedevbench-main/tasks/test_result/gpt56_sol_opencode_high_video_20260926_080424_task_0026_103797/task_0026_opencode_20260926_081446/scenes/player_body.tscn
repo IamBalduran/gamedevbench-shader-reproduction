@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/player_body.gd" id="1_rpyl6"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_camera_shake"]
+noise_type = 0
+frequency = 0.01
+
+[node name="PlayerBody" type="Node3D" node_paths=PackedStringArray("camera_node", "camera_actual")]
+script = ExtResource("1_rpyl6")
+camera_node = NodePath("CameraNode")
+camera_actual = NodePath("CameraNode/CameraActual")
+camera_shake_noise = SubResource("FastNoiseLite_camera_shake")
+noise_panning_speed = 30.0
+max_power = 0.15
+blend_speed = 7.0
+return_strength = 5.0
+noise_strength = 0.2
+falling_bias = 1.0
+falling_strength_falloff = 2.0
+falling_max_strength = 1.0
+jumping_strength = 0.2
+
+[node name="CameraNode" type="Node3D" parent="."]
+
+[node name="CameraActual" type="Node3D" parent="CameraNode"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraNode/CameraActual"]
+current = true

@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0058"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0058": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:17:39+00:00",
+      "finished_at": "2026-09-25T17:21:24+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "ec039dbf6a1a9ab8e495b4e6a665137071ecec82969fe1a469a33a3d16e9981e",
+      "validator_sha256": "c550fb3090beaa63ee731f09f298efb1053aa21ec4bc3da89e3522db42be75f3",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0058/console/task_0058_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_011742_task_0058_18334",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Audio demo UI lists sounds, wires buttons, and reflects AudioManager stats",
+      "official_details": "{}",
+      "validator_error_line": "119",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented:\n- `res://scenes/audio_demo.tscn`: full-screen layout, 20px margins, centered two-column grid with 10px spacing, and the specified top-bar node order and font.\n- `res://scripts/audio_demo.gd`: exported `sound_dir`, dynamic WAV/OGG buttons using Poppins, playback through `AudioManager.play()`, and live stream/queue counters.\n\nVerified in Godot 4.4.1: inspected the rendered scene and confirmed all eight buttons enqueue correct paths, audio streams load, and counters update correctly.",
+      "solver_duration": 194.75091743469238,
+      "cost_usd": 0.106548,
+      "input_tokens": 20351,
+      "output_tokens": 3033,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_011742_task_0058_18334/task_task_0058.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011742_task_0058_18334/task_0058_opencode_20260926_012120/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011742_task_0058_18334/task_0058_opencode_20260926_012120",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011742_task_0058_18334/task_0058_opencode_20260926_012120/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:21:24+00:00"
+}

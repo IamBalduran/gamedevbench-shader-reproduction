@@ -1,0 +1,57 @@
+Single task: task_0220 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_211608_task_0220_232029
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_211608_task_0220_232029/task_task_0220.json
+{
+  "task_name": "task_0220",
+  "success": false,
+  "message": "Add a Node2D named CoinHighlights under Level",
+  "timestamp": "2026-09-26T21:26:31.679046",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.1331434249878,
+  "is_rate_limited": false,
+  "input_tokens": 23599,
+  "output_tokens": 2103,
+  "total_tokens": 25702,
+  "cache_read_tokens": 112640,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.10234199999999999,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_d1010841",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_211608_task_0220_232029/task_0220_opencode_20260926_212631"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_211608_task_0220_232029
+Final status: FAILED/CANCELLED | exit code: 1

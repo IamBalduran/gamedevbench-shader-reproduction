@@ -1,0 +1,20 @@
+Task: task_0284
+Agent: opencode
+Model: openai/deepseek-v4-pro
+Sandbox: /tmp/gamedevbench_sandbox_cd24c3a7
+Confinement: strict-v1
+Network policy: isolated-provider-proxy
+Provider hosts: api.openai.com, api.shubiaobiao.cn, docs.godotengine.org, openrouter.ai
+Denied network requests: models.opencode.ai:443, registry.npmjs.org:443
+Timestamp: 2026-09-27T00:49:04.609103
+================================================================================
+
+Success: False
+Message: OpenCode execution timed out after 600s
+Duration: 600.15s
+
+STDOUT:
+{"type":"step_start","timestamp":1790440761658,"sessionID":"ses_f216a5718ffe4JAO9EO7hzpor3","part":{"id":"prt_0de95e90a00128N3WQVdoQIzXX","messageID":"msg_0de95ab63001Tpk6ZutQwF9Q3t","sessionID":"ses_f216a5718ffe4JAO9EO7hzpor3","type":"step-start"}}
+
+
+STDERR:

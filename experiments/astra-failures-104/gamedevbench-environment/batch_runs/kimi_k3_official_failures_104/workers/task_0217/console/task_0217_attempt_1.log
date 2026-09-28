@@ -1,0 +1,56 @@
+Single task: task_0217 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_050935_task_0217_311523
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_task_0217.json
+{
+  "task_name": "task_0217",
+  "success": false,
+  "message": "Add a Node2D named CoinHighlights under Level",
+  "timestamp": "2026-09-27T05:13:44.028600",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Two of the six coins are at bottom (one partially behind a platform edge). Let me confirm all six locations: A(425,71), B(283.5,111), C(319,82), D(288,186), E(383,90), F-bottom pair (254,311) and (287.5,297) \u2014 those bottom two are distinct coins. Let me verify E and D crops.",
+  "solver_duration": 226.78912615776062,
+  "is_rate_limited": false,
+  "input_tokens": 147947,
+  "output_tokens": 3138,
+  "total_tokens": 151085,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.490911,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_5939f6a6",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_0217_opencode_20260927_051344"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523
+Final status: FAILED/CANCELLED | exit code: 1

@@ -1,0 +1,56 @@
+Single task: task_0093 | OpenCode | gpt-5.6-sol | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt56_sol_opencode_high_video_20260926_093247_task_0093_130354
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_093247_task_0093_130354/task_task_0093.json
+{
+  "task_name": "task_0093",
+  "success": false,
+  "message": "ContinueButton size_flags_horizontal must be Expand Fill",
+  "timestamp": "2026-09-26T09:34:46.061590",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Implemented `battle_over_panel.tscn` and `battle_over_panel.gd` with the requested layout, styling, signal handling, button behavior, and pause logic. Godot 4.4.1 loaded the project successfully without errors.",
+  "solver_duration": 97.6598973274231,
+  "is_rate_limited": false,
+  "input_tokens": 26203,
+  "output_tokens": 1346,
+  "total_tokens": 27549,
+  "cache_read_tokens": 20049,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.023658625,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_e8f7a718",
+  "result_dir": "tasks/test_result/gpt56_sol_opencode_high_video_20260926_093247_task_0093_130354/task_0093_opencode_20260926_093446"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_093247_task_0093_130354
+Final status: FAILED/CANCELLED | exit code: 1

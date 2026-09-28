@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Projectile must react to enemies inside _on_area_entered",
+  "details": {},
+  "timestamp": "2026-09-26T00:03:20.795334"
+}

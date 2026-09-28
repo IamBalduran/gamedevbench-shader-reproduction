@@ -1,0 +1,28 @@
+{
+  "task_id": 30,
+  "name": "Bonkahe Sunshine Clouds Driver Setup",
+  "instruction": "Under Main, add a SunshineCloudsDriver node that uses addons/SunshineClouds2/SunshineCloudsDriver.gd, enable Update Continuously, and assign res://assets/clouds/tutorial_clouds_settings.tres to its clouds_resource while reusing the WorldEnvironment environment as ambience_sample_environment. Register the existing DirectionalLight3D and OmniLight3D inside tracked_directional_lights and tracked_point_lights (with a single shadow step entry set to 32) so the clouds use those lights, keep the OmniLight range at 20000, and extend Camera3D's far clip plane to 400000. Wire the same clouds resource into the WorldEnvironment's compositor effect list so the effect renders, and edit assets/clouds/tutorial_clouds_settings.tres to match the reference settings: cloud coverage 0.874, atmospheric density 0.617977, cloud ambient color pure white, ambient tint Color(0.131626, 0.201524, 0.241773, 1), atmosphere color Color(0.696127, 0.832325, 0.989334, 1), and a 512 km mask width so the painted area covers the entire level.",
+  "metadata": {
+    "tutorial_source": "YouTube: Bonkahe - Godot 3D - Implementing Volumetric Clouds Easy",
+    "video_id": "aEDDkGIfwDY",
+    "github_repo": "https://github.com/Bonkahe/SunshineClouds2",
+    "transcript_excerpt": "The first thing you're going to have to do is go ahead and create your driver ... go ahead and drag in our directional light ... set the cloud ambient color to just white ... set the view distance ... turn that up to something like 400,000.",
+    "expected_nodes": [
+      "WorldEnvironment",
+      "SunshineCloudsDriver",
+      "DirectionalLight3D",
+      "OmniLight3D",
+      "Camera3D"
+    ],
+    "key_properties": {
+      "Camera3D.far": 400000.0,
+      "SunshineCloudsDriver.tracked_directional_lights": "../DirectionalLight3D",
+      "SunshineCloudsDriver.tracked_point_lights": "../OmniLight3D",
+      "SunshineCloudsDriver.tracked_directional_light_shadow_steps[0]": 32,
+      "tutorial_clouds_settings.clouds_coverage": 0.874,
+      "tutorial_clouds_settings.atmospheric_density": 0.617977,
+      "tutorial_clouds_settings.cloud_ambient_color": "Color(1, 1, 1, 1)",
+      "tutorial_clouds_settings.mask_width_km": 512.0
+    }
+  }
+}

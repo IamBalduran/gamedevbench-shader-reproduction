@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0107"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0107": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T01:35:15+00:00",
+      "finished_at": "2026-09-26T01:39:10+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+      "validator_sha256": "3f855be8dec6b0c3d412979d43c9c320f2fdd3979c79847fadcf611ebf44cf30",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0107/console/task_0107_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_093516_task_0107_131279",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Surface material is not a ShaderMaterial",
+      "official_details": "{}",
+      "validator_error_line": "55",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented and verified in Godot 4.4.1:\n\n- Swaps view-model mesh surfaces to the weapon clip/FOV shader.\n- Copies albedo, metallic, and roughness values.\n- Sets `viewmodel_fov` to `54.0`.\n- Runtime verification passed: `View model shader swap verified`.",
+      "solver_duration": 210.26910877227783,
+      "cost_usd": 0.030032875,
+      "input_tokens": 45703,
+      "output_tokens": 2432,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_093516_task_0107_131279/task_task_0107.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_093516_task_0107_131279/task_0107_opencode_20260926_093908/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_093516_task_0107_131279/task_0107_opencode_20260926_093908",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_093516_task_0107_131279/task_0107_opencode_20260926_093908/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T01:39:10+00:00"
+}

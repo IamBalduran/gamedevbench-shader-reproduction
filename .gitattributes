@@ -7,3 +7,6 @@
 *.json text eol=lf
 *.yaml text eol=lf
 *.zip binary
+
+# Preserve evidence bytes in the independent experiment snapshot
+experiments/astra-failures-104/** -text

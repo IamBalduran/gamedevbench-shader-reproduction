@@ -1,0 +1,12 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "model": "openai/gpt-6-astra",
+  "total": 1,
+  "counts": {
+    "completed": 1
+  },
+  "updated_at": "2026-09-25T21:45:32+00:00",
+  "results_csv": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0230/results.csv",
+  "results_csv_stale": false,
+  "latest_csv": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0230/results.csv"
+}

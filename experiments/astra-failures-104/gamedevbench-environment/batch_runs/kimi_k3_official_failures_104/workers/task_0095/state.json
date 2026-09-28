@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0095"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0095": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:27:03+00:00",
+      "finished_at": "2026-09-26T19:32:48+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb",
+      "validator_sha256": "0c711ba6185e9f65d2bf221d513ea51f21b3c3718ca71ebc6ce7c4589b00c373",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0095/console/task_0095_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_032704_task_0095_289581",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Shader code missing required parts: step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Task complete. The CRT screen shader was implemented in `screen_effect/screen_effect.gdshader` and verified by rendering actual frames with Godot 4.4.1.\n\n**Implementation summary:**\n- `shader_type canvas_item` with `render_mode unshaded, skip_vertex_transform`\n- Constants: `curvature = 7.0` and `vignette_multiplier = 2.0`\n- `uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap`\n- `fragment()` pipeline:\n  1. Centered UVs: `centered_uv = SCREEN_UV * 2.0 - 1.0` (range [-1,1])\n  2. Curvature warp: `warped_uv = centered_uv + centered_uv * (centered_uv.yx / curvature)²`\n  3. Cutoff mask via `step()` on |warped_uv| ≤ 0.5 → black at corners/barrel edges\n  4. Scanlines: `sin(2.0 * warped_uv.y * 100.0) * 0.1 + 0.9`\n  5. Vignette: `length(pow(abs(warped_uv), vec2(4.0)) / 0.5)` scaled by `vignette_multiplier`\n  6. Samples `screen_texture` at the warped UV with a small LOD bias (`textureLod(..., 0.25)`) for blur\n  7. Outputs `COLOR = vec4(color, 1.0)`\n\n**Verification:** Rendered with `godot --path . --quit-after N --write-movie` using a temporary colorful background behind the quad. The captures confirmed all effect components: barrel-curved content with black cutoff in the corners, darkened curved edges (vignette), subtle softening from the LOD blur, and visible horizontal scanlines (clearly seen in a 6× vertically-stretched crop). The scene file was then restored to its original state and the project still renders without errors.",
+      "solver_duration": 318.3699297904968,
+      "cost_usd": 1.0315020000000001,
+      "input_tokens": 318454,
+      "output_tokens": 5076,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_032704_task_0095_289581/task_task_0095.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032704_task_0095_289581/task_0095_opencode_20260927_033246/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032704_task_0095_289581/task_0095_opencode_20260927_033246",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_032704_task_0095_289581/task_0095_opencode_20260927_033246/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:32:48+00:00"
+}

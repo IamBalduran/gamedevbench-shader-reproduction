@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0052"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0052": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:15:03+00:00",
+      "finished_at": "2026-09-26T18:17:09+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "242421c4b38c9be6b95465e25dda1e968a496dd8508e73af565d09ed5037bf4a",
+      "validator_sha256": "890afb72c124ce6cab16633156ef276be3ddaf6434911542f482c461e670ec86",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0052/console/task_0052_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_021504_task_0052_267816",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Failed to load Player scene.",
+      "official_details": "{}",
+      "validator_error_line": "10",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Done. `scripts/player.gd` has been updated:\n\n- Added `@export_range(0.0, 1.0) var friction = 0.1` and `@export_range(0.0, 1.0) var acceleration = 0.25`\n- Cached `Input.get_axis(\"move_left\", \"move_right\")` in a local `dir` variable\n- `velocity.x = lerp(velocity.x, dir * speed, acceleration)` when `dir != 0`, else lerps toward `0.0` with `friction`\n- Preserved the existing gravity, `move_and_slide()`, and floor-gated jump logic\n\nVerified with Godot 4.4.1: `--check-only` passes with no script errors, and a live run (`--quit-after 5 --write-movie`) renders correctly — the player spawns, gravity pulls it down, and the engine exits cleanly.",
+      "solver_duration": 99.81157207489014,
+      "cost_usd": 0.331764,
+      "input_tokens": 104258,
+      "output_tokens": 1266,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_021504_task_0052_267816/task_task_0052.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021504_task_0052_267816/task_0052_opencode_20260927_021707/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021504_task_0052_267816/task_0052_opencode_20260927_021707",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_021504_task_0052_267816/task_0052_opencode_20260927_021707/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:17:09+00:00"
+}

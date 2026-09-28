@@ -1,0 +1,195 @@
+{
+  "created_at": "2026-09-25T16:53:11+00:00",
+  "selection_count": 104,
+  "expected_solver_cases": 416,
+  "copied_from": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main",
+  "input_hashes": {
+    "published_astra_baseline": {
+      "path": "gamedevbench-main\\gamedevbench-main\\results\\gpt6_astra_codex_runtime_video_high_full_333\\final_results.json",
+      "sha256": "ee4e23828b14fa7622a7787eb081f1c1bf5106d9544bbeaad759580ad33f9569"
+    },
+    "selection": {
+      "path": "gamedevbench-environment\\audit\\official_failures.csv",
+      "sha256": "cafb61f48ee08b301a3c59547b08dfd2097f965c5822b39717c12269c358be03"
+    },
+    "godot": {
+      "path": "gamedevbench-environment\\tools\\Godot_v4.4.1-stable_linux.x86_64",
+      "sha256": "54215149d52efb1d653a3dec39d0993587bdf5daa2c56e787b5ee88417fb1339"
+    },
+    "uv_lock": {
+      "path": "gamedevbench-main\\gamedevbench-main\\uv.lock",
+      "sha256": "b3fbfa3870b081240f1d2f607cb2d9be61b056828eef64771066bab4128ddc68"
+    },
+    "benchmark_runner": {
+      "path": "gamedevbench-main\\gamedevbench-main\\gamedevbench\\src\\benchmark_runner.py",
+      "sha256": "38d23f5f67978662003767b11a1964b19367e08c94e19eb0f822916a19668082"
+    },
+    "opencode_config": {
+      "path": "gamedevbench-main\\gamedevbench-main\\opencode.json",
+      "sha256": "39105e1165ac2d3c2d4f9c7c03bb29e1e2bf76ac3bbdb3049ebf5f31db367e1a"
+    },
+    "provider_plugin": {
+      "path": "gamedevbench-main\\gamedevbench-main\\gamedevbench\\shubiaobiao_plugin.mjs",
+      "sha256": "a768f7be7f33b01fd731e2ba324c774405b72e77b994a711b5349b3b790bd404"
+    },
+    "runner": {
+      "path": "gamedevbench-environment\\run_batch.py",
+      "sha256": "0c30d23540c041eb31edc3c3fba9d315811e59c016bbb0efa869da121baf4cb8"
+    },
+    "orchestrator": {
+      "path": "gamedevbench-environment\\run_official_failures_comparison.py",
+      "sha256": "385b2415326ece9e7b42e693b69748f140fd9c7e99bbc52170a1ea6c9d175d85"
+    }
+  },
+  "archive_sha256": {
+    "task_0002": "e29ee4a43d807ffe3107f827228171cb46cedabc3d2608b14c2bd46c8baea139",
+    "task_0003": "348553eed2a8efa005b74f6e67ef5f74e534a1d02b12ac497330d0d8db83d300",
+    "task_0019": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+    "task_0026": "9bf17985857257b04caf9b58f3277a46e12d77350fa6f8076e773fb056b94eab",
+    "task_0027": "5c0dbb6bcfa651f37fd97532768cbccc5c9d0b2caf8aa0317e64af65dee244f5",
+    "task_0028": "5606d0021844fcf14cc0d01fb2d0b259d819eb7b5c3780f0974267a8cd7344a6",
+    "task_0030": "d317b25b106231b8783c8fce4d88808ea35af4870a5835a65267d7b15bff7902",
+    "task_0033": "c9a46c8cae7e601e910cd8f1e1024bf79871597370c4a431abe697e755010554",
+    "task_0034": "36ef6645cdaa0fb6677f05327f72159404ec5733c2faa66d917a8b959bc81e87",
+    "task_0042": "08c1f058807ca8670df239b31e4d91b3c8eee54100ed8386dbad3c6f74049dd2",
+    "task_0048": "77d44738ae7a4c1a629d533a0afb9bcbe6544984624c70e57b88829b27caefff",
+    "task_0052": "242421c4b38c9be6b95465e25dda1e968a496dd8508e73af565d09ed5037bf4a",
+    "task_0055": "3b226d0cc57bc2b6eb93c43e061671ca011ca5d9ef6e6e478caa0dd5e0a28ced",
+    "task_0057": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+    "task_0058": "ec039dbf6a1a9ab8e495b4e6a665137071ecec82969fe1a469a33a3d16e9981e",
+    "task_0060": "4508852f8138454250b7378962e0dd22a8ae0f19c38b2d60013d22205e677a2d",
+    "task_0063": "e3e19b22e5fbd28459110d0852a9330cfd02231e81a30dcba1dfd2e627202eeb",
+    "task_0068": "13cb795558216b854973920e9323c7b6fe5fbe465b4ecc4c3e22be12a08a881d",
+    "task_0069": "2b02cc5d33d38bffc5eb5c68c046a3cc0186867a9d8a6246708b48940f135111",
+    "task_0070": "e428abe8a03f23f51f63a64b5af233cbb90c5661a725e42460a5c6d01cf3966e",
+    "task_0071": "8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905",
+    "task_0072": "93e4a5a8b04e6dcb69123f2004a22f8614f5aa526b0f8ebde1939d89f726f0a5",
+    "task_0073": "a31302afd477e8ac9b73095284f9b1a4bad211dfce671707d14486d1e2a2e4c1",
+    "task_0075": "f84d39606b48e17a7143ead0fb15a6ac0237d1961bc347f175a7d2a6c76e8735",
+    "task_0076": "eb9128857d27c22e37a845e769f5e98a6569f1e304c2da703e5631aa0ebd25be",
+    "task_0077": "888b4454cf1fa09a723ee489e6b39dae796c394ae77e2ed1c618d49abbf3dfc7",
+    "task_0078": "8971e9f0398c2fe0664d7a892bc32b440529fff585682d5e0ec1638cd65b43c9",
+    "task_0082": "f47a24fbc3e1072b08172cac00617f88cf79252700bc4f79bcf48cd7042a660f",
+    "task_0087": "669046cbd9b437fb416e006819178bcb387078fdc2bfdab96fe507a8a467a709",
+    "task_0089": "0beac960a63e245bc62af1471b5f1c2f221e4bb3779600254ae86b5a8c82bfcf",
+    "task_0093": "eafab9545af9f382923970647181ac41b961b611d8600b645ae632c237b63cb0",
+    "task_0095": "53a790764762dc78429469ee50f5584f17d94c4c1120f84a017119f6d8fc4deb",
+    "task_0107": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+    "task_0108": "93bbc5372a25d1ad7fb50acb4b28fde84f99c0bccecabd16e52c38acf31ec6a9",
+    "task_0121": "06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff",
+    "task_0132": "7c2c76a17d5a8bba7885377b51ddf2ad76bb08114d3cb3386ee2edb3b3dde4e2",
+    "task_0150": "92e2fb70f347c1bff046d60380c41905c130648f0f9e0865e85836794918b2d5",
+    "task_0159": "68c85543266663b50b7fd12723c010dafb41a1d423407133e0c4c5d8d49c2d64",
+    "task_0164": "2043c6a3d282a9def14e86406c4422aa1a0a44a06a0030c606ea6513e7ddfddb",
+    "task_0166": "ab28fb467396f3404e033d8e52aa3d4f655755c05b94228bd9cd094dfce24811",
+    "task_0183": "792916d111487f711ac489bd87e128c55d4fe01707a3c407cb6ecf63d6bd6a7a",
+    "task_0184": "a8700919750798386a96e0cfb22baa58e4f66be2bed82873575cec7fdb75a06b",
+    "task_0185": "3310810798f55ec44687c32b599e8eccbc39086b1262b8a7eb0382262b4298f0",
+    "task_0190": "3c5c7cdcfde4c9696ea6d3879c325b9d8412576087772de8194cfb9bce71f8b9",
+    "task_0204": "37276795867c343ff12d19f8bcc67f34bc9b9ba5c0ee594f6630d41769d5cbfa",
+    "task_0205": "32ca2277d9e869737fb8baa1f88c38411f65226a664e4046cf974f0760abd4e1",
+    "task_0206": "27d9c3574667b9fab7f3292036671186f50052baa694a400daa487819d8d9e54",
+    "task_0207": "6c47f9ead88e697d9a027eadb11167754f09f0bd6205db2376e17c3b7aa99fdc",
+    "task_0208": "b34fc7dce70ccd451f0e8b8518a8eb3b362e64f4add586859082be4b0b268ffc",
+    "task_0209": "b6e1c98e028db0fd012542b32e0b5f05dac29f6ceb1f77de92415bda8fa02385",
+    "task_0210": "dedde54faed2a10d76b48557a423329502088ad99235ed2a7547f9ffe6e0fa55",
+    "task_0211": "eb172fd3048ea38c89d1951a4e185e21fd3a4e4e5a735438891039f3e7e38e63",
+    "task_0212": "2c2de3957e9ee6a9b949ee57ba7840d3c23b1b98325f96221111a5175e2840c1",
+    "task_0213": "29b3f7fdc7259f01362426495ed276ed33f7590da39b7ee74a24913933750cf4",
+    "task_0214": "6023ee4ad3058e5af458abb2f83990fe5271b7d48a8d8dbbaa3d6d8d725834a7",
+    "task_0215": "6099d1a85d72d3b716d8d01f62a8c456a2385ca784eccb823be298ddcf35eb39",
+    "task_0216": "0e60a77d855029188690346991e5efbfd274845a3f7c3adea56d92915547f32e",
+    "task_0217": "59a0d2996e41ee6d42ce445ec7db811e5f77e4f5d3e28f07ef2aefe8a102f7b6",
+    "task_0218": "a6b4ec2ca25ee8c872a6c1ab8970957898ff8d6c454f38ca1d4e35abcaf4790f",
+    "task_0219": "ca6f0601d74f907684e4b9f989407a85c69ebc7d30a43ca78a8044aebc55adee",
+    "task_0220": "b9eaa6198bbc0fce053fe219ab511bc96e2e1c712c9de65acbd4c973387ce3a5",
+    "task_0221": "5a9e64da37cd027fdff8fad578a7c28e8171cbaf0943533951229f8bded392d8",
+    "task_0222": "16bbfb5405b039905f20174dba996818e785f3b148f59b964381b7dbe525dfbf",
+    "task_0223": "273bff2e3e98e1bc43acc1ef1c5ffb375b87638e073017b4e20c64cbb3557048",
+    "task_0224": "f1eba435c8443361105fa17f578a5e1ab39e9af3cb4151e783346702668ba209",
+    "task_0225": "51e8f08d02e0db8920fb6ca266cd24399f4adcc808bbfb11387322edf16a014c",
+    "task_0226": "28a009a685d9746ad5014e93971d8269def47a0f979edb1d5ca3282294068bfb",
+    "task_0227": "b8f0f89c064807fc99c339aa51e1314be5164151cdcc8299d2456a23e3089a5d",
+    "task_0228": "2a96c4509aaee81bb63d26f10c4a82af21e7ef0b61611dc9e407cd1d7bd02929",
+    "task_0229": "18161bb170aac5256807e27fda448a422a333b5045e0bc09ae31b7034e24a837",
+    "task_0230": "41f74e9c71eab501d4c39931e8227005609d7e0fc579d3b8e7404eb2b22ec3f5",
+    "task_0231": "fc8f0a7d05dc84f5eee9aaaf9b8fe8464167df475e562705265abcdec157f7c3",
+    "task_0232": "db1c258e43505324c610a65c538726abe7aee3d0c80c1b53b6ceeb1574b15f72",
+    "task_0233": "87bed82d4f4ed2ee6e3c95030ed1e6937b82c99ce19aba2334e6a8702d679dc7",
+    "task_0234": "037a800dd84ef19f72a1cadad99c76ffa8aa84fc4639038e581bc0a441e70630",
+    "task_0235": "f48ba30495b7f381c494669e01526f7b1cb23428fef0fbf0abc4cc65140848d6",
+    "task_0236": "06d2aa42865ea3e6bf764099d472fed5c75fdd93d875158ad5277ce77c701607",
+    "task_0237": "3a08e7109c25d73afc699fc36fc1a8b19ede695ec1cb82d4299acc1793a15412",
+    "task_0238": "197fcff48752be160c106421846d2db1ab6ad4dc9ac6bef4a15086f075dcbd34",
+    "task_0240": "d34e1034ee4b1b543444e6f23cbf00b27f06ea2f06dc8715a6110082749fd75c",
+    "task_0244": "6b367c0856d85bd09bdeaf55bdf9c6880fae643eb4e27385c1431e445e840a96",
+    "task_0245": "5d1818665ef3b954bf73e70de0cac6fe03b860db6a0fc8de4c7638e5017340ce",
+    "task_0248": "b19d6e7df580ef2c7cd6d2c733817cffe29bc40de8d70b453ca1f3f9331a42fb",
+    "task_0263": "c94bf44b8eac78cb931536c93df33f052972266304c8bc4535833aa6b17d5462",
+    "task_0264": "08fb738cd53ee0157513fcfd6ffa07df00bdff10aeb27e709270b9978ceaccd6",
+    "task_0265": "b35dc93850a26da03baea24935361ae82e5e692d2d2f62b159f0e0edab472b8d",
+    "task_0267": "e23ecd20b1daa417cb58316f7ba9f9188469bb2b175c7751487edda759d64f52",
+    "task_0268": "e84db157cbf3f4546af36174e3c3741e6e84a0f3df8b4f6503f63567127ce62e",
+    "task_0269": "a2fbcdabccbb6eddaa211a0e670abf000bf063086f03c46d33e138822d9513b4",
+    "task_0270": "eac4164e9449530e2b6703c3af06fae20bf11d170bcfa6dfcb91609f32cb0037",
+    "task_0271": "ec83596f3d5d251a885bbb499492300bb3f690214794300e1c228e60e05cc13c",
+    "task_0272": "0aacc0b84f17d6859d09e097cb53d89b073cecd13860cbea5b537bda7766d4ff",
+    "task_0273": "9bb7b6ab8ba5d592fbb0f9da27bd47bf3c4c2f7f82075d416e89b981bc299e94",
+    "task_0281": "d83bbaa923bd83111f712ff73849bf2178b4db8526f3bdf51f9ce883396f25ed",
+    "task_0282": "e10fe88a9a0e9e5dbdfe3bfc0a82ec1a119e90652afd6bdee1236fd1708d67f9",
+    "task_0283": "a84d84d9bdad4efe6ac971dd74e7cf6f0cca1210cad6adecdb5f9ab1336c1b0e",
+    "task_0284": "9102c951b5184a152bb25bcb885f4a3d376ace138aa119aeba48d0bd95eb3c48",
+    "task_0285": "a55dc8326c070aba2663698b2e2fc59242fe761174e34aef23b2233807ebd63a",
+    "task_0286": "75d18630da62273e3b4c3638f7f0653642a58c99b3ed322fdeecefb789cd6635",
+    "task_0287": "df87e73682153963d4b4e9dfe5524da6fd1e03afa70f07200e12c5cada6b5668",
+    "task_0288": "7821a33e44f12e3ee617cdd7cc820bdec3ac2bc771e725df042d6929b21395b1",
+    "task_0289": "6d39b45133b47c71fa7b1a89f91a0dc22e2c485c390a614bba10783f8f3eb80c",
+    "task_0290": "a01e70b1a4676e66608625ee79edb4ed96fbb731ea164c8dd3e3a37ddd0ccc67",
+    "task_0291": "54814dbffc102fad26014d975ae7ea5a1e0f0fdf84c764447cbc7a5df22f3de1"
+  },
+  "imported_pre_isolation_attempts": [
+    {
+      "task": "task_0002",
+      "state_at_import": "completed",
+      "run_name": "gpt6_astra_opencode_high_video_20260925_235835_task_0002_2041",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0003",
+      "state_at_import": "completed",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_000636_task_0003_3308",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0019",
+      "state_at_import": "completed",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_000636_task_0019_3310",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0026",
+      "state_at_import": "completed",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_001658_task_0026_5034",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0027",
+      "state_at_import": "completed",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_001659_task_0027_5036",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0028",
+      "state_at_import": "interrupted",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_002513_task_0028_7432",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    },
+    {
+      "task": "task_0030",
+      "state_at_import": "interrupted",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_002646_task_0030_7843",
+      "original_directory": "D:/ShaderAgent/re/gamedevbench-main/gamedevbench-main"
+    }
+  ],
+  "secret_in_manifest": false
+}

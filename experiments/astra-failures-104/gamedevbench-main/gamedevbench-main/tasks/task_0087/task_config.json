@@ -1,0 +1,38 @@
+{
+  "task_id": 87,
+  "name": "Build Grid Player Nodes Alt II",
+  "instruction": "In scenes/Player.tscn finish the Player Area2D by adding the `Sprite2d` that uses res://assets/sokoban_character.png sliced to several frames, a `CollisionShape2d` with a RectangleShape2D that is as large as the grid cell size, a `RayCast2d` that has collide_with_areas enabled, and an AnimationPlayer containing four clips named up, down, left, and right that key Sprite2d.frame for each movement row in the spritesheet. Name the nodes as described above, with lowercase `d` in `2d`. Each clip should be properly animated with 6 frames, and the first and only animation track should be Sprite2d.frame.",
+  "metadata": {
+    "tutorial_source": "KidsCanCode \u2013 Grid-based movement",
+    "github_repo": "https://github.com/godotrecipes/2d_grid_movement",
+    "godot_version": "4.5",
+    "transcript_excerpt": "Character setup \u2192 Area2D root with Sprite2D, CollisionShape2D, RayCast2D, AnimationPlayer; spritesheet uses 6\u00d74 frames for Sokoban character (transcript.txt lines 7-46).",
+    "expected_nodes": [
+      "Player",
+      "Player/Sprite2d",
+      "Player/CollisionShape2d",
+      "Player/RayCast2d",
+      "Player/AnimationPlayer"
+    ],
+    "key_properties": {
+      "Sprite2d.texture": "res://assets/sokoban_character.png",
+      "Sprite2d.hframes": 6,
+      "Sprite2d.vframes": 4,
+      "CollisionShape2d.shape": "RectangleShape2D",
+      "CollisionShape2d.size": "Vector2(32, 32)",
+      "RayCast2d.collide_with_areas": true,
+      "AnimationPlayer.animations": "up/down/left/right key Sprite2d.frame"
+    },
+    "categories": [
+      "graphics",
+      "animation",
+      "physics"
+    ],
+    "validation_focus": [
+      "Spritesheet slicing",
+      "Collision hitbox sizing",
+      "RayCast2D overlap detection",
+      "Directional animation clips"
+    ]
+  }
+}

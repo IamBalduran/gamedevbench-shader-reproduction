@@ -1,0 +1,56 @@
+Single task: task_0072 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_180419_task_0072_204341
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_180419_task_0072_204341/task_task_0072.json
+{
+  "task_name": "task_0072",
+  "success": true,
+  "message": "Depth scene geometry matches tutorial setup",
+  "timestamp": "2026-09-26T18:12:26.317518",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The `main.tscn` scene has been populated with all required nodes. Verified by rendering the scene with `godot --rendering-driver opengl3 --quit-after 2 --write-movie`. Both frames confirmed the water plane, green spheres, procedural sky with glow, and camera are all in place.",
+  "solver_duration": 454.40130710601807,
+  "is_rate_limited": false,
+  "input_tokens": 22239,
+  "output_tokens": 2314,
+  "total_tokens": 24553,
+  "cache_read_tokens": 172032,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.101427,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_d0fc7e3d",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180419_task_0072_204341/task_0072_opencode_20260926_181226"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_180419_task_0072_204341
+Final status: PASS | exit code: 0

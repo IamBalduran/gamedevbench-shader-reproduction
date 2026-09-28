@@ -1,0 +1,56 @@
+Single task: task_0002 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_153516_task_0002_189991
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_153516_task_0002_189991/task_task_0002.json
+{
+  "task_name": "task_0002",
+  "success": false,
+  "message": "Projectile must react to enemies inside _on_area_entered",
+  "timestamp": "2026-09-26T15:40:31.524584",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The game runs without errors. The projectile already had all the required behaviors \u2014 the only fix needed was correcting the `progress_quest` call to use the actual quest ID (`\"shoot_em_up\"`) and step ID (`\"kill_step\"`).\n\nThe projectile now:\n- Calls `QuestManager.progress_quest(\"shoot_em_up\", \"kill_step\")` on enemy overlap (line 31)\n- `queue_free()` after hitting (line 33)\n- `queue_free()` when off screen above -50px (line 23-24)",
+  "solver_duration": 295.58597445487976,
+  "is_rate_limited": false,
+  "input_tokens": 25686,
+  "output_tokens": 1110,
+  "total_tokens": 26796,
+  "cache_read_tokens": 97280,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.093708,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_f3e9605d",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_153516_task_0002_189991/task_0002_opencode_20260926_154031"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_153516_task_0002_189991
+Final status: FAILED/CANCELLED | exit code: 1

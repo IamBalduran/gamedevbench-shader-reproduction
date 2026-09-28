@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0264"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0264": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T22:18:21+00:00",
+      "finished_at": "2026-09-25T22:24:47+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "08fb738cd53ee0157513fcfd6ffa07df00bdff10aeb27e709270b9978ceaccd6",
+      "validator_sha256": "0ffac9f03e9601ddfdb5353efa2a126f96eb6d78ceb2c5b567a6a9573ff503dc",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0264/console/task_0264_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "DetectRange.base_range_size must be 24.0",
+      "official_details": "{}",
+      "validator_error_line": "53",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the guard patrol intruder tracking setup.\n\nChanges include:\n\n- Added `UnitStats.TARGET` team-to-group mapping in [unit_stats.gd](/workspace/data/units/unit_stats.gd:4).\n- Added [detect_range.gd](/workspace/custom_nodes/detect_range.gd:1):\n  - Configures collision layer and mask from team.\n  - Creates a circular detection shape based on `base_range_size * attack_range`.\n- Added [target_finder.gd](/workspace/custom_nodes/target_finder.gd:1):\n  - Tracks `BattleUnit` instances entering and leaving range.\n  - Emits `targets_in_range_changed`.\n  - Finds the closest opposing unit by group and distance.\n- Updated [battle_unit.gd](/workspace/scenes/battle_unit/battle_unit.gd:4) with `detect_range` and `target_finder` references and stat propagation.\n- Updated [battle_unit.tscn](/workspace/scenes/battle_unit/battle_unit.tscn:1) with the `DetectRange`, collision shape, and `TargetFinder` nodes.\n\nValidation completed successfully with Godot 4.4.1:\n\n- Project parsed and loaded in headless editor mode.\n- Runtime checks passed for collision setup, target detection, closest-target selection, entry/exit signals, filtering, and stat-driven range updates.\n- The project launched and exited cleanly with `--quit-after`.",
+      "solver_duration": 361.0708248615265,
+      "cost_usd": 0.115896,
+      "input_tokens": 16222,
+      "output_tokens": 4482,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_task_0264.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061822_task_0264_80749/task_0264_opencode_20260926_062445/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T22:24:47+00:00"
+}

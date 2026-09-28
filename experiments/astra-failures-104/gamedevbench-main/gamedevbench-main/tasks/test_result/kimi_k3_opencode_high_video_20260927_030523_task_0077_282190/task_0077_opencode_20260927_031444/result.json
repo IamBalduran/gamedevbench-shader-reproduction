@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0077",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_031444",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "message": "Depth scene geometry matches tutorial setup",
+    "timestamp": "2026-09-27T03:14:44.917984"
+  },
+  "solver": {
+    "success": true,
+    "message": "The camera's local position is exactly (0, 1, 22) as set (the `global_transform` warning is only because the node was read in the same frame before the scene tree processed transforms \u2014 harmless to my headless check, and irrelevant to the saved scene or rendering, which both use the local transform). The rendered image already confirmed the camera works correctly.\n\nLet me clean up temp files.",
+    "duration_seconds": 534.6289148330688,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 1.106022,
+    "token_usage": {
+      "input_tokens": 350799,
+      "output_tokens": 3575,
+      "total_tokens": 354374,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

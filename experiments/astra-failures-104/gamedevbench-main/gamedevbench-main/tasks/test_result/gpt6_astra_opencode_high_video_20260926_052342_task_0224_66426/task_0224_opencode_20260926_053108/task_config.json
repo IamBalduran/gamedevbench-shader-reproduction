@@ -1,0 +1,3 @@
+{
+  "instruction": "Rotate the Level node to 0.22 radians. Add a Node2D named CoinHighlights under the Level node. Inside CoinHighlights, create six semi-transparent circular Polygon2D nodes named CoinHighlight1 through CoinHighlight6. Place one very tight circle over each yellow star coin in the rotated platformer image so each highlight closely covers its coin with minimal spill outside the coin."
+}

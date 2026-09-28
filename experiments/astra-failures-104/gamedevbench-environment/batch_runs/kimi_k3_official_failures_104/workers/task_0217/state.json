@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0217"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0217": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T21:09:34+00:00",
+      "finished_at": "2026-09-26T21:13:45+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "59a0d2996e41ee6d42ce445ec7db811e5f77e4f5d3e28f07ef2aefe8a102f7b6",
+      "validator_sha256": "179c6e89b4a244c7ccb4d358aec006fad757ee7b69e00706c292cabe98948b66",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0217/console/task_0217_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_050935_task_0217_311523",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Add a Node2D named CoinHighlights under Level",
+      "official_details": "{}",
+      "validator_error_line": "176",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Two of the six coins are at bottom (one partially behind a platform edge). Let me confirm all six locations: A(425,71), B(283.5,111), C(319,82), D(288,186), E(383,90), F-bottom pair (254,311) and (287.5,297) — those bottom two are distinct coins. Let me verify E and D crops.",
+      "solver_duration": 226.78912615776062,
+      "cost_usd": 0.490911,
+      "input_tokens": 147947,
+      "output_tokens": 3138,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_task_0217.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_0217_opencode_20260927_051344/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_0217_opencode_20260927_051344",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_050935_task_0217_311523/task_0217_opencode_20260927_051344/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T21:13:45+00:00"
+}

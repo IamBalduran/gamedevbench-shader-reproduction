@@ -1,0 +1,109 @@
+Single task: task_0060 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381/task_task_0060.json
+{
+  "task_name": "task_0060",
+  "success": false,
+  "message": "Minimap must be a script instance",
+  "timestamp": "2026-09-26T17:33:06.024012",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode command failed (exit code 1)",
+  "solver_duration": 174.5697844028473,
+  "is_rate_limited": false,
+  "input_tokens": 1403,
+  "output_tokens": 162,
+  "total_tokens": 1565,
+  "cache_read_tokens": 6144,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.006639000000000001,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_3f6409cf",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381/task_0060_opencode_20260926_173306"
+}
+API HTTP 400. Retrying task in 300 seconds (1/3). Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381_retry1
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381_retry1/task_task_0060.json
+{
+  "task_name": "task_0060",
+  "success": false,
+  "message": "Minimap must define set_zoom",
+  "timestamp": "2026-09-26T17:48:34.771370",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.0316858291626,
+  "is_rate_limited": false,
+  "input_tokens": 22450,
+  "output_tokens": 4570,
+  "total_tokens": 27020,
+  "cache_read_tokens": 102400,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.13590000000000002,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_1aae9db0",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381_retry1/task_0060_opencode_20260926_174834"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_172947_task_0060_198381_retry1
+Final status: FAILED/CANCELLED | exit code: 1

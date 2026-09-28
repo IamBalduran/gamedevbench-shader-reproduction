@@ -1,0 +1,25 @@
+{
+  "task_id": 244,
+  "name": "Platformer Gemstone Highlight Variant R",
+  "instruction": "Keep the Level node aligned to the viewport with position (188.509, -25.555), scale (0.63, 0.63), and rotation 0.16 radians. Keep Sprite2D using assets/sprites/platformer_coins.jpg with centered set to false. Add a Node2D named GemstoneHighlights under the Level node. Inside GemstoneHighlights, create a semi-transparent Polygon2D named GemstoneHighlight. Shape and place the polygon so it closely covers the gemstone.",
+  "metadata": {
+    "tutorial_source": "Synthetic platformer image task",
+    "variant_of": "task_0238",
+    "video_id": "unknown",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "draw a tight semi-transparent polygon highlight over the gemstone with Level scale Vector2(0.63, 0.63) and rotation 0.16",
+    "expected_nodes": [
+      "Node2D:Level/GemstoneHighlights",
+      "Polygon2D:Level/GemstoneHighlights/GemstoneHighlight"
+    ],
+    "key_properties": {
+      "Level.position": "Vector2(188.509, -25.555)",
+      "Level.scale": "Vector2(0.63, 0.63)",
+      "Level.rotation": "0.16",
+      "Sprite2D.texture": "res://assets/sprites/platformer_coins.jpg",
+      "Sprite2D.centered": "false",
+      "GemstoneHighlight.effective_alpha": "semi-transparent via color.a * modulate.a, strictly between 0 and 1",
+      "GemstoneHighlight.color_range": "purple or pink-purple tint, approximately within validator ranges"
+    }
+  }
+}

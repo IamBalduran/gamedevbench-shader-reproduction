@@ -1,0 +1,22 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,validation_source,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0028,kimi_k3,openai/kimi-k3,,,completed,1,False,PillarPoint node missing,{},,True,"Done. Here's what I created and verified:
+
+**`scripts/flashlight_point.gd`** — `FlashlightPoint` class extending `Marker3D`:
+- `enum Priority { low, medium, high }` (exported as `@export var priority`)
+- `var has_been_targeted: bool = false`
+- `func reset_target_state()` sets it back to `false`
+
+**`scenes/flashlight_point.tscn`** — reusable marker scene (root `Marker3D` named `FlashlightPoint`) with the script attached and declared in the `FlashlightPoints` group.
+
+**`scenes/main.tscn`** — three instances parented directly under `Main`:
+| Node | Position | Priority |
+|------|----------|----------|
+| FlashlightPoint | (8.36166, 1.81915, -12.0301) | medium (1) |
+| FlashlightPoint2 | (-16.6577, 2.41884, -39.9426) | low (0) |
+| FlashlightPoint3 | (23.0185, 2.63927, -86.6948) | high (2) |
+
+Verification (run headless in an isolated harness, since removed):
+- `group_size=3`, all three members of `FlashlightPoints` ✓
+- Positions match exactly, priorities resolve to medium/low/high ✓
+- `has_been_targeted` toggles true then resets to false via `reset_target_state()` ✓
+- All nodes are `FlashlightPoint` instances, parented directly under `Main`, and the project/scene load cleanly (`--check-only` exit 0) ✓",381.84416604042053,0.8694870000000001,270759,3814,False,kimi_k3_opencode_high_video_20260927_014736_task_0028_262453,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_task_0028.json,official_results_json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_014736_task_0028_262453/task_0028_opencode_20260927_015423/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0028/console/task_0028_attempt_1.log,5606d0021844fcf14cc0d01fb2d0b259d819eb7b5c3780f0974267a8cd7344a6,72e8064c2a35a62628b0a633a9efceb022e8c94ba71a5d4a0fc2c0b160217e1b,2026-09-26T17:47:35+00:00,2026-09-26T17:54:24+00:00,1,official_fail_review_needed,,

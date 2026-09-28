@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0236"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0236": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T21:55:55+00:00",
+      "finished_at": "2026-09-25T22:05:25+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "06d2aa42865ea3e6bf764099d472fed5c75fdd93d875158ad5277ce77c701607",
+      "validator_sha256": "80882636b88679c17332d3dc3eef89acb5501ed9470915215b02f743492e56de",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0236/console/task_0236_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_055557_task_0236_74799",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "StarHighlight must stay inside the platformer image bounds",
+      "official_details": "{}",
+      "validator_error_line": "149",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated [main.tscn](/workspace/scenes/main.tscn):\n\n- Preserved the Level position, scale, and rotation.\n- Preserved Sprite2D’s `platformer_coins.jpg` texture and `centered = false`.\n- Added `StarHighlights` under `Level`.\n- Added a semi-transparent, antialiased `StarHighlight` Polygon2D fitted to the yellow star near the top of the image.\n- Ran Godot 4.4.1 and visually verified the rendered scene.",
+      "solver_duration": 543.5428676605225,
+      "cost_usd": 0.10774800000000001,
+      "input_tokens": 21996,
+      "output_tokens": 2784,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_055557_task_0236_74799/task_task_0236.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_055557_task_0236_74799/task_0236_opencode_20260926_060523/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_055557_task_0236_74799/task_0236_opencode_20260926_060523",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_055557_task_0236_74799/task_0236_opencode_20260926_060523/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T22:05:25+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0207"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0207": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T20:15:37+00:00",
+      "finished_at": "2026-09-25T20:26:06+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "6c47f9ead88e697d9a027eadb11167754f09f0bd6205db2376e17c3b7aa99fdc",
+      "validator_sha256": "fd85f4d76230d4bff96d8795cfcea73d8041e4f19ecac307ba8dd4a5988d9602",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0207/console/task_0207_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_041538_task_0207_52854",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "SpawnTop must line up with the bottom tip of the branch closest to the water",
+      "official_details": "{}",
+      "validator_error_line": "58",
+      "solver_success": false,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0516941547394,
+      "cost_usd": 0.079047,
+      "input_tokens": 16319,
+      "output_tokens": 2006,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_041538_task_0207_52854/task_task_0207.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_041538_task_0207_52854/task_0207_opencode_20260926_042604/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_041538_task_0207_52854/task_0207_opencode_20260926_042604",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_041538_task_0207_52854/task_0207_opencode_20260926_042604/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T20:26:06+00:00"
+}

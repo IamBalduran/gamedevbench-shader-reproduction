@@ -1,0 +1,50 @@
+{
+  "task_name": "task_0075",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_030518",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": true,
+    "message": "Depth scene geometry matches tutorial setup",
+    "timestamp": "2026-09-27T03:05:18.719225"
+  },
+  "solver": {
+    "success": true,
+    "message": "Some spheres still out of frustum at z=12. Let me compute required camera distance for fov=30 to cover the horizontal extent (-5.1 to 5.1, half-width 5.1) plus margin.\n\nHalf-width 5.5 with margin \u2192 dist = 5.5 / tan(15\u00b0) \u2248 20.5. But h-fov also depends on aspect ratio (typically 16:9 in editor default 1152x648 project \u2192 narrower). Let me just test z=22 and also slightly reduce margins. Also vertical extent: y -1.1 to 1, camera at y=1 \u2192 vertical range [-2.1, 0], half ~1.05 \u2014 well within v-fov (30\u00b0 vertical? In Godot, fov is vertical FOV... actually Godot's Camera3D fov is vertical). Wait \u2014 if fov is vertical = 30\u00b0, then tan(15\u00b0) covers vertical half. Vertical needed: from y=1 down to -1.1 = 2.1 \u2192 dist = 2.1/tan(15\u00b0) \u2248 7.8. Horizontal: with aspect 16:9, h_half_angle = atan(tan(15\u00b0)*16/9) = atan(0.476) \u2248 25.4\u00b0, tan \u2248 0.476. dist = 5.5/0.476 \u2248 11.5. Hmm, then z=12 should nearly work. The in_frustum=false for sphere at x=3.8: dist 12, h offset 3.8/12 = 0.3167 < 0.476 \u2192 should be in frustum... Wait, camera is at z=12, sphere at z=3.2 \u2192 effective distance 12-3.2 = 8.8. x=3.8 \u2192 3.8/8.8=0.432 < 0.476 OK barely. Sphere3 x=4.6, z=-0.6 \u2192 dist 12.6, 4.6/12.6=0.365 OK. Hmm but it says false. Maybe the frustum check ran before viewport update? Or the default viewport aspect in headless is 1:1 \u2014 then h half-width at dist 12.6 = tan(15\u00b0)*12.6 = 3.38 < 4.6. Yes, that's it.\n\nHeadless default window is small. Rather than relying on rendering viewport, push camera back to z=18 and also shift camera look slightly. Let's compute worst: sphere4 x=-4.2, radius 0.5 \u2192 need h offset 4.7 visible. If aspect 1:1: dist needed = 4.7/tan(15\u00b0) \u2248 17.5. Sphere4 z=1.7 \u2192 camera z = 1.7+17.5 = 19.2. Use z=20 for margin. Vertical: sphere below: y -1.1, from cam y=1 \u2192 2.1 below; at dist 20 works.\n\nLet's try z=20.",
+    "duration_seconds": 499.6244831085205,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.7824,
+    "token_usage": {
+      "input_tokens": 239640,
+      "output_tokens": 4232,
+      "total_tokens": 243872,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

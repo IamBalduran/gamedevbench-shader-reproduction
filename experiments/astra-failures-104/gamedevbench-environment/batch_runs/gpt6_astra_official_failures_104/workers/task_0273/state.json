@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0273"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0273": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T22:43:27+00:00",
+      "finished_at": "2026-09-25T22:53:32+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "9bb7b6ab8ba5d592fbb0f9da27bd47bf3c4c2f7f82075d416e89b981bc299e94",
+      "validator_sha256": "fa777a3c328c979222d4d17eb15f53a72202be9c5e9d4801fa2cc5305ce6d5b9",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0273/console/task_0273_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_064328_task_0273_88312",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "DetectRange.base_range_size must be 27.0",
+      "official_details": "{}",
+      "validator_error_line": "53",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the targeting setup:\n\n- Added `UnitStats.TARGET` with the requested opposing groups.\n- Created `DetectRange` with team-based collision settings and a scaled circular range.\n- Created `TargetFinder` with nearest-opponent selection, range tracking, and change signals.\n- Wired both nodes into `battle_unit.tscn` and exposed them in `battle_unit.gd`.\n\nVerified in Godot 4.4.1 with runtime checks and a debug screenshot. Target selection, overlap signals, team filtering, and stats updates pass; the main scene runs without script errors.",
+      "solver_duration": 580.2110495567322,
+      "cost_usd": 0.079707,
+      "input_tokens": 784,
+      "output_tokens": 5157,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_064328_task_0273_88312/task_task_0273.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_064328_task_0273_88312/task_0273_opencode_20260926_065330/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_064328_task_0273_88312/task_0273_opencode_20260926_065330",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_064328_task_0273_88312/task_0273_opencode_20260926_065330/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T22:53:32+00:00"
+}

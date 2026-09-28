@@ -1,0 +1,22 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0027,gpt56_sol,openai/gpt-5.6-sol,,,completed,1,True,Weapon recoil signal wired into PlayerBody,{},72,True,"Implemented the complete weapon recoil signal flow:
+
+- `scripts/weapon_effects.gd`
+  - Added typed `on_shot_camera_impulse(Vector3, float)` signal.
+  - Added exported `camera_shake_power` defaulting to `0.3`.
+  - `fire_weapon()` now emits the normalized global forward direction from `BarrelRayCast` with the exported power.
+
+- `scenes/weapon_rig.tscn`
+  - Exposes `BarrelEnd`, `BarrelRayCast`, and `camera_shake_power = 0.3`.
+
+- `scripts/player_body.gd`
+  - Added `apply_weapon_impulse()`, forwarding to `impulse_camera_with_recoil()`.
+
+- `scenes/main.tscn`
+  - Connected the weapon signal to `PlayerBody.apply_weapon_impulse`.
+
+Validated with Godot 4.4.1:
+
+- Project and scenes load without script or scene errors.
+- Visual smoke-test frames rendered successfully.
+- Runtime assertion confirmed direction `(0, 0, -1)`, power `0.3`, and immediate camera offset `(0, 0.12, -0.09)`.",412.00710678100586,0.04569625,46850,3984,False,gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_task_0027.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_080459_task_0027_104156/task_0027_opencode_20260926_081215/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0027/console/task_0027_attempt_1.log,5c0dbb6bcfa651f37fd97532768cbccc5c9d0b2caf8aa0317e64af65dee244f5,4f6b8582db0800ed86186e45004ac677b8f92296385e436923bee9c75e59514f,2026-09-26T00:04:58+00:00,2026-09-26T00:12:17+00:00,0,official_pass,,

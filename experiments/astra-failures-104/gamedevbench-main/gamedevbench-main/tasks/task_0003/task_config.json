@@ -1,0 +1,21 @@
+{
+  "task_id": 3,
+  "name": "River Raid Player Jet Scene",
+  "instruction": "Create a Player scene with a CharacterBody2D root named Player, add an AnimatedSprite2D that autoplay the default animation and includes looping default/left/right jet frames from assets/sprites/sprites-Sheet.png and a non-looping explode sequence from the smoke sprites at assets/sprites/Free Smoke Fx  Pixel 04.png, and attach a 16\u00d716 rectangular CollisionShape2D that fits the jet.",
+  "metadata": {
+    "tutorial_source": "YouTube: CyberPotato - [BETTER SOUND REUPLOAD] How to make River Raid Atari Classic in Godot 4 - Tutorial",
+    "video_id": "PjPDNLBdstw",
+    "github_repo": "https://github.com/wojciech-bilicki/RiverRaidTutorial",
+    "transcript_excerpt": "we will start by creating a new scene ... our player will be based on character body to D ... add child node ... animated Sprite Tod ... we will need a collision shape ... we can add of course the explosion animation because it can be destroyed",
+    "expected_nodes": [
+      "CharacterBody2D:Player",
+      "AnimatedSprite2D:Player/AnimatedSprite2D",
+      "CollisionShape2D:Player/CollisionShape2D"
+    ],
+    "key_properties": {
+      "AnimatedSprite2D.autoplay": "default",
+      "AnimatedSprite2D.animations": "default,left,right,explode",
+      "CollisionShape2D.shape.size": "Vector2(16,16)"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://c0so0h638fwfp" path="res://assets/sprites/platformer.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(219.175, 37.657)
+rotation = 0.37
+scale = Vector2(0.55, 0.55)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+texture = ExtResource("1_platformer")
+centered = false

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://prev605main"]
+
+[ext_resource type="PackedScene" uid="uid://hud605start" path="res://scenes/hud_preview.tscn" id="1_hud"]
+
+[node name="Main" type="Node"]
+
+[node name="HUD" parent="." instance=ExtResource("1_hud")]

@@ -1,0 +1,20 @@
+Task: task_0228
+Agent: opencode
+Model: openai/kimi-k3
+Sandbox: /tmp/gamedevbench_sandbox_ff4e85fe
+Confinement: strict-v1
+Network policy: isolated-provider-proxy
+Provider hosts: api.openai.com, api.shubiaobiao.cn, docs.godotengine.org, openrouter.ai
+Denied network requests: models.opencode.ai:443, registry.npmjs.org:443
+Timestamp: 2026-09-27T06:07:03.426974
+================================================================================
+
+Success: False
+Message: OpenCode command failed (exit code 1)
+Duration: 3.61s
+
+STDOUT:
+{"type":"error","timestamp":1790460422396,"sessionID":"ses_f203e204affeKPUukuF6DbbURx","error":{"name":"APIError","data":{"message":"该令牌额度已用尽 (request id: 2026092706070345661965107149033)","statusCode":401,"isRetryable":false,"responseHeaders":{"connection":"keep-alive","content-length":"119","content-type":"application/json; charset=utf-8","date":"Sat, 26 Sep 2026 22:07:03 GMT","eo-cache-status":"MISS","eo-log-uuid":"5962859207571210709","server":"nginx","x-shellapi-request-id":"2026092706070345661965107149033"},"responseBody":"{\"error\":{\"message\":\"该令牌额度已用尽 (request id: 2026092706070345661965107149033)\",\"type\":\"shell_api_error\"}}","metadata":{"url":"https://api.shubiaobiao.cn/v1/responses"}}}}
+
+
+STDERR:

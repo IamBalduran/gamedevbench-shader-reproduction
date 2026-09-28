@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0048"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0048": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T16:59:49+00:00",
+      "finished_at": "2026-09-25T17:08:47+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "77d44738ae7a4c1a629d533a0afb9bcbe6544984624c70e57b88829b27caefff",
+      "validator_sha256": "d06adb4d5aecb2f9cd4ed6f3e1e461559bbf88d85285685a989be1037a9990b2",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0048/console/task_0048_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_005950_task_0048_12158",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Draggable without overlaps must call self_destruct and queue_free",
+      "official_details": "{}",
+      "validator_error_line": "84",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the draggable decoration component.\n\nChanges:\n\n- Added `Sprite2D` named `Sprite` using `assets/sprites/star_1.png`, scaled uniformly to `0.58`.\n- Added a 72×72 `RectangleShape2D` under `CollisionShape`, scaled to cover the visible sprite.\n- Configured the root `Draggable` `Area2D` with:\n  - `collision_mask = 2`\n  - `linear_damp = 20`\n  - `scripts/draggable.gd`\n- Implemented spawn animation, mouse dragging, drop reporting, and destruction outside `DropTarget`.\n- Updated the sample drop target shape to use Godot 4’s `size` property.\n\nFiles:\n\n- [scenes/draggable.tscn](/workspace/scenes/draggable.tscn)\n- [scripts/draggable.gd](/workspace/scripts/draggable.gd)\n- [scenes/main.tscn](/workspace/scenes/main.tscn)\n\nValidation completed with Godot 4.4.1:\n\n- Headless project parse passed.\n- Visual smoke test rendered the star and spawn animation successfully.\n- Interaction verification passed for mouse picking, smooth dragging, valid drops, overlapping-area reporting, and invalid-drop destruction.",
+      "solver_duration": 512.8786387443542,
+      "cost_usd": 0.168963,
+      "input_tokens": 28011,
+      "output_tokens": 5662,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_005950_task_0048_12158/task_task_0048.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005950_task_0048_12158/task_0048_opencode_20260926_010845/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005950_task_0048_12158/task_0048_opencode_20260926_010845",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_005950_task_0048_12158/task_0048_opencode_20260926_010845/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:08:47+00:00"
+}

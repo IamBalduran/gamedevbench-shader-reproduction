@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0095",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "timestamp": "20260926_094510",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Shader code missing required parts: uniform sampler2D screen_texture: hint_screen_texture, filter_linear_mipmap, centered_uv.yx / curvature, step(abs(warped_uv.x), 1.0), step(abs(warped_uv.y), 1.0), sin(2.0 * warped_uv.y * 180.0), pow(abs(centered_uv), vec2(4.0)) / 3.0, textureLod(screen_texture, (warped_uv + 1.0) / 2.0, 0.2), COLOR = vec4(screen_color, 1.0)",
+    "timestamp": "2026-09-26T09:45:10.873999"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode execution timed out after 600s",
+    "duration_seconds": 600.0969307422638,
+    "is_rate_limited": false,
+    "model": "openai/gpt-5.6-sol",
+    "cost_usd": 0.025848625,
+    "token_usage": {
+      "input_tokens": 18229,
+      "output_tokens": 2357,
+      "total_tokens": 20586,
+      "cache_read_tokens": 139528,
+      "cache_write_tokens": 0
+    }
+  }
+}

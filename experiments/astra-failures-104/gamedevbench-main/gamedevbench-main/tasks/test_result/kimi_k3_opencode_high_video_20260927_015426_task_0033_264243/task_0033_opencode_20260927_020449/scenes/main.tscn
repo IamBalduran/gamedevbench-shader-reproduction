@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/particle_loop.gd" id="1_5dmhk"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_5dmhk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.7, 0.5, 0)
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="Explosion" type="Node3D" parent="."]
+
+[node name="ArcingChunks" type="GPUParticles3D" parent="Explosion"]
+amount = 8
+
+[node name="ArcingChunkSmoke" type="GPUParticles3D" parent="Explosion"]
+amount = 32
+
+[node name="ExplosionLight" type="OmniLight3D" parent="Explosion"]
+omni_range = 10.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.707107, -0.0477986, 0.705489, 0, 0.997713, 0.0675974, -0.707107, -0.0477985, 0.705489, 10, 3, 10)
+size = 20.0

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scenes/battle_unit/battle_unit.gd" id="1_battle_unit"]
+[ext_resource type="Resource" path="res://data/units/bjorn.tres" id="2_stats"]
+[ext_resource type="Script" path="res://custom_nodes/detect_range.gd" id="3_detect_range"]
+[ext_resource type="Script" path="res://custom_nodes/target_finder.gd" id="4_target_finder"]
+
+[sub_resource type="RectangleShape2D" id="1_body_shape"]
+size = Vector2(24, 24)
+
+[node name="BattleUnit" type="Area2D"]
+collision_mask = 0
+script = ExtResource("1_battle_unit")
+stats = ExtResource("2_stats")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1_body_shape")
+
+[node name="DetectRange" type="Area2D" parent="." node_paths=PackedStringArray("col_shape")]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("3_detect_range")
+col_shape = NodePath("CollisionShape2D")
+base_range_size = 24.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectRange"]
+
+[node name="TargetFinder" type="Node" parent="." node_paths=PackedStringArray("actor")]
+unique_name_in_owner = true
+script = ExtResource("4_target_finder")
+actor = NodePath("..")

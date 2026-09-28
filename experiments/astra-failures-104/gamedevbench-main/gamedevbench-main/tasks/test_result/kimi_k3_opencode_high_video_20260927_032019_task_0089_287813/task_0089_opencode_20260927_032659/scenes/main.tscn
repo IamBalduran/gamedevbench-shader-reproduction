@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1qxvjy3m8p8n"]
+
+[ext_resource type="PackedScene" uid="uid://ce2ql4xdm0gwa" path="res://scenes/audio_demo.tscn" id="1_audio_demo"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="AudioDemo" parent="CanvasLayer" instance=ExtResource("1_audio_demo")]

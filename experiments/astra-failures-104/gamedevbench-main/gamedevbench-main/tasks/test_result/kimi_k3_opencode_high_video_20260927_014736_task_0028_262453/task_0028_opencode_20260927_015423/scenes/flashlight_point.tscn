@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://flashlight_point_marker_scene"]
+
+[ext_resource type="Script" uid="uid://cq5ymshf2i1dr" path="res://scripts/flashlight_point.gd" id="1_flashlight_point"]
+
+[node name="FlashlightPoint" type="Marker3D" groups=["FlashlightPoints"]]
+script = ExtResource("1_flashlight_point")

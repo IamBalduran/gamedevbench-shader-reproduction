@@ -1,0 +1,56 @@
+Single task: task_0076 | OpenCode | gpt-5.6-sol | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt56_sol_opencode_high_video_20260926_091731_task_0076_122980
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_091731_task_0076_122980/task_task_0076.json
+{
+  "task_name": "task_0076",
+  "success": false,
+  "message": "Water requires a ShaderMaterial override (via material_override or surface_material_override)",
+  "timestamp": "2026-09-26T09:22:16.350996",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Populated `scenes/main.tscn` with all requested environment, lighting, water, sphere, and camera settings.\n\nVerified in Godot 4.4.1 via rendered frame: all five spheres are visible and the scene loads successfully.",
+  "solver_duration": 254.60075092315674,
+  "is_rate_limited": false,
+  "input_tokens": 47225,
+  "output_tokens": 2337,
+  "total_tokens": 49562,
+  "cache_read_tokens": 111836,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.029273125000000004,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_8918331b",
+  "result_dir": "tasks/test_result/gpt56_sol_opencode_high_video_20260926_091731_task_0076_122980/task_0076_opencode_20260926_092216"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_091731_task_0076_122980
+Final status: FAILED/CANCELLED | exit code: 1

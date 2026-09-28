@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0220"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0220": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T21:12:10+00:00",
+      "finished_at": "2026-09-25T21:15:47+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "b9eaa6198bbc0fce053fe219ab511bc96e2e1c712c9de65acbd4c973387ce3a5",
+      "validator_sha256": "2d0d885d1f9c452f33b5f640308dd7a1986707e3fc66a2e1d69f5676b994b550",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0220/console/task_0220_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_051212_task_0220_62775",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "CoinHighlight1 must tightly cover one of the coins with overlap above 90% (best IoU=0.8497)",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated `scenes/main.tscn` with `Level/CoinHighlights` and six circular `Polygon2D` children named `CoinHighlight1` through `CoinHighlight6`.\n\nEach highlight has a tight 13-pixel radius and 30% opacity, centered over one yellow star coin. Verified alignment in a Godot 4.4.1 render.",
+      "solver_duration": 193.45251893997192,
+      "cost_usd": 0.121893,
+      "input_tokens": 22216,
+      "output_tokens": 3683,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_051212_task_0220_62775/task_task_0220.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_051212_task_0220_62775/task_0220_opencode_20260926_051545/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_051212_task_0220_62775/task_0220_opencode_20260926_051545",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_051212_task_0220_62775/task_0220_opencode_20260926_051545/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T21:15:47+00:00"
+}

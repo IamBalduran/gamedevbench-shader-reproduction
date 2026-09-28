@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0076"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0076": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:03:42+00:00",
+      "finished_at": "2026-09-26T19:09:10+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "eb9128857d27c22e37a845e769f5e98a6569f1e304c2da703e5631aa0ebd25be",
+      "validator_sha256": "37d193da97115e7c11742a882bca50307deca05b6c8b1174b1519a3aa0175d32",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0076/console/task_0076_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_030344_task_0076_281308",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The scene is complete and verified. `res://scenes/main.tscn` now contains:\n\n- **WorldEnvironment** — `Environment` with a `ProceduralSkyMaterial` (`background_mode = 2` (sky), `glow_enabled = true`)\n- **DirectionalLight3D** — angled down with `shadow_enabled = true`\n- **Water** (MeshInstance3D) — `PlaneMesh` with `size = 10×10`, `subdivide_width = 20`, `subdivide_depth = 20`, and a `ShaderMaterial` pointing at `res://scenes/WaterShader.tres`\n- **Background** (Node3D) — exactly 5 sphere MeshInstance3Ds with green `StandardMaterial3D` overrides at the requested positions:\n  - Sphere `(-1.8, 0.2, 4.7)`, Sphere2 `(4.4, -0.3, 1.1)`, Sphere3 `(-4.7, 0.1, -0.4)`, Sphere4 `(2.2, -0.5, -4.3)`, Sphere5 `(0.3, 0.4, 2.9)`\n- **Camera3D** — `y = 1.0`, `fov = 30.0`, positioned at z = 16 with a ~3.6° downward tilt so all 5 spheres are fully inside the frustum\n\nVisual verification (rendered with `godot --write-movie`) confirms the blue water plane with the procedural sky background and all five green spheres visible above/below the water surface. Godot 4.4.1 loads the scene with no errors.",
+      "solver_duration": 296.58463525772095,
+      "cost_usd": 0.49383,
+      "input_tokens": 151615,
+      "output_tokens": 2599,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_task_0076.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_0076_opencode_20260927_030907/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_0076_opencode_20260927_030907",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_0076_opencode_20260927_030907/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:09:10+00:00"
+}

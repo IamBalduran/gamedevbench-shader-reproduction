@@ -1,0 +1,3 @@
+{
+  "instruction": "Inside the SteerComponent script, capture the current velocity, scaled desired velocity, and steering force in a debug dictionary whenever debugging is enabled, and queue a redraw every frame so the overlay can update."
+}

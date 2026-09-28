@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://btpc7vckoe5q8"]
+
+[ext_resource type="Texture2D" uid="uid://d2kc2xj6c0m8d" path="res://assets/sprites/platformer_coins.jpg" id="1_platformer"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+position = Vector2(182.04, 28.342)
+scale = Vector2(0.6, 0.6)
+rotation = 0.08
+
+[node name="Sprite2D" type="Sprite2D" parent="Level"]
+position = Vector2(0, -0.76923084)
+texture = ExtResource("1_platformer")
+centered = false
+
+[node name="StarHighlights" type="Node2D" parent="Level"]
+
+[node name="StarHighlight" type="Polygon2D" parent="Level/StarHighlights"]
+polygon = PackedVector2Array(1003, 58, 1008, 69, 1021, 70, 1012, 79, 1015, 91, 1003, 85, 991, 91, 994, 79, 985, 70, 998, 69)
+color = Color(1, 0.92, 0.12, 0.42)

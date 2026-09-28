@@ -1,0 +1,20 @@
+{
+  "task_id": 42,
+  "name": "Pong Camera Spring Shake",
+  "instruction": "Add a Camera2D node centered on the playfield, attach a Camera2D.gd script that stores displacement, velocity, and the SPRING=900, DAMP=18, MULTIPLIER=20 constants, and implement a shake(right_pointed) method that reverses direction based on who scored. Update pong.gd so new_ball() keeps respawning the Ball and also calls Camera2D.shake() after every score. In _physics_process(), apply spring-damper physics to update velocity and displacement, then set position.x = displacement to drive the horizontal spring motion.",
+  "metadata": {
+    "tutorial_source": "YouTube: MerliGameDev - Godot Juice ? - Pong com Juice #godot #godotengine",
+    "video_id": "mV1EWF3MEWc",
+    "github_repo": "https://github.com/filipemerli/PongJuiceGodot4.git",
+    "transcript_excerpt": "If the ball hits the corner, I make the camera move according to the ball's hit ... then it will do a spring movement",
+    "expected_nodes": [
+      "Camera2D"
+    ],
+    "key_properties": {
+      "Camera2D.script": "res://scripts/Camera2D.gd",
+      "SPRING": "900",
+      "DAMP": "18",
+      "MULTIPLIER": "20"
+    }
+  }
+}

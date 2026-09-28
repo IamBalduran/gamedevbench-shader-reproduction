@@ -1,0 +1,60 @@
+{
+  "task_name": "task_0034",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_020435",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "duckduckgo.com:443",
+      "www.youtube.com:443",
+      "www.google.com:443",
+      "html.duckduckgo.com:443",
+      "www.bing.com:443",
+      "www.bing.com:443",
+      "www.bing.com:443",
+      "www.bing.com:443",
+      "www.bing.com:443",
+      "docs.godotengine.org:443",
+      "docs.godotengine.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "debug dictionary missing steer entry",
+    "timestamp": "2026-09-27T02:04:35.847565"
+  },
+  "solver": {
+    "success": true,
+    "message": "The task is complete. Here's a summary of the changes made to `/workspace/scripts/steer_component.gd`:\n\n## Changes Made\n\n**1. Capture debug data in `steer()`** \u2014 whenever `debug_enabled` is true, the script now stores the three steering vectors into the `debug` dictionary via `update_debug()`:\n\n```gdscript\nvar steering_adjustment := (scaled_desired_velocity - velocity) / mass\nif debug_enabled:\n    update_debug({\n        \"velocity\": velocity,\n        \"scaled_desired_velocity\": scaled_desired_velocity,\n        \"steering_force\": steering_adjustment,\n    })\nreturn velocity + steering_adjustment\n```\n\n**2. Queue a redraw every frame in `_process()`** \u2014 so the debug overlay can update continuously:\n\n```gdscript\nfunc _process(_delta: float) -> void:\n    if debug_enabled:\n        queue_redraw()\n```\n\n## Verification\n\n- \u2705 Script passes Godot's parse check (`--check-only`, exit code 0)\n- \u2705 Project runs headless for 30 frames with no errors (exit code 0)\n- \u2705 Ran the game in Movie Maker mode \u2014 the fish sprite renders and moves toward the mouse (frame captures confirm steering behavior is working, with the `SteerComponent` active and `debug_enabled = true` set by `fish.gd`)\n\nThe debug dictionary now buffers the current velocity, scaled desired velocity, and steering force each time `steer()` runs (matching the pattern from Cashew OldDew's steering debug vectors tutorial), and `queue_redraw()` is called every frame while debugging is enabled so the overlay stays up to date.",
+    "duration_seconds": 297.55777072906494,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.951885,
+    "token_usage": {
+      "input_tokens": 301540,
+      "output_tokens": 3151,
+      "total_tokens": 304691,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

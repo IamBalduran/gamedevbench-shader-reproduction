@@ -1,0 +1,19 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,validation_source,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0071,deepseek_v4_pro,openai/deepseek-v4-pro,,,completed,1,False,WorldEnvironment with procedural sky missing,{},58,False,"OpenCode command failed (exit code -4)
+STDERR: ============================================================
+Bun v1.3.14 (0d9b296a) Linux x64 (baseline)
+WSL Kernel v6.18.33 | glibc v2.43
+CPU: sse42 popcnt avx avx2
+Args: ""opencode"" ""--user-agent=opencode/1.18.32"" ""--use-system-ca"" ""--"" ""run"" ""--format"" ""json"" ""--dir"" ""/workspace"" ""--variant"" ""high"" ""--model"" ""openai/deepseek-v4-pro"" ""Populate res://scenes/main.tscn so Main contains a water depth visuali""...
+Features: Bun.stderr(2) Bun.stdin(2) Bun.stdout(2) fetch(2) jsc standalone_executable 
+Builtins: ""bun:ffi"" ""bun:main"" ""bun:sqlite"" ""node:assert"" ""node:async_hooks"" ""node:buffer"" ""node:child_process"" ""node:crypto"" ""node:dns"" ""node:events"" ""node:fs"" ""node:fs/promises"" ""node:http"" ""node:https"" ""node:module"" ""node:net"" ""node:os"" ""node:path"" ""node:process"" ""node:querystring"" ""node:readline"" ""node:stream"" ""node:stream/consumers"" ""node:stream/promises"" ""node:string_decoder"" ""node:timers/promises"" ""node:tls"" ""node:tty"" ""node:url"" ""node:util"" ""node:zlib"" ""node:worker_threads"" ""ws"" ""node:v8"" ""node:http2"" ""node:diagnostics_channel"" ""node:dgram"" 
+Elapsed: 1170ms | User: 1448ms | Sys: 261ms
+RSS: 55.51MB | Peak: 0.44GB | Commit: 55.51MB | Faults: 1 | Machine: 33.45GB
+
+panic(main thread): Segmentation fault at address 0x7609206E46A8
+oh no: Bun has crashed. This indicates a bug in Bun, not your code.
+
+To send a redacted crash report to Bun's team,
+please file a GitHub issue using the link below:
+
+ https://bun.report/1.3.14/Ba10d9b296EugogC4664tE+quR0niswEmt/1wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEu65ixE2orhxEA2yg7Bwqj5tgB",1.187493085861206,0.0,,,False,deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_task_0071.json,official_results_json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0071/console/task_0071_attempt_1.log,8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905,99b1a95b7673bae2154d68f3bce3753dd1623f1fc3c99c2e141883d78addf247,2026-09-26T10:03:44+00:00,2026-09-26T10:04:18+00:00,1,solver_incomplete,,

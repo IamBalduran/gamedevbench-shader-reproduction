@@ -1,0 +1,24 @@
+{
+  "task_id": 159,
+  "name": "Battle Over Panel Expand D",
+  "instruction": "Create a battle over UI panel scene and its script. Add res://scenes/ui/battle_over_panel.tscn with a root Panel named BattleOverPanel, set process mode to Always, and stretch it to full rect. Override the panel style with a StyleBoxFlat using rgba(0, 0, 0, 0.47). Add a centered VBoxContainer with offsets -36/-36/36/36. Inside it, add a Label named Label with text \"Encounter Won\", centered horizontal and vertical alignment, and LabelSettings font_size 31. Add two Buttons named ContinueButton and RestartButton, each with custom_minimum_size (80, 28), size_flags_horizontal set to Expand, and texts \"Next Round\" and \"Reset Fight\" respectively. Create res://scenes/ui/battle_over_panel.gd that class_names BattleOverPanel, defines enum Type {WIN, LOSE}, binds the Label and both Buttons with % paths, connects ContinueButton to get_tree().quit and RestartButton to get_tree().reload_current_scene in _ready, and connects Events.battle_over_screen_requested to show_screen. Implement show_screen(text, type) to update the label text, toggle ContinueButton for WIN and RestartButton for LOSE, show the panel, and pause the scene tree.",
+  "metadata": {
+    "tutorial_source": "YouTube: GodotGameLab - Slay the Spire Clone Godot 4 Tutorial: SFX, Music & Adding New Content (S01 FINALE)",
+    "video_id": "GrDIg96Ames",
+    "github_repo": "https://github.com/guladam/deck_builder_tutorial",
+    "transcript_excerpt": "create a new scene ... root node will be a panel ... set to full rect ... override with a new style box flat ... full black color ... create a label and buttons ... connect buttons ... show screen and pause the tree",
+    "expected_nodes": [
+      "Panel",
+      "VBoxContainer",
+      "Label",
+      "Button"
+    ],
+    "key_properties": {
+      "process_mode": "Always",
+      "panel_style": "StyleBoxFlat rgba(0,0,0,0.34902)",
+      "label_font_size": 24
+    },
+    "source_variant_of": "task_0150",
+    "failure_mode": "Exact Godot Control size flag semantics must be restored correctly in the panel scene."
+  }
+}

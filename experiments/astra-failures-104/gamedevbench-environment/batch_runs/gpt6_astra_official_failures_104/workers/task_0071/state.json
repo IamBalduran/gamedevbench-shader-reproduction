@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0071"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0071": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:40:54+00:00",
+      "finished_at": "2026-09-25T17:51:35+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905",
+      "validator_sha256": "99b1a95b7673bae2154d68f3bce3753dd1623f1fc3c99c2e141883d78addf247",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0071/console/task_0071_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_014057_task_0071_23917",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": false,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.082911491394,
+      "cost_usd": 0.148092,
+      "input_tokens": 34569,
+      "output_tokens": 2959,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_014057_task_0071_23917/task_task_0071.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_014057_task_0071_23917/task_0071_opencode_20260926_015130/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_014057_task_0071_23917/task_0071_opencode_20260926_015130",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_014057_task_0071_23917/task_0071_opencode_20260926_015130/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:51:35+00:00"
+}

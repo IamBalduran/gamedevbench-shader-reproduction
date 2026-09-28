@@ -1,0 +1,130 @@
+[
+  {
+    "model": "gpt6_astra",
+    "task": "task_0093",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt6_astra_task_0093/audit_probe.log"
+  },
+  {
+    "model": "gpt6_astra",
+    "task": "task_0107",
+    "original_message": "Surface material is not a ShaderMaterial",
+    "solver_success": true,
+    "modified_exit": 1,
+    "messages": [
+      "VALIDATION_PASSED: View model shader applied and configured"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt6_astra_task_0107/audit_probe.log"
+  },
+  {
+    "model": "gpt6_astra",
+    "task": "task_0150",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt6_astra_task_0150/audit_probe.log"
+  },
+  {
+    "model": "gpt56_sol",
+    "task": "task_0093",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt56_sol_task_0093/audit_probe.log"
+  },
+  {
+    "model": "gpt56_sol",
+    "task": "task_0107",
+    "original_message": "Surface material is not a ShaderMaterial",
+    "solver_success": true,
+    "modified_exit": "timeout",
+    "messages": [],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt56_sol_task_0107/audit_probe.log"
+  },
+  {
+    "model": "gpt56_sol",
+    "task": "task_0150",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt56_sol_task_0150/audit_probe.log"
+  },
+  {
+    "model": "deepseek_v4_pro",
+    "task": "task_0093",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": false,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/deepseek_v4_pro_task_0093/audit_probe.log"
+  },
+  {
+    "model": "deepseek_v4_pro",
+    "task": "task_0107",
+    "original_message": "Surface material is not a ShaderMaterial",
+    "solver_success": true,
+    "modified_exit": "timeout",
+    "messages": [],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/deepseek_v4_pro_task_0107/audit_probe.log"
+  },
+  {
+    "model": "deepseek_v4_pro",
+    "task": "task_0150",
+    "original_message": "VBoxContainer must be centered with 0.5 anchors",
+    "solver_success": false,
+    "modified_exit": 1,
+    "messages": [
+      "VALIDATION_FAILED: VBoxContainer must be centered with 0.5 anchors"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/deepseek_v4_pro_task_0150/audit_probe.log"
+  },
+  {
+    "model": "kimi_k3",
+    "task": "task_0093",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/kimi_k3_task_0093/audit_probe.log"
+  },
+  {
+    "model": "kimi_k3",
+    "task": "task_0107",
+    "original_message": "Surface material is not a ShaderMaterial",
+    "solver_success": true,
+    "modified_exit": 1,
+    "messages": [
+      "VALIDATION_PASSED: View model shader applied and configured"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/kimi_k3_task_0107/audit_probe.log"
+  },
+  {
+    "model": "kimi_k3",
+    "task": "task_0150",
+    "original_message": "ContinueButton size_flags_horizontal must be Expand Fill",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Task completed successfully"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/kimi_k3_task_0150/audit_probe.log"
+  }
+]

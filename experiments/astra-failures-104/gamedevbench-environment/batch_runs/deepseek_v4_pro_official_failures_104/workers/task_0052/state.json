@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0052"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0052": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T08:18:34+00:00",
+      "finished_at": "2026-09-26T08:20:21+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "242421c4b38c9be6b95465e25dda1e968a496dd8508e73af565d09ed5037bf4a",
+      "validator_sha256": "890afb72c124ce6cab16633156ef276be3ddaf6434911542f482c461e670ec86",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0052/console/task_0052_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Failed to load Player scene.",
+      "official_details": "{}",
+      "validator_error_line": "10",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The script compiles and runs without errors. Changes made to `scripts/player.gd`:\n\n- Added `@export_range(0.0, 1.0) var friction = 0.1` and `@export_range(0.0, 1.0) var acceleration = 0.25`\n- Cached input as `dir` variable via `Input.get_axis(\"move_left\", \"move_right\")`\n- When `dir != 0`, velocity.x lerps toward `dir * speed` using `acceleration`\n- When idle (`dir == 0`), velocity.x lerps toward `0.0` using `friction`\n- Gravity, `move_and_slide()`, and jump gated on `is_on_floor()` all preserved",
+      "solver_duration": 81.75727868080139,
+      "cost_usd": 0.030462000000000003,
+      "input_tokens": 6054,
+      "output_tokens": 820,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_task_0052.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_0052_opencode_20260926_162019/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_0052_opencode_20260926_162019",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_161835_task_0052_196075/task_0052_opencode_20260926_162019/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T08:20:21+00:00"
+}

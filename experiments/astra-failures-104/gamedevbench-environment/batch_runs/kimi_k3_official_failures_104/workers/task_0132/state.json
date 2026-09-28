@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0132"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0132": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T19:37:17+00:00",
+      "finished_at": "2026-09-26T19:45:37+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "7c2c76a17d5a8bba7885377b51ddf2ad76bb08114d3cb3386ee2edb3b3dde4e2",
+      "validator_sha256": "08b8b50b43927db9ca389eed306a7774514f7baf5e6861ab9123ab61e38cce89",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0132/console/task_0132_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_033718_task_0132_293708",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "grid_scale must be derived from grid size, viewport, and zoom",
+      "official_details": "{}",
+      "validator_error_line": "50",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The minimap works exactly as intended:\n\n- Bottom-left HUD shows the blueprint grid with a wooden frame\n- Blue player arrow centered at the middle of the grid, pointing up (rotation + PI/2)\n- Mob (red jewel) and crate (yellow alert) markers related to their world positions, clamped to the grid edges at 0.75 scale when off the visible region\n\nLet me clean up the temporary test files and do a final review of all changed files.",
+      "solver_duration": 472.9929897785187,
+      "cost_usd": 2.7578880000000003,
+      "input_tokens": 891291,
+      "output_tokens": 5601,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_033718_task_0132_293708/task_task_0132.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033718_task_0132_293708/task_0132_opencode_20260927_034533/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033718_task_0132_293708/task_0132_opencode_20260927_034533",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033718_task_0132_293708/task_0132_opencode_20260927_034533/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T19:45:37+00:00"
+}

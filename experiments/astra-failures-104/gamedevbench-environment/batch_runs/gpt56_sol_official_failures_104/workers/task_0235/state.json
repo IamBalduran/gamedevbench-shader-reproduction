@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0235"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0235": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T04:49:41+00:00",
+      "finished_at": "2026-09-26T04:54:50+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "f48ba30495b7f381c494669e01526f7b1cb23428fef0fbf0abc4cc65140848d6",
+      "validator_sha256": "f303c8aa81a6c874360d6c353f33f146147a684095a5b598f8fb5af4664b4489",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0235/console/task_0235_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_124942_task_0235_166862",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "StarHighlight must cover the star with overlap above 85% (IoU=0.6104)",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Updated [`scenes/main.tscn`](/workspace/scenes/main.tscn) with:\n\n- Required `Level` transform and `Sprite2D` settings\n- `StarHighlights/StarHighlight` Polygon2D\n- Semi-transparent polygon aligned to the top yellow star\n\nVerified successfully in Godot 4.4.1 with a rendered frame and clean headless run.",
+      "solver_duration": 281.999694108963,
+      "cost_usd": 0.017464125,
+      "input_tokens": 19713,
+      "output_tokens": 1500,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_124942_task_0235_166862/task_task_0235.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_124942_task_0235_166862/task_0235_opencode_20260926_125447/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_124942_task_0235_166862/task_0235_opencode_20260926_125447",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_124942_task_0235_166862/task_0235_opencode_20260926_125447/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T04:54:50+00:00"
+}

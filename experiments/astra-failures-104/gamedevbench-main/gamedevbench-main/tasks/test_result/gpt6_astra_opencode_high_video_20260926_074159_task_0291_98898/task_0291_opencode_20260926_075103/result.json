@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0291",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "timestamp": "20260926_075103",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "Dragging state must reparent the card into the drag_overlay group",
+    "timestamp": "2026-09-26T07:51:03.455148"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code 1)\nFinal response: The harness starts cleanly in Godot 4.4.1, and the captured frame shows all three cards in Base state. Next I\u2019ll check the 55 ms release guard, target entry/exit, valid drops, and cancellation back to each original slot.",
+    "duration_seconds": 514.376627445221,
+    "is_rate_limited": false,
+    "model": "openai/gpt-6-astra",
+    "cost_usd": 0.10120499999999999,
+    "token_usage": {
+      "input_tokens": 6230,
+      "output_tokens": 5501,
+      "total_tokens": 11731,
+      "cache_read_tokens": 309316,
+      "cache_write_tokens": 0
+    }
+  }
+}

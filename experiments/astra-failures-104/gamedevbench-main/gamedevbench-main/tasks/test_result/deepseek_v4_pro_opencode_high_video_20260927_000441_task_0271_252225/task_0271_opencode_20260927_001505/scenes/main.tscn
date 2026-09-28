@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/battle_unit/battle_unit.tscn" id="1_battle_unit"]
+[ext_resource type="Resource" path="res://data/units/bjorn.tres" id="2_player_stats"]
+[ext_resource type="Resource" path="res://data/enemies/zombie.tres" id="3_enemy_stats"]
+
+[node name="Main" type="Node2D"]
+
+[node name="WizardUnit" parent="." groups=["wizards"] instance=ExtResource("1_battle_unit")]
+position = Vector2(0, 0)
+stats = ExtResource("2_player_stats")
+
+[node name="WarlockNear" parent="." groups=["warlocks"] instance=ExtResource("1_battle_unit")]
+position = Vector2(70, 0)
+stats = ExtResource("3_enemy_stats")
+
+[node name="WarlockFar" parent="." groups=["warlocks"] instance=ExtResource("1_battle_unit")]
+position = Vector2(160, 0)
+stats = ExtResource("3_enemy_stats")

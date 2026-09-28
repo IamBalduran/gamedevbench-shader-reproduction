@@ -1,0 +1,3 @@
+{
+  "instruction": "Update `res://assets/tile_set.tres` so the remaining solid tiles that currently lack collision shapes are given collisions. Add collision boxes to the water pipe tiles and the solid leaf block tiles that are still missing them. Use the same single full-tile rectangular collision polygon already used by the other solid tiles. All other tiles should remain without collision."
+}

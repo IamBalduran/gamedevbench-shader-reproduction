@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Draggable without overlaps must call self_destruct and queue_free",
+  "details": {},
+  "timestamp": "2026-09-26T01:08:45.688492"
+}

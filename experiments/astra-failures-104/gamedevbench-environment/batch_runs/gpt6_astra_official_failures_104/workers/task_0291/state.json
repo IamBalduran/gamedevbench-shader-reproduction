@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0291"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0291": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T23:41:55+00:00",
+      "finished_at": "2026-09-25T23:51:16+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "54814dbffc102fad26014d975ae7ea5a1e0f0fdf84c764447cbc7a5df22f3de1",
+      "validator_sha256": "628b42183b7dee5b534f7c07f987d5eca0576af9f67767a4c7686a84ee0d2f83",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0291/console/task_0291_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_074159_task_0291_98898",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Dragging state must reparent the card into the drag_overlay group",
+      "official_details": "{}",
+      "validator_error_line": "77",
+      "solver_success": false,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "OpenCode command failed (exit code 1)\nFinal response: The harness starts cleanly in Godot 4.4.1, and the captured frame shows all three cards in Base state. Next I’ll check the 55 ms release guard, target entry/exit, valid drops, and cancellation back to each original slot.",
+      "solver_duration": 514.376627445221,
+      "cost_usd": 0.10120499999999999,
+      "input_tokens": 6230,
+      "output_tokens": 5501,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_074159_task_0291_98898/task_task_0291.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_074159_task_0291_98898/task_0291_opencode_20260926_075103/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_074159_task_0291_98898/task_0291_opencode_20260926_075103",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_074159_task_0291_98898/task_0291_opencode_20260926_075103/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T23:51:17+00:00"
+}

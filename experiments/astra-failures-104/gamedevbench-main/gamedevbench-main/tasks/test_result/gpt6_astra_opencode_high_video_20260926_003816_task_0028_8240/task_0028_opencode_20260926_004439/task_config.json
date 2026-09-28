@@ -1,0 +1,3 @@
+{
+  "instruction": "Create a reusable FlashlightPoint marker scene that uses scripts/flashlight_point.gd to expose a Priority enum (low, medium, high), a has_been_targeted flag, and a reset_target_state() helper, then instance three FlashlightPoint nodes directly under Main in scenes/main.tscn. Place the nodes at (8.36166, 1.81915, -12.0301), (-16.6577, 2.41884, -39.9426), and (23.0185, 2.63927, -86.6948), keep them in the FlashlightPoints group, and set their priorities to medium, low, and high respectively."
+}

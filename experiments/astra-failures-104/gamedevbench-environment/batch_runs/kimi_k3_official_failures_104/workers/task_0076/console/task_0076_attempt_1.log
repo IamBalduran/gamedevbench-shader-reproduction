@@ -1,0 +1,56 @@
+Single task: task_0076 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_030344_task_0076_281308
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_task_0076.json
+{
+  "task_name": "task_0076",
+  "success": true,
+  "message": "Depth scene geometry matches tutorial setup",
+  "timestamp": "2026-09-27T03:09:07.873858",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The scene is complete and verified. `res://scenes/main.tscn` now contains:\n\n- **WorldEnvironment** \u2014 `Environment` with a `ProceduralSkyMaterial` (`background_mode = 2` (sky), `glow_enabled = true`)\n- **DirectionalLight3D** \u2014 angled down with `shadow_enabled = true`\n- **Water** (MeshInstance3D) \u2014 `PlaneMesh` with `size = 10\u00d710`, `subdivide_width = 20`, `subdivide_depth = 20`, and a `ShaderMaterial` pointing at `res://scenes/WaterShader.tres`\n- **Background** (Node3D) \u2014 exactly 5 sphere MeshInstance3Ds with green `StandardMaterial3D` overrides at the requested positions:\n  - Sphere `(-1.8, 0.2, 4.7)`, Sphere2 `(4.4, -0.3, 1.1)`, Sphere3 `(-4.7, 0.1, -0.4)`, Sphere4 `(2.2, -0.5, -4.3)`, Sphere5 `(0.3, 0.4, 2.9)`\n- **Camera3D** \u2014 `y = 1.0`, `fov = 30.0`, positioned at z = 16 with a ~3.6\u00b0 downward tilt so all 5 spheres are fully inside the frustum\n\nVisual verification (rendered with `godot --write-movie`) confirms the blue water plane with the procedural sky background and all five green spheres visible above/below the water surface. Godot 4.4.1 loads the scene with no errors.",
+  "solver_duration": 296.58463525772095,
+  "is_rate_limited": false,
+  "input_tokens": 151615,
+  "output_tokens": 2599,
+  "total_tokens": 154214,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.49383,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_3b69c843",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308/task_0076_opencode_20260927_030907"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_030344_task_0076_281308
+Final status: PASS | exit code: 0

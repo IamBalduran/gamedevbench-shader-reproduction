@@ -1,0 +1,56 @@
+Single task: task_0063 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_022757_task_0063_270344
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_022757_task_0063_270344/task_task_0063.json
+{
+  "task_name": "task_0063",
+  "success": false,
+  "message": "Top margin left padding must be 20",
+  "timestamp": "2026-09-27T02:34:18.976911",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The frame actually contains plenty of content (dark gradient spread across the viewport) \u2014 the earlier image read likely failed to render/display properly. The dump showed the scene tree is correct. The preview just confirms rendering works. Let me now clean up the temporary preview files and verify the actual `hud.tscn` file is final.",
+  "solver_duration": 361.6700165271759,
+  "is_rate_limited": false,
+  "input_tokens": 232098,
+  "output_tokens": 2933,
+  "total_tokens": 235031,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.740289,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_a99c011d",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_022757_task_0063_270344/task_0063_opencode_20260927_023418"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_022757_task_0063_270344
+Final status: FAILED/CANCELLED | exit code: 1

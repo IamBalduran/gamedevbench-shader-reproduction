@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0269"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0269": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T22:29:25+00:00",
+      "finished_at": "2026-09-25T22:35:51+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "a2fbcdabccbb6eddaa211a0e670abf000bf063086f03c46d33e138822d9513b4",
+      "validator_sha256": "db1d4bcbbd3ccfd01867351affa22854a7260082324115b4a1dd9fd33995979d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0269/console/task_0269_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_062926_task_0269_84781",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "DetectRange.base_range_size must be 26.0",
+      "official_details": "{}",
+      "validator_error_line": "53",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the security drone contact tracking setup.\n\n- Added the opposing-team group mapping in [unit_stats.gd](/workspace/data/units/unit_stats.gd).\n- Created [detect_range.gd](/workspace/custom_nodes/detect_range.gd) with the requested exports, collision layer/mask formulas, and circular range scaled by `attack_range`. The base range defaults to 32 pixels.\n- Created [target_finder.gd](/workspace/custom_nodes/target_finder.gd) with contact tracking, change signals, nearest opposing-unit selection, and `has_target_in_range()`.\n- Wired the nodes and exported references in [battle_unit.tscn](/workspace/scenes/battle_unit/battle_unit.tscn), and added the onready references and stats assignment in [battle_unit.gd](/workspace/scenes/battle_unit/battle_unit.gd).\n\nValidated with Godot 4.4.1: the project loads successfully, and runtime checks passed for nearest-target selection, both teams’ detection settings, contact entry/exit, non-unit filtering, empty groups, and stats reassignment.\n\nThe [visual verification image](/workspace/target_tracking_verification.png) confirms the close intruder is inside the drone’s detection range and the distant intruder is outside it.",
+      "solver_duration": 362.61090660095215,
+      "cost_usd": 0.162201,
+      "input_tokens": 29357,
+      "output_tokens": 4942,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_062926_task_0269_84781/task_task_0269.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_062926_task_0269_84781/task_0269_opencode_20260926_063549/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_062926_task_0269_84781/task_0269_opencode_20260926_063549",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_062926_task_0269_84781/task_0269_opencode_20260926_063549/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T22:35:51+00:00"
+}

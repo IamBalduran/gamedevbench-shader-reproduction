@@ -1,0 +1,67 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0055"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0055": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "",
+          "solver_message": null,
+          "run_name": "deepseek_v4_pro_opencode_high_video_20260926_162023_task_0055_196399",
+          "started_at": "2026-09-26T08:20:21+00:00",
+          "finished_at": "2026-09-26T08:26:41+00:00"
+        }
+      ],
+      "started_at": "2026-09-26T09:12:21+00:00",
+      "finished_at": "2026-09-26T09:55:42+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3b226d0cc57bc2b6eb93c43e061671ca011ca5d9ef6e6e478caa0dd5e0a28ced",
+      "validator_sha256": "7ac786c04c0ff80f74367dddc3fbcaa962163b9545a46d912ef26fbc53644070",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0055/console/task_0055_attempt_2.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_171224_task_0055_196911_retry2",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "player.gd must reference snappedf",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The game runs without errors and renders properly. The script is complete and working.\n\nThe implementation:\n- Reads the local mouse position each physics frame\n- Snaps the angle to 45-degree steps using `snapped(angle, PI/4)`\n- Converts to a 0-7 direction index using `wrapi`\n- When `left_mouse` is held and distance > 10px: plays `run0`-`run7`, moves toward mouse via `move_and_slide()`\n- Otherwise: plays `idle0`-`idle7` with zero velocity",
+      "solver_duration": 317.6409945487976,
+      "cost_usd": 0.22487400000000002,
+      "input_tokens": 64973,
+      "output_tokens": 1997,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_171224_task_0055_196911_retry2/task_task_0055.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171224_task_0055_196911_retry2/task_0055_opencode_20260926_175026/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171224_task_0055_196911_retry2/task_0055_opencode_20260926_175026",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171224_task_0055_196911_retry2/task_0055_opencode_20260926_175026/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T09:55:42+00:00"
+}

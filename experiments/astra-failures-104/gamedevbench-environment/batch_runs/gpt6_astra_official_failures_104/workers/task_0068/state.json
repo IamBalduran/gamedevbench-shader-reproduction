@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0068"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0068": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:29:10+00:00",
+      "finished_at": "2026-09-25T17:35:42+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "13cb795558216b854973920e9323c7b6fe5fbe465b4ecc4c3e22be12a08a881d",
+      "validator_sha256": "9e6c3826a2df22683f141ccd492671d194ca9cf0ef668483aba293f4b8712c17",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0068/console/task_0068_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_012912_task_0068_21202",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Crate must be destroyed after bullet hit",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated [bullet.gd](/workspace/scripts/entities/tank/weapon/bullet.gd:1) to:\n\n- Define `const SPEED = 500`.\n- Store the travel `direction` and firing `tank`.\n- Move every physics frame using `direction.normalized() * SPEED * delta`.\n- Queue itself for deletion on `area_entered`.\n- Destroy `Crate` bodies on `body_entered`, then queue itself for deletion.\n\nValidation completed successfully with Godot 4.4.1:\n\n- Headless project/editor parse check passed.\n- Runtime demo launched and rendered successfully.\n- Visual output showed bullets traveling toward the crates.",
+      "solver_duration": 364.6609365940094,
+      "cost_usd": 0.098151,
+      "input_tokens": 24267,
+      "output_tokens": 1690,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_012912_task_0068_21202/task_task_0068.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_012912_task_0068_21202/task_0068_opencode_20260926_013537/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_012912_task_0068_21202/task_0068_opencode_20260926_013537",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_012912_task_0068_21202/task_0068_opencode_20260926_013537/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:35:42+00:00"
+}

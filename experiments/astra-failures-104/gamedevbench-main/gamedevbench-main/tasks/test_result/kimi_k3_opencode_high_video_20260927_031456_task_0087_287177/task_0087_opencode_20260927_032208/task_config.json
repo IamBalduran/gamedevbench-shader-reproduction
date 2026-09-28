@@ -1,0 +1,3 @@
+{
+  "instruction": "In scenes/Player.tscn finish the Player Area2D by adding the `Sprite2d` that uses res://assets/sokoban_character.png sliced to several frames, a `CollisionShape2d` with a RectangleShape2D that is as large as the grid cell size, a `RayCast2d` that has collide_with_areas enabled, and an AnimationPlayer containing four clips named up, down, left, and right that key Sprite2d.frame for each movement row in the spritesheet. Name the nodes as described above, with lowercase `d` in `2d`. Each clip should be properly animated with 6 frames, and the first and only animation track should be Sprite2d.frame."
+}

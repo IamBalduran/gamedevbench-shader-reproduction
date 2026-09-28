@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl4gtvqpbx2pb"]
+
+[ext_resource type="Texture2D" uid="uid://ogksparxf2cn" path="res://assets/sprites/tree_image.jpg" id="2_igidl"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Trap" type="Node2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(1.6, 1.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Trap"]
+position = Vector2(64.5, 34.5)
+rotation = -1.5707964
+scale = Vector2(0.12, 0.05)
+texture = ExtResource("2_igidl")

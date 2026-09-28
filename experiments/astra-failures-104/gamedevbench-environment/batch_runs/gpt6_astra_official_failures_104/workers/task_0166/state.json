@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0166"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0166": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:50:32+00:00",
+      "finished_at": "2026-09-25T18:56:11+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "ab28fb467396f3404e033d8e52aa3d4f655755c05b94228bd9cd094dfce24811",
+      "validator_sha256": "4349268e2bbf3c4c54785ed3a3aceef0a6a340741ff87faa46d70acfdc9828b1",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0166/console/task_0166_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_025035_task_0166_44949",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "kick animation must enable DamageEmitter monitoring during the kick and disable it when the kick ends",
+      "official_details": "{}",
+      "validator_error_line": "115",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the standing kick across the three requested files.\n\n- [character.gd](/workspace/scenes/characters/character.gd:17): Added `State.KICK` and its `\"kick\"` animation mapping.\n- [player.gd](/workspace/scenes/characters/player.gd:18): Attacking while walking enters `KICK` and immediately stops ground movement. Attacking while idle still punches.\n- [player.tscn](/workspace/scenes/characters/player.tscn:117): Added a 0.3-second kick using all six valid fifth-row frames, **40–45**. `DamageEmitter.monitoring` turns on at 0.1 seconds and off at completion. The existing `on_action_complete` callback returns the player to idle.\n\nVerified in **Godot 4.4.1**: attack selection, movement stopping and resuming, all six frames, damage timing, completion, and existing airborne jumpkick behavior. The main scene also passed a 60-frame smoke run. Visually reviewed the [captured kick sequence](/workspace/.godot/kick_frames.png).",
+      "solver_duration": 300.29543018341064,
+      "cost_usd": 0.12057299999999999,
+      "input_tokens": 19676,
+      "output_tokens": 4103,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_025035_task_0166_44949/task_task_0166.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_025035_task_0166_44949/task_0166_opencode_20260926_025601/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_025035_task_0166_44949/task_0166_opencode_20260926_025601",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_025035_task_0166_44949/task_0166_opencode_20260926_025601/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:56:11+00:00"
+}

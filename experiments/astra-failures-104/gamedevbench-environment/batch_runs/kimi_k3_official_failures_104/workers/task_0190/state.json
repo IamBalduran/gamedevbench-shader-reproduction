@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0190"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0190": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T20:07:43+00:00",
+      "finished_at": "2026-09-26T20:13:48+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3c5c7cdcfde4c9696ea6d3879c325b9d8412576087772de8194cfb9bce71f8b9",
+      "validator_sha256": "1512896c9f4ce7a0a8e26d1c9f90308ed47dc5646f10ebfc70556c8327ddeb89",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0190/console/task_0190_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_040744_task_0190_300781",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Tile (8, 0) must remain without collision",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The game renders correctly with the updated tile set. The task is complete.\n\n## Summary\n\nI updated `res://assets/tile_set.tres` to add collision shapes to the remaining solid tiles that were missing them. By visually inspecting the tile atlas (`assets/sprites/tilemap.png`) and the rendered game scene, I identified that:\n\n- **Rows 6–8** contain the water pipe set (blue-violet pipes) and the solid green leaf blocks, but only some tiles in those groups had the standard full-tile collision polygon (`PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)`).\n\nI added the same single full-tile rectangular collision polygon to the 8 tiles that were missing it:\n\n- **Water pipe tiles**: `(8,0)`, `(10,3)`, `(11,2)`, `(11,3)` — completing the pipe set (joining `(7,2)`, `(9,0–2)`, `(10,0–2)`, `(11,0–1)` which already had collisions).\n- **Solid leaf block tiles**: `(7,1)`, `(7,3)`, `(12,1)`, `(12,2)` — completing the leaf block set (joining `(7,2)`, `(8,1–2)`, `(12,0)`, `(13,0)`).\n\nAll other tiles (clouds/leaves decorations at `(4,6–8)`, `(16,6–8)`, plants, crates, pipes' decorative variants `(7,4–8)`, `(8,3–8)`, etc.) remain without collision. Verified the result with a Godot script confirming exactly 62 full-tile collision polygons, all 8 required additions present, and no unexpected changes — plus a game render confirming nothing broke.",
+      "solver_duration": 341.03295612335205,
+      "cost_usd": 1.392108,
+      "input_tokens": 437056,
+      "output_tokens": 5396,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_040744_task_0190_300781/task_task_0190.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_040744_task_0190_300781/task_0190_opencode_20260927_041346/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_040744_task_0190_300781/task_0190_opencode_20260927_041346",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_040744_task_0190_300781/task_0190_opencode_20260927_041346/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T20:13:48+00:00"
+}

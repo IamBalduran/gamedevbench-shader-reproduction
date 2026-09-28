@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0057"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0057": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:09:42+00:00",
+      "finished_at": "2026-09-25T17:17:39+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "20ab6a3521c10492df4518123aae76b2277dda290490d9bd56eea92609608981",
+      "validator_sha256": "de834174bfe83a75853636430152234181fbe00d034e1b0989fbd895a177cc7d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0057/console/task_0057_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_010944_task_0057_15353",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Main needs at least two Unit instances for testing",
+      "official_details": "{}",
+      "validator_error_line": "20",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the reusable Unit scene and behavior.\n\nChanged:\n\n- [scenes/player.tscn](/workspace/scenes/player.tscn:1)\n  - `CharacterBody2D` root in the `units` group\n  - Collision layer `2`, mask `3`\n  - Sprite region set to `Rect2(960, 640, 64, 64)`\n  - `towerDefense_tilesheet.png` texture\n  - Aura shader material using `aura.gdshader`\n  - Body `CollisionShape2D` with radius `14`\n  - `Detect` `Area2D` with layer `2`, mask `2`\n  - Detection circle radius `35`\n\n- [scripts/unit.gd](/workspace/scripts/unit.gd:1)\n  - Exported `speed`\n  - `target_radius`\n  - `set_selected()` and `set_target()`\n  - Aura width toggles between `1.0` and `0.0`\n  - Duplicates the sprite material in `_ready()`\n  - `avoid()` uses `$Detect.get_overlapping_bodies()`\n  - Target movement uses `move_and_collide()`\n\nValidation completed with Godot 4.4.1:\n\n- Headless scene and behavior integration check passed.\n- Verified collision settings, texture region, shader, material isolation, selection behavior, movement, and avoidance.\n- Main scene rendered successfully with both units visible in the captured frame.\n- Godot exited cleanly after each run.",
+      "solver_duration": 437.5824496746063,
+      "cost_usd": 0.1572,
+      "input_tokens": 29290,
+      "output_tokens": 4622,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_010944_task_0057_15353/task_task_0057.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_010944_task_0057_15353/task_0057_opencode_20260926_011737/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_010944_task_0057_15353/task_0057_opencode_20260926_011737",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_010944_task_0057_15353/task_0057_opencode_20260926_011737/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:17:39+00:00"
+}

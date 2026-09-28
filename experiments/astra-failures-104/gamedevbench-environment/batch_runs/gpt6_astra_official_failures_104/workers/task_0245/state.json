@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0245"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0245": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T22:10:38+00:00",
+      "finished_at": "2026-09-25T22:18:21+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "5d1818665ef3b954bf73e70de0cac6fe03b860db6a0fc8de4c7638e5017340ce",
+      "validator_sha256": "c1c1c49b2a17875c926491b4aeb1dcc81d51c580c7782964c5663f0ff06317cd",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0245/console/task_0245_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_061040_task_0245_78563",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Gemstone highlight correctly covers the gemstone collectible",
+      "official_details": "{}",
+      "validator_error_line": "162",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated [main.tscn](/workspace/scenes/main.tscn):\n\n- `Level` position: `(180.812, 188.842)`\n- `Level` scale: `(0.52, 0.52)`\n- `Level` rotation: `-0.19`\n- `Sprite2D` uses `assets/sprites/platformer_coins.jpg`\n- `Sprite2D.centered = false`\n- Added `GemstoneHighlights` under `Level`\n- Added semi-transparent `GemstoneHighlight` Polygon2D under `GemstoneHighlights`\n- Polygon shaped and positioned over the gemstone\n\nVerified with Godot 4.4.1 by loading the scene headlessly and rendering a frame successfully.",
+      "solver_duration": 436.39349484443665,
+      "cost_usd": 0.092247,
+      "input_tokens": 18269,
+      "output_tokens": 2496,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_061040_task_0245_78563/task_task_0245.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061040_task_0245_78563/task_0245_opencode_20260926_061820/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061040_task_0245_78563/task_0245_opencode_20260926_061820",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_061040_task_0245_78563/task_0245_opencode_20260926_061820/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T22:18:21+00:00"
+}

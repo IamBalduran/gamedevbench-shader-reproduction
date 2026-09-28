@@ -1,0 +1,35 @@
+{
+  "task_id": 82,
+  "name": "Assemble Crusader Sprite Sheet Animation",
+  "instruction": "In scenes/Player.tscn finish the Player CharacterBody2D by switching motion_mode to Floating, adding an AnimatedSprite2D that uses the Isometric Mini-Crusader sprite set with animations idle0 through idle7 and run0 through run7 (default to idle0, with animation speed scale 2.0), and add a CollisionShape2D rectangle positioned at (7, 44) with a 66x24 size so the collider hugs the feet. Note that animations are ordered in clockwise order starting from right, so idle0 should face right, idle1 faces bottom-right, idle2 faces bottom, etc.; the same applies to run0 through run7. For Each spritesheet can be sliced into 8*N regions (do not set margins, trim empty space, or do anything like that). Use the crusader_idle spritesheet for the idle animation, but crusader_walk for the run animations. Name the nodes the same as each node's class names (AnimatedSprite2D and CollisionShape2D, case sensitive).",
+  "metadata": {
+    "tutorial_source": "KidsCanCode \u2013 8-Directional Movement/Animation",
+    "github_repo": "https://github.com/godotrecipes/8_direction_animation",
+    "godot_version": "4.5",
+    "transcript_excerpt": "The animations are organized in folders, with a separate image for each frame. We\u2019ll use an AnimatedSprite2D and we\u2019ll name each animation based on its direction ... idle0 pointing to the right and going clockwise to idle7.",
+    "expected_nodes": [
+      "Player",
+      "Player/AnimatedSprite2D",
+      "Player/CollisionShape2D"
+    ],
+    "key_properties": {
+      "Player.motion_mode": "CharacterBody2D.MOTION_MODE_FLOATING",
+      "AnimatedSprite2D.sprite_frames": "Contains idle0-idle7 and run0-run7 animations",
+      "AnimatedSprite2D.animation": "idle0",
+      "AnimatedSprite2D.speed_scale": 2.0,
+      "CollisionShape2D.shape": "RectangleShape2D sized 66x24",
+      "CollisionShape2D.position": "Vector2(7, 44)"
+    },
+    "categories": [
+      "graphics",
+      "animation",
+      "physics"
+    ],
+    "validation_focus": [
+      "AnimatedSprite2D animation names",
+      "SpriteFrames frame counts",
+      "Collider sizing and offset",
+      "CharacterBody2D motion mode"
+    ]
+  }
+}

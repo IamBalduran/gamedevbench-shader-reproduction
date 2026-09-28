@@ -1,0 +1,21 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,validation_source,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0121,kimi_k3,openai/kimi-k3,,,completed,1,False,Panel background color must be RPG blue (#1743 8C),{},105,True,"Everything is verified. The task is complete.
+
+## Summary
+
+**`scenes/portrait_balloon.tscn`** — rebuilt the dialogue layout:
+
+1. **HBoxContainer layout**: The inner `MarginContainer` now wraps an `HBoxContainer` (30 px separation) containing:
+   - the `VBoxContainer` text column (CharacterLabel + DialogueLabel, `size_flags_horizontal = 3` so it expands), then
+   - the `PortraitTexture` (`TextureRect`, 150×150 min size, `unique_name_in_owner = true`) — ordered **after** the VBox so it renders to the **right** of the dialogue text.
+2. **Theme updates**:
+   - All four MarginContainer margins set to **30 px**
+   - Default font size set to **26**
+   - Panel background switched to **RPG blue #17438C**
+   - Response button StyleBoxFlats: **#0F2E66** (darker blue, normal) and **#285FA8** (lighter blue, focus; hover also uses focus style)
+
+**`scenes/main.tscn` / `scenes/main.gd`** — small demo script that loads the hero portrait into the `%PortraitTexture` slot at runtime for visual confirmation.
+
+**Verification** (Godot 4.4.1):
+- Scene instantiates cleanly; node tree, separation, min size, unique-name flag (`%PortraitTexture` lookup works), all margins, font size 26, panel `#17438C`, and button colors all confirmed via script inspection.
+- Rendered frames show the RPG-blue balloon with the text column on the left, the hero portrait on the right, and a matching blue ""Continue"" response button below.",239.72476816177368,0.560754,169803,3423,False,kimi_k3_opencode_high_video_20260927_033713_task_0121_293658,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_task_0121.json,official_results_json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_033713_task_0121_293658/task_0121_opencode_20260927_034137/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0121/console/task_0121_attempt_1.log,06b3ac8689855ec8beef2d2ac7bda36c0823a6542fc39e98efa8b7e82343a4ff,7e45f6875d75c8c139e4642c54f8addb34f8763a856785db40c336e19f841dd4,2026-09-26T19:37:12+00:00,2026-09-26T19:41:39+00:00,1,official_fail_review_needed,,

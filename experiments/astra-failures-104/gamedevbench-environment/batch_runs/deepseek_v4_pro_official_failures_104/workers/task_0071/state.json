@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0071"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0071": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T10:03:44+00:00",
+      "finished_at": "2026-09-26T10:04:18+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905",
+      "validator_sha256": "99b1a95b7673bae2154d68f3bce3753dd1623f1fc3c99c2e141883d78addf247",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0071/console/task_0071_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "WorldEnvironment with procedural sky missing",
+      "official_details": "{}",
+      "validator_error_line": "58",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode command failed (exit code -4)\nSTDERR: ============================================================\nBun v1.3.14 (0d9b296a) Linux x64 (baseline)\nWSL Kernel v6.18.33 | glibc v2.43\nCPU: sse42 popcnt avx avx2\nArgs: \"opencode\" \"--user-agent=opencode/1.18.32\" \"--use-system-ca\" \"--\" \"run\" \"--format\" \"json\" \"--dir\" \"/workspace\" \"--variant\" \"high\" \"--model\" \"openai/deepseek-v4-pro\" \"Populate res://scenes/main.tscn so Main contains a water depth visuali\"...\nFeatures: Bun.stderr(2) Bun.stdin(2) Bun.stdout(2) fetch(2) jsc standalone_executable \nBuiltins: \"bun:ffi\" \"bun:main\" \"bun:sqlite\" \"node:assert\" \"node:async_hooks\" \"node:buffer\" \"node:child_process\" \"node:crypto\" \"node:dns\" \"node:events\" \"node:fs\" \"node:fs/promises\" \"node:http\" \"node:https\" \"node:module\" \"node:net\" \"node:os\" \"node:path\" \"node:process\" \"node:querystring\" \"node:readline\" \"node:stream\" \"node:stream/consumers\" \"node:stream/promises\" \"node:string_decoder\" \"node:timers/promises\" \"node:tls\" \"node:tty\" \"node:url\" \"node:util\" \"node:zlib\" \"node:worker_threads\" \"ws\" \"node:v8\" \"node:http2\" \"node:diagnostics_channel\" \"node:dgram\" \nElapsed: 1170ms | User: 1448ms | Sys: 261ms\nRSS: 55.51MB | Peak: 0.44GB | Commit: 55.51MB | Faults: 1 | Machine: 33.45GB\n\npanic(main thread): Segmentation fault at address 0x7609206E46A8\noh no: Bun has crashed. This indicates a bug in Bun, not your code.\n\nTo send a redacted crash report to Bun's team,\nplease file a GitHub issue using the link below:\n\n https://bun.report/1.3.14/Ba10d9b296EugogC4664tE+quR0niswEmt/1wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEm+91wEg0h1wEo680wEu65ixE2orhxEA2yg7Bwqj5tgB",
+      "solver_duration": 1.187493085861206,
+      "cost_usd": 0.0,
+      "input_tokens": "",
+      "output_tokens": "",
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_task_0071.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_180345_task_0071_203645/task_0071_opencode_20260926_180416/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T10:04:18+00:00"
+}

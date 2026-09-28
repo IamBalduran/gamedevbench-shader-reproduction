@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0055"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0055": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T17:08:47+00:00",
+      "finished_at": "2026-09-25T17:22:54+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3b226d0cc57bc2b6eb93c43e061671ca011ca5d9ef6e6e478caa0dd5e0a28ced",
+      "validator_sha256": "7ac786c04c0ff80f74367dddc3fbcaa962163b9545a46d912ef26fbc53644070",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0055/console/task_0055_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_011051_task_0055_15513",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "player.gd must reference snappedf",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Updated `scripts/player.gd` to:\n- Read the local mouse vector each physics frame.\n- Snap its angle to 45° steps and wrap the index to `0–7`.\n- Play matching `idle0–idle7` or `run0–run7` animations.\n- Move toward the mouse using `move_and_slide()` while `left_mouse` is held and distance exceeds 10 pixels; otherwise use zero velocity and idle animations.\n\nVerified in Godot 4.4.1: all eight directions, angle wrapping, movement, release-to-stop, and the 10-pixel threshold passed. Captured and inspected idle and run frames.",
+      "solver_duration": 304.9301493167877,
+      "cost_usd": 0.167301,
+      "input_tokens": 40262,
+      "output_tokens": 3101,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_011051_task_0055_15513/task_task_0055.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011051_task_0055_15513/task_0055_opencode_20260926_011802/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011051_task_0055_15513/task_0055_opencode_20260926_011802",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_011051_task_0055_15513/task_0055_opencode_20260926_011802/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T17:22:54+00:00"
+}

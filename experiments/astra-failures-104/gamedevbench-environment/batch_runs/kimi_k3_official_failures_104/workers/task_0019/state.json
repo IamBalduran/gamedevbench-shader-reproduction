@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0019"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0019": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T17:35:59+00:00",
+      "finished_at": "2026-09-26T17:45:33+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "validator_sha256": "785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0019/console/task_0019_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_013600_task_0019_259944",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "MuzzleFireLeft must use the muzzle flash shader material",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "All checks pass — the leak warnings are just from my validation script not freeing the instantiated scene before `quit()`, not a scene issue. Everything is verified:\n\n**Summary of changes:**\n\n**`scenes/effects/muzzle_flash_effect.tscn`** — rebuilt as a layered prefab:\n- **Root `MuzzleFlashEffect` (Node3D)** — attaches `scripts/generic_effect_handler.gd`, with `optional_light_path = MuzzleFlash` (the OmniLight3D child) and `light_duration = 0.2` (0.2 s fade).\n- **`MuzzleFlash` (OmniLight3D)** — warm-orange flash light (energy 4, range 5) that the handler tweens to 0 over 0.2 s.\n- **`SmokeParticles` (GPUParticles3D)** — one-shot, 24 particles, 1.2 s lifetime; process material has **gravity = (0,0,0)** and a scale-growth curve; draw pass is a `SphereMesh` whose **StandardMaterial3D** uses a **radial GradientTexture2D** (fill = 1) with **particle billboard mode = 3** for camera-facing volumetric smoke puffs.\n- **`MuzzleFireLeft` / `MuzzleFireRight` (GPUParticles3D)** — opposing one-shot bursts (Left rotated 180° so its +X direction points opposite Right), 8 particles, 0.3 s lifetime, explosiveness 1.0; draw-pass **QuadMesh** with a **ShaderMaterial** based on `assets/shaders/muzzle_flash.gdshader` (`cull_disabled` renders both sides).\n\n**`scenes/main.tscn`** — keeps `MuzzleFlashEffect` instantiated under `Main` (and adds a dim `DirectionalLight3D` so the scene isn't pitch black before the flash fires).\n\nVerified by running the game: frame captures show the fire burst at ~f2, expanding billboarding smoke at f3–f5, fade and self `queue_free` after ~1.2 s (screen returns to black).",
+      "solver_duration": 548.1534411907196,
+      "cost_usd": 0.776373,
+      "input_tokens": 231681,
+      "output_tokens": 5422,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_013600_task_0019_259944/task_task_0019.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_013600_task_0019_259944/task_0019_opencode_20260927_014531/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_013600_task_0019_259944/task_0019_opencode_20260927_014531",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_013600_task_0019_259944/task_0019_opencode_20260927_014531/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T17:45:33+00:00"
+}

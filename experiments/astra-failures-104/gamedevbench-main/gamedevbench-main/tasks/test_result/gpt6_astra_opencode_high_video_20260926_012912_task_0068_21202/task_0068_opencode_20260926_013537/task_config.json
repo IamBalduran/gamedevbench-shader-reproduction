@@ -1,0 +1,3 @@
+{
+  "instruction": "Update res://scripts/entities/tank/weapon/bullet.gd so the Bullet has const SPEED = 500, stores its travel direction and firing tank, moves every physics frame by direction.normalized() * SPEED * delta, queues itself when area_entered fires, and on body_entered destroys Crate bodies before calling queue_free()."
+}

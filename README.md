@@ -1,4 +1,15 @@
-# GameDevBench Shader 子集复现实验
+# GameDevBench 复现实验 / Reproduction Experiments
+
+本仓库保存两个独立实验，分别维护题集、检查点、结果和审计结论：
+
+| 实验 / Experiment | 状态 / Status | 入口 / Entry |
+|---|---|---|
+| Shader 子集 / Shader subset | 48/48，已完成 / complete | [结果 / Results](RESULTS_AND_VALIDATOR_AUDIT.md) |
+| 官方 Astra 失败题 / Published Astra failure subset | 380/416，进行中快照 / incomplete snapshot | [实验说明 / Experiment README](experiments/astra-failures-104/README.md) |
+
+第二个实验的 Kimi 已完成68/104，其余三个模型各104/104。尚缺36题，不按失败计分；报告会随后续实验更新。下文介绍之前的 Shader 实验。
+
+## 中文：Shader 实验
 
 基于 [waynchi/gamedevbench](https://github.com/waynchi/gamedevbench) 的 12 道 Shader 相关任务，对 GPT-6 Astra、GPT-5.6 Sol、DeepSeek V4 Pro、Kimi K3 各运行一遍，共 48 条记录。保留官方验证器原判分、模型产物、求解器记录，并单独审计疑似假阴性。实验日期：2026-09-24～25。
 
@@ -53,3 +64,35 @@ python .\gamedevbench-environment\secure_key.py save
 ## 与原作者评测的关系
 
 任务输入和官方验证器来自上游；本仓库没有为提高分数而改动验证器。每道题的官方判分以对应 `result_json` 为准，审计结论另见报告。作者发布的 Astra/Codex 全量结果是对照数据；本地 Astra 使用 OpenCode、不同供应商路径和并发设置，不能解释成同一实验配置。上游仓库：[waynchi/gamedevbench](https://github.com/waynchi/gamedevbench)。
+
+## English
+
+We archive two separate GameDevBench reproduction experiments in this repository. The original **12-task Shader subset** remains at the repository root (48/48 model-task records). The new **104-task published Astra failure subset** lives under [experiments/astra-failures-104](experiments/astra-failures-104/README.md), with its own inputs, checkpoints, outputs, trajectories and reports. It is an **incomplete snapshot: 380/416 records**, not a finished four-model benchmark. Kimi has 68/104 completed tasks; the other three models each have 104/104. Missing cases are not counted as failures.
+
+For the Shader study, start with [the validator audit](RESULTS_AND_VALIDATOR_AUDIT.md) and [the portable evidence table](results/comparison_portable.csv). Official pass counts are Astra 7/12, Sol 4/12, DeepSeek 2/12 and Kimi 3/12. These are original scores, not manually corrected results. Solver failures and validator concerns are reported separately.
+
+The archive includes task inputs, official validators, generated projects, visible agent/tool trajectories, results and audit evidence. API credentials, local Python environments, Godot caches and downloaded binaries are excluded. Upstream code is provided under its [Apache-2.0 license](gamedevbench-main/gamedevbench-main/LICENSE); bundled assets retain their respective upstream terms.
+
+To check the original Shader archive without model calls, run `python tools/verify_package.py`. Its reproduction environment is Windows with WSL Ubuntu, Godot 4.4.1 and OpenCode 1.18.32. `bash gamedevbench-environment/setup.sh` installs dependencies without starting model tasks. Then save your own key locally using `python gamedevbench-environment/secure_key.py save`; `./Run-Shader-Comparison.ps1 -Status` reads checkpoints and `./Run-Shader-Comparison.ps1 -Parallel 2` runs/resumes tasks and incurs API charges. Preserve the historical snapshot before rerunning it.
+
+The published author baseline uses Codex, whereas these experiments use OpenCode through Shubiaobiao. Agent/provider differences and task selection prevent a controlled model-only comparison. Task text is supplied to solvers; hidden validators are kept separate from solver feedback. Audit conclusions remain separate from original scores.
+
+## 代表性截图 / Representative screenshots
+
+以下截图由真实结果与轨迹摘录渲染，非实时终端截图；轨迹参数有截短，完整原文保存在日志。
+These screenshots render saved results and trace excerpts, not a live terminal; tool arguments are shortened and the full logs are retained.
+
+### 四模型结果与未完成状态 / Results and incomplete status
+
+![四模型结果与未完成状态 / Results and incomplete status](experiments/astra-failures-104/docs/screenshots/01-results.png)
+
+### Astra 的工具调用与最终回复 / Astra tool calls and final response
+
+![Astra 的工具调用与最终回复 / Astra tool calls and final response](experiments/astra-failures-104/docs/screenshots/02-trajectory.png)
+
+### 错误枚举断言与离线复测 / Incorrect enum assertion and offline replay
+
+![错误枚举断言与离线复测 / Incorrect enum assertion and offline replay](experiments/astra-failures-104/docs/screenshots/03-validator.png)
+
+
+发布副本中的一份轨迹已遮盖疑似密钥字符串；本地原始证据未修改。One published trajectory has credential-shaped text redacted; original local evidence is unchanged.

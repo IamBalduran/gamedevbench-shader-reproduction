@@ -1,0 +1,48 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-6-astra",
+  "small_model": "openai/gpt-6-astra",
+  "default_agent": "build",
+  "enabled_providers": [
+    "openai"
+  ],
+  "permission": "allow",
+  "provider": {
+    "openai": {
+      "npm": "@ai-sdk/openai",
+      "name": "Shubiaobiao",
+      "options": {
+        "baseURL": "https://api.shubiaobiao.cn/v1",
+        "apiKey": "{env:OPENAI_API_KEY}",
+        "timeout": false
+      },
+      "models": {
+        "gpt-6-astra": {
+          "name": "GPT-6 Astra"
+        }
+      }
+    }
+  },
+  "mcp": {
+    "godot-screenshot": {
+      "type": "local",
+      "command": [
+        "uv",
+        "run",
+        "gamedevbench-mcp"
+      ],
+      "enabled": true,
+      "timeout": 30000
+    }
+  },
+  "agent": {
+    "build": {
+      "model": "openai/gpt-6-astra",
+      "steps": 30
+    }
+  },
+  "autoupdate": false,
+  "plugin": [
+    "file:///mnt/d/ShaderAgent/re/gamedevbench-main/gamedevbench-main/gamedevbench/shubiaobiao_plugin.mjs"
+  ]
+}

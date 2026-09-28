@@ -1,0 +1,3 @@
+{
+  "instruction": "Update scripts/player.gd so the Player CharacterBody2D reads the local mouse vector each physics frame, snaps the angle to 45-degree steps, wraps it into the 0-7 range, and plays the matching AnimatedSprite2D animation with the angle appended (e.g., idle0, idle1, etc.). When left_mouse is held and the mouse distance exceeds 10 pixels, switch to run animations (e.g., run0, run1, etc.) and move with move_and_slide() toward the mouse; otherwise, stay on idle animations with zero velocity."
+}

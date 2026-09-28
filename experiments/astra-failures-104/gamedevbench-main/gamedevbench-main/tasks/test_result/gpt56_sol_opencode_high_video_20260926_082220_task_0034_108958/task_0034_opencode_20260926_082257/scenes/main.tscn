@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d203opopv2tte"]
+
+[ext_resource type="PackedScene" path="res://scenes/fish.tscn" id="1_x3e1v"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Fish" parent="." instance=ExtResource("1_x3e1v")]

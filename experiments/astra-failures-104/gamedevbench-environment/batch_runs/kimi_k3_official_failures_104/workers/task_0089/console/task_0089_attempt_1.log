@@ -1,0 +1,56 @@
+Single task: task_0089 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_032019_task_0089_287813
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_032019_task_0089_287813/task_task_0089.json
+{
+  "task_name": "task_0089",
+  "success": false,
+  "message": "Label text incorrect",
+  "timestamp": "2026-09-27T03:26:59.832818",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "The UI IS rendering \u2014 the image viewer just mis-rendered it. Now let me verify functionally by simulating button presses and checking AudioManager state transitions:",
+  "solver_duration": 378.21460819244385,
+  "is_rate_limited": false,
+  "input_tokens": 242244,
+  "output_tokens": 3672,
+  "total_tokens": 245916,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.781812,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_31f84dbc",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_032019_task_0089_287813/task_0089_opencode_20260927_032659"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_032019_task_0089_287813
+Final status: FAILED/CANCELLED | exit code: 1

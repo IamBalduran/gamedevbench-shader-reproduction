@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://hud605start"]
+
+[sub_resource type="Gradient" id="Gradient_game_over"]
+colors = PackedColorArray(0.0588235, 0.0784314, 0.164706, 0.96, 0.4, 0.0666667, 0.27451, 0.96)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_game_over"]
+gradient = SubResource("Gradient_game_over")
+width = 640
+height = 480
+fill_from = Vector2(0, 0)
+fill_to = Vector2(1, 1)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 128.0
+offset_bottom = 23.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Health" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Health: 100"
+
+[node name="Score" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Score: 0"
+
+[node name="GameOver" type="MarginContainer" parent="."]
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 100
+
+[node name="Background" type="TextureRect" parent="GameOver"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_game_over")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Labels" type="VBoxContainer" parent="GameOver"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Game Over!!!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "your score is 0"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="GameOver/Labels"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "your high score is 100"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOver"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="menu" type="Button" parent="GameOver/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "menu"
+
+[node name="restart" type="Button" parent="GameOver/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "restart"

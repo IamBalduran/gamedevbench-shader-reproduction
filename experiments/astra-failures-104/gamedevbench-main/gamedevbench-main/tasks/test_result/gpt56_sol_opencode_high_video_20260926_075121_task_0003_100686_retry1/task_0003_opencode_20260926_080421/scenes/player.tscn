@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://bvqxo8n4xhc2j"]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/sprites-Sheet.png" id="1_0pln3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/Free Smoke Fx  Pixel 04.png" id="2_smoke"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_default"]
+atlas = ExtResource("1_0pln3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_left"]
+atlas = ExtResource("1_0pln3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_right"]
+atlas = ExtResource("1_0pln3")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_0"]
+atlas = ExtResource("2_smoke")
+region = Rect2(0, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_1"]
+atlas = ExtResource("2_smoke")
+region = Rect2(64, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_2"]
+atlas = ExtResource("2_smoke")
+region = Rect2(128, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_3"]
+atlas = ExtResource("2_smoke")
+region = Rect2(192, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_4"]
+atlas = ExtResource("2_smoke")
+region = Rect2(256, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_5"]
+atlas = ExtResource("2_smoke")
+region = Rect2(320, 384, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_explode_6"]
+atlas = ExtResource("2_smoke")
+region = Rect2(384, 384, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+animations = [{
+	"frames": [{
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_default")
+	}],
+	"loop": true,
+	"name": &"default",
+	"speed": 5.0
+}, {
+	"frames": [{
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_left")
+	}],
+	"loop": true,
+	"name": &"left",
+	"speed": 5.0
+}, {
+	"frames": [{
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_right")
+	}],
+	"loop": true,
+	"name": &"right",
+	"speed": 5.0
+}, {
+	"frames": [{
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_0")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_1")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_2")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_3")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_4")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_5")
+	}, {
+	"duration": 1.0,
+	"texture": SubResource("AtlasTexture_explode_6")
+	}],
+	"loop": false,
+	"name": &"explode",
+	"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_player")
+animation = &"default"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_player")

@@ -1,0 +1,49 @@
+{
+  "task_name": "task_0003",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "timestamp": "20260926_075544",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "AnimatedSprite2D missing 'left' animation",
+    "timestamp": "2026-09-26T07:55:44.722958"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code 1)\nFinal response: The source dimensions confirm a 16-pixel jet grid and a 64-pixel smoke grid. I\u2019m enlarging the relevant atlas regions to avoid guessing frame coordinates, then I\u2019ll encode the chosen frames directly as `AtlasTexture` resources in the scene.",
+    "duration_seconds": 243.8437728881836,
+    "is_rate_limited": false,
+    "model": "openai/gpt-5.6-sol",
+    "cost_usd": 0.0364675,
+    "token_usage": {
+      "input_tokens": 28590,
+      "output_tokens": 1225,
+      "total_tokens": 29815,
+      "cache_read_tokens": 10240,
+      "cache_write_tokens": 0
+    }
+  }
+}

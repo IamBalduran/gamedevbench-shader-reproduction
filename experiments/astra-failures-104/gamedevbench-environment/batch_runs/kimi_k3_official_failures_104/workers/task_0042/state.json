@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0042"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0042": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:04:37+00:00",
+      "finished_at": "2026-09-26T18:15:02+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "08c1f058807ca8670df239b31e4d91b3c8eee54100ed8386dbad3c6f74049dd2",
+      "validator_sha256": "b841986c7a2367c1100e7869e981bdc7f17ad098a94c8de6c70fc5c7bc900566",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0042/console/task_0042_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_020439_task_0042_267005",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "new_ball must trigger camera shake velocity change",
+      "official_details": "{}",
+      "validator_error_line": "38",
+      "solver_success": false,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.1509878635406,
+      "cost_usd": 0.288807,
+      "input_tokens": 85924,
+      "output_tokens": 2069,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_020439_task_0042_267005/task_task_0042.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_020439_task_0042_267005/task_0042_opencode_20260927_021500/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_020439_task_0042_267005/task_0042_opencode_20260927_021500",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_020439_task_0042_267005/task_0042_opencode_20260927_021500/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:15:02+00:00"
+}

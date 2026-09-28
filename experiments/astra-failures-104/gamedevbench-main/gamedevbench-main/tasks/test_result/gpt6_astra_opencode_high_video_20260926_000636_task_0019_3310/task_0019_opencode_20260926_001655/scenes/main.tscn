@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://task0620_start_main"]
+
+[ext_resource type="PackedScene" path="res://scenes/effects/muzzle_flash_effect.tscn" id="1_e4p0h"]
+
+[sub_resource type="Environment" id="Environment_preview"]
+background_mode = 1
+background_color = Color(0.025, 0.035, 0.055, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_preview")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4)
+current = true
+fov = 40.0
+
+[node name="MuzzleFlashEffect" parent="." instance=ExtResource("1_e4p0h")]

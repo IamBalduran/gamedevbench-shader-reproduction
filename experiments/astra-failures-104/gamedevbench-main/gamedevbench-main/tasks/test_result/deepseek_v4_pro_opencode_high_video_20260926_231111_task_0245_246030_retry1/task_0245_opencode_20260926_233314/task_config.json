@@ -1,0 +1,3 @@
+{
+  "instruction": "Keep the Level node aligned to the viewport with position (180.812, 188.842), scale (0.52, 0.52), and rotation -0.19 radians. Keep Sprite2D using assets/sprites/platformer_coins.jpg with centered set to false. Add a Node2D named GemstoneHighlights under the Level node. Inside GemstoneHighlights, create a semi-transparent Polygon2D named GemstoneHighlight. Shape and place the polygon so it closely covers the gemstone."
+}

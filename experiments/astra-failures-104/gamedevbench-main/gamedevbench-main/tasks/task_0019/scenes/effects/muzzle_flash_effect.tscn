@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://task0620_start_effect"]
+
+[node name="MuzzleFlashEffect" type="Node3D"]

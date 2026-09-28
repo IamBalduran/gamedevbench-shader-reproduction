@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0002"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0002": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T23:51:19+00:00",
+      "finished_at": "2026-09-25T23:54:36+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "e29ee4a43d807ffe3107f827228171cb46cedabc3d2608b14c2bd46c8baea139",
+      "validator_sha256": "69b4daf0dec7db66f4ddfc46ff42309921ec5dae51fc72ee18d0b24f346ee515",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0002/console/task_0002_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_075121_task_0002_100688",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Projectile updates quest steps correctly and UI is present for visual feedback",
+      "official_details": "{}",
+      "validator_error_line": "52",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented and verified with Godot 4.4.1:\n\n- Enemy overlap advances `shoot_em_up` / `kill_step`.\n- Projectile queues itself for deletion after impact.\n- Projectile is removed beyond a 50-pixel viewport margin.\n- Fixed enemy group registration and autoload access.\n- Headless runtime and physics collision tests pass.",
+      "solver_duration": 172.4107484817505,
+      "cost_usd": 0.041623375000000004,
+      "input_tokens": 15147,
+      "output_tokens": 3973,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_075121_task_0002_100688/task_task_0002.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075121_task_0002_100688/task_0002_opencode_20260926_075434/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075121_task_0002_100688/task_0002_opencode_20260926_075434",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075121_task_0002_100688/task_0002_opencode_20260926_075434/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T23:54:36+00:00"
+}

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://portrait_main_start"]
+
+[ext_resource type="PackedScene" path="res://scenes/portrait_balloon.tscn" id="1"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="2"]
+
+[node name="Main" type="Node"]
+script = ExtResource("2")
+
+[node name="PortraitBalloon" parent="." instance=ExtResource("1")]

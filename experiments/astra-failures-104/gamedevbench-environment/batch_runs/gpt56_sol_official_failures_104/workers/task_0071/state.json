@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0071"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0071": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T01:06:10+00:00",
+      "finished_at": "2026-09-26T01:15:45+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "8a0bf76b167d263a195e61eebab529bca0fd0f098a864a3512284c09168c9905",
+      "validator_sha256": "99b1a95b7673bae2154d68f3bce3753dd1623f1fc3c99c2e141883d78addf247",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0071/console/task_0071_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_090611_task_0071_117914",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented `res://scenes/main.tscn` with:\n\n- Procedural sky and glow-enabled `WorldEnvironment`\n- Shadow-enabled `DirectionalLight3D`\n- 10x10 water plane subdivided 20x20 using `WaterShader.tres`\n- Exactly five green sphere meshes at the requested positions\n- Camera at `(0, 0.6, 0.2)` with 110° FOV\n- All spheres visible in the rendered scene\n\nValidated successfully with Godot 4.4.1 and captured a rendered frame showing the scene.",
+      "solver_duration": 540.7979946136475,
+      "cost_usd": 0.035373,
+      "input_tokens": 37144,
+      "output_tokens": 3073,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_090611_task_0071_117914/task_task_0071.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_090611_task_0071_117914/task_0071_opencode_20260926_091542/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_090611_task_0071_117914/task_0071_opencode_20260926_091542",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_090611_task_0071_117914/task_0071_opencode_20260926_091542/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T01:15:45+00:00"
+}

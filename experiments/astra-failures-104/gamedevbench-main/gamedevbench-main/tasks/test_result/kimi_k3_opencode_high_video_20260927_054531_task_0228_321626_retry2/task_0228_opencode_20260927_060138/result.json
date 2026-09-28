@@ -1,0 +1,42 @@
+{
+  "task_name": "task_0228",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_060138",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+    "timestamp": "2026-09-27T06:01:38.725964"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code 1)",
+    "duration_seconds": 3.650782585144043,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 0.0
+  }
+}

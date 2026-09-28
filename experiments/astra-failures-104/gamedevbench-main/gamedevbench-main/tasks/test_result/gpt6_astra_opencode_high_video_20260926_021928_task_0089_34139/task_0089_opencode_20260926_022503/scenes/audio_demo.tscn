@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce2ql4xdm0gwa"]
+
+[ext_resource type="Script" path="res://scripts/audio_demo.gd" id="1"]
+[ext_resource type="FontFile" path="res://assets/Poppins-Medium.ttf" id="2_poppins"]
+
+[node name="AudioDemo" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+layout_mode = 2
+columns = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 56.0
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.94, 1, 1)
+theme_override_fonts/font = ExtResource("2_poppins")
+theme_override_font_sizes/font_size = 24
+text = "Available Streams: 0 | Queue: 0"

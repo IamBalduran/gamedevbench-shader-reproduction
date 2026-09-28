@@ -1,0 +1,46 @@
+[
+  {
+    "model": "gpt6_astra",
+    "task": "task_0028",
+    "original_message": "PillarPoint node missing",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Flashlight priority points configured"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt6_astra_task_0028/audit_probe.log"
+  },
+  {
+    "model": "gpt56_sol",
+    "task": "task_0028",
+    "original_message": "PillarPoint node missing",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Flashlight priority points configured"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/gpt56_sol_task_0028/audit_probe.log"
+  },
+  {
+    "model": "deepseek_v4_pro",
+    "task": "task_0028",
+    "original_message": "PillarPoint node missing",
+    "solver_success": true,
+    "modified_exit": 1,
+    "messages": [
+      "VALIDATION_FAILED: FlashlightPoint is not a Marker3D"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/deepseek_v4_pro_task_0028/audit_probe.log"
+  },
+  {
+    "model": "kimi_k3",
+    "task": "task_0028",
+    "original_message": "PillarPoint node missing",
+    "solver_success": true,
+    "modified_exit": 0,
+    "messages": [
+      "VALIDATION_PASSED: Flashlight priority points configured"
+    ],
+    "log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/analysis/probes/kimi_k3_task_0028/audit_probe.log"
+  }
+]

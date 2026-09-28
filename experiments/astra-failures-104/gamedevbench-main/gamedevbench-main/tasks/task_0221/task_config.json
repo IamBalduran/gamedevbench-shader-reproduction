@@ -1,0 +1,32 @@
+{
+  "task_id": 221,
+  "name": "Platformer Coin Highlights Variant U",
+  "instruction": "Add a Node2D named CoinHighlights under the Level node. Inside CoinHighlights, create six semi-transparent circular Polygon2D nodes named CoinHighlight1 through CoinHighlight6. Place one very tight circle over each yellow star coin in the platformer image so each highlight closely covers its coin with minimal spill outside the coin.",
+  "metadata": {
+    "tutorial_source": "Synthetic platformer image task",
+    "variant_of": "task_0216",
+    "video_id": "unknown",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "add very tight circular highlight overlays over the yellow star coins in the platformer image at Level scale Vector2(0.95, 0.95)",
+    "expected_nodes": [
+      "Node2D:Level/CoinHighlights",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight1",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight2",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight3",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight4",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight5",
+      "Polygon2D:Level/CoinHighlights/CoinHighlight6"
+    ],
+    "key_properties": {
+      "Level.position": "Vector2(55.5, 5)",
+      "Sprite2D.centered": "false",
+      "CoinHighlight1.color.a": "0.35",
+      "CoinHighlight2.color.a": "0.35",
+      "CoinHighlight3.color.a": "0.35",
+      "CoinHighlight4.color.a": "0.35",
+      "CoinHighlight5.color.a": "0.35",
+      "CoinHighlight6.color.a": "0.35",
+      "Level.scale": "Vector2(0.95, 0.95)"
+    }
+  }
+}

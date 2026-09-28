@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0068"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0068": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T18:34:20+00:00",
+      "finished_at": "2026-09-26T18:39:23+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "13cb795558216b854973920e9323c7b6fe5fbe465b4ecc4c3e22be12a08a881d",
+      "validator_sha256": "9e6c3826a2df22683f141ccd492671d194ca9cf0ef668483aba293f4b8712c17",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0068/console/task_0068_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_023422_task_0068_272052",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Crate must be destroyed after bullet hit",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "Task complete. I updated `/workspace/scripts/entities/tank/weapon/bullet.gd` to match the specification exactly:\n\n```gdscript\nextends Area2D\nclass_name Bullet\n\nconst SPEED = 500\n\nvar direction: Vector2 = Vector2.ZERO\nvar tank: Tank\n\nfunc _physics_process(delta):\n\tposition += direction.normalized() * SPEED * delta\n\nfunc _on_area_entered(_area):\n\tqueue_free()\n\nfunc _on_body_entered(body):\n\tif body is Crate:\n\t\tbody.destroy()\n\tqueue_free()\n```\n\nIt fulfills every requirement:\n- `const SPEED = 500`\n- Stores travel `direction` and the firing `tank`\n- Moves every physics frame via `direction.normalized() * SPEED * delta`\n- `area_entered` → `queue_free()`\n- `body_entered` → destroys `Crate` bodies via `body.destroy()` before `queue_free()`\n\nVerification performed:\n- Headless `--check-only` parse passed with exit code 0 and no script errors\n- Running the project showed no errors\n- Frame captures confirmed the bullet spawns at the tank, travels rightward with the physics movement code, and the bullet/despawn behavior works (bullets disappear before/after reaching obstacles as signals fire), with the scene rendering correctly throughout.",
+      "solver_duration": 278.157418012619,
+      "cost_usd": 0.788724,
+      "input_tokens": 251713,
+      "output_tokens": 2239,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_023422_task_0068_272052/task_task_0068.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023422_task_0068_272052/task_0068_opencode_20260927_023921/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023422_task_0068_272052/task_0068_opencode_20260927_023921",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_023422_task_0068_272052/task_0068_opencode_20260927_023921/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:39:23+00:00"
+}

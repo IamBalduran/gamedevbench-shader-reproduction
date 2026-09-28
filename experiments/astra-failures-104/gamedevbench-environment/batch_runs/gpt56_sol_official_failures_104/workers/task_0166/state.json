@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0166"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0166": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T02:05:34+00:00",
+      "finished_at": "2026-09-26T02:15:50+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "ab28fb467396f3404e033d8e52aa3d4f655755c05b94228bd9cd094dfce24811",
+      "validator_sha256": "4349268e2bbf3c4c54785ed3a3aceef0a6a340741ff87faa46d70acfdc9828b1",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0166/console/task_0166_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_100535_task_0166_137150",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "kick animation must enable DamageEmitter monitoring during the kick and disable it when the kick ends",
+      "official_details": "{}",
+      "validator_error_line": "115",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented the standing kick attack:\n\n- Added `KICK` state and `\"kick\"` animation mapping.\n- Walking attack now stops movement and kicks.\n- Idle attack still punches.\n- Added frames `40–45` from spritesheet row 5.\n- Added damage monitoring and `on_action_complete` tracks.\n- Verified with Godot 4.4.1 runtime assertions and a visual capture.",
+      "solver_duration": 579.9360148906708,
+      "cost_usd": 0.056079875,
+      "input_tokens": 89199,
+      "output_tokens": 4493,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_100535_task_0166_137150/task_task_0166.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_100535_task_0166_137150/task_0166_opencode_20260926_101541/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_100535_task_0166_137150/task_0166_opencode_20260926_101541",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_100535_task_0166_137150/task_0166_opencode_20260926_101541/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T02:15:50+00:00"
+}

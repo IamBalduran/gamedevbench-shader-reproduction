@@ -1,0 +1,55 @@
+Single task: task_0048 | OpenCode | deepseek-v4-pro | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: deepseek_v4_pro_opencode_high_video_20260926_161059_task_0048_195106
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+{
+  "task_name": "task_0048",
+  "success": false,
+  "message": "Validation timed out",
+  "timestamp": "2026-09-26T16:26:38.547737",
+  "agent": "opencode",
+  "model": "openai/deepseek-v4-pro",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Both files are implemented and the project launches cleanly in Godot 4.4.1 headless mode.\n\n**scenes/draggable.tscn**: Root `Area2D` named `Draggable` with `collision_mask=2`, `linear_damp=20`, script attached. Child `Sprite` (scale 0.58) with `star_1.png`, and `CollisionShape` with a 72\u00d772 `RectangleShape2D`.\n\n**scripts/draggable.gd**: \n- `_ready()` stores `initial_position`/`initial_scale`, calls `play_spawn_animation()` (scale\u21920 then tween back)\n- `_input_event` detects `\"click\"` action to start dragging\n- `_process` lerps toward mouse at `20 * delta`\n- `_input` catches left button release \u2192 `_drop()`\n- `_drop()` emits `dropped(self, overlapping_areas)`, calls `self_destruct()` (shrink tween \u2192 `queue_free`) if not over `DropTarget`",
+  "solver_duration": 318.57285833358765,
+  "is_rate_limited": false,
+  "input_tokens": 19091,
+  "output_tokens": 2638,
+  "total_tokens": 21729,
+  "cache_read_tokens": 139264,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.09684300000000001,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_c3aaa84c",
+  "result_dir": "tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_161059_task_0048_195106/task_0048_opencode_20260926_162638"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_161059_task_0048_195106
+Final status: FAILED/CANCELLED | exit code: 1

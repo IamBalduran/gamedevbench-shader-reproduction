@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0026"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0026": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T07:45:38+00:00",
+      "finished_at": "2026-09-26T07:53:15+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "9bf17985857257b04caf9b58f3277a46e12d77350fa6f8076e773fb056b94eab",
+      "validator_sha256": "741fec2b95c8e5ed9cad633689054ddc4df9fca7f29de4691f9866a45fd6bf82",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0026/console/task_0026_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_154540_task_0026_191259",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Export 'camera_shake_noise_panning_speed' missing on PlayerBody",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "All done. Here's a summary of what was changed:\n\n**`scripts/player_body.gd`** — Full camera shake system implemented:\n- Added `camera_shake_noise: FastNoiseLite` export plus all numeric exports (`noise_panning_speed=30`, `max_power=0.15`, `blend_speed=7`, `return_strength=5`, `noise_strength=0.2`, `falling_bias=1.0`, `falling_strength_falloff=2.0`, `falling_max_strength=1.0`, `jumping_strength=0.2`)\n- `_physics_process`: samples 2D noise at different offsets for x/y/z, lerps `CameraActual.position` toward `camera_shake_position + noise`, decays `camera_shake_position` back to origin\n- `impulse_camera`: adds direction-scaled impulse, clamped to `max_power`\n- `impulse_camera_with_recoil`: calls `impulse_camera` with the base direction, then adds an upward kick using `jumping_strength`\n- `apply_landing_impulse`: when downward velocity exceeds `falling_bias`, computes a proportional downward impulse clamped to `falling_max_strength`\n\n**`scenes/player_body.tscn`** — Added `FastNoiseLite` sub-resource + wired `camera_shake_noise` export. Scene structure remains `CameraNode → CameraActual → Camera3D` (as it already was).",
+      "solver_duration": 430.6749675273895,
+      "cost_usd": 0.11413199999999998,
+      "input_tokens": 23329,
+      "output_tokens": 2943,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_154540_task_0026_191259/task_task_0026.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154540_task_0026_191259/task_0026_opencode_20260926_155313/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154540_task_0026_191259/task_0026_opencode_20260926_155313",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154540_task_0026_191259/task_0026_opencode_20260926_155313/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T07:53:15+00:00"
+}

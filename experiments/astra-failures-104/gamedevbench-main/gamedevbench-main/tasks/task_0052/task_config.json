@@ -1,0 +1,28 @@
+{
+  "task_id": 52,
+  "name": "Platform Character Acceleration Lerp",
+  "instruction": "Update scripts/player.gd so the Player exports @export_range(0.0, 1.0) var friction = 0.1 and @export_range(0.0, 1.0) var acceleration = 0.25, cache Input.get_axis(\"move_left\", \"move_right\") in a dir variable, lerp velocity.x toward dir * speed using acceleration whenever dir != 0, lerp toward 0 using friction when idle, and keep the existing gravity, move_and_slide(), and jump logic gating Input.is_action_just_pressed(\"jump\") on is_on_floor().",
+  "metadata": {
+    "tutorial_source": "KidsCanCode \u2013 Platform character",
+    "github_repo": "https://github.com/godotrecipes/2d_platform_basic",
+    "godot_version": "4.4",
+    "transcript_excerpt": "One way to add this behavior is to use linear interpolation (\"lerp\"). \u2026 @export_range(0.0, 1.0) var friction = 0.1 \u2026 var dir = Input.get_axis(\"walk_left\", \"walk_right\") \u2026 lerp between the current speed and the max speed when moving, otherwise lerp toward 0 (transcript.txt lines 91-140).",
+    "expected_nodes": [
+      "Main/Player"
+    ],
+    "key_properties": {
+      "Player.friction": 0.1,
+      "Player.acceleration": 0.25,
+      "Player": "uses lerp for both the moving and idle branches"
+    },
+    "categories": [
+      "physics",
+      "programming"
+    ],
+    "validation_focus": [
+      "Export ranges",
+      "Lerp-based acceleration",
+      "Jump logic preserved"
+    ]
+  }
+}

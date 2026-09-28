@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0107"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0107": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T18:25:07+00:00",
+      "finished_at": "2026-09-25T18:31:16+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "ec05bdc4ead8752330dc4a9d2f048d6ee013df15b1f263ff4dd8fc658b51ddf6",
+      "validator_sha256": "3f855be8dec6b0c3d412979d43c9c320f2fdd3979c79847fadcf611ebf44cf30",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0107/console/task_0107_attempt_1.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_022508_task_0107_36729",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "Surface material is not a ShaderMaterial",
+      "official_details": "{}",
+      "validator_error_line": "55",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the view model clip shader swap in [weapon_manager.gd](/workspace/scripts/weapon_manager.gd:1).\n\nThe implementation now:\n\n- Applies the shader automatically in `_ready()` with `viewmodel_fov = 54.0`.\n- Recursively finds all `MeshInstance3D` nodes under the view model.\n- Replaces each surface material with a `ShaderMaterial`.\n- Uses `res://shaders/weapon_clip_and_fov_shader.gdshader`.\n- Copies albedo, metallic, roughness, metallic texture channels, and available material textures.\n- Preserves separate materials for multiple mesh surfaces.\n- Clears any geometry-wide material override so surface overrides take effect.\n- Supports repeated application without losing the shader state.\n\nValidation completed successfully with Godot 4.4.1:\n\n- Headless project run passed.\n- Custom verification passed for nested meshes, multiple surfaces, repeated application, material overrides, shader parameters, and shared mesh preservation.\n- Captured frame verified the weapon rendered with the copied material and shader.",
+      "solver_duration": 344.97964906692505,
+      "cost_usd": 0.12940800000000002,
+      "input_tokens": 21311,
+      "output_tokens": 4365,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_022508_task_0107_36729/task_task_0107.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022508_task_0107_36729/task_0107_opencode_20260926_023114/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022508_task_0107_36729/task_0107_opencode_20260926_023114",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_022508_task_0107_36729/task_0107_opencode_20260926_023114/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T18:31:16+00:00"
+}

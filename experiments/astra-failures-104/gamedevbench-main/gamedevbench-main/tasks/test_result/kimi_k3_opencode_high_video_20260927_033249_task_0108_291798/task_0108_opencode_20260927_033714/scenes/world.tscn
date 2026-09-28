@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://world_start_1218"]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_world"]
+
+[sub_resource type="Gradient" id="Gradient_water"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.05, 0.25, 0.85, 1, 0.2, 0.5, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_water"]
+gradient = SubResource("Gradient_water")
+width = 256
+
+[sub_resource type="Gradient" id="Gradient_dirt"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.35, 0.2, 0.08, 1, 0.6, 0.4, 0.2, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dirt"]
+gradient = SubResource("Gradient_dirt")
+width = 256
+
+[sub_resource type="Gradient" id="Gradient_grass"]
+offsets = PackedFloat32Array(0, 1)
+colors = PackedColorArray(0.1, 0.45, 0.1, 1, 0.5, 0.75, 0.25, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_grass"]
+gradient = SubResource("Gradient_grass")
+width = 256
+
+[sub_resource type="TileSet" id="TileSet_world"]
+custom_data_layer_0/name = "tile_type"
+custom_data_layer_0/type = 2
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_world")
+water_color = SubResource("GradientTexture1D_water")
+dirt_color = SubResource("GradientTexture1D_dirt")
+grass_color = SubResource("GradientTexture1D_grass")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_world")
+format = 2
+layer_0/name = "terrain"
+layer_0/z_index = -10

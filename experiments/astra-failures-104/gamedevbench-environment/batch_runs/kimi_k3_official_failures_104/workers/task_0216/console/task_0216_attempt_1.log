@@ -1,0 +1,56 @@
+Single task: task_0216 | OpenCode | kimi-k3 | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: kimi_k3_opencode_high_video_20260927_050650_task_0216_311119
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_050650_task_0216_311119/task_task_0216.json
+{
+  "task_name": "task_0216",
+  "success": false,
+  "message": "Add a Node2D named CoinHighlights under Level",
+  "timestamp": "2026-09-27T05:09:33.001619",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "I now have a clear picture. The 6 yellow star coins (the blobs with white star sparkles) are at these approximate texture coordinates:\n\n- Star 1: ~(426, 72) \u2014 top right\n- Star 2: ~(319, 83) \u2014 top middle-right area\n- Star 3: ~(287.8, 186.9) \u2014 middle\n- Star 4: ~(287, 298) \u2014 lower area\n- Star 5: ~(254, 312) \u2014 bottom\n- Star 6: one more... let me re-check which of the remaining is a star coin. Candidates 2 and 8 show blue/purple characters, not coins. Let me look more carefully at the second row and find all stars.",
+  "solver_duration": 139.75085759162903,
+  "is_rate_limited": false,
+  "input_tokens": 137595,
+  "output_tokens": 2564,
+  "total_tokens": 140159,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.45124499999999995,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_cf964b46",
+  "result_dir": "tasks/test_result/kimi_k3_opencode_high_video_20260927_050650_task_0216_311119/task_0216_opencode_20260927_050933"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_050650_task_0216_311119
+Final status: FAILED/CANCELLED | exit code: 1

@@ -1,0 +1,18 @@
+{
+  "task_id": 2,
+  "name": "Projectile Step Tracker",
+  "instruction": "Make the projectile advance the Shoot Em Up quest by calling QuestManager.progress_quest with the kill step each time it overlaps an enemy, queue_free itself after the hit, and ensure it also removes itself when it travels far off screen (50 pixels).",
+  "metadata": {
+    "tutorial_source": "YouTube: Chevifier - Quest Manager For Godot 4",
+    "video_id": "9tu-Q-T--mY",
+    "github_repo": "https://github.com/Chevifier/QuestManager",
+    "transcript_excerpt": "in order to progress the quest you need to call progress Quest ... in my projectiles node ... if the projectile overlapped with if it's an enemy I progress Quest ... it's killing one enemy ... and then it removes itself ... and that's just a check for if it's far off screen",
+    "expected_nodes": [
+      "Area2D:Projectile",
+      "CollisionShape2D:Projectile/CollisionShape2D"
+    ],
+    "key_properties": {
+      "Projectile.script": "Calls QuestManager.progress_quest(\"Shoot Em Up\", \"kill_step\") on enemy overlap"
+    }
+  }
+}

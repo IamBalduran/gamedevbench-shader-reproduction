@@ -1,0 +1,56 @@
+{
+  "task_name": "task_0228",
+  "agent": "opencode",
+  "model": "openai/kimi-k3",
+  "timestamp": "20260927_055026",
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443",
+      "pypi.org:443"
+    ]
+  },
+  "validation": {
+    "success": false,
+    "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+    "timestamp": "2026-09-27T05:50:26.966324"
+  },
+  "solver": {
+    "success": false,
+    "message": "OpenCode command failed (exit code 1)\nFinal response: The star is at approximately (680, 112) in image coordinates. Let me extract its exact outline.",
+    "duration_seconds": 271.33837604522705,
+    "is_rate_limited": false,
+    "model": "openai/kimi-k3",
+    "cost_usd": 1.1835390000000001,
+    "token_usage": {
+      "input_tokens": 370618,
+      "output_tokens": 4779,
+      "total_tokens": 375397,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0
+    }
+  }
+}

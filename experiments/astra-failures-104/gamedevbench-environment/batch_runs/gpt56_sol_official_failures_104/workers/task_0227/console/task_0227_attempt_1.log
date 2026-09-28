@@ -1,0 +1,57 @@
+Single task: task_0227 | OpenCode | gpt-5.6-sol | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_task_0227.json
+{
+  "task_name": "task_0227",
+  "success": false,
+  "message": "StarHighlights needs a Polygon2D child named StarHighlight",
+  "timestamp": "2026-09-26T12:25:22.281780",
+  "agent": "opencode",
+  "model": "openai/gpt-5.6-sol",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.0454435348511,
+  "is_rate_limited": false,
+  "input_tokens": 6279,
+  "output_tokens": 484,
+  "total_tokens": 6763,
+  "cache_read_tokens": 13460,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.005624875,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_7f1e1ad3",
+  "result_dir": "tasks/test_result/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651/task_0227_opencode_20260926_122522"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_121457_task_0227_159651
+Final status: FAILED/CANCELLED | exit code: 1

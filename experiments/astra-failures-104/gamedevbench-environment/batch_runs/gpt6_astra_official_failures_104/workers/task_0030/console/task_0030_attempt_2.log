@@ -1,0 +1,57 @@
+Single task: task_0030 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_task_0030.json
+{
+  "task_name": "task_0030",
+  "success": true,
+  "message": "Sunshine Clouds driver and lighting configured",
+  "timestamp": "2026-09-26T00:56:30.279004",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Implemented the requested configuration:\n\n- Added `Main/SunshineCloudsDriver` with continuous updates, the shared cloud resource, and WorldEnvironment\u2019s environment.\n- Registered both existing lights with a single shadow-step value of `32`.\n- Kept OmniLight range at `20000` and set Camera3D far clip to `400000`.\n- Connected the cloud resource to the compositor.\n- Applied all specified coverage, density, color, and 512 km mask settings.\n\nGodot 4.4.1 successfully loaded the scene and recorded three frames after shader reimport. It reported resource-leak warnings on shutdown.\n\n**Remaining:** Visual inspection of the generated PNG frames was not completed before the agent\u2019s maximum step limit was reached. The next verification step is to inspect the numbered `clouds_verification*.png` captures.",
+  "solver_duration": 562.7016847133636,
+  "is_rate_limited": false,
+  "input_tokens": 42139,
+  "output_tokens": 3637,
+  "total_tokens": 45776,
+  "cache_read_tokens": 687129,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.180972,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_c2667957",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_0030_opencode_20260926_005630"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073
+Final status: PASS | exit code: 0

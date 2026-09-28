@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "grid_scale must be derived from grid size, viewport, and zoom",
+  "details": {},
+  "timestamp": "2026-09-26T02:45:45.184447"
+}

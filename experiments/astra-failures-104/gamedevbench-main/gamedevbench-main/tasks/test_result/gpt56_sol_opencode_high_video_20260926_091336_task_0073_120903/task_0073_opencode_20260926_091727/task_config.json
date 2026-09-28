@@ -1,0 +1,3 @@
+{
+  "instruction": "Populate res://scenes/main.tscn so Main contains a water depth visualization scene: add a WorldEnvironment with a procedural sky and glow enabled, a DirectionalLight3D with shadows enabled, a MeshInstance3D named Water that uses a 10x10 PlaneMesh subdivided 20x20 with a ShaderMaterial pointing at res://scenes/WaterShader.tres, a Background Node3D holding exactly 5 sphere MeshInstance3Ds at these positions (all within the 10x10 water plane): Sphere at (3.200, 0.300, 3.000); Sphere2 at (4.000, -0.500, 2.200); Sphere3 at (2.500, 0.100, 4.200); Sphere4 at (3.800, -0.700, 4.500); Sphere5 at (4.400, 0.400, 3.800), all with green StandardMaterial3D overrides, and a Camera3D positioned at (0.142, 0.600, 0.141) with a FOV of 50 and all spheres are visible."
+}

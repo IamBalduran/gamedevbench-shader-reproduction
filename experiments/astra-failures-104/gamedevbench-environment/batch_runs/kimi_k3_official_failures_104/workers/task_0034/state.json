@@ -1,0 +1,56 @@
+{
+  "batch_id": "kimi_k3_official_failures_104",
+  "tasks": [
+    "task_0034"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0034": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T17:59:15+00:00",
+      "finished_at": "2026-09-26T18:04:37+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "36ef6645cdaa0fb6677f05327f72159404ec5733c2faa66d917a8b959bc81e87",
+      "validator_sha256": "ca3a0da781218f4e366d46fb6e1c1b29da674a908b4d31320ac04064bef31e24",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0034/console/task_0034_attempt_1.log",
+      "run_name": "kimi_k3_opencode_high_video_20260927_015916_task_0034_265496",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "debug dictionary missing steer entry",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/kimi-k3",
+      "solver_message": "The task is complete. Here's a summary of the changes made to `/workspace/scripts/steer_component.gd`:\n\n## Changes Made\n\n**1. Capture debug data in `steer()`** — whenever `debug_enabled` is true, the script now stores the three steering vectors into the `debug` dictionary via `update_debug()`:\n\n```gdscript\nvar steering_adjustment := (scaled_desired_velocity - velocity) / mass\nif debug_enabled:\n    update_debug({\n        \"velocity\": velocity,\n        \"scaled_desired_velocity\": scaled_desired_velocity,\n        \"steering_force\": steering_adjustment,\n    })\nreturn velocity + steering_adjustment\n```\n\n**2. Queue a redraw every frame in `_process()`** — so the debug overlay can update continuously:\n\n```gdscript\nfunc _process(_delta: float) -> void:\n    if debug_enabled:\n        queue_redraw()\n```\n\n## Verification\n\n- ✅ Script passes Godot's parse check (`--check-only`, exit code 0)\n- ✅ Project runs headless for 30 frames with no errors (exit code 0)\n- ✅ Ran the game in Movie Maker mode — the fish sprite renders and moves toward the mouse (frame captures confirm steering behavior is working, with the `SteerComponent` active and `debug_enabled = true` set by `fish.gd`)\n\nThe debug dictionary now buffers the current velocity, scaled desired velocity, and steering force each time `steer()` runs (matching the pattern from Cashew OldDew's steering debug vectors tutorial), and `queue_redraw()` is called every frame while debugging is enabled so the overlay stays up to date.",
+      "solver_duration": 297.55777072906494,
+      "cost_usd": 0.951885,
+      "input_tokens": 301540,
+      "output_tokens": 3151,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_task_0034.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/kimi-k3",
+    "model_key": "kimi_k3",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T18:04:37+00:00"
+}

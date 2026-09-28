@@ -1,0 +1,66 @@
+{
+  "batch_id": "gpt6_astra_official_failures_104",
+  "tasks": [
+    "task_0030"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0030": {
+      "state": "completed",
+      "attempts": 2,
+      "attempt_history": [
+        {
+          "attempt": 1,
+          "state": "running",
+          "classification": "",
+          "solver_message": null,
+          "run_name": "gpt6_astra_opencode_high_video_20260926_002646_task_0030_7843",
+          "started_at": "2026-09-25T16:26:39+00:00",
+          "finished_at": "2026-09-25T16:27:19+00:00"
+        }
+      ],
+      "started_at": "2026-09-25T16:46:26+00:00",
+      "finished_at": "2026-09-25T16:56:45+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "d317b25b106231b8783c8fce4d88808ea35af4870a5835a65267d7b15bff7902",
+      "validator_sha256": "faf45e4ee9d4fbe41b9deb58cee7ce00061775de7b3616ec1cd1c8e593829053",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt6_astra_official_failures_104/workers/task_0030/console/task_0030_attempt_2.log",
+      "run_name": "gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Sunshine Clouds driver and lighting configured",
+      "official_details": "{}",
+      "validator_error_line": "109",
+      "solver_success": true,
+      "reported_model": "openai/gpt-6-astra",
+      "solver_message": "Implemented the requested configuration:\n\n- Added `Main/SunshineCloudsDriver` with continuous updates, the shared cloud resource, and WorldEnvironment’s environment.\n- Registered both existing lights with a single shadow-step value of `32`.\n- Kept OmniLight range at `20000` and set Camera3D far clip to `400000`.\n- Connected the cloud resource to the compositor.\n- Applied all specified coverage, density, color, and 512 km mask settings.\n\nGodot 4.4.1 successfully loaded the scene and recorded three frames after shader reimport. It reported resource-leak warnings on shutdown.\n\n**Remaining:** Visual inspection of the generated PNG frames was not completed before the agent’s maximum step limit was reached. The next verification step is to inspect the numbered `clouds_verification*.png` captures.",
+      "solver_duration": 562.7016847133636,
+      "cost_usd": 0.180972,
+      "input_tokens": 42139,
+      "output_tokens": 3637,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_task_0030.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_0030_opencode_20260926_005630/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_0030_opencode_20260926_005630",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt6_astra_opencode_high_video_20260926_004633_task_0030_9073/task_0030_opencode_20260926_005630/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-6-astra",
+    "model_key": "gpt6_astra",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-25T16:56:45+00:00"
+}

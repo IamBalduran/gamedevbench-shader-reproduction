@@ -1,0 +1,56 @@
+Single task: task_0069 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260926_013202_task_0069_21633
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_013202_task_0069_21633/task_task_0069.json
+{
+  "task_name": "task_0069",
+  "success": false,
+  "message": "Water requires a ShaderMaterial override (via material_override or surface_material_override)",
+  "timestamp": "2026-09-26T01:42:36.312308",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": false,
+  "solver_message": "OpenCode execution timed out after 600s",
+  "solver_duration": 600.0533192157745,
+  "is_rate_limited": false,
+  "input_tokens": 35658,
+  "output_tokens": 3870,
+  "total_tokens": 39528,
+  "cache_read_tokens": 321722,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.165024,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_afbd1bc8",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260926_013202_task_0069_21633/task_0069_opencode_20260926_014236"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_013202_task_0069_21633
+Final status: FAILED/CANCELLED | exit code: 1

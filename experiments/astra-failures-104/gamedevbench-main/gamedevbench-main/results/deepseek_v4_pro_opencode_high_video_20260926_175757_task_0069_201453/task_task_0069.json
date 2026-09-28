@@ -1,0 +1,6 @@
+{
+  "success": false,
+  "message": "Camera FOV must be close to 110.0 (found: 75.0)",
+  "details": {},
+  "timestamp": "2026-09-26T18:03:40.174861"
+}

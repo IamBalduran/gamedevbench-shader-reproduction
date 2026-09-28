@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0235"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0235": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T14:39:44+00:00",
+      "finished_at": "2026-09-26T14:50:14+00:00",
+      "classification": "solver_incomplete",
+      "archive_sha256": "f48ba30495b7f381c494669e01526f7b1cb23428fef0fbf0abc4cc65140848d6",
+      "validator_sha256": "f303c8aa81a6c874360d6c353f33f146147a684095a5b598f8fb5af4664b4489",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0235/console/task_0235_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_223946_task_0235_241707",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "StarHighlights needs a Polygon2D child named StarHighlight",
+      "official_details": "{}",
+      "validator_error_line": "136",
+      "solver_success": false,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "OpenCode execution timed out after 600s",
+      "solver_duration": 600.0429022312164,
+      "cost_usd": 0.033186,
+      "input_tokens": 7377,
+      "output_tokens": 737,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_223946_task_0235_241707/task_task_0235.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_223946_task_0235_241707/task_0235_opencode_20260926_225011/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_223946_task_0235_241707/task_0235_opencode_20260926_225011",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_223946_task_0235_241707/task_0235_opencode_20260926_225011/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T14:50:14+00:00"
+}

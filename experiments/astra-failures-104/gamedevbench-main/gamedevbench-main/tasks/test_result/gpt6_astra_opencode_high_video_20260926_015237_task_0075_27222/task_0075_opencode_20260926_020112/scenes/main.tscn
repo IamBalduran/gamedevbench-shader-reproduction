@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://codex0619task"]
+
+[ext_resource type="Shader" path="res://scenes/WaterShader.tres" id="1_water_shader"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_water"]
+sky_top_color = Color(0.055, 0.16, 0.3, 1)
+sky_horizon_color = Color(0.3, 0.55, 0.72, 1)
+sky_curve = 0.12
+sky_energy_multiplier = 0.8
+ground_bottom_color = Color(0.025, 0.045, 0.08, 1)
+ground_horizon_color = Color(0.2, 0.33, 0.42, 1)
+ground_curve = 0.08
+ground_energy_multiplier = 0.35
+sun_angle_max = 12.0
+sun_curve = 0.08
+
+[sub_resource type="Sky" id="Sky_water"]
+sky_material = SubResource("ProceduralSkyMaterial_water")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_water"]
+background_mode = 2
+sky = SubResource("Sky_water")
+background_energy_multiplier = 0.7
+ambient_light_source = 3
+ambient_light_color = Color(0.32, 0.48, 0.62, 1)
+ambient_light_energy = 0.8
+reflected_light_source = 2
+glow_enabled = true
+glow_intensity = 1.1
+glow_strength = 1.2
+glow_bloom = 0.15
+tonemap_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_water"]
+material = null
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_water"]
+shader = ExtResource("1_water_shader")
+
+[sub_resource type="SphereMesh" id="SphereMesh_green"]
+material = null
+radius = 1.0
+height = 2.0
+radial_segments = 32
+rings = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_green"]
+albedo_color = Color(0.06, 0.82, 0.22, 1)
+metallic = 0.05
+roughness = 0.28
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_water")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-52, -28, 0)
+light_color = Color(1, 0.93, 0.82, 1)
+light_energy = 1.4
+shadow_enabled = true
+directional_shadow_max_distance = 40.0
+
+[node name="Water" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_water")
+material_override = SubResource("ShaderMaterial_water")
+
+[node name="Background" type="Node3D" parent="."]
+
+[node name="Sphere" type="MeshInstance3D" parent="Background"]
+position = Vector3(3.8, -0.4, 3.2)
+mesh = SubResource("SphereMesh_green")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere2" type="MeshInstance3D" parent="Background"]
+position = Vector3(-2.9, 0.2, -4.1)
+mesh = SubResource("SphereMesh_green")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere3" type="MeshInstance3D" parent="Background"]
+position = Vector3(4.6, 0, -0.6)
+mesh = SubResource("SphereMesh_green")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere4" type="MeshInstance3D" parent="Background"]
+position = Vector3(-4.2, -0.6, 1.7)
+mesh = SubResource("SphereMesh_green")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Sphere5" type="MeshInstance3D" parent="Background"]
+position = Vector3(0.8, 0.5, -3.1)
+mesh = SubResource("SphereMesh_green")
+material_override = SubResource("StandardMaterial3D_green")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 1, 18)
+rotation_degrees = Vector3(-4, 0, 0)
+fov = 30.0
+current = true

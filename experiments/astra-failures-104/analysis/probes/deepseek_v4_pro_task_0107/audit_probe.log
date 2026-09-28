@@ -1,0 +1,2 @@
+b'Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org\n\n'
+b"WARNING: res://scenes/test.tscn:4 - ext_resource, invalid UID: uid://bk0ocudwcker6 - using text path instead: res://scenes/main.tscn\n     at: load (scene/resources/resource_format_text.cpp:447)\nSCRIPT ERROR: Invalid type in function '_color_close' in base 'Node (test.gd)'. Cannot convert argument 1 from Nil to Color.\n          at: run_validation (res://scripts/test.gd:76)\n"

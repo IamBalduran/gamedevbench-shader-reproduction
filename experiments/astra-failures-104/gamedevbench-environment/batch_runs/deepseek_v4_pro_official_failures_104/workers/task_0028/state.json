@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0028"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0028": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T07:53:15+00:00",
+      "finished_at": "2026-09-26T08:00:27+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "5606d0021844fcf14cc0d01fb2d0b259d819eb7b5c3780f0974267a8cd7344a6",
+      "validator_sha256": "72e8064c2a35a62628b0a633a9efceb022e8c94ba71a5d4a0fc2c0b160217e1b",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0028/console/task_0028_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_155317_task_0028_192748",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "PillarPoint node missing",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "Done. Here's what was created:\n\n- **`scripts/flashlight_point.gd`** — `class_name FlashlightPoint` extending `Node3D` with:\n  - `enum Priority { LOW, MEDIUM, HIGH }`\n  - `@export var priority` and `@export var has_been_targeted`\n  - `reset_target_state()` helper\n  - `_ready()` to auto-add to `FlashlightPoints` group\n\n- **`scenes/flashlight_point.tscn`** — reusable packed scene referencing the script\n\n- **`scenes/main.tscn`** — three FlashlightPoint instances under Main:\n  - `FlashlightPoint` at `(8.36166, 1.81915, -12.0301)` — priority `MEDIUM` (1)\n  - `FlashlightPoint2` at `(-16.6577, 2.41884, -39.9426)` — priority `LOW` (0)\n  - `FlashlightPoint3` at `(23.0185, 2.63927, -86.6948)` — priority `HIGH` (2)\n\nGodot launched and rendered without errors.",
+      "solver_duration": 403.95199179649353,
+      "cost_usd": 0.09943199999999999,
+      "input_tokens": 20009,
+      "output_tokens": 2627,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_155317_task_0028_192748/task_task_0028.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_155317_task_0028_192748/task_0028_opencode_20260926_160025/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_155317_task_0028_192748/task_0028_opencode_20260926_160025",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_155317_task_0028_192748/task_0028_opencode_20260926_160025/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T08:00:27+00:00"
+}

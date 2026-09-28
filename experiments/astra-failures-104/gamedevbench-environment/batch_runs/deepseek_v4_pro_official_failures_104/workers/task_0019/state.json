@@ -1,0 +1,55 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0019"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0019": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T07:40:34+00:00",
+      "finished_at": "2026-09-26T07:50:15+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "validator_sha256": "785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0019/console/task_0019_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_154035_task_0019_190907",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "SmokeParticles mesh must have a material assigned",
+      "official_details": "{}",
+      "validator_error_line": "81",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "Done. The muzzle flash effect prefab is complete. Here's what the scene contains:\n\n- **Root `Node3D`** with `generic_effect_handler.gd` script, `optional_light_path` pointing at the `MuzzleFlash` OmniLight child\n- **`MuzzleFlash`** OmniLight3D — energy 4.0, range 6.0, warm amber color, fades over 0.2s via the handler script\n- **`SmokeParticles`** GPUParticles3D — 16 particles, zero gravity, upward direction with 40° spread, `StandardMaterial3D` with transparent billboard mode (3 = `BILLBOARD_ENABLED`) and a radial `GradientTexture2D` for volumetric smoke puffs\n- **`MuzzleFireLeft`** / **`MuzzleFireRight`** — two opposing one-shot GPUParticles3D systems (1 particle each, 0.15s lifetime), each with the `muzzle_flash.gdshader` `ShaderMaterial` and a 3×3 `QuadMesh` draw pass for dual-sided rendering\n\n`scenes/main.tscn` already referenced the effect scene — no changes needed there. The scene runs cleanly in Godot 4.4.1 headless mode.",
+      "solver_duration": 554.7006113529205,
+      "cost_usd": 0.08511,
+      "input_tokens": 14675,
+      "output_tokens": 2739,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_154035_task_0019_190907/task_task_0019.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154035_task_0019_190907/task_0019_opencode_20260926_155013/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154035_task_0019_190907/task_0019_opencode_20260926_155013",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_154035_task_0019_190907/task_0019_opencode_20260926_155013/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T07:50:15+00:00"
+}

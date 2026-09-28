@@ -1,0 +1,55 @@
+{
+  "batch_id": "gpt56_sol_official_failures_104",
+  "tasks": [
+    "task_0019"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0019": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-25T23:54:36+00:00",
+      "finished_at": "2026-09-26T00:04:58+00:00",
+      "classification": "official_fail_review_needed",
+      "archive_sha256": "3774dfe3652c40e64bda5b16628173123293cb093939c6b5f20926c716b19cb2",
+      "validator_sha256": "785317f1b6fbedea31e1d52286fa56333f55b5ebff6ac10039d6b47b79684b1d",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/gpt56_sol_official_failures_104/workers/task_0019/console/task_0019_attempt_1.log",
+      "run_name": "gpt56_sol_opencode_high_video_20260926_075437_task_0019_101730_retry1",
+      "exit_code": 1,
+      "official_success": false,
+      "official_message": "MuzzleFireLeft must use the muzzle flash shader material",
+      "official_details": "{}",
+      "validator_error_line": "",
+      "solver_success": true,
+      "reported_model": "openai/gpt-5.6-sol",
+      "solver_message": "Implemented `scenes/effects/muzzle_flash_effect.tscn` with:\n\n- Scripted root and 0.2-second fading `MuzzleFlash` light\n- Radial, zero-gravity billboard smoke\n- Opposing one-shot muzzle fire particles\n- Provided shader material and double-sided quad rendering\n- Existing `Main` scene instance retained\n\nValidated with Godot 4.4.1 and rendered frames successfully.",
+      "solver_duration": 231.88792943954468,
+      "cost_usd": 0.039692,
+      "input_tokens": 24976,
+      "output_tokens": 3657,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt56_sol_opencode_high_video_20260926_075437_task_0019_101730_retry1/task_task_0019.json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075437_task_0019_101730_retry1/task_0019_opencode_20260926_080456/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075437_task_0019_101730_retry1/task_0019_opencode_20260926_080456",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/gpt56_sol_opencode_high_video_20260926_075437_task_0019_101730_retry1/task_0019_opencode_20260926_080456/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/gpt-5.6-sol",
+    "model_key": "gpt56_sol",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T00:04:58+00:00"
+}

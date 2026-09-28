@@ -1,0 +1,33 @@
+﻿task,model_key,model_id,reported_model,model_match,state,attempts,official_success,official_message,official_details,validator_error_line,solver_success,solver_message,solver_duration,cost_usd,input_tokens,output_tokens,is_rate_limited,run_name,result_json,validation_source,solver_result_json,artifact_dir,trajectory_log,console_log,archive_sha256,validator_sha256,started_at,finished_at,exit_code,classification,api_http_status,transport_error
+task_0034,kimi_k3,openai/kimi-k3,,,completed,1,False,debug dictionary missing steer entry,{},,True,"The task is complete. Here's a summary of the changes made to `/workspace/scripts/steer_component.gd`:
+
+## Changes Made
+
+**1. Capture debug data in `steer()`** — whenever `debug_enabled` is true, the script now stores the three steering vectors into the `debug` dictionary via `update_debug()`:
+
+```gdscript
+var steering_adjustment := (scaled_desired_velocity - velocity) / mass
+if debug_enabled:
+    update_debug({
+        ""velocity"": velocity,
+        ""scaled_desired_velocity"": scaled_desired_velocity,
+        ""steering_force"": steering_adjustment,
+    })
+return velocity + steering_adjustment
+```
+
+**2. Queue a redraw every frame in `_process()`** — so the debug overlay can update continuously:
+
+```gdscript
+func _process(_delta: float) -> void:
+    if debug_enabled:
+        queue_redraw()
+```
+
+## Verification
+
+- ✅ Script passes Godot's parse check (`--check-only`, exit code 0)
+- ✅ Project runs headless for 30 frames with no errors (exit code 0)
+- ✅ Ran the game in Movie Maker mode — the fish sprite renders and moves toward the mouse (frame captures confirm steering behavior is working, with the `SteerComponent` active and `debug_enabled = true` set by `fish.gd`)
+
+The debug dictionary now buffers the current velocity, scaled desired velocity, and steering force each time `steer()` runs (matching the pattern from Cashew OldDew's steering debug vectors tutorial), and `queue_redraw()` is called every frame while debugging is enabled so the overlay stays up to date.",297.55777072906494,0.951885,301540,3151,False,kimi_k3_opencode_high_video_20260927_015916_task_0034_265496,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_task_0034.json,official_results_json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435/result.json,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/kimi_k3_opencode_high_video_20260927_015916_task_0034_265496/task_0034_opencode_20260927_020435/agent_trajectory.log,/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/kimi_k3_official_failures_104/workers/task_0034/console/task_0034_attempt_1.log,36ef6645cdaa0fb6677f05327f72159404ec5733c2faa66d917a8b959bc81e87,ca3a0da781218f4e366d46fb6e1c1b29da674a908b4d31320ac04064bef31e24,2026-09-26T17:59:15+00:00,2026-09-26T18:04:37+00:00,1,official_fail_review_needed,,

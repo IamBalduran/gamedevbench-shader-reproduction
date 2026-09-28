@@ -1,0 +1,56 @@
+Single task: task_0075 | OpenCode | gpt-6-astra | Shubiaobiao
+Key is supplied locally. Ctrl+C cancels.
+Starting: gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222
+Using Godot 4.4.1.stable.official.49a5bc7b6 (/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/tools/Godot_v4.4.1-stable_linux.x86_64)
+Validation result saved to: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_task_0075.json
+{
+  "task_name": "task_0075",
+  "success": true,
+  "message": "Depth scene geometry matches tutorial setup",
+  "timestamp": "2026-09-26T02:01:12.691729",
+  "agent": "opencode",
+  "model": "openai/gpt-6-astra",
+  "use_mcp": false,
+  "use_runtime_video": true,
+  "effort": "high",
+  "godot_version": "4.4.1.stable.official.49a5bc7b6",
+  "skip_display": false,
+  "debug": false,
+  "solver_success": true,
+  "solver_message": "Implemented the water depth visualization scene in [main.tscn](/workspace/scenes/main.tscn).\n\nIt now includes:\n\n- `WorldEnvironment` with a procedural sky and glow enabled\n- `DirectionalLight3D` with shadows enabled\n- `Water` MeshInstance3D using:\n  - 10\u00d710 `PlaneMesh`\n  - 20\u00d720 subdivisions\n  - ShaderMaterial referencing `res://scenes/WaterShader.tres`\n- `Background` Node3D containing exactly five green sphere MeshInstance3D nodes at the requested positions\n- `Camera3D` with FOV `30` and Y position `1.0`, framed to show all spheres\n- Forward+ rendering enabled in [project.godot](/workspace/project.godot) to support glow and successful rendering\n\nValidation completed successfully with Godot 4.4.1. A Forward+ render capture showed the water plane and all five green spheres in view.",
+  "solver_duration": 475.71835947036743,
+  "is_rate_limited": false,
+  "input_tokens": 44241,
+  "output_tokens": 3527,
+  "total_tokens": 47768,
+  "cache_read_tokens": 289408,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.18562800000000002,
+  "confinement": {
+    "profile": "strict-v1",
+    "filesystem": "bubblewrap-private-mount-namespace",
+    "network": "isolated-provider-proxy",
+    "provider_hosts": [
+      "api.openai.com",
+      "api.shubiaobiao.cn",
+      "docs.godotengine.org",
+      "openrouter.ai"
+    ],
+    "bubblewrap_version": "bubblewrap 0.11.1",
+    "private_tmp": true,
+    "private_home": true,
+    "private_display": true,
+    "allowed_connects": [
+      "api.shubiaobiao.cn:443",
+      "api.shubiaobiao.cn:443"
+    ],
+    "denied_connects": [
+      "models.opencode.ai:443",
+      "registry.npmjs.org:443"
+    ]
+  },
+  "sandbox_dir": "/tmp/gamedevbench_sandbox_f5b2cbca",
+  "result_dir": "tasks/test_result/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222/task_0075_opencode_20260926_020112"
+}
+Results: /mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/gpt6_astra_opencode_high_video_20260926_015237_task_0075_27222
+Final status: PASS | exit code: 0

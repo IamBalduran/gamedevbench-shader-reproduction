@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://minimaplogic0734"]
+
+[ext_resource type="Texture2D" path="res://assets/panel_woodDetail_blank.res" id="1_tex"]
+[ext_resource type="Texture2D" path="res://assets/pattern_blueprintPaper.res" id="2_tex"]
+[ext_resource type="Texture2D" path="res://assets/minimapIcon_arrowA.res" id="3_tex"]
+[ext_resource type="Texture2D" path="res://assets/minimapIcon_jewelRed.res" id="4_tex"]
+[ext_resource type="Texture2D" path="res://assets/minimapIcon_exclamationYellow.res" id="5_tex"]
+[ext_resource type="Script" path="res://scripts/minimap.gd" id="6_minimap"]
+
+[node name="Minimap" type="MarginContainer"]
+offset_right = 200.0
+offset_bottom = 200.0
+mouse_filter = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("6_minimap")
+
+[node name="Frame" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_tex")
+patch_margin_left = 64
+patch_margin_top = 64
+patch_margin_right = 64
+patch_margin_bottom = 64
+
+[node name="Content" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Grid" type="TextureRect" parent="Content"]
+layout_mode = 2
+texture = ExtResource("2_tex")
+stretch_mode = 1
+
+[node name="PlayerMarker" type="Sprite2D" parent="Content/Grid"]
+position = Vector2(75, 75)
+texture = ExtResource("3_tex")
+
+[node name="MobMarker" type="Sprite2D" parent="Content/Grid"]
+visible = false
+position = Vector2(24, 24)
+texture = ExtResource("4_tex")
+
+[node name="AlertMarker" type="Sprite2D" parent="Content/Grid"]
+visible = false
+position = Vector2(120, 120)
+texture = ExtResource("5_tex")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

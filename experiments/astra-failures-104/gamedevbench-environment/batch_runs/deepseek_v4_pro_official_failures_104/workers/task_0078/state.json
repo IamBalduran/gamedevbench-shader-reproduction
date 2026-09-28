@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0078"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0078": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T10:30:13+00:00",
+      "finished_at": "2026-09-26T10:36:17+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "8971e9f0398c2fe0664d7a892bc32b440529fff585682d5e0ec1638cd65b43c9",
+      "validator_sha256": "99079d1f65867b61879db2edbdbc482ad364d42fcd9d863a8426618757af57fc",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0078/console/task_0078_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_183015_task_0078_212043",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Depth scene geometry matches tutorial setup",
+      "official_details": "{}",
+      "validator_error_line": "187",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "The scene is working. The output shows the water plane with the shader, green spheres at their specified positions, and the camera captures them all. Here's a summary of what was created in `scenes/main.tscn`:\n\n- **WorldEnvironment** with procedural sky and glow enabled\n- **DirectionalLight3D** with shadows enabled\n- **Water** MeshInstance3D: 10x10 PlaneMesh, 20x20 subdivision, ShaderMaterial pointing to `res://scenes/WaterShader.tres`\n- **Background** Node3D containing 5 green sphere MeshInstance3Ds at the specified positions\n- **Camera3D** at Y=1.0, Z=22, FOV=30, positioned to view all spheres",
+      "solver_duration": 331.2166221141815,
+      "cost_usd": 0.074316,
+      "input_tokens": 15917,
+      "output_tokens": 1771,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_183015_task_0078_212043/task_task_0078.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_183015_task_0078_212043/task_0078_opencode_20260926_183614/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_183015_task_0078_212043/task_0078_opencode_20260926_183614",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_183015_task_0078_212043/task_0078_opencode_20260926_183614/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T10:36:17+00:00"
+}

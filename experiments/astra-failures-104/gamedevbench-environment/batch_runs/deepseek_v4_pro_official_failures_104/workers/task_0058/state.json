@@ -1,0 +1,56 @@
+{
+  "batch_id": "deepseek_v4_pro_official_failures_104",
+  "tasks": [
+    "task_0058"
+  ],
+  "display_total": 104,
+  "items": {
+    "task_0058": {
+      "state": "completed",
+      "attempts": 1,
+      "started_at": "2026-09-26T09:19:33+00:00",
+      "finished_at": "2026-09-26T09:29:46+00:00",
+      "classification": "official_pass",
+      "archive_sha256": "ec039dbf6a1a9ab8e495b4e6a665137071ecec82969fe1a469a33a3d16e9981e",
+      "validator_sha256": "c550fb3090beaa63ee731f09f298efb1053aa21ec4bc3da89e3522db42be75f3",
+      "console_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-environment/batch_runs/deepseek_v4_pro_official_failures_104/workers/task_0058/console/task_0058_attempt_1.log",
+      "run_name": "deepseek_v4_pro_opencode_high_video_20260926_171934_task_0058_197603",
+      "exit_code": 0,
+      "official_success": true,
+      "official_message": "Audio demo UI lists sounds, wires buttons, and reflects AudioManager stats",
+      "official_details": "{}",
+      "validator_error_line": "119",
+      "solver_success": true,
+      "reported_model": "openai/deepseek-v4-pro",
+      "solver_message": "Done. Here's what was created:\n\n**`res://scenes/audio_demo.tscn`** — MarginContainer root named \"AudioDemo\" with full-screen anchors, 20px margins on all sides, CenterContainer > GridContainer (2 columns, 10px h/v separation), and a CanvasLayer with an HBoxContainer top bar containing Labels in order: \"Available Streams:\", Label2 (count), VSeparator, \"Queue:\", Label3 (count). All labels use Poppins-Medium at size 24.\n\n**`res://scripts/audio_demo.gd`** — On `_ready()` scans `sound_dir` (defaulting to `res://assets`) for `.wav`/`.ogg` files, creates a Button per file with Poppins font override and `pressed` connected to `on_audio_button_pressed` which calls `AudioManager.play(sound_dir + \"/\" + filename)`. `_process()` updates the count labels from `AudioManager.available.size()` and `AudioManager.queue.size()`.\n\nProject runs cleanly with no errors.",
+      "solver_duration": 577.5224697589874,
+      "cost_usd": 0.109929,
+      "input_tokens": 22148,
+      "output_tokens": 2899,
+      "is_rate_limited": false,
+      "result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/results/deepseek_v4_pro_opencode_high_video_20260926_171934_task_0058_197603/task_task_0058.json",
+      "validation_source": "official_results_json",
+      "solver_result_json": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171934_task_0058_197603/task_0058_opencode_20260926_172942/result.json",
+      "artifact_dir": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171934_task_0058_197603/task_0058_opencode_20260926_172942",
+      "trajectory_log": "/mnt/d/ShaderAgent/re/gamedevbench-astra-failures-104/gamedevbench-main/gamedevbench-main/tasks/test_result/deepseek_v4_pro_opencode_high_video_20260926_171934_task_0058_197603/task_0058_opencode_20260926_172942/agent_trajectory.log",
+      "model_match": true
+    }
+  },
+  "enable_live_counts": false,
+  "config": {
+    "agent": "opencode",
+    "model": "openai/deepseek-v4-pro",
+    "model_key": "deepseek_v4_pro",
+    "provider": "https://api.shubiaobiao.cn/v1",
+    "effort": "high",
+    "runtime_video": true,
+    "godot": "4.4.1",
+    "confinement": "strict",
+    "solver_timeout_seconds": 600,
+    "parallel": 2,
+    "api_error_retry_seconds": 300,
+    "api_error_max_retries": 3,
+    "comparability": "OpenCode/Shubiaobiao adapter; not the authors Codex CLI run"
+  },
+  "updated_at": "2026-09-26T09:29:46+00:00"
+}

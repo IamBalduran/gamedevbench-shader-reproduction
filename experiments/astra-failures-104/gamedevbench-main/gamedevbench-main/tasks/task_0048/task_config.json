@@ -1,0 +1,27 @@
+{
+  "task_id": 48,
+  "name": "Codex Draggable Decorations",
+  "instruction": "Implement scenes/draggable.tscn as a decoration component that can be dragged. The root Area2D must be named Draggable in the scene, set collision_mask to 2, linear_damp to 20, and attach scripts/draggable.gd. Under it, add Sprite2D named Sprite that uses assets/sprites/star_1.png and is uniformly scaled to 0.58, plus a CollisionShape2D named CollisionShape that holds a 72\u00d772 RectangleShape2D covering the sprite. Implement scripts/draggable.gd so it records initial_position and initial_scale on _ready(), shrinks to zero and tweens back in play_spawn_animation(), listens for the \"click\" action in _on_input_event/_input, lerps toward the mouse while dragging, emits dropped(self, overlapping_areas) on release, and calls self_destruct() with a shrink tween whenever it is dropped outside DropTarget's region.",
+  "metadata": {
+    "tutorial_source": "YouTube: Cashew OldDew - Master Drag and Drop with Tree Systems in Godot",
+    "video_id": "iHkFPcYTdxg",
+    "github_repo": "https://github.com/cashew-olddew/godot-tutorials",
+    "transcript_excerpt": "[L157-214] \"a decoration is simply an area ... initialize the texture, initial position, initial scale and also a spawn animation ... place some animations on spawn and on self-destruct\"",
+    "expected_nodes": [
+      "Area2D:Draggable",
+      "Sprite2D:Sprite",
+      "CollisionShape2D:CollisionShape"
+    ],
+    "key_properties": {
+      "Sprite.texture": "res://assets/sprites/star_1.png",
+      "Sprite.scale": "Vector2(0.58, 0.58)",
+      "CollisionShape.shape.size": "Vector2(72, 72)",
+      "Draggable.collision_mask": 2
+    },
+    "categories": [
+      "game-systems",
+      "ui"
+    ],
+    "godot_version": "4.4"
+  }
+}
